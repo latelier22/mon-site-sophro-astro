@@ -1,26 +1,146 @@
 <footer class="mt-24 pb-10">
   <div class="mx-auto max-w-7xl px-4 sm:px-6">
-    <div class="section-bg rounded-[2.5rem] overflow-hidden">
-      <div class="soft-card rounded-[2.5rem] px-8 py-10 md:px-10 md:py-12 text-sm text-[var(--text)]">
-        <div class="grid gap-8 md:grid-cols-[1.4fr_1fr] md:items-end">
-          <div>
-            <p class="text-xl font-semibold text-[var(--brown-deep)]">
-              Alexandra Coirier – Sophrologue
-            </p>
-            <p class="mt-3 max-w-xl leading-relaxed">
-              Loudéac • Séances individuelles • Accompagnement en douceur
-            </p>
-          </div>
+    <div
+      class="relative overflow-hidden rounded-[2.5rem] bg-[url('/images/footer-bg.png')] bg-cover bg-center"
+    >
+      <div class="absolute inset-0 bg-white/35 backdrop-blur-[1px]"></div>
 
-          <div class="md:text-right">
-            <nav class="flex flex-wrap gap-4 md:justify-end text-sm">
-              <a href="/mentions-legales" class="footer-link">Mentions légales</a>
-              <a href="/politique-confidentialite" class="footer-link">Confidentialité</a>
-              <a href="/politique-cookies" class="footer-link">Cookies</a>
-            </nav>
+      <div class="relative px-6 pt-20 pb-8 md:px-10 md:pt-28">
+        <div class="mx-auto max-w-2xl text-center">
+          <p class="text-2xl md:text-3xl font-semibold leading-relaxed text-[var(--brown-deep)]">
+            Prendre soin de soi, c’est se donner la possibilité de vivre plus aligné et plus serein.
+          </p>
+        </div>
+
+        <div class="mt-16 soft-card rounded-t-[2.5rem] rounded-b-none p-8 md:p-10">
+          <div class="grid gap-10 lg:grid-cols-[1.3fr_0.8fr_0.9fr]">
+            <div class="flex flex-col sm:flex-row gap-6">
+              
+              <img
+  src="/images/alexandra-coirier.png"
+  alt="Alexandra Coirier, sophrologue à Loudéac"
+  class="h-60 w-40 rounded-full object-cover shadow-lg"
+/>
+
+              <div>
+                <p class="text-2xl font-semibold text-[var(--brown-deep)]">
+                  Alexandra Coirier
+                </p>
+
+                <p class="mt-2 text-xs uppercase tracking-[0.3em] text-[var(--brown-soft)]">
+                  Sophrologue à Loudéac
+                </p>
+
+                <p class="mt-5 leading-relaxed text-[var(--text)]">
+                  J’accompagne les personnes qui traversent une période de stress,
+                  d’anxiété, de fatigue, de surcharge mentale ou de transition de vie.
+                </p>
+
+                <div class="mt-6">
+                  <a
+                    href="/contact"
+                    class="soft-btn bg-[var(--brown-soft)] text-white px-6 py-3 font-medium inline-block hover:bg-[var(--brown-deep)]"
+                  >
+                    Prendre rendez-vous
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <p class="text-xl font-semibold text-[var(--brown-deep)]">
+                Navigation
+              </p>
+
+              <nav class="mt-5 grid gap-3 text-[var(--text)]">
+                <a href="/" class="footer-link">Accueil</a>
+                <a href="/a-quoi-s-attendre" class="footer-link">À quoi s’attendre</a>
+                <a href="/accompagnement" class="footer-link">Accompagnements</a>
+                <a href="/mon-approche" class="footer-link">Mon approche</a>
+                <a href="/qui-suis-je" class="footer-link">Qui suis-je ?</a>
+                <a href="/faq" class="footer-link">FAQ</a>
+                <a href="/contact" class="footer-link">Contact</a>
+              </nav>
+            </div>
+
+            <div>
+              <p class="text-xl font-semibold text-[var(--brown-deep)]">
+                Informations
+              </p>
+
+              <div class="mt-5 space-y-3 text-[var(--text)]">
+                <p>
+                  <a href="tel:+33781528517" class="footer-link">
+                    07 81 52 85 17
+                  </a>
+                </p>
+
+                <p>
+                  <a
+                    href="mailto:contact@alexandracoirier-sophrologue.fr"
+                    class="footer-link break-all"
+                  >
+                    contact@alexandracoirier-sophrologue.fr
+                  </a>
+                </p>
+
+                <p>
+                  26 Rue du Dr Robin<br />
+                  22600 Loudéac
+                </p>
+              </div>
+
+              <nav class="mt-6 grid gap-3 text-sm">
+                <a href="/mentions-legales" class="footer-link">Mentions légales</a>
+                <a href="/politique-confidentialite" class="footer-link">Politique de confidentialité</a>
+                <a href="/politique-cookies" class="footer-link">Politique de cookies</a>
+              </nav>
+            </div>
           </div>
         </div>
+
+  <div class="-mt-1 rounded-b-[2.5rem] bg-[var(--brown-deep)]/85 px-6 py-5 md:px-10">
+  <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/90">
+    <p>
+      © 2025 Alexandra Coirier – Sophrologue à Loudéac • Tous droits réservés
+    </p>
+
+    <div class="flex gap-3">
+      <a href="https://www.facebook.com/p/Alexandra-Coirier-Sophrologue-100072807305535/" class="footer-social" aria-label="Facebook">f</a>
+      <a href="#" class="footer-social" aria-label="Instagram">◎</a>
+    </div>
+  </div>
+</div>
       </div>
     </div>
   </div>
 </footer>
+
+<style>
+  .footer-link {
+    color: var(--text);
+    transition: color 220ms ease, transform 220ms ease;
+  }
+
+  .footer-link:hover {
+    color: var(--brown-deep);
+    transform: translateX(3px);
+  }
+
+  .footer-social {
+    width: 38px;
+    height: 38px;
+    border-radius: 999px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    color: white;
+    font-weight: 600;
+    transition: transform 220ms ease, background 220ms ease;
+  }
+
+  .footer-social:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.18);
+  }
+</style>
