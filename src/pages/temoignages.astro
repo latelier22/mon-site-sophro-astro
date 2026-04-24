@@ -1,0 +1,119 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<BaseLayout
+  title="Témoignages – Alexandra Coirier"
+  description="Témoignages de personnes accompagnées par Alexandra Coirier, sophrologue à Loudéac."
+>
+  <Header />
+
+  <main class="mx-auto max-w-6xl px-4 sm:px-6 py-10 md:py-16">
+    <div class="soft-card rounded-[2.5rem] p-8 md:p-10">
+      <p class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]">
+        Témoignages
+      </p>
+
+      <h1 class="mt-4 text-4xl md:text-5xl font-semibold text-[var(--brown-deep)]">
+        Ce qu’ils en ont pensé
+      </h1>
+
+      <p class="mt-5 text-lg leading-relaxed text-[var(--text)]">
+        Quelques retours de personnes accompagnées en sophrologie, autour du stress,
+        de l’anxiété, des émotions et du mieux-être au quotidien.
+      </p>
+    </div>
+
+    <section class="mt-8 section-bg rounded-[2.5rem] p-8 md:p-10">
+      <section class="soft-card rounded-[2rem] p-8">
+        <blockquote class="space-y-4 leading-relaxed text-[var(--text)]">
+          <p>
+            « J’avais vraiment besoin de sortir d’un réel mal-être.
+            C’était un peu une dernière chance après avoir essayé l’acupuncture
+            et l’ostéopathie.
+          </p>
+
+          <p>
+            J’ai donc commencé les séances en toute confiance en la thérapeute,
+            mais avec peu de confiance en moi.
+          </p>
+
+          <p>
+            À ce jour, je suis très heureuse d’avoir insisté. J’ai accroché tout
+            de suite et je n’ai jamais manqué les exercices à faire seule.
+          </p>
+
+          <p>
+            Mon stress s’en est allé au fur et à mesure des séances.
+            Je suis très heureuse d’avoir fait la rencontre d’Alexandra et je la recommande vivement.
+          </p>
+
+          <p>
+            Je n’ai pas encore terminé les séances mais je suis très optimiste pour la suite. »
+          </p>
+
+          <footer class="pt-4 text-sm font-semibold text-[var(--brown-soft)]">
+            M-A
+          </footer>
+        </blockquote>
+      </section>
+
+      <section class="mt-8 grid md:grid-cols-2 gap-6">
+        <div class="soft-card rounded-[2rem] p-8">
+          <blockquote class="leading-relaxed text-[var(--text)]">
+            <p>
+              « J’ai retrouvé un vrai apaisement intérieur et des outils concrets
+              pour mieux vivre mes émotions au quotidien. »
+            </p>
+            <footer class="mt-5 text-sm font-semibold text-[var(--brown-soft)]">
+              Témoignage
+            </footer>
+          </blockquote>
+        </div>
+
+        <div class="soft-card rounded-[2rem] p-8">
+          <blockquote class="leading-relaxed text-[var(--text)]">
+            <p>
+              « Les séances m’ont permis de reprendre confiance et de me reconnecter
+              à mes besoins avec plus de douceur. »
+            </p>
+            <footer class="mt-5 text-sm font-semibold text-[var(--brown-soft)]">
+              Témoignage
+            </footer>
+          </blockquote>
+        </div>
+      </section>
+
+      <section class="mt-8 soft-card rounded-[2rem] p-8">
+        <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+          Vous souhaitez échanger avant de commencer ?
+        </h2>
+
+        <p class="mt-5 leading-relaxed text-[var(--text)]">
+          Vous pouvez me contacter pour poser une question, parler de votre situation
+          ou convenir d’un premier rendez-vous.
+        </p>
+
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a
+            href="/contact"
+            class="soft-btn bg-[var(--brown-soft)] text-white px-7 py-3.5 font-medium inline-block hover:bg-[var(--brown-deep)]"
+          >
+            Prendre rendez-vous
+          </a>
+
+          <a
+            href="/a-quoi-s-attendre"
+            class="soft-btn border border-[var(--brown-soft)]/20 bg-white/70 px-7 py-3.5 text-[var(--brown-deep)] hover:bg-white"
+          >
+            À quoi s’attendre ?
+          </a>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>

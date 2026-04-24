@@ -1,0 +1,151 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<BaseLayout
+  title="La sophrologie est-elle faite pour vous ? – Alexandra Coirier"
+  description="Découvrez si la sophrologie peut vous aider à apaiser l’anxiété, le stress, les émotions et retrouver un équilibre durable."
+>
+  <Header />
+
+  <main class="mx-auto max-w-6xl px-4 sm:px-6 py-10 md:py-16">
+    <div class="soft-card rounded-[2.5rem] p-8 md:p-10">
+      <p class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]">
+        Sophrologie
+      </p>
+
+      <h1 class="mt-4 text-4xl md:text-5xl font-semibold text-[var(--brown-deep)]">
+        Est-ce que la sophrologie est faite pour vous ?
+      </h1>
+
+      <p class="mt-5 text-lg leading-relaxed text-[var(--text)]">
+        Vous vous demandez peut-être si cette approche peut réellement vous aider.
+        La réponse dépend surtout de ce que vous vivez aujourd’hui… et de ce que vous souhaitez changer.
+      </p>
+    </div>
+
+    <section class="mt-8 section-bg rounded-[2.5rem] p-8 md:p-10">
+
+      <!-- POUR QUI -->
+      <section class="soft-card rounded-[2rem] p-8">
+        <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+          Cela peut être fait pour vous si…
+        </h2>
+
+        <ul class="mt-6 space-y-4 text-[var(--text)] leading-relaxed">
+          <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
+            Vous sentez que vous ne pouvez plus continuer ainsi et que vous avez besoin de retrouver du calme, de l’énergie et de la sérénité.
+          </li>
+
+          <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
+            Vous souhaitez comprendre ce qui se passe en vous plutôt que de subir vos émotions, vos peurs ou vos réactions.
+          </li>
+
+          <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
+            Vous êtes souvent dans le mental, dans l’anticipation ou le stress, et vous avez du mal à lâcher prise.
+          </li>
+
+          <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
+            Vous ressentez une fatigue émotionnelle, une surcharge mentale ou un besoin de ralentir.
+          </li>
+
+          <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
+            Vous cherchez une approche concrète, avec des outils simples à utiliser dans votre quotidien.
+          </li>
+        </ul>
+      </section>
+
+      <!-- CE QUE CA APPORTE -->
+      <section class="mt-8 grid md:grid-cols-2 gap-6">
+        <div class="soft-card rounded-[2rem] p-8">
+          <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+            Ce que vous pouvez en attendre
+          </h2>
+
+          <ul class="mt-5 space-y-3 text-[var(--text)] leading-relaxed">
+            <li>• Apaiser le stress et les tensions</li>
+            <li>• Retrouver un sommeil plus serein</li>
+            <li>• Mieux comprendre vos émotions</li>
+            <li>• Renforcer votre confiance en vous</li>
+            <li>• Vous sentir plus stable et aligné(e)</li>
+            <li>• Retrouver de la clarté dans vos choix</li>
+          </ul>
+        </div>
+
+        <div class="soft-card rounded-[2rem] p-8">
+          <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+            Ce que cela demande
+          </h2>
+
+          <ul class="mt-5 space-y-3 text-[var(--text)] leading-relaxed">
+            <li>• Un peu d’implication entre les séances</li>
+            <li>• L’envie d’écouter ce qui se passe en vous</li>
+            <li>• Accepter d’avancer progressivement</li>
+            <li>• Prendre du temps pour vous</li>
+          </ul>
+
+          <p class="mt-6 italic text-[var(--brown-soft)]">
+            La sophrologie n’est pas une solution “magique” immédiate,
+            mais un chemin vers un mieux-être durable.
+          </p>
+        </div>
+      </section>
+
+      <!-- LIMITES -->
+      <section class="mt-8 soft-card rounded-[2rem] p-8">
+        <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+          Dans quels cas ce n’est pas adapté ?
+        </h2>
+
+        <div class="mt-5 space-y-4 text-[var(--text)] leading-relaxed">
+          <p>
+            La sophrologie ne remplace pas un suivi médical ou psychologique lorsque cela est nécessaire.
+          </p>
+
+          <p>
+            Elle peut en revanche être un excellent complément pour vous aider à mieux vivre
+            ce que vous traversez et retrouver des ressources en vous.
+          </p>
+        </div>
+      </section>
+
+      <!-- CTA FINAL -->
+      <section class="mt-8 soft-card rounded-[2rem] p-8 text-center">
+        <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+          Et si vous faisiez le premier pas ?
+        </h2>
+
+        <p class="mt-5 text-[var(--text)] leading-relaxed">
+          Un premier échange permet souvent de clarifier votre situation
+          et de voir si cet accompagnement est adapté pour vous.
+        </p>
+
+        <p class="mt-6 italic text-[var(--brown-soft)]">
+          « La vie, ce n’est pas d’attendre que les orages passent,
+          c’est d’apprendre comment danser sous la pluie. »
+        </p>
+
+        <div class="mt-8 flex flex-wrap justify-center gap-4">
+          <a
+            href="/contact"
+            class="soft-btn bg-[var(--brown-soft)] text-white px-7 py-3.5 font-medium inline-block hover:bg-[var(--brown-deep)]"
+          >
+            Prendre rendez-vous
+          </a>
+
+          <a
+            href="/accompagnement"
+            class="soft-btn border border-[var(--brown-soft)]/20 bg-white/70 px-7 py-3.5 text-[var(--brown-deep)] hover:bg-white"
+          >
+            Voir les accompagnements
+          </a>
+        </div>
+      </section>
+
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>

@@ -9,18 +9,30 @@ npm run dev
 
 Puis ouvre `http://localhost:4321`.
 
-## À faire
-
-- Remplacer `public/images/sophro-hero.jpg` par une vraie photo.
-- Remplacer les coordonnées dans `src/pages/contact.astro`.
-- Brancher le formulaire de contact (Formspree, Basin ou endpoint perso).
-- Ajouter le lien Calendly dans le menu et les boutons.
-
-## Pages incluses
-
-- Accueil
-- À quoi s’attendre
-- Tarifs
-- Qui suis-je
-- FAQ
-- Contact
+🧭 Pages principales (menu visible)
+/                          → Accueil
+/a-quoi-s-attendre         → Déroulé des séances
+/accompagnement            → Parcours + accompagnement
+/tarifs                    → Tarifs détaillés
+/contact                   → Contact + RDV
+📚 Pages “En savoir plus” (menu secondaire)
+/anxiete-stress-emotions   → Page clé (SEO + conversion)
+/mon-approche              → Ta méthode
+/sophrologie-pour-qui      → Est-ce que c’est pour moi ?
+/temoignages               → Preuve sociale
+/sophrologue-loudeac       → SEO local
+/qui-suis-je               → Présentation perso
+/faq                       → Questions fréquentes
+🧠 Lecture stratégique (important)
+🎯 Acquisition (Google)
+/anxiete-stress-emotions
+/sophrologue-loudeac
+💬 Convaincre / rassurer
+/mon-approche
+/temoignages
+/faq
+/qui-suis-je
+💸 Conversion
+/accompagnement
+/tarifs
+/contact
