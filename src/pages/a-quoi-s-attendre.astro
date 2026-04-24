@@ -4,7 +4,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 ---
 
-<BaseLayout title="TESTÀ quoi s’attendre ? – Alexandra Coirier" description="Déroulé des séances de sophrologie, tarifs et fonctionnement.">
+<BaseLayout title="À quoi s’attendre ? – Alexandra Coirier" description="Déroulé des séances de sophrologie, tarifs et fonctionnement.">
   <Header />
   <main class="mx-auto max-w-5xl px-4 sm:px-6 py-10 md:py-16">
     <div class="soft-card rounded-[2.5rem] p-8 md:p-10">
@@ -16,13 +16,53 @@ import Footer from "../components/Footer.astro";
 
     <div class="mt-8 grid gap-6">
       <section class="soft-card rounded-[2rem] p-8">
-        <h2 class="text-2xl font-semibold text-[var(--forest)]">1. Prendre contact</h2>
-        <ul class="mt-5 space-y-3 leading-relaxed text-[var(--text)]">
-          <li>Par téléphone : 07 81 52 85 17</li>
-          <li>Par mail</li>
-          <li>Via le formulaire de contact</li>
-          <li>Ou directement via l’agenda de réservation</li>
-        </ul>
+       <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+  1. Prendre contact
+</h2>
+
+<ul class="mt-5 space-y-3 leading-relaxed text-[var(--text)]">
+  <li>
+    Par téléphone :
+    <a
+      href="tel:+33781528517"
+      class="font-medium text-[var(--brown-deep)] underline decoration-[var(--brown-soft)]/40 underline-offset-4 hover:text-[var(--brown-soft)]"
+    >
+      07 81 52 85 17
+    </a>
+  </li>
+
+  <li>
+    Par mail :
+    <a
+      href="mailto:contact@alexandracoirier-sophrologue.fr"
+      class="font-medium text-[var(--brown-deep)] underline decoration-[var(--brown-soft)]/40 underline-offset-4 hover:text-[var(--brown-soft)]"
+    >
+      contact@alexandracoirier-sophrologue.fr
+    </a>
+  </li>
+
+  <li>
+    Via
+    <a
+      href="/contact"
+      class="font-medium text-[var(--brown-deep)] underline decoration-[var(--brown-soft)]/40 underline-offset-4 hover:text-[var(--brown-soft)]"
+    >
+      le formulaire de contact
+    </a>
+  </li>
+
+  <li>
+  Ou directement via
+  <a
+    href="https://calendly.com/alexandracoirier-sophrologue"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="font-medium text-[var(--brown-deep)] underline decoration-[var(--brown-soft)]/40 underline-offset-4 hover:text-[var(--brown-soft)]"
+  >
+    l’agenda de réservation
+  </a>.
+</li>
+</ul>
       </section>
 
       <section class="soft-card rounded-[2rem] p-8">

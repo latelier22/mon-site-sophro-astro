@@ -2,9 +2,10 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import SophroMozaicFlip from "../components/SophroMozaicFlip.astro";
 ---
 
-<BaseLayout title="TESTQui suis-je ? – Alexandra Coirier" description="Présentation d’Alexandra Coirier, sophrologue à Loudéac.">
+<BaseLayout title="Qui suis-je ? – Alexandra Coirier" description="Présentation d’Alexandra Coirier, sophrologue à Loudéac.">
   <Header />
   <main class="mx-auto max-w-5xl px-4 sm:px-6 py-10 md:py-16">
     <div class="soft-card rounded-[2.5rem] p-8 md:p-10">
@@ -33,6 +34,14 @@ import Footer from "../components/Footer.astro";
           <a href="/contact" class="soft-btn bg-[var(--bg-soft)] text-white px-7 py-3.5 font-medium inline-block hover:bg-[var(--sage-deep)]">Prendre rendez-vous</a>
         </div>
       </section>
+
+      <section class="mx-auto max-w-7xl px-4 sm:px-6 py-16">
+      <section
+        class="section-bg relative overflow-hidden min-h-[40vh] flex items-center"
+      >
+        <SophroMozaicFlip />
+      </section>
+    </section>
     </section>
   </main>
   <Footer />
