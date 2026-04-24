@@ -2,113 +2,233 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import ScrollReveal from "../components/ScrollReveal.astro";
 ---
 
-<BaseLayout title="À quoi s’attendre ? – Alexandra Coirier" description="Déroulé des séances de sophrologie, tarifs et fonctionnement.">
+<BaseLayout
+  title="À quoi s’attendre ? – Alexandra Coirier"
+  description="Découvrez le déroulé des séances de sophrologie avec Alexandra Coirier : premier contact, première séance, accompagnement et outils entre les séances."
+>
   <Header />
-  <main class="mx-auto max-w-5xl px-4 sm:px-6 py-10 md:py-16">
-    <div class="soft-card rounded-[2.5rem] p-8 md:p-10">
-      <h1 class="text-4xl md:text-5xl font-semibold text-[var(--forest)]">À quoi s’attendre ?</h1>
-      <p class="mt-5 text-lg leading-relaxed text-[var(--text)]">Voici comment je fonctionne, pas à pas, pour vous accompagner dans un cadre rassurant, clair et respectueux de votre rythme.</p>
-    </div>
 
-     <section class="mt-8 section-bg rounded-[2.5rem] p-8 md:p-10">
+  <main>
+    <section class="mx-auto max-w-6xl px-4 sm:px-6 py-10 md:py-16">
+      <div class="soft-card rounded-[2.5rem] p-8 md:p-10 slide-right">
+        <p class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]">
+          Déroulé des séances
+        </p>
 
-    <div class="mt-8 grid gap-6">
-      <section class="soft-card rounded-[2rem] p-8">
-       <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
-  1. Prendre contact
-</h2>
+        <h1 class="mt-4 text-4xl md:text-5xl font-semibold text-[var(--brown-deep)]">
+          À quoi s’attendre ?
+        </h1>
 
-<ul class="mt-5 space-y-3 leading-relaxed text-[var(--text)]">
-  <li>
-    Par téléphone :
-    <a
-      href="tel:+33781528517"
-      class="font-medium text-[var(--brown-deep)] underline decoration-[var(--brown-soft)]/40 underline-offset-4 hover:text-[var(--brown-soft)]"
-    >
-      07 81 52 85 17
-    </a>
-  </li>
+        <p class="mt-5 text-lg leading-relaxed text-[var(--text)]">
+          Voici comment je fonctionne, pas à pas, pour vous accompagner dans un cadre rassurant,
+          clair et respectueux de votre rythme.
+        </p>
+      </div>
 
-  <li>
-    Par mail :
-    <a
-      href="mailto:contact@alexandracoirier-sophrologue.fr"
-      class="font-medium text-[var(--brown-deep)] underline decoration-[var(--brown-soft)]/40 underline-offset-4 hover:text-[var(--brown-soft)]"
-    >
-      contact@alexandracoirier-sophrologue.fr
-    </a>
-  </li>
+      <section class="mt-8 soft-card rounded-[2.5rem] p-4 md:p-5 fade-in">
+  <img
+    src="/images/deroule-seance-triptyque.png"
+    alt="Moment d’introspection, respiration et ancrage, espace d’écoute et de bienveillance"
+    class="w-full rounded-[2rem] object-cover"
+  />
+</section>
 
-  <li>
-    Via
-    <a
-      href="/contact"
-      class="font-medium text-[var(--brown-deep)] underline decoration-[var(--brown-soft)]/40 underline-offset-4 hover:text-[var(--brown-soft)]"
-    >
-      le formulaire de contact
-    </a>
-  </li>
+      <section class="mt-8 section-bg rounded-[2.5rem] p-8 md:p-10">
+        <section class="soft-card rounded-[2rem] p-8 fade-in">
+          <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+            1. Prendre contact
+          </h2>
 
-  <li>
-  Ou directement via
-  <a
-    href="https://calendly.com/alexandracoirier-sophrologue"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="font-medium text-[var(--brown-deep)] underline decoration-[var(--brown-soft)]/40 underline-offset-4 hover:text-[var(--brown-soft)]"
-  >
-    l’agenda de réservation
-  </a>.
-</li>
-</ul>
+          <div class="mt-5 space-y-4 leading-relaxed text-[var(--text)]">
+            <p>Vous pouvez me joindre :</p>
+
+            <ul class="space-y-3">
+              <li>
+                Par téléphone :
+                <a
+                  href="tel:+33781528517"
+                  class="font-medium text-[var(--brown-deep)] underline decoration-[var(--brown-soft)]/40 underline-offset-4 hover:text-[var(--brown-soft)]"
+                >
+                  07 81 52 85 17
+                </a>
+              </li>
+
+              <li>
+                Par mail :
+                <a
+                  href="mailto:contact@alexandracoirier-sophrologue.fr"
+                  class="font-medium text-[var(--brown-deep)] underline decoration-[var(--brown-soft)]/40 underline-offset-4 hover:text-[var(--brown-soft)]"
+                >
+                  contact@alexandracoirier-sophrologue.fr
+                </a>
+              </li>
+
+              <li>
+                Via
+                <a
+                  href="/contact"
+                  class="font-medium text-[var(--brown-deep)] underline decoration-[var(--brown-soft)]/40 underline-offset-4 hover:text-[var(--brown-soft)]"
+                >
+                  le formulaire de contact
+                </a>
+              </li>
+
+              <li>
+                Ou directement via
+                <a
+                  href="https://calendly.com/alexandracoirier-sophrologue"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="font-medium text-[var(--brown-deep)] underline decoration-[var(--brown-soft)]/40 underline-offset-4 hover:text-[var(--brown-soft)]"
+                >
+                  l’agenda de réservation
+                </a>.
+              </li>
+            </ul>
+
+            <p>
+              Si je ne réponds pas immédiatement, je suis peut-être en séance.
+              Je reviendrai vers vous dès que possible.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-6 mt-6">
+              <div class="rounded-[1.5rem] bg-white/70 p-6 zoom-in">
+                <h3 class="text-xl font-semibold text-[var(--brown-deep)]">
+                  Un premier échange
+                </h3>
+                <p class="mt-3">
+                  Vous pouvez organiser un court échange téléphonique ou en visio
+                  pour découvrir mon approche et parler de votre situation.
+                </p>
+              </div>
+
+              <div class="rounded-[1.5rem] bg-white/70 p-6 zoom-in">
+                <h3 class="text-xl font-semibold text-[var(--brown-deep)]">
+                  Une réservation directe
+                </h3>
+                <p class="mt-3">
+                  Vous pouvez aussi réserver directement une séance sur l’agenda,
+                  accompagnée d’un petit questionnaire préparatoire.
+                </p>
+              </div>
+            </div>
+
+            <p class="font-medium text-[var(--brown-deep)]">
+              Chacun avance à son rythme.
+            </p>
+          </div>
+        </section>
+
+        <section class="mt-8 grid lg:grid-cols-2 gap-6">
+          <div class="soft-card rounded-[2rem] p-8 slide-right">
+            <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+              2. La première séance
+            </h2>
+
+            <div class="mt-5 space-y-5 leading-relaxed text-[var(--text)]">
+              <div>
+                <h3 class="font-semibold text-[var(--brown-deep)]">
+                  Écoute et compréhension
+                </h3>
+                <ul class="mt-3 space-y-3">
+                  <li>• Échange sur votre situation, vos besoins et vos attentes.</li>
+                  <li>• Clarification de ce que vous souhaitez ressentir et vivre plus souvent.</li>
+                  <li>• Premier pas vers un esprit apaisé et une meilleure compréhension de vos ressources.</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="font-semibold text-[var(--brown-deep)]">
+                  Techniques personnalisées
+                </h3>
+                <ul class="mt-3 space-y-3">
+                  <li>• Exercices : respiration, mouvements doux, visualisations.</li>
+                  <li>• Pratique adaptée à vos besoins et à votre confort.</li>
+                  <li>• Assis, debout, yeux ouverts ou fermés selon ce qui est juste pour vous.</li>
+                </ul>
+              </div>
+
+              <p class="font-medium text-[var(--brown-deep)]">
+                Vous restez acteur·rice de votre expérience, guidé·e pas à pas.
+                Chaque séance est unique et entièrement centrée sur vous.
+              </p>
+            </div>
+          </div>
+
+          <div class="soft-card rounded-[2rem] p-8 slide-left">
+            <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+              3. Après la séance
+            </h2>
+
+            <div class="mt-5 space-y-5 leading-relaxed text-[var(--text)]">
+              <div>
+                <h3 class="font-semibold text-[var(--brown-deep)]">
+                  Débriefing et planification
+                </h3>
+                <ul class="mt-3 space-y-3">
+                  <li>• Point sur vos ressentis.</li>
+                  <li>• Fixation de l’axe de travail pour la prochaine séance.</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="font-semibold text-[var(--brown-deep)]">
+                  Accompagnement modulable
+                </h3>
+                <ul class="mt-3 space-y-3">
+                  <li>• Les objectifs peuvent évoluer selon vos besoins et vos découvertes.</li>
+                  <li>• Le fil rouge reste personnalisé et adaptable.</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="font-semibold text-[var(--brown-deep)]">
+                  Outils pour avancer en autonomie
+                </h3>
+                <ul class="mt-3 space-y-3">
+                  <li>• Audios des séances pour pratiquer chez vous.</li>
+                  <li>• Fiches ou rituels simples pour intégrer les apprentissages.</li>
+                  <li>• Conseils et coaching personnalisés.</li>
+                  <li>• Possibilité de 2 messages WhatsApp entre les séances pour vos questions.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="mt-8 soft-card rounded-[2rem] p-8 text-center zoom-in">
+          <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+            L’objectif de l’accompagnement
+          </h2>
+
+          <p class="mt-5 mx-auto max-w-3xl leading-relaxed text-[var(--text)]">
+            Se reconnecter à soi, déposer ce qui pèse, désamorcer l’anxiété
+            et retrouver confiance, sérénité et clarté.
+          </p>
+
+          <div class="mt-8 flex flex-wrap justify-center gap-4">
+            <a
+              href="/contact"
+              class="soft-btn bg-[var(--brown-soft)] text-white px-7 py-3.5 font-medium inline-block hover:bg-[var(--brown-deep)]"
+            >
+              Prendre rendez-vous
+            </a>
+
+            <a
+              href="/tarifs"
+              class="soft-btn border border-[var(--brown-soft)]/20 bg-white/70 px-7 py-3.5 text-[var(--brown-deep)] hover:bg-white"
+            >
+              Voir les tarifs
+            </a>
+          </div>
+        </section>
       </section>
-
-      <section class="soft-card rounded-[2rem] p-8">
-        <h2 class="text-2xl font-semibold text-[var(--forest)]">2. La première séance</h2>
-        <ul class="mt-5 space-y-3 leading-relaxed text-[var(--text)]">
-          <li>Échange sur votre situation, vos besoins et vos attentes</li>
-          <li>Clarification de ce que vous souhaitez ressentir et vivre plus souvent</li>
-          <li>Exercices personnalisés : respiration, mouvements doux, visualisations</li>
-          <li>Vous restez acteur·rice de votre expérience, guidé·e pas à pas</li>
-        </ul>
-      </section>
-
-      <section class="soft-card rounded-[2rem] p-8">
-        <h2 class="text-2xl font-semibold text-[var(--forest)]">3. Après la séance</h2>
-        <ul class="mt-5 space-y-3 leading-relaxed text-[var(--text)]">
-          <li>Débriefing sur vos ressentis</li>
-          <li>Définition de l’axe de travail pour la séance suivante</li>
-          <li>Audios personnalisés et rituels simples pour pratiquer chez vous</li>
-          <li>Accompagnement modulable selon l’évolution de vos besoins</li>
-        </ul>
-      </section>
-
-      <section class="soft-card rounded-[2rem] p-8">
-        <h2 class="text-2xl font-semibold text-[var(--forest)]">4. Tarifs et fonctionnement</h2>
-        <ul class="mt-5 space-y-3 leading-relaxed text-[var(--text)]">
-          <li>Première séance : 60 €</li>
-          <li>Séance de suivi : 60 €</li>
-          <li>Acompte de 30 € demandé pour toute réservation de séance de suivi</li>
-          <li>Parcours 6 séances : tarifs et modalités sur demande</li>
-        </ul>
-      </section>
-
-      <section class="soft-card rounded-[2rem] p-8">
-        <h2 class="text-2xl font-semibold text-[var(--forest)]">5. Cadre des rendez-vous</h2>
-        <ul class="mt-5 space-y-3 leading-relaxed text-[var(--text)]">
-          <li>Modification ou report possible jusqu’à 48h avant le rendez-vous</li>
-          <li>Annulation tardive : l’acompte est conservé</li>
-          <li>Situation exceptionnelle : possibilité de report</li>
-        </ul>
-        
-      </section>
-      </section>
-      <div class="mt-8">
-          <a href="/contact" class="soft-btn bg-[var(--bg-soft)] text-white px-7 py-3.5 font-medium inline-block hover:bg-[var(--sage-deep)]">Prendre rendez-vous</a>
-        </div>
-    </div>
+    </section>
   </main>
+
   <Footer />
+  <ScrollReveal />
 </BaseLayout>

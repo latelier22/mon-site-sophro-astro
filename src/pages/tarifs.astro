@@ -2,72 +2,242 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import ScrollReveal from "../components/ScrollReveal.astro";
 ---
 
-<BaseLayout title="Tarifs – Alexandra Coirier" description="Tarifs et modalités des séances et parcours de sophrologie.">
+<BaseLayout
+  title="Tarifs et fonctionnement – Alexandra Coirier"
+  description="Tarifs des séances individuelles, parcours d’accompagnement et modalités de rendez-vous en sophrologie à Loudéac."
+>
   <Header />
-  <main class="mx-auto max-w-6xl px-4 sm:px-6 py-10 md:py-16">
-    <div class="soft-card rounded-[2.5rem] p-8 md:p-10">
-      <h1 class="text-4xl md:text-5xl font-semibold text-[var(--forest)]">Tarifs et modalités</h1>
-      <p class="mt-5 text-lg leading-relaxed text-[var(--text)]">Je propose des séances à l’unité pour un besoin ponctuel, ainsi que des parcours d’accompagnement pour installer des changements plus profonds et durables.</p>
-    </div>
 
-    <section class="mt-8 section-bg rounded-[2.5rem] p-8 md:p-10">
+  <main>
+    <section class="mx-auto max-w-6xl px-4 sm:px-6 py-10 md:py-16">
+      <div class="soft-card rounded-[2.5rem] p-8 md:p-10 slide-right">
+        <p class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]">
+          Tarifs et fonctionnement
+        </p>
 
-      <section class="mt-8 grid md:grid-cols-3 gap-6">
-        <div class="soft-card rounded-[2rem] p-8">
-          <h2 class="text-2xl font-semibold text-[var(--forest)]">Première séance</h2>
-          <p class="mt-4 text-[var(--text)]">Analyse + séance découverte</p>
-          <p class="mt-6 text-4xl font-semibold text-[var(--forest)]">60 €</p>
-        </div>
-        <div class="soft-card rounded-[2rem] p-8">
-          <h2 class="text-2xl font-semibold text-[var(--forest)]">Suivi individuel</h2>
-          <p class="mt-4 text-[var(--text)]">Séance personnalisée</p>
-          <p class="mt-6 text-4xl font-semibold text-[var(--forest)]">60 €</p>
-        </div>
-        <div class="soft-card rounded-[2rem] p-8">
-          <h2 class="text-2xl font-semibold text-[var(--forest)]">Duo parent-enfant</h2>
-          <p class="mt-4 text-[var(--text)]">Séance en duo</p>
-          <p class="mt-6 text-4xl font-semibold text-[var(--forest)]">70 €</p>
-        </div>
+        <h1 class="mt-4 text-4xl md:text-5xl font-semibold text-[var(--brown-deep)]">
+          Tarifs et modalités
+        </h1>
+
+        <p class="mt-5 text-lg leading-relaxed text-[var(--text)]">
+          Je propose des séances à l’unité pour un besoin ponctuel, ainsi que des parcours
+          d’accompagnement pour installer des changements plus profonds et durables.
+        </p>
+      </div>
+
+      <section class="mt-8 section-bg rounded-[2.5rem] p-8 md:p-10">
+        <section class="grid md:grid-cols-3 gap-6">
+          <div class="soft-card rounded-[2rem] p-8 zoom-in">
+            <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+              Première séance
+            </h2>
+
+            <p class="mt-4 text-[var(--text)]">
+              Analyse + découverte
+            </p>
+
+            <p class="mt-6 text-4xl font-semibold text-[var(--brown-deep)]">
+              60 €
+            </p>
+          </div>
+
+          <div class="soft-card rounded-[2rem] p-8 zoom-in">
+            <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+              Séance de suivi
+            </h2>
+
+            <p class="mt-4 text-[var(--text)]">
+              Séance personnalisée
+            </p>
+
+            <p class="mt-6 text-4xl font-semibold text-[var(--brown-deep)]">
+              60 €
+            </p>
+          </div>
+
+          <div class="soft-card rounded-[2rem] p-8 zoom-in">
+            <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+              Duo parent-enfant
+            </h2>
+
+            <p class="mt-4 text-[var(--text)]">
+              Séance en duo
+            </p>
+
+            <p class="mt-6 text-4xl font-semibold text-[var(--brown-deep)]">
+              70 €
+            </p>
+          </div>
+        </section>
+
+        <section class="mt-8 soft-card rounded-[2rem] p-8 fade-in">
+          <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+            Séances individuelles
+          </h2>
+
+          <div class="mt-6 grid md:grid-cols-2 gap-6">
+            <div class="rounded-[1.5rem] bg-white/70 p-6">
+              <p class="font-semibold text-[var(--brown-deep)]">
+                Première séance
+              </p>
+              <p class="mt-2 leading-relaxed text-[var(--text)]">
+                Une séance d’analyse et de découverte pour faire le point sur votre situation,
+                vos besoins et la direction que vous souhaitez prendre.
+              </p>
+              <p class="mt-4 text-2xl font-semibold text-[var(--brown-deep)]">
+                60 €
+              </p>
+            </div>
+
+            <div class="rounded-[1.5rem] bg-white/70 p-6">
+              <p class="font-semibold text-[var(--brown-deep)]">
+                Séance de suivi
+              </p>
+              <p class="mt-2 leading-relaxed text-[var(--text)]">
+                Une séance personnalisée pour poursuivre l’accompagnement,
+                pratiquer et ancrer progressivement les changements.
+              </p>
+              <p class="mt-4 text-2xl font-semibold text-[var(--brown-deep)]">
+                60 €
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-6 rounded-[1.5rem] bg-white/70 p-6">
+            <p class="font-semibold text-[var(--brown-deep)]">
+              Acompte
+            </p>
+            <p class="mt-2 leading-relaxed text-[var(--text)]">
+              Un acompte de 30 € est demandé pour toute réservation de séance de suivi.
+              Il soutient la préparation de votre accompagnement et confirme votre engagement.
+            </p>
+          </div>
+        </section>
+
+        <section class="mt-8 grid md:grid-cols-2 gap-6">
+          <div class="soft-card rounded-[2rem] p-8 slide-right">
+            <p class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]">
+              Parcours
+            </p>
+
+            <h2 class="mt-4 text-2xl font-semibold text-[var(--brown-deep)]">
+              Parcours Envol
+            </h2>
+
+            <p class="mt-4 leading-relaxed text-[var(--text)]">
+              Découverte et transformation — 6 séances personnalisées.
+              Un suivi structuré avec des outils additionnels pour avancer progressivement.
+            </p>
+
+            <ul class="mt-5 space-y-3 text-[var(--text)] leading-relaxed">
+              <li>• Solo : 360 €</li>
+              <li>• Duo parent-enfant : 420 €</li>
+              <li>• Paiement possible en 1 ou 2 fois</li>
+            </ul>
+          </div>
+
+          <div class="soft-card rounded-[2rem] p-8 slide-left">
+            <p class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]">
+              Parcours
+            </p>
+
+            <h2 class="mt-4 text-2xl font-semibold text-[var(--brown-deep)]">
+              Parcours Harmonie
+            </h2>
+
+            <p class="mt-4 leading-relaxed text-[var(--text)]">
+              Stabilisation et ancrage — 4 à 5 séances personnalisées.
+              Ce parcours permet de consolider les changements amorcés.
+            </p>
+
+            <ul class="mt-5 space-y-3 text-[var(--text)] leading-relaxed">
+              <li>• Solo : 240 € à 300 €</li>
+              <li>• Duo parent-enfant : 280 € à 350 €</li>
+              <li>• Paiement possible en 1 ou 2 fois</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="mt-8 soft-card rounded-[2rem] p-8 fade-in">
+          <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+            Parcours 6 séances
+          </h2>
+
+          <div class="mt-5 space-y-4 leading-relaxed text-[var(--text)]">
+            <p>
+              Le parcours de 6 séances permet un suivi structuré avec des outils additionnels :
+              audios personnalisés, pratiques entre les séances, messages de soutien si nécessaire
+              et temps d’intégration.
+            </p>
+
+            <p>
+              Les tarifs et modalités sont définis selon le type d’accompagnement choisi :
+              individuel, duo parent-enfant ou besoin spécifique.
+            </p>
+          </div>
+
+          <div class="mt-8">
+            <a
+              href="/accompagnement"
+              class="soft-btn border border-[var(--brown-soft)]/20 bg-white/70 px-7 py-3.5 text-[var(--brown-deep)] hover:bg-white"
+            >
+              Voir les accompagnements
+            </a>
+          </div>
+        </section>
+
+        <section class="mt-8 soft-card rounded-[2rem] p-8 slide-right">
+          <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+            Cadre des rendez-vous
+          </h2>
+
+          <ul class="mt-5 space-y-3 text-[var(--text)] leading-relaxed">
+            <li>• Modification ou report possible jusqu’à 48h avant le rendez-vous.</li>
+            <li>• En cas d’annulation tardive, l’acompte est conservé.</li>
+            <li>• En situation exceptionnelle, hospitalisation ou urgence, un report reste possible.</li>
+            <li>• Les séances peuvent se dérouler en cabinet, en visio ou à domicile selon les possibilités.</li>
+            <li>• Un enregistrement audio personnalisé peut être proposé pour poursuivre la pratique chez vous.</li>
+          </ul>
+
+          <p class="mt-6 font-medium text-[var(--brown-deep)] leading-relaxed">
+            Ce cadre garantit un espace respectueux et pleinement dédié à votre cheminement.
+            Merci pour votre confiance dans cette démarche.
+          </p>
+        </section>
+
+        <section class="mt-8 soft-card rounded-[2rem] p-8 text-center zoom-in">
+          <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+            Vous souhaitez prendre rendez-vous ?
+          </h2>
+
+          <p class="mt-5 leading-relaxed text-[var(--text)]">
+            Vous pouvez me contacter pour poser une question, échanger sur votre situation
+            ou convenir ensemble d’un premier rendez-vous.
+          </p>
+
+          <div class="mt-8 flex flex-wrap justify-center gap-4">
+            <a
+              href="/contact"
+              class="soft-btn bg-[var(--brown-soft)] text-white px-7 py-3.5 font-medium inline-block hover:bg-[var(--brown-deep)]"
+            >
+              Prendre rendez-vous
+            </a>
+
+            <a
+              href="/a-quoi-s-attendre"
+              class="soft-btn border border-[var(--brown-soft)]/20 bg-white/70 px-7 py-3.5 text-[var(--brown-deep)] hover:bg-white"
+            >
+              À quoi s’attendre ?
+            </a>
+          </div>
+        </section>
       </section>
-      
-      <section class="mt-8 grid md:grid-cols-2 gap-6">
-        <div class="soft-card rounded-[2rem] p-8">
-        <h2 class="text-2xl font-semibold text-[var(--forest)]">Parcours Envol</h2>
-        <p class="mt-4 text-[var(--text)]">Découverte et transformation – 6 séances personnalisées</p>
-        <ul class="mt-5 space-y-3 text-[var(--text)] leading-relaxed">
-          <li>Solo : 360 €</li>
-          <li>Duo parent-enfant : 420 €</li>
-          <li>Paiement possible en 1 ou 2 fois</li>
-        </ul>
-      </div>
-      <div class="soft-card rounded-[2rem] p-8">
-        <h2 class="text-2xl font-semibold text-[var(--forest)]">Parcours Harmonie</h2>
-        <p class="mt-4 text-[var(--text)]">Stabilisation et ancrage – 4 à 5 séances personnalisées</p>
-        <ul class="mt-5 space-y-3 text-[var(--text)] leading-relaxed">
-          <li>Solo : 240 € à 300 €</li>
-          <li>Duo parent-enfant : 280 € à 350 €</li>
-          <li>Paiement possible en 1 ou 2 fois</li>
-        </ul>
-      </div>
     </section>
-    
-    <section class="mt-8 soft-card rounded-[2rem] p-8">
-      <h2 class="text-2xl font-semibold text-[var(--forest)]">Modalités</h2>
-      <ul class="mt-5 space-y-3 text-[var(--text)] leading-relaxed">
-        <li>Acompte de 30 € demandé pour toute réservation de séance de suivi</li>
-        <li>Séances possibles en cabinet, en visio ou à domicile selon les possibilités</li>
-        <li>Un enregistrement audio personnalisé peut être proposé</li>
-        <li>Modification ou report possible jusqu’à 48h avant le rendez-vous</li>
-      </ul>
-      
-    </section>
-    
-    </section>
-    <div class="mt-8">
-        <a href="/contact" class="soft-btn bg-[var(--bg-soft)] text-white px-7 py-3.5 font-medium inline-block hover:bg-[var(--sage-deep)]">Prendre rendez-vous</a>
-      </div>
   </main>
+
   <Footer />
+  <ScrollReveal />
 </BaseLayout>

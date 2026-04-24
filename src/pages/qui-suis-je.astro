@@ -2,47 +2,274 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import ScrollReveal from "../components/ScrollReveal.astro";
 import SophroMozaicFlip from "../components/SophroMozaicFlip.astro";
 ---
 
-<BaseLayout title="Qui suis-je ? – Alexandra Coirier" description="Présentation d’Alexandra Coirier, sophrologue à Loudéac.">
+<BaseLayout
+  title="Qui suis-je ? – Alexandra Coirier"
+  description="Présentation d’Alexandra Coirier, sophrologue à Loudéac, son parcours, son approche et ce qui l’anime dans l’accompagnement."
+>
   <Header />
-  <main class="mx-auto max-w-5xl px-4 sm:px-6 py-10 md:py-16">
-    <div class="soft-card rounded-[2.5rem] p-8 md:p-10">
-      <h1 class="text-4xl md:text-5xl font-semibold text-[var(--forest)]">Qui suis-je ?</h1>
-      <p class="mt-5 text-lg leading-relaxed text-[var(--text)]">Je m’appelle Alexandra, je suis sophrologue à Loudéac, et j’accompagne les personnes qui traversent une période de fatigue, de surcharge mentale, de perte de sens ou de transition.</p>
-    </div>
 
-    <section class="mt-8 section-bg rounded-[2.5rem] p-8 md:p-10">
+  <main>
+    <section class="mx-auto max-w-7xl px-4 sm:px-6 py-10 md:py-16">
+      <section class="section-bg relative overflow-hidden rounded-[2.5rem] p-8 md:p-10">
+        <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div class="soft-card rounded-[2.5rem] p-8 md:p-10 slide-right">
+            <p class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]">
+              Qui suis-je ?
+            </p>
 
-      <section class="mt-8 soft-card rounded-[2rem] p-8">
-        <h2 class="text-2xl font-semibold text-[var(--forest)]">Ce qui m’anime</h2>
-        <div class="mt-5 space-y-4 text-[var(--text)] leading-relaxed">
-          <p>Ce qui me fait profondément vibrer, c’est la rencontre. La rencontre avec l’autre, mais aussi celle que chacun peut faire avec lui-même lorsqu’il s’autorise enfin à ralentir, à respirer et à écouter ce qui se passe à l’intérieur.</p>
-          <p>Ma douceur, mon écoute attentive et ma présence stable sont au cœur de ma pratique. J’offre un espace sécurisant où l’on peut déposer ce qui pèse, se découvrir sans jugement et se reconnecter à ses propres ressources.</p>
-        </div>
-      </section>
-      
-      <section class="mt-8 soft-card rounded-[2rem] p-8">
-        <h2 class="text-2xl font-semibold text-[var(--forest)]">Quelques mots sur mon parcours</h2>
-        <div class="mt-5 space-y-4 text-[var(--text)] leading-relaxed">
-          <p>Avant d’accompagner les autres, j’ai moi-même traversé une période de profonde transition. Pendant 18 ans, j’ai exercé le métier d’enseignante. Puis un jour, j’ai dû accepter que je n’y trouvais plus ma place.</p>
-          <p>C’est dans ce moment de reconstruction que j’ai découvert la sophrologie. Elle m’a aidée à me réancrer, à clarifier mes valeurs et à retrouver ma boussole intérieure.</p>
-          <p>Aujourd’hui, j’accompagne adultes, parents et enfants à apaiser leurs émotions, à se reconnecter à leur corps et à retrouver plus de sens et d’élan dans leur vie.</p>
-        </div>
-        <div class="mt-8">
-          <a href="/contact" class="soft-btn bg-[var(--bg-soft)] text-white px-7 py-3.5 font-medium inline-block hover:bg-[var(--sage-deep)]">Prendre rendez-vous</a>
-        </div>
-      </section>
+            <h1 class="mt-4 text-4xl md:text-5xl font-semibold text-[var(--brown-deep)]">
+              Je m’appelle Alexandra
+            </h1>
 
-      <section class="mx-auto max-w-7xl px-4 sm:px-6 py-16">
-      <section
-        class="section-bg relative overflow-hidden min-h-[40vh] flex items-center"
-      >
-        <SophroMozaicFlip />
+            <div class="mt-6 space-y-4 text-lg leading-relaxed text-[var(--text)]">
+              <p>
+                Je suis sophrologue à Loudéac, et j’accompagne des personnes qui
+                traversent un moment de transition dans leur vie : fatigue,
+                surcharge mentale, perte de sens ou besoin de changement.
+              </p>
+
+              <p>
+                J’accompagne aussi celles et ceux qui ont longtemps beaucoup donné
+                aux autres et qui ressentent aujourd’hui le besoin de ralentir,
+                de se reconnecter à eux-mêmes et de retrouver une direction plus juste.
+              </p>
+
+              <p class="font-medium text-[var(--brown-deep)]">
+                Mon accompagnement offre un espace pour faire le point, revenir à soi
+                et remettre du sens et de l’élan dans sa vie.
+              </p>
+            </div>
+
+            <div class="mt-8 flex flex-wrap gap-4">
+              <a
+                href="/mon-approche"
+                class="soft-btn border border-[var(--brown-soft)]/20 bg-white/70 px-7 py-3.5 text-[var(--brown-deep)] hover:bg-white"
+              >
+                Découvrir mon approche
+              </a>
+
+              <a
+                href="/contact"
+                class="soft-btn bg-[var(--brown-soft)] text-white px-7 py-3.5 font-medium hover:bg-[var(--brown-deep)]"
+              >
+                Prendre rendez-vous
+              </a>
+            </div>
+          </div>
+
+          <div class="relative slide-left">
+            <div class="absolute -inset-4 rounded-[2.5rem] bg-white/30 blur-2xl"></div>
+
+            <div class="relative soft-card rounded-[2.5rem] p-4">
+              <img
+                src="/images/alexandra-coirier.jpg"
+                alt="Alexandra Coirier, sophrologue à Loudéac"
+                class="h-[520px] w-full rounded-[2rem] object-cover"
+              />
+            </div>
+          </div>
+        </div>
       </section>
     </section>
+
+    <section class="mx-auto max-w-7xl px-4 sm:px-6 py-8 md:py-14">
+      <div class="soft-card rounded-[2.5rem] p-8 md:p-10 fade-in">
+        <p class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]">
+          Ce qui m’anime
+        </p>
+
+        <h2 class="mt-4 text-3xl md:text-4xl font-semibold text-[var(--brown-deep)]">
+          La rencontre, l’écoute et le chemin vers soi
+        </h2>
+
+        <div class="mt-8 grid lg:grid-cols-3 gap-6">
+          <div class="rounded-[1.5rem] bg-white/70 p-6 zoom-in">
+            <h3 class="text-xl font-semibold text-[var(--brown-deep)]">
+              La rencontre
+            </h3>
+            <p class="mt-3 leading-relaxed text-[var(--text)]">
+              Ce qui me fait profondément vibrer, c’est la rencontre avec l’autre,
+              mais aussi celle que chacun peut faire avec lui-même lorsqu’il s’autorise
+              enfin à ralentir, à respirer et à écouter ce qui se passe à l’intérieur.
+            </p>
+          </div>
+
+          <div class="rounded-[1.5rem] bg-white/70 p-6 zoom-in">
+            <h3 class="text-xl font-semibold text-[var(--brown-deep)]">
+              Ce qui se dénoue
+            </h3>
+            <p class="mt-3 leading-relaxed text-[var(--text)]">
+              J’aime accompagner ces moments où quelque chose se dénoue :
+              le souffle qui revient, le corps qui se relâche, la confiance
+              qui se réinstalle.
+            </p>
+          </div>
+
+          <div class="rounded-[1.5rem] bg-white/70 p-6 zoom-in">
+            <h3 class="text-xl font-semibold text-[var(--brown-deep)]">
+              Le changement possible
+            </h3>
+            <p class="mt-3 leading-relaxed text-[var(--text)]">
+              Ces instants où l’on réalise que le changement est possible,
+              qu’un autre rapport à soi peut émerger, plus doux, plus juste,
+              plus vivant.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-7xl px-4 sm:px-6 py-8 md:py-14">
+      <section class="section-bg relative overflow-hidden rounded-[2.5rem] p-8 md:p-10">
+        <div class="grid lg:grid-cols-2 gap-8 items-stretch">
+          <div class="soft-card rounded-[2.5rem] p-8 md:p-10 slide-right">
+            <h2 class="text-3xl md:text-4xl font-semibold text-[var(--brown-deep)]">
+              Une présence douce et sécurisante
+            </h2>
+
+            <div class="mt-6 space-y-4 leading-relaxed text-[var(--text)]">
+              <p>
+                Ma douceur, mon écoute attentive et ma présence stable sont au cœur
+                de ma pratique.
+              </p>
+
+              <p>
+                J’offre un espace sécurisant où l’on peut déposer ce qui pèse,
+                se découvrir sans jugement et se reconnecter à ses propres ressources.
+              </p>
+
+              <p class="font-medium text-[var(--brown-deep)]">
+                Je suis profondément convaincue que chacun porte en lui les clés
+                de son équilibre.
+              </p>
+
+              <p>
+                Parfois, il suffit d’un lieu sûr et d’une présence juste pour
+                retrouver le chemin vers soi.
+              </p>
+            </div>
+          </div>
+
+          <div class="soft-card rounded-[2.5rem] p-8 md:p-10 slide-left">
+            <h2 class="text-3xl md:text-4xl font-semibold text-[var(--brown-deep)]">
+              Ce que je souhaite transmettre
+            </h2>
+
+            <ul class="mt-8 space-y-4 text-[var(--text)] leading-relaxed">
+              <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
+                Un espace où vous pouvez ralentir et souffler.
+              </li>
+
+              <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
+                Une écoute bienveillante, sans jugement.
+              </li>
+
+              <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
+                Des outils pour revenir au corps, au souffle et aux ressentis.
+              </li>
+
+              <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
+                Un accompagnement pour retrouver vos propres ressources.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="mx-auto max-w-7xl px-4 sm:px-6 py-8 md:py-14">
+      <div class="soft-card rounded-[2.5rem] p-8 md:p-10 fade-in">
+        <p class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]">
+          Quelques mots sur mon parcours
+        </p>
+
+        <h2 class="mt-4 text-3xl md:text-4xl font-semibold text-[var(--brown-deep)]">
+          D’une transition personnelle à l’accompagnement des autres
+        </h2>
+
+        <div class="mt-8 space-y-5 text-[var(--text)] leading-relaxed">
+          <p>
+            Avant d’accompagner les autres, j’ai moi-même traversé une période
+            de profonde transition.
+          </p>
+
+          <p>
+            Pendant 18 ans, j’ai exercé le métier d’enseignante, un métier riche
+            et engageant. Puis un jour, j’ai dû accepter que je n’y trouvais plus
+            ma place. Mon licenciement a été une rupture : douloureuse, déstabilisante,
+            mais aussi profondément transformatrice.
+          </p>
+
+          <p>
+            J’ai traversé un burn-out silencieux, une perte de repères et de confiance.
+            C’est dans ce moment de reconstruction que j’ai découvert la sophrologie.
+          </p>
+
+          <p>
+            Elle m’a aidée à me réancrer, à clarifier mes valeurs et à retrouver
+            ma boussole intérieure. Peu à peu, une évidence s’est imposée :
+            accompagner à mon tour celles et ceux qui traversent l’épuisement,
+            le doute ou une période de transition.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-7xl px-4 sm:px-6 py-8 md:py-14">
+      <section class="section-bg relative overflow-hidden rounded-[2.5rem] p-8 md:p-10">
+        <div class="grid lg:grid-cols-2 gap-8 items-center">
+          <div class="slide-right">
+            <SophroMozaicFlip />
+          </div>
+
+          <div class="soft-card rounded-[2.5rem] p-8 md:p-10 slide-left">
+            <h2 class="text-3xl md:text-4xl font-semibold text-[var(--brown-deep)]">
+              Aujourd’hui
+            </h2>
+
+            <div class="mt-6 space-y-4 leading-relaxed text-[var(--text)]">
+              <p>
+                Aujourd’hui, j’accompagne adultes, parents et enfants à apaiser
+                leurs émotions, à se reconnecter à leur corps et à retrouver plus
+                de sens et d’élan dans leur vie.
+              </p>
+
+              <p>
+                Je les accueille avec douceur, justesse et humanité — comme j’aurais
+                aimé être accompagnée à ce moment-là.
+              </p>
+
+              <p class="font-medium text-[var(--brown-deep)]">
+                Ce que je transmets est avant tout un chemin vers soi :
+                plus doux, plus clair, plus vivant.
+              </p>
+            </div>
+
+            <div class="mt-8 flex flex-wrap gap-4">
+              <a
+                href="/accompagnement"
+                class="soft-btn border border-[var(--brown-soft)]/20 bg-white/70 px-7 py-3.5 text-[var(--brown-deep)] hover:bg-white"
+              >
+                Voir les accompagnements
+              </a>
+
+              <a
+                href="/contact"
+                class="soft-btn bg-[var(--brown-soft)] text-white px-7 py-3.5 font-medium hover:bg-[var(--brown-deep)]"
+              >
+                Prendre rendez-vous
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
     </section>
   </main>
+
   <Footer />
+  <ScrollReveal />
 </BaseLayout>
