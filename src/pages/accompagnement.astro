@@ -2,255 +2,297 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import ScrollReveal from "../components/ScrollReveal.astro";
+import ImageBlock from "../components/ImageBlock.astro";
 ---
 
 <BaseLayout
   title="Accompagnements – Alexandra Coirier"
-  description="Les différentes façons d’être accompagné en sophrologie : séances à l’unité, parcours Envol et parcours Harmonie."
+  description="Séances à l’unité, parcours Envol et Harmonie : les différentes façons d’être accompagné en sophrologie à Loudéac."
 >
   <Header />
 
-  <main class="mx-auto max-w-6xl px-4 sm:px-6 py-10 md:py-16">
-    <div class="soft-card rounded-[2.5rem] p-8 md:p-10">
-      <p class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]">
-        Accompagnements
-      </p>
-
-      <h1 class="mt-4 text-4xl md:text-5xl font-semibold text-[var(--brown-deep)]">
-        Les différentes façons d’être accompagné
-      </h1>
-
-      <p class="mt-5 text-lg leading-relaxed text-[var(--text)]">
-        Je propose deux formes d’accompagnement en sophrologie : des séances à l’unité,
-        pour un besoin ponctuel ou un premier contact, et des parcours d’accompagnement,
-        pour installer des changements plus profonds et durables.
-      </p>
-
-      <p class="mt-4 text-lg leading-relaxed text-[var(--text)]">
-        Chaque accompagnement est personnalisé et s’adapte à votre rythme, à votre situation
-        et à vos besoins.
-      </p>
-    </div>
-
-    <section class="mt-8 section-bg rounded-[2.5rem] p-8 md:p-10">
-      <section class="soft-card rounded-[2rem] p-8">
-        <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
-          Séances à l’unité
-        </h2>
-
-        <p class="mt-5 leading-relaxed text-[var(--text)]">
-          Les séances à l’unité conviennent si vous souhaitez un soutien ponctuel,
-          découvrir la sophrologie ou avancer à votre rythme sans engagement sur un parcours.
+  <main>
+    <section class="mx-auto max-w-6xl px-4 sm:px-6 py-10 md:py-16">
+      <div class="soft-card rounded-[2.5rem] p-8 md:p-10 slide-right">
+        <p class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]">
+          Accompagnements
         </p>
 
-        <div class="mt-8 grid md:grid-cols-2 gap-6">
-          <div class="rounded-[1.5rem] bg-white/70 p-6">
-            <h3 class="text-xl font-semibold text-[var(--brown-deep)]">
-              Séance individuelle
-            </h3>
-            <p class="mt-3 text-[var(--text)]">Adulte ou enfant</p>
-            <p class="mt-5 text-4xl font-semibold text-[var(--brown-deep)]">
-              60 €
-            </p>
-          </div>
+        <h1 class="mt-4 text-4xl md:text-5xl font-semibold text-[var(--brown-deep)]">
+          Les différentes façons d’être accompagné
+        </h1>
 
-          <div class="rounded-[1.5rem] bg-white/70 p-6">
-            <h3 class="text-xl font-semibold text-[var(--brown-deep)]">
-              Séance duo parent-enfant
-            </h3>
-            <p class="mt-3 text-[var(--text)]">
-              Un espace partagé pour avancer ensemble.
-            </p>
-            <p class="mt-5 text-4xl font-semibold text-[var(--brown-deep)]">
-              70 €
-            </p>
-          </div>
-        </div>
-
-        <p class="mt-6 italic text-[var(--brown-soft)]">
-          Ces séances peuvent aussi être un premier pas avant d’envisager un parcours plus structuré.
+        <p class="mt-5 text-lg leading-relaxed text-[var(--text)]">
+          Je propose deux formes d’accompagnement en sophrologie : des séances à l’unité,
+          pour un besoin ponctuel ou un premier contact, et des parcours d’accompagnement,
+          pour installer des changements plus profonds et durables.
         </p>
-      </section>
 
-      <section class="mt-8 soft-card rounded-[2rem] p-8">
-        <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
-          Pourquoi choisir un parcours ?
-        </h2>
+        <p class="mt-4 text-lg leading-relaxed text-[var(--text)]">
+          Chaque accompagnement est personnalisé et s’adapte à votre rythme, à votre situation
+          et à vos besoins.
+        </p>
+      </div>
 
-        <div class="mt-5 space-y-4 leading-relaxed text-[var(--text)]">
-          <p>
-            Certaines situations demandent plus qu’une séance ponctuelle. Lorsqu’on traverse
-            une période de fatigue, d’anxiété ou de transition, le corps et l’esprit ont souvent
-            besoin de temps pour retrouver leur équilibre.
+      <ImageBlock
+        src="/images/accompagnement-intro.png"
+        alt="Un accompagnement progressif en sophrologie"
+      />
+
+      <section class="mt-8 section-bg rounded-[2.5rem] p-8 md:p-10">
+        <section class="soft-card rounded-[2rem] p-8 fade-in">
+          <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+            Séances à l’unité
+          </h2>
+
+          <p class="mt-5 leading-relaxed text-[var(--text)]">
+            Les séances à l’unité conviennent si vous souhaitez un soutien ponctuel,
+            découvrir la sophrologie ou avancer à votre rythme sans engagement sur un parcours.
           </p>
 
-          <p>
-            Les parcours offrent un cadre progressif et sécurisant pour accompagner ce processus.
-            D’une séance à l’autre, vous apprenez à mieux comprendre votre fonctionnement,
-            à relâcher les tensions et à renforcer vos ressources intérieures.
-          </p>
+          <div class="mt-8 grid md:grid-cols-2 gap-6">
+            <div class="rounded-[1.5rem] bg-white/70 p-6 zoom-in">
+              <h3 class="text-xl font-semibold text-[var(--brown-deep)]">
+                Séance individuelle
+              </h3>
+              <p class="mt-3 text-[var(--text)]">Adulte ou enfant</p>
+              <p class="mt-5 text-4xl font-semibold text-[var(--brown-deep)]">
+                60 €
+              </p>
+            </div>
 
-          <p>
-            Les pratiques proposées entre les séances permettent d’ancrer ces changements
-            dans votre quotidien. Le parcours devient alors un véritable chemin d’évolution,
-            qui soutient votre autonomie et votre capacité à retrouver un équilibre durable.
-          </p>
-        </div>
-      </section>
+            <div class="rounded-[1.5rem] bg-white/70 p-6 zoom-in">
+              <h3 class="text-xl font-semibold text-[var(--brown-deep)]">
+                Séance duo parent-enfant
+              </h3>
+              <p class="mt-3 text-[var(--text)]">
+                Un espace partagé pour avancer ensemble.
+              </p>
+              <p class="mt-5 text-4xl font-semibold text-[var(--brown-deep)]">
+                70 €
+              </p>
+            </div>
+          </div>
 
-      <section class="mt-8 grid md:grid-cols-2 gap-6">
-        <div class="soft-card rounded-[2rem] p-8">
+          <p class="mt-6 italic text-[var(--brown-soft)]">
+            Ces séances peuvent aussi être un premier pas avant d’envisager un parcours plus structuré.
+          </p>
+        </section>
+
+        <section class="mt-8 soft-card rounded-[2rem] p-8 slide-right">
+          <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+            Pourquoi choisir un parcours ?
+          </h2>
+
+          <div class="mt-5 space-y-4 leading-relaxed text-[var(--text)]">
+            <p>
+              Certaines situations demandent plus qu’une séance ponctuelle.
+              Lorsqu’on traverse une période de fatigue, d’anxiété ou de transition,
+              le corps et l’esprit ont souvent besoin de temps pour retrouver leur équilibre.
+            </p>
+
+            <p>
+              Les parcours offrent un cadre progressif et sécurisant pour accompagner ce processus.
+              D’une séance à l’autre, vous apprenez à mieux comprendre votre fonctionnement,
+              à relâcher les tensions et à renforcer vos ressources intérieures.
+            </p>
+
+            <p>
+              Les pratiques proposées entre les séances permettent d’ancrer ces changements
+              dans votre quotidien. Le parcours devient alors un véritable chemin d’évolution,
+              qui soutient votre autonomie et votre capacité à retrouver un équilibre durable.
+            </p>
+          </div>
+        </section>
+
+        <section class="mt-8 grid md:grid-cols-2 gap-6">
+          <div class="soft-card rounded-[2rem] p-8 slide-right">
+            <p class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]">
+              Parcours Envol
+            </p>
+
+            <h2 class="mt-4 text-2xl font-semibold text-[var(--brown-deep)]">
+              Découverte et transformation
+            </h2>
+
+            <p class="mt-5 leading-relaxed text-[var(--text)]">
+              Ce parcours est souvent le point de départ de l’accompagnement.
+              Il aide à apaiser l’anxiété, se libérer de ce qui pèse,
+              se reconnecter à soi et amorcer un changement durable.
+            </p>
+
+            <ul class="mt-5 space-y-3 leading-relaxed text-[var(--text)]">
+              <li>• 6 séances personnalisées, individuelles ou parent-enfant selon les besoins</li>
+              <li>• Solo : 360 €</li>
+              <li>• Duo parent-enfant : 420 €</li>
+              <li>• Paiement possible en 1 ou 2 fois</li>
+            </ul>
+          </div>
+
+          <div class="soft-card rounded-[2rem] p-8 slide-left">
+            <p class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]">
+              Parcours Harmonie
+            </p>
+
+            <h2 class="mt-4 text-2xl font-semibold text-[var(--brown-deep)]">
+              Stabilisation et ancrage
+            </h2>
+
+            <p class="mt-5 leading-relaxed text-[var(--text)]">
+              Ce parcours s’adresse aux personnes ayant déjà réalisé le parcours Envol
+              et souhaitant consolider les changements amorcés, stabiliser leur équilibre
+              ou approfondir leur cheminement.
+            </p>
+
+            <ul class="mt-5 space-y-3 leading-relaxed text-[var(--text)]">
+              <li>• 4 à 5 séances personnalisées</li>
+              <li>• Solo : 240 € à 300 €</li>
+              <li>• Duo parent-enfant : 280 € à 350 €</li>
+              <li>• Paiement possible en 1 ou 2 fois</li>
+            </ul>
+          </div>
+        </section>
+
+        <ImageBlock
+          src="/images/parcours-envol.png"
+          alt="Parcours Envol : se reconnecter à soi et retrouver son équilibre"
+        />
+
+        <section class="mt-8 soft-card rounded-[2rem] p-8 fade-in">
           <p class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]">
             Parcours Envol
           </p>
 
           <h2 class="mt-4 text-2xl font-semibold text-[var(--brown-deep)]">
-            Découverte et transformation
+            Se reconnecter à soi et retrouver son équilibre
+          </h2>
+
+          <div class="mt-5 space-y-4 leading-relaxed text-[var(--text)]">
+            <p>
+              Le Parcours Envol est un accompagnement en sophrologie conçu pour les personnes
+              qui traversent une période de fatigue, d’anxiété, de surcharge mentale ou de transition
+              dans leur vie.
+            </p>
+
+            <p>
+              Lorsque tout devient trop lourd ou confus, il peut être difficile de savoir
+              par où commencer. Ce parcours offre un espace pour ralentir, déposer ce qui pèse
+              et retrouver progressivement plus de clarté et de stabilité intérieure.
+            </p>
+
+            <p>
+              Au fil des séances, vous apprenez à relâcher les tensions, à mieux comprendre
+              vos émotions et à vous reconnecter à vos ressources. Pas à pas, votre corps
+              et votre esprit retrouvent un rythme plus apaisé et un nouvel élan peut émerger.
+            </p>
+
+            <p>
+              Le Parcours Envol est une invitation à prendre soin de vous, à votre rythme,
+              dans un cadre soutenant et bienveillant.
+            </p>
+          </div>
+        </section>
+
+        <section class="mt-8 soft-card rounded-[2rem] p-8 slide-right">
+          <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+            Ce que comprend le Parcours Envol
           </h2>
 
           <p class="mt-5 leading-relaxed text-[var(--text)]">
-            Ce parcours est souvent le point de départ de l’accompagnement.
-            Il aide à apaiser l’anxiété, se libérer de ce qui pèse,
-            se reconnecter à soi et amorcer un changement durable.
+            Au-delà des séances, le parcours propose un cadre soutenant qui favorise
+            l’intégration et l’autonomie.
           </p>
 
-          <ul class="mt-5 space-y-3 leading-relaxed text-[var(--text)]">
-            <li>• 6 séances personnalisées</li>
-            <li>• Solo : 360 €</li>
-            <li>• Duo parent-enfant : 420 €</li>
-            <li>• Paiement possible en 1 ou 2 fois</li>
-          </ul>
-        </div>
+          <div class="mt-8 grid md:grid-cols-2 gap-6">
+            <div class="rounded-[1.5rem] bg-white/70 p-6 zoom-in">
+              <h3 class="text-xl font-semibold text-[var(--brown-deep)]">
+                Une direction personnalisée
+              </h3>
+              <p class="mt-3 leading-relaxed text-[var(--text)]">
+                Nous clarifions ensemble votre situation et la direction vers laquelle vous souhaitez évoluer.
+              </p>
+            </div>
 
-        <div class="soft-card rounded-[2rem] p-8">
-          <p class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]">
-            Parcours Harmonie
-          </p>
+            <div class="rounded-[1.5rem] bg-white/70 p-6 zoom-in">
+              <h3 class="text-xl font-semibold text-[var(--brown-deep)]">
+                Des pratiques entre les séances
+              </h3>
+              <p class="mt-3 leading-relaxed text-[var(--text)]">
+                Des exercices simples — respiration, pauses conscientes, rituels d’ancrage —
+                peuvent vous être proposés pour soutenir votre évolution au quotidien.
+              </p>
+            </div>
 
-          <h2 class="mt-4 text-2xl font-semibold text-[var(--brown-deep)]">
-            Stabilisation et ancrage
+            <div class="rounded-[1.5rem] bg-white/70 p-6 zoom-in">
+              <h3 class="text-xl font-semibold text-[var(--brown-deep)]">
+                Des audios personnalisés
+              </h3>
+              <p class="mt-3 leading-relaxed text-[var(--text)]">
+                Vous recevez des pratiques audio pour favoriser l’apaisement,
+                relâcher les tensions et renforcer votre capacité naturelle d’autorégulation.
+              </p>
+            </div>
+
+            <div class="rounded-[1.5rem] bg-white/70 p-6 zoom-in">
+              <h3 class="text-xl font-semibold text-[var(--brown-deep)]">
+                Un lien de continuité
+              </h3>
+              <p class="mt-3 leading-relaxed text-[var(--text)]">
+                Le parcours inclut la possibilité d’échanger par message si nécessaire,
+                ainsi que quelques messages de soutien pour accompagner votre cheminement.
+              </p>
+            </div>
+
+            <div class="rounded-[1.5rem] bg-white/70 p-6 zoom-in md:col-span-2">
+              <h3 class="text-xl font-semibold text-[var(--brown-deep)]">
+                Un temps d’intégration
+              </h3>
+              <p class="mt-3 leading-relaxed text-[var(--text)]">
+                La dernière séance permet de consolider les ressources installées.
+                Un temps de retour est également proposé quelques semaines après la fin du parcours
+                pour observer les évolutions et soutenir votre autonomie.
+              </p>
+            </div>
+          </div>
+        </section>
+<ImageBlock
+          src="/images/parcours-harmonie.png"
+          alt="Parcours Envol : se reconnecter à soi et retrouver son équilibre"
+        />
+        <section class="mt-8 soft-card rounded-[2rem] p-8 slide-left">
+          <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+            Ce parcours est fait pour vous si…
           </h2>
 
-          <p class="mt-5 leading-relaxed text-[var(--text)]">
-            Ce parcours s’adresse aux personnes ayant déjà réalisé le parcours Envol
-            et souhaitant consolider les changements amorcés, stabiliser leur équilibre
-            ou approfondir leur cheminement.
-          </p>
-
           <ul class="mt-5 space-y-3 leading-relaxed text-[var(--text)]">
-            <li>• 4 à 5 séances personnalisées</li>
-            <li>• Solo : 240 € à 300 €</li>
-            <li>• Duo parent-enfant : 280 € à 350 €</li>
-            <li>• Paiement possible en 1 ou 2 fois</li>
+            <li>• Vous traversez une période de fatigue, de surcharge mentale ou d’anxiété.</li>
+            <li>• Vous ressentez le besoin de ralentir et de prendre soin de vous.</li>
+            <li>• Vous souhaitez retrouver plus de clarté, de stabilité et d’élan dans votre vie.</li>
+            <li>• Vous avez envie d’apprendre des outils concrets pour gérer vos émotions et relâcher les tensions.</li>
+            <li>• Vous souhaitez un accompagnement structuré, progressif et bienveillant, qui s’adapte à votre rythme.</li>
           </ul>
-        </div>
-      </section>
 
-      <section class="mt-8 soft-card rounded-[2rem] p-8">
-        <p class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]">
-          Parcours Envol
-        </p>
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a
+              href="/contact"
+              class="soft-btn bg-[var(--brown-soft)] text-white px-7 py-3.5 font-medium inline-block hover:bg-[var(--brown-deep)]"
+            >
+              Prendre rendez-vous
+            </a>
 
-        <h2 class="mt-4 text-2xl font-semibold text-[var(--brown-deep)]">
-          Se reconnecter à soi et retrouver son équilibre
-        </h2>
-
-        <div class="mt-5 space-y-4 leading-relaxed text-[var(--text)]">
-          <p>
-            Le Parcours Envol est un accompagnement en sophrologie conçu pour les personnes
-            qui traversent une période de fatigue, d’anxiété, de surcharge mentale ou de transition
-            dans leur vie.
-          </p>
-
-          <p>
-            Lorsque tout devient trop lourd ou confus, il peut être difficile de savoir
-            par où commencer. Ce parcours offre un espace pour ralentir, déposer ce qui pèse
-            et retrouver progressivement plus de clarté et de stabilité intérieure.
-          </p>
-
-          <p>
-            Au fil des séances, vous apprenez à relâcher les tensions, à mieux comprendre
-            vos émotions et à vous reconnecter à vos ressources. Pas à pas, votre corps
-            et votre esprit retrouvent un rythme plus apaisé et un nouvel élan peut émerger.
-          </p>
-
-          <p>
-            Le Parcours Envol est une invitation à prendre soin de vous, à votre rythme,
-            dans un cadre soutenant et bienveillant.
-          </p>
-        </div>
-      </section>
-
-      <section class="mt-8 soft-card rounded-[2rem] p-8">
-        <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
-          Ce que comprend le Parcours Envol
-        </h2>
-
-        <div class="mt-8 grid md:grid-cols-2 gap-6">
-          <div class="rounded-[1.5rem] bg-white/70 p-6">
-            <h3 class="text-xl font-semibold text-[var(--brown-deep)]">
-              Une direction personnalisée
-            </h3>
-            <p class="mt-3 leading-relaxed text-[var(--text)]">
-              Nous clarifions ensemble votre situation et la direction vers laquelle vous souhaitez évoluer.
-            </p>
+            <a
+              href="/tarifs"
+              class="soft-btn border border-[var(--brown-soft)]/20 bg-white/70 px-7 py-3.5 text-[var(--brown-deep)] hover:bg-white"
+            >
+              Voir les tarifs
+            </a>
           </div>
-
-          <div class="rounded-[1.5rem] bg-white/70 p-6">
-            <h3 class="text-xl font-semibold text-[var(--brown-deep)]">
-              Des pratiques entre les séances
-            </h3>
-            <p class="mt-3 leading-relaxed text-[var(--text)]">
-              Des exercices simples peuvent vous être proposés pour soutenir votre évolution au quotidien.
-            </p>
-          </div>
-
-          <div class="rounded-[1.5rem] bg-white/70 p-6">
-            <h3 class="text-xl font-semibold text-[var(--brown-deep)]">
-              Des audios personnalisés
-            </h3>
-            <p class="mt-3 leading-relaxed text-[var(--text)]">
-              Vous recevez des pratiques audio pour favoriser l’apaisement, relâcher les tensions
-              et renforcer votre capacité naturelle d’autorégulation.
-            </p>
-          </div>
-
-          <div class="rounded-[1.5rem] bg-white/70 p-6">
-            <h3 class="text-xl font-semibold text-[var(--brown-deep)]">
-              Un lien de continuité
-            </h3>
-            <p class="mt-3 leading-relaxed text-[var(--text)]">
-              Le parcours inclut la possibilité d’échanger par message si nécessaire,
-              ainsi que quelques messages de soutien.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="mt-8 soft-card rounded-[2rem] p-8">
-        <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
-          Ce parcours est fait pour vous si…
-        </h2>
-
-        <ul class="mt-5 space-y-3 leading-relaxed text-[var(--text)]">
-          <li>• Vous traversez une période de fatigue, de surcharge mentale ou d’anxiété.</li>
-          <li>• Vous ressentez le besoin de ralentir et de prendre soin de vous.</li>
-          <li>• Vous souhaitez retrouver plus de clarté, de stabilité et d’élan dans votre vie.</li>
-          <li>• Vous avez envie d’apprendre des outils concrets pour gérer vos émotions.</li>
-          <li>• Vous souhaitez un accompagnement structuré, progressif et bienveillant.</li>
-        </ul>
-
-        <div class="mt-8">
-          <a
-            href="/contact"
-            class="soft-btn bg-[var(--brown-soft)] text-white px-7 py-3.5 font-medium inline-block hover:bg-[var(--brown-deep)]"
-          >
-            Prendre rendez-vous
-          </a>
-        </div>
+        </section>
       </section>
     </section>
   </main>
 
   <Footer />
+  <ScrollReveal />
 </BaseLayout>

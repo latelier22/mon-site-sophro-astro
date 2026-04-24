@@ -2,6 +2,8 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import ScrollReveal from "../components/ScrollReveal.astro";
+import ImageBlock from "../components/ImageBlock.astro";
 ---
 
 <BaseLayout
@@ -10,172 +12,180 @@ import Footer from "../components/Footer.astro";
 >
   <Header />
 
-  <main class="mx-auto max-w-6xl px-4 sm:px-6 py-10 md:py-16">
-
-    <!-- HERO -->
-    <div class="soft-card rounded-[2.5rem] p-8 md:p-10">
-      <h1 class="text-4xl md:text-5xl font-semibold text-[var(--brown-deep)]">
-        Anxiété, stress, émotions…
-        <br />et si ça pouvait vraiment s’apaiser ?
-      </h1>
-
-      <p class="mt-6 text-lg leading-relaxed text-[var(--text)]">
-        Vous ressentez peut-être une tension constante, un mental qui ne s’arrête jamais,
-        ou des émotions qui prennent trop de place.
-      </p>
-
-      <p class="mt-4 text-lg leading-relaxed text-[var(--text)]">
-        Et si vous pouviez enfin souffler, comprendre ce qui se passe en vous,
-        et retrouver un équilibre plus stable et apaisé ?
-      </p>
-    </div>
-
-    <section class="mt-8 section-bg rounded-[2.5rem] p-8 md:p-10">
-
-      <!-- RECONNAISSANCE -->
-      <section class="soft-card rounded-[2rem] p-8">
-        <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
-          Vous vous reconnaissez peut-être…
-        </h2>
-
-        <ul class="mt-6 space-y-4 text-[var(--text)]">
-          <li class="bg-white/70 rounded-[1.25rem] p-4">
-            Vous anticipez tout, vous ressassez, vous avez du mal à couper le mental
-          </li>
-
-          <li class="bg-white/70 rounded-[1.25rem] p-4">
-            Vous ressentez une fatigue permanente, comme si votre cerveau ne s’arrêtait jamais
-          </li>
-
-          <li class="bg-white/70 rounded-[1.25rem] p-4">
-            Vous avez des tensions dans le corps, des douleurs, un sommeil perturbé
-          </li>
-
-          <li class="bg-white/70 rounded-[1.25rem] p-4">
-            Vous vous sentez submergé(e) par vos émotions ou en décalage avec les autres
-          </li>
-
-          <li class="bg-white/70 rounded-[1.25rem] p-4">
-            Vous avez parfois l’impression de ne plus vous reconnaître
-          </li>
-        </ul>
-      </section>
-
-      <!-- EXPLICATION -->
-      <section class="mt-8 soft-card rounded-[2rem] p-8">
-        <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
-          Ce n’est pas “vous le problème”
-        </h2>
-
-        <div class="mt-5 space-y-4 text-[var(--text)] leading-relaxed">
-          <p>
-            Ce que vous vivez n’est pas une faiblesse.
-            C’est souvent le résultat d’un système nerveux en surcharge,
-            qui est resté trop longtemps en état d’alerte.
-          </p>
-
-          <p>
-            Votre corps et votre mental essaient de vous protéger…
-            mais à force, cela devient épuisant.
-          </p>
-
-          <p class="font-medium text-[var(--brown-deep)]">
-            La bonne nouvelle, c’est que cela peut évoluer.
-          </p>
-        </div>
-      </section>
-
-      <!-- SOLUTION -->
-      <section class="mt-8 grid md:grid-cols-2 gap-6">
-        <div class="soft-card rounded-[2rem] p-8">
-          <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
-            Ce que la sophrologie permet
-          </h2>
-
-          <ul class="mt-5 space-y-3 text-[var(--text)]">
-            <li>• Apaiser le système nerveux</li>
-            <li>• Relâcher les tensions physiques</li>
-            <li>• Sortir de l’hyper-contrôle mental</li>
-            <li>• Retrouver un état de calme</li>
-            <li>• Mieux comprendre ses émotions</li>
-            <li>• Reprendre confiance en soi</li>
-          </ul>
-        </div>
-
-        <div class="soft-card rounded-[2rem] p-8">
-          <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
-            Comment ça fonctionne
-          </h2>
-
-          <ul class="mt-5 space-y-3 text-[var(--text)]">
-            <li>• Respiration guidée</li>
-            <li>• Mouvements doux</li>
-            <li>• Visualisations</li>
-            <li>• Travail sur les ressentis</li>
-            <li>• Outils concrets à utiliser chez vous</li>
-          </ul>
-
-          <p class="mt-6 text-sm text-[var(--brown-soft)]">
-            Vous restez toujours actif(ve) dans votre expérience.
-          </p>
-        </div>
-      </section>
-
-      <!-- PROJECTION -->
-      <section class="mt-8 soft-card rounded-[2rem] p-8">
-        <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
-          Et si ça changeait vraiment ?
-        </h2>
-
-        <div class="mt-5 space-y-4 text-[var(--text)]">
-          <p>
-            Imaginez :
-          </p>
-
-          <ul class="space-y-2">
-            <li>• vous réveiller sans boule au ventre</li>
-            <li>• vous sentir plus calme dans votre quotidien</li>
-            <li>• retrouver de l’énergie</li>
-            <li>• être plus à l’aise avec vous-même et avec les autres</li>
-          </ul>
-
-          <p class="font-medium text-[var(--brown-deep)]">
-            Pas en devenant quelqu’un d’autre…
-            mais en revenant à vous.
-          </p>
-        </div>
-      </section>
-
-      <!-- CTA -->
-      <section class="mt-8 soft-card rounded-[2rem] p-8 text-center">
-        <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
-          Faire un premier pas
-        </h2>
-
-        <p class="mt-5 text-[var(--text)]">
-          Un premier échange permet de faire le point sur votre situation
-          et de voir si cet accompagnement peut vous aider.
+  <main>
+    <section class="mx-auto max-w-6xl px-4 sm:px-6 py-10 md:py-16">
+      <div class="soft-card rounded-[2.5rem] p-8 md:p-10 slide-right">
+        <p class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]">
+          Anxiété · Stress · Émotions
         </p>
 
-        <div class="mt-8 flex flex-wrap justify-center gap-4">
-          <a
-            href="/contact"
-            class="soft-btn bg-[var(--brown-soft)] text-white px-7 py-3.5 font-medium hover:bg-[var(--brown-deep)]"
-          >
-            Prendre rendez-vous
-          </a>
+        <h1 class="mt-4 text-4xl md:text-5xl font-semibold text-[var(--brown-deep)]">
+          Anxiété, stress, émotions…
+          <br />et si ça pouvait vraiment s’apaiser ?
+        </h1>
 
-          <a
-            href="/accompagnement"
-            class="soft-btn border border-[var(--brown-soft)]/20 bg-white/70 px-7 py-3.5 text-[var(--brown-deep)] hover:bg-white"
-          >
-            Voir les accompagnements
-          </a>
-        </div>
+        <p class="mt-6 text-lg leading-relaxed text-[var(--text)]">
+          Vous ressentez peut-être une tension constante, un mental qui ne s’arrête jamais,
+          ou des émotions qui prennent trop de place.
+        </p>
+
+        <p class="mt-4 text-lg leading-relaxed text-[var(--text)]">
+          Et si vous pouviez enfin souffler, comprendre ce qui se passe en vous,
+          et retrouver un équilibre plus stable et apaisé ?
+        </p>
+      </div>
+
+      <ImageBlock
+        src="/images/anxiete-apaisement.png"
+        alt="De l’anxiété à l’apaisement intérieur"
+      />
+
+      <section class="mt-8 section-bg rounded-[2.5rem] p-8 md:p-10">
+        <section class="soft-card rounded-[2rem] p-8 fade-in">
+          <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+            Vous vous reconnaissez peut-être…
+          </h2>
+
+          <ul class="mt-6 space-y-4 text-[var(--text)]">
+            <li class="bg-white/70 rounded-[1.25rem] p-4 zoom-in">
+              Vous anticipez tout, vous ressassez, vous avez du mal à couper le mental.
+            </li>
+
+            <li class="bg-white/70 rounded-[1.25rem] p-4 zoom-in">
+              Vous ressentez une fatigue permanente, comme si votre cerveau ne s’arrêtait jamais.
+            </li>
+
+            <li class="bg-white/70 rounded-[1.25rem] p-4 zoom-in">
+              Vous avez des tensions dans le corps, des douleurs, un sommeil perturbé.
+            </li>
+
+            <li class="bg-white/70 rounded-[1.25rem] p-4 zoom-in">
+              Vous vous sentez submergé(e) par vos émotions ou en décalage avec les autres.
+            </li>
+
+            <li class="bg-white/70 rounded-[1.25rem] p-4 zoom-in">
+              Vous avez parfois l’impression de ne plus vous reconnaître.
+            </li>
+          </ul>
+        </section>
+
+        <section class="mt-8 soft-card rounded-[2rem] p-8 slide-right">
+          <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+            Ce n’est pas “vous le problème”
+          </h2>
+
+          <div class="mt-5 space-y-4 text-[var(--text)] leading-relaxed">
+            <p>
+              Ce que vous vivez n’est pas une faiblesse. C’est souvent le résultat
+              d’un système nerveux en surcharge, qui est resté trop longtemps en état d’alerte.
+            </p>
+
+            <p>
+              Votre corps et votre mental essaient de vous protéger… mais à force,
+              cela devient épuisant.
+            </p>
+
+            <p class="font-medium text-[var(--brown-deep)]">
+              La bonne nouvelle, c’est que cela peut évoluer.
+            </p>
+          </div>
+        </section>
+
+        <section class="mt-8 grid md:grid-cols-2 gap-6">
+          <div class="soft-card rounded-[2rem] p-8 slide-right">
+            <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+              Ce que la sophrologie permet
+            </h2>
+
+            <ul class="mt-5 space-y-3 text-[var(--text)]">
+              <li>• Apaiser le système nerveux</li>
+              <li>• Relâcher les tensions physiques</li>
+              <li>• Sortir de l’hyper-contrôle mental</li>
+              <li>• Retrouver un état de calme</li>
+              <li>• Mieux comprendre ses émotions</li>
+              <li>• Reprendre confiance en soi</li>
+            </ul>
+          </div>
+
+          <div class="soft-card rounded-[2rem] p-8 slide-left">
+            <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+              Comment ça fonctionne
+            </h2>
+
+            <ul class="mt-5 space-y-3 text-[var(--text)]">
+              <li>• Respiration guidée</li>
+              <li>• Mouvements doux</li>
+              <li>• Visualisations</li>
+              <li>• Travail sur les ressentis</li>
+              <li>• Outils concrets à utiliser chez vous</li>
+            </ul>
+
+            <p class="mt-6 text-sm text-[var(--brown-soft)]">
+              Vous restez toujours actif(ve) dans votre expérience.
+            </p>
+          </div>
+        </section>
+      </section>
+      <section>
+
+        <ImageBlock
+          src="/images/anxiete-ressources.png"
+          alt="Respirer, relâcher les tensions et retrouver ses ressources"
+        />
       </section>
 
+
+        <section class="mt-8 soft-card rounded-[2rem] p-8 fade-in">
+          <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+            Et si ça changeait vraiment ?
+          </h2>
+
+          <div class="mt-5 space-y-4 text-[var(--text)] leading-relaxed">
+            <p>Imaginez :</p>
+
+            <ul class="space-y-2">
+              <li>• vous réveiller sans boule au ventre</li>
+              <li>• vous sentir plus calme dans votre quotidien</li>
+              <li>• retrouver de l’énergie</li>
+              <li>• être plus à l’aise avec vous-même et avec les autres</li>
+            </ul>
+
+            <p class="font-medium text-[var(--brown-deep)]">
+              Pas en devenant quelqu’un d’autre… mais en revenant à vous.
+            </p>
+          </div>
+        </section>
+
+        <section class="mt-8 soft-card rounded-[2rem] p-8 text-center zoom-in">
+          <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+            Faire un premier pas
+          </h2>
+
+          <p class="mt-5 text-[var(--text)]">
+            Un premier échange permet de faire le point sur votre situation
+            et de voir si cet accompagnement peut vous aider.
+          </p>
+
+          <div class="mt-8 flex flex-wrap justify-center gap-4">
+            <a
+              href="/contact"
+              class="soft-btn bg-[var(--brown-soft)] text-white px-7 py-3.5 font-medium hover:bg-[var(--brown-deep)]"
+            >
+              Prendre rendez-vous
+            </a>
+
+            <a
+              href="/accompagnement"
+              class="soft-btn border border-[var(--brown-soft)]/20 bg-white/70 px-7 py-3.5 text-[var(--brown-deep)] hover:bg-white"
+            >
+              Voir les accompagnements
+            </a>
+          </div>
+        </section>
+      </section>
     </section>
   </main>
 
   <Footer />
+  <ScrollReveal />
 </BaseLayout>

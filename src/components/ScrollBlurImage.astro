@@ -1,0 +1,70 @@
+---
+const {
+  src,
+  alt = "",
+  className = "",
+  imageClass = "",
+} = Astro.props;
+---
+
+<div class={`soft-card rounded-[2.5rem] p-4 md:p-5 overflow-hidden fade-in ${className}`}>
+  <img
+    src={src}
+    alt={alt}
+    loading="lazy"
+    class={`scroll-blur-image h-full w-full rounded-[2rem] object-cover ${imageClass}`}
+  />
+</div>
+
+<script is:inline>
+  (() => {
+    const setupScrollBlurImages = () => {
+      const images = document.querySelectorAll(
+        ".scroll-blur-image:not([data-scroll-observed])"
+      );
+
+      if (!images.length) return;
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.25 }
+      );
+
+      images.forEach((image) => {
+        image.setAttribute("data-scroll-observed", "true");
+        observer.observe(image);
+      });
+    };
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", setupScrollBlurImages);
+    } else {
+      setupScrollBlurImages();
+    }
+  })();
+</script>
+
+<style>
+  .scroll-blur-image {
+    opacity: 0;
+    filter: blur(18px);
+    transform: scale(1.04);
+    transition:
+      opacity 900ms ease,
+      filter 1200ms ease,
+      transform 1200ms ease;
+  }
+
+  .scroll-blur-image.is-visible {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+  }
+</style>

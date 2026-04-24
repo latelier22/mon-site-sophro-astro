@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import ScrollReveal from "../components/ScrollReveal.astro";
+import ScrollBlurImage from "../components/ScrollBlurImage.astro";
 ---
 
 <BaseLayout
@@ -28,13 +29,12 @@ import ScrollReveal from "../components/ScrollReveal.astro";
         </p>
       </div>
 
-      <section class="mt-8 soft-card rounded-[2.5rem] p-4 md:p-5 fade-in">
-  <img
-    src="/images/deroule-seance-triptyque.png"
-    alt="Moment d’introspection, respiration et ancrage, espace d’écoute et de bienveillance"
-    class="w-full rounded-[2rem] object-cover"
-  />
-</section>
+
+
+<ScrollBlurImage
+  src="/images/deroule-seance-triptyque.png"
+  alt="Tarifs et fonctionnement des séances de sophrologie"
+/>
 
       <section class="mt-8 section-bg rounded-[2.5rem] p-8 md:p-10">
         <section class="soft-card rounded-[2rem] p-8 fade-in">

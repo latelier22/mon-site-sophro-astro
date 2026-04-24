@@ -2,6 +2,8 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import ScrollReveal from "../components/ScrollReveal.astro";
+import ScrollBlurImage from "../components/ScrollBlurImage.astro";
 ---
 
 <BaseLayout
@@ -10,119 +12,149 @@ import Footer from "../components/Footer.astro";
 >
   <Header />
 
-  <main class="mx-auto max-w-6xl px-4 sm:px-6 py-10 md:py-16">
-    <div class="soft-card rounded-[2.5rem] p-8 md:p-10">
-      <p class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]">
-        Sophrologue à Loudéac
-      </p>
-
-      <h1 class="mt-4 text-4xl md:text-5xl font-semibold text-[var(--brown-deep)]">
-        Un accompagnement en sophrologie à Loudéac, en Centre-Bretagne
-      </h1>
-
-      <p class="mt-5 text-lg leading-relaxed text-[var(--text)]">
-        J’accompagne les personnes qui traversent une période de stress,
-        d’anxiété, de fatigue, de surcharge mentale ou de transition de vie.
-      </p>
-
-      <p class="mt-4 text-lg leading-relaxed text-[var(--text)]">
-        Les séances peuvent se dérouler au cabinet à Loudéac, en visio,
-        ou à domicile selon les possibilités.
-      </p>
-    </div>
-
-    <section class="mt-8 section-bg rounded-[2.5rem] p-8 md:p-10">
-      <section class="grid md:grid-cols-2 gap-6">
-        <div class="soft-card rounded-[2rem] p-8">
-          <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
-            Le cabinet
-          </h2>
-
-          <div class="mt-5 space-y-3 leading-relaxed text-[var(--text)]">
-            <p>
-              Le cabinet est situé à Loudéac, au cœur du Centre-Bretagne.
-            </p>
-
-            <div class="rounded-[1.5rem] bg-white/70 p-5">
-              <p class="font-semibold text-[var(--brown-deep)]">Adresse</p>
-              <p class="mt-1">26 Rue du Dr Robin</p>
-              <p>22600 Loudéac</p>
-            </div>
-
-            <div class="rounded-[1.5rem] bg-white/70 p-5">
-              <p class="font-semibold text-[var(--brown-deep)]">Téléphone</p>
-              <p class="mt-1">07 81 52 85 17</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="soft-card rounded-[2rem] p-8">
-          <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
-            Pour quelles demandes ?
-          </h2>
-
-          <ul class="mt-5 space-y-3 leading-relaxed text-[var(--text)]">
-            <li>• Stress et anxiété</li>
-            <li>• Émotions envahissantes</li>
-            <li>• Fatigue ou surcharge mentale</li>
-            <li>• Perte de sens ou période de transition</li>
-            <li>• Confiance et estime de soi</li>
-            <li>• Sommeil et récupération</li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="mt-8 soft-card rounded-[2rem] p-8">
-        <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
-          Une approche douce et personnalisée
-        </h2>
-
-        <div class="mt-5 space-y-4 leading-relaxed text-[var(--text)]">
-          <p>
-            Chaque accompagnement commence par un temps d’écoute pour comprendre
-            votre situation, vos besoins et ce que vous souhaitez retrouver dans votre quotidien.
-          </p>
-
-          <p>
-            Les séances associent respiration, mouvements doux, visualisations et écoute des ressentis.
-            Vous restez toujours acteur ou actrice de votre expérience.
-          </p>
-
-          <p>
-            L’objectif est de vous aider à retrouver du calme, de la clarté,
-            de la sécurité intérieure et des outils concrets à réutiliser entre les séances.
-          </p>
-        </div>
-      </section>
-
-      <section class="mt-8 soft-card rounded-[2rem] p-8">
-        <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
-          Prendre rendez-vous
-        </h2>
-
-        <p class="mt-5 leading-relaxed text-[var(--text)]">
-          Vous pouvez me contacter par téléphone, par e-mail, via le formulaire de contact
-          ou réserver directement un rendez-vous.
+  <main>
+    <section class="mx-auto max-w-6xl px-4 sm:px-6 py-10 md:py-16">
+      <div class="soft-card rounded-[2.5rem] p-8 md:p-10 slide-right">
+        <p class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]">
+          Sophrologue à Loudéac
         </p>
 
-        <div class="mt-8 flex flex-wrap gap-4">
-          <a
-            href="/contact"
-            class="soft-btn bg-[var(--brown-soft)] text-white px-7 py-3.5 font-medium inline-block hover:bg-[var(--brown-deep)]"
-          >
-            Me contacter
-          </a>
+        <h1 class="mt-4 text-4xl md:text-5xl font-semibold text-[var(--brown-deep)]">
+          Un accompagnement en sophrologie à Loudéac, en Centre-Bretagne
+        </h1>
 
-          <a
-            href="/a-quoi-s-attendre"
-            class="soft-btn border border-[var(--brown-soft)]/20 bg-white/70 px-7 py-3.5 text-[var(--brown-deep)] hover:bg-white"
-          >
-            Voir le déroulé des séances
-          </a>
-        </div>
+        <p class="mt-5 text-lg leading-relaxed text-[var(--text)]">
+          J’accompagne les personnes qui traversent une période de stress,
+          d’anxiété, de fatigue, de surcharge mentale ou de transition de vie.
+        </p>
+
+        <p class="mt-4 text-lg leading-relaxed text-[var(--text)]">
+          Les séances peuvent se dérouler au cabinet à Loudéac, en visio,
+          ou à domicile selon les possibilités.
+        </p>
+      </div>
+
+      <section class="mt-8 section-bg rounded-[2.5rem] p-8 md:p-10">
+        <section class="grid lg:grid-cols-2 gap-8 items-stretch">
+          <div class="slide-right">
+            <ScrollBlurImage
+              src="/images/sophrologue-loudeac-cabinet.png"
+              alt="Cabinet de sophrologie chaleureux à Loudéac"
+              className="mt-0 h-full"
+            />
+          </div>
+
+          <div class="soft-card rounded-[2rem] p-8 md:p-10 slide-left flex flex-col justify-center">
+            <h2 class="text-2xl md:text-3xl font-semibold text-[var(--brown-deep)]">
+              Le cabinet
+            </h2>
+
+            <div class="mt-5 space-y-4 leading-relaxed text-[var(--text)]">
+              <p>
+                Le cabinet est situé à Loudéac, au cœur du Centre-Bretagne.
+                C’est un espace pensé pour vous accueillir dans un cadre calme,
+                doux et sécurisant.
+              </p>
+
+              <div class="rounded-[1.5rem] bg-white/70 p-5">
+                <p class="font-semibold text-[var(--brown-deep)]">Adresse</p>
+                <p class="mt-1">26 Rue du Dr Robin</p>
+                <p>22600 Loudéac</p>
+              </div>
+
+              <div class="rounded-[1.5rem] bg-white/70 p-5">
+                <p class="font-semibold text-[var(--brown-deep)]">Téléphone</p>
+                <p class="mt-1">
+                  <a
+                    href="tel:+33781528517"
+                    class="font-medium text-[var(--brown-deep)] underline decoration-[var(--brown-soft)]/40 underline-offset-4 hover:text-[var(--brown-soft)]"
+                  >
+                    07 81 52 85 17
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="mt-8 grid lg:grid-cols-2 gap-8 items-stretch">
+          <div class="soft-card rounded-[2rem] p-8 md:p-10 slide-right flex flex-col justify-center order-2 lg:order-1">
+            <h2 class="text-2xl md:text-3xl font-semibold text-[var(--brown-deep)]">
+              Pour quelles demandes ?
+            </h2>
+
+            <ul class="mt-6 space-y-3 leading-relaxed text-[var(--text)]">
+              <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">Stress et anxiété</li>
+              <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">Émotions envahissantes</li>
+              <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">Fatigue ou surcharge mentale</li>
+              <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">Perte de sens ou période de transition</li>
+              <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">Confiance et estime de soi</li>
+              <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">Sommeil et récupération</li>
+            </ul>
+          </div>
+
+          <div class="slide-left order-1 lg:order-2">
+            <ScrollBlurImage
+              src="/images/sophrologue-loudeac-centre-bretagne.png"
+              alt="Centre-Bretagne, calme et nature autour de Loudéac"
+              className="mt-0 h-full"
+            />
+          </div>
+        </section>
+
+        <section class="mt-8 soft-card rounded-[2rem] p-8 md:p-10 fade-in">
+          <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+            Une approche douce et personnalisée
+          </h2>
+
+          <div class="mt-5 space-y-4 leading-relaxed text-[var(--text)]">
+            <p>
+              Chaque accompagnement commence par un temps d’écoute pour comprendre
+              votre situation, vos besoins et ce que vous souhaitez retrouver dans votre quotidien.
+            </p>
+
+            <p>
+              Les séances associent respiration, mouvements doux, visualisations
+              et écoute des ressentis. Vous restez toujours acteur ou actrice de votre expérience.
+            </p>
+
+            <p>
+              L’objectif est de vous aider à retrouver du calme, de la clarté,
+              de la sécurité intérieure et des outils concrets à réutiliser entre les séances.
+            </p>
+          </div>
+        </section>
+
+        <section class="mt-8 soft-card rounded-[2rem] p-8 text-center zoom-in">
+          <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+            Prendre rendez-vous
+          </h2>
+
+          <p class="mt-5 leading-relaxed text-[var(--text)]">
+            Vous pouvez me contacter par téléphone, par e-mail, via le formulaire
+            de contact ou réserver directement un rendez-vous.
+          </p>
+
+          <div class="mt-8 flex flex-wrap justify-center gap-4">
+            <a
+              href="/contact"
+              class="soft-btn bg-[var(--brown-soft)] text-white px-7 py-3.5 font-medium inline-block hover:bg-[var(--brown-deep)]"
+            >
+              Me contacter
+            </a>
+
+            <a
+              href="/a-quoi-s-attendre"
+              class="soft-btn border border-[var(--brown-soft)]/20 bg-white/70 px-7 py-3.5 text-[var(--brown-deep)] hover:bg-white"
+            >
+              Voir le déroulé des séances
+            </a>
+          </div>
+        </section>
       </section>
     </section>
   </main>
 
   <Footer />
+  <ScrollReveal />
 </BaseLayout>

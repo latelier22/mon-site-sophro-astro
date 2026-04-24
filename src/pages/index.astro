@@ -5,6 +5,8 @@ import Footer from "../components/Footer.astro";
 import ScrollReveal from "../components/ScrollReveal.astro";
 import SophroCarousel from "../components/SophroCarousel.astro";
 import SophroMozaicFlip from "../components/SophroMozaicFlip.astro";
+import ScrollBlurImage from "../components/ScrollBlurImage.astro";
+import ImageBlock from "../components/ImageBlock.astro";
 ---
 
 <BaseLayout
@@ -100,6 +102,7 @@ import SophroMozaicFlip from "../components/SophroMozaicFlip.astro";
 
         <div class="hero-waves"></div>
       </section>
+      <ImageBlock src="/images/accueil-triptyque.png" alt="Souffler, s’ancrer, se retrouver" />
     </section>
 
     <!-- <section class="mx-auto max-w-7xl px-4 sm:px-6 py-16">
@@ -109,6 +112,8 @@ import SophroMozaicFlip from "../components/SophroMozaicFlip.astro";
         <SophroMozaicFlip />
       </section>
     </section> -->
+
+    
 
     <section class="mx-auto max-w-7xl px-4 sm:px-6 py-8 md:py-14">
       <div class="soft-card rounded-[2.5rem] p-8 md:p-10 fade-in">
@@ -173,80 +178,80 @@ import SophroMozaicFlip from "../components/SophroMozaicFlip.astro";
         </div>
       </div>
     </section>
-
     <section class="mx-auto max-w-7xl px-4 sm:px-6 py-16">
+      <ImageBlock src="/images/accueil-diptyque-1.png" alt="Souffler, s’ancrer, se retrouver" />
       <section
-        class="section-bg relative overflow-hidden min-h-[50vh] flex items-center"
+      class="section-bg relative overflow-hidden min-h-[50vh] flex items-center"
       >
-        <section class="mx-auto max-w-7xl px-4 sm:px-6 py-8 md:py-14">
-          <div class="grid lg:grid-cols-2 gap-8 items-stretch">
-            <div class="soft-card rounded-[2.5rem] p-8 md:p-10 slide-right">
-              <h2
-                class="text-3xl md:text-4xl font-semibold text-[var(--brown-deep)]"
+      <section class="mx-auto max-w-7xl px-4 sm:px-6 py-8 md:py-14">
+        <div class="grid lg:grid-cols-2 gap-8 items-stretch">
+          <div class="soft-card rounded-[2.5rem] p-8 md:p-10 slide-right">
+            <h2
+            class="text-3xl md:text-4xl font-semibold text-[var(--brown-deep)]"
               >
-                Et si tu décidais de reprendre les rênes ?
-              </h2>
-
-              <ul class="mt-8 space-y-4 text-[var(--text)] leading-relaxed">
-                <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
-                  Tu sens bien que vivre ainsi t’épuise et t’empêche d’être à
-                  l’aise dans tes relations, au travail ou dans ta vie
-                  personnelle.
-                </li>
-                <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
-                  L’anxiété ronge peu à peu la confiance et l’estime de soi.
-                </li>
-                <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
-                  La sophrologie donne des outils concrets et simples pour
-                  apaiser tes émotions et retrouver une clarté intérieure.
-                </li>
-                <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
-                  Tu peux reprendre confiance, avancer pas à pas et retrouver la
-                  simplicité d’être bien avec toi-même.
-                </li>
-              </ul>
-
-              <div class="mt-8">
-                <a
-                  href="/anxiete-stress-emotions"
-                  class="soft-btn border border-[var(--brown-soft)]/20 bg-white/70 px-7 py-3.5 text-[var(--brown-deep)] hover:bg-white"
-                >
-                  En savoir plus sur l’anxiété
-                </a>
-              </div>
-            </div>
-
-            <div class="soft-card rounded-[2.5rem] p-8 md:p-10 slide-left">
-              <h2
-                class="text-3xl md:text-4xl font-semibold text-[var(--brown-deep)]"
+              Et si tu décidais de reprendre les rênes ?
+            </h2>
+            
+            <ul class="mt-8 space-y-4 text-[var(--text)] leading-relaxed">
+              <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
+                Tu sens bien que vivre ainsi t’épuise et t’empêche d’être à
+                l’aise dans tes relations, au travail ou dans ta vie
+                personnelle.
+              </li>
+              <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
+                L’anxiété ronge peu à peu la confiance et l’estime de soi.
+              </li>
+              <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
+                La sophrologie donne des outils concrets et simples pour
+                apaiser tes émotions et retrouver une clarté intérieure.
+              </li>
+              <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
+                Tu peux reprendre confiance, avancer pas à pas et retrouver la
+                simplicité d’être bien avec toi-même.
+              </li>
+            </ul>
+            
+            <div class="mt-8">
+              <a
+              href="/anxiete-stress-emotions"
+              class="soft-btn border border-[var(--brown-soft)]/20 bg-white/70 px-7 py-3.5 text-[var(--brown-deep)] hover:bg-white"
               >
-                Vers une vie plus légère et sereine
-              </h2>
-
-              <ul class="mt-8 space-y-4 text-[var(--text)]">
-                <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
-                  Te réveiller sans boule au ventre et sans angoisse qui
-                  t’épuise avant même que la journée ne commence.
-                </li>
-                <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
-                  Retrouver la joie de vivre, l’élan et l’envie de faire des
-                  projets.
-                </li>
-                <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
-                  Vivre des relations plus apaisées et te sentir plus libre
-                  d’être toi-même.
-                </li>
-                <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
-                  Sentir les crises d’angoisse perdre peu à peu en intensité
-                  jusqu’à ne plus dicter tes choix.
-                </li>
-              </ul>
-
-              <div class="mt-8">
-                <a
-                  href="/sophrologie-pour-qui"
+              En savoir plus sur l’anxiété
+            </a>
+          </div>
+        </div>
+        
+        <div class="soft-card rounded-[2.5rem] p-8 md:p-10 slide-left">
+          <h2
+          class="text-3xl md:text-4xl font-semibold text-[var(--brown-deep)]"
+          >
+          Vers une vie plus légère et sereine
+        </h2>
+        
+        <ul class="mt-8 space-y-4 text-[var(--text)]">
+          <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
+            Te réveiller sans boule au ventre et sans angoisse qui
+            t’épuise avant même que la journée ne commence.
+          </li>
+          <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
+            Retrouver la joie de vivre, l’élan et l’envie de faire des
+            projets.
+          </li>
+          <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
+            Vivre des relations plus apaisées et te sentir plus libre
+            d’être toi-même.
+          </li>
+          <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
+            Sentir les crises d’angoisse perdre peu à peu en intensité
+            jusqu’à ne plus dicter tes choix.
+          </li>
+        </ul>
+        
+        <div class="mt-8">
+          <a
+          href="/sophrologie-pour-qui"
                   class="soft-btn border border-[var(--brown-soft)]/20 bg-white/70 px-7 py-3.5 text-[var(--brown-deep)] hover:bg-white"
-                >
+                  >
                   Voir si la sophrologie est faite pour moi
                 </a>
               </div>
@@ -254,8 +259,11 @@ import SophroMozaicFlip from "../components/SophroMozaicFlip.astro";
           </div>
         </section>
       </section>
+      <ImageBlock src="/images/accueil-diptyque-2.png" alt="Souffler, s’ancrer, se retrouver" />
+      
+     
     </section>
-
+ 
     <section class="mx-auto max-w-7xl px-4 sm:px-6 py-8 md:py-14">
       <div class="soft-card rounded-[2.5rem] p-8 md:p-10 zoom-in">
         <p class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]">
@@ -348,18 +356,20 @@ import SophroMozaicFlip from "../components/SophroMozaicFlip.astro";
           </a>
         </div>
       </div>
-    </section>
 
-
-<section class="mt-8 soft-card rounded-[2.5rem] overflow-hidden">
+      <section class="mt-8 soft-card rounded-[2.5rem] overflow-hidden">
   <div class="grid lg:grid-cols-2 items-stretch">
-    <div class="relative min-h-[320px]">
+    <!-- <div class="relative min-h-[320px]">
       <img
         src="/images/parent-enfant.jpg"
         alt="Parent et enfant main dans la main"
         class="absolute inset-0 h-full w-full object-cover"
       />
-    </div>
+    </div> -->
+    <ScrollBlurImage
+  src="/images/parent-enfant.jpg"
+  alt="Tarifs et fonctionnement des séances de sophrologie"
+/>
 
     <div class="p-8 md:p-10 flex flex-col justify-center">
       <p class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]">
@@ -398,6 +408,10 @@ import SophroMozaicFlip from "../components/SophroMozaicFlip.astro";
     </div>
   </div>
 </section>
+    </section>
+
+
+
 
 
     <section class="mx-auto max-w-5xl px-4 sm:px-6 py-8 md:py-14">

@@ -2,41 +2,19 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import ScrollReveal from "../components/ScrollReveal.astro";
+import AnimatedFAQ from "../components/AnimatedFAQ.astro";
 ---
 
 <BaseLayout title="FAQ – Alexandra Coirier" description="Questions fréquentes sur la sophrologie, les séances et les modalités.">
   <Header />
+
   <main class="mx-auto max-w-5xl px-4 sm:px-6 py-10 md:py-16">
-    <div class="soft-card rounded-[2.5rem] p-8 md:p-10">
-      <h1 class="text-4xl md:text-5xl font-semibold text-[var(--forest)]">Questions fréquentes</h1>
-    </div>
-    <section class="mt-8 section-bg rounded-[2.5rem] p-8 md:p-10">
-    <div class="mt-8 grid gap-4">
-      <details class="summary-marker soft-card rounded-[1.5rem] p-6" open>
-        <summary class="font-semibold text-[var(--forest)]">Qu’est-ce que la sophrologie ?</summary>
-        <p class="mt-4 text-[var(--text)] leading-relaxed">La sophrologie est une pratique qui associe respiration, mouvements doux et visualisations pour apaiser le mental, relâcher les tensions et se reconnecter à ses ressources.</p>
-      </details>
-      <details class="summary-marker soft-card rounded-[1.5rem] p-6">
-        <summary class="font-semibold text-[var(--forest)]">Faut-il croire à la sophrologie pour que cela fonctionne ?</summary>
-        <p class="mt-4 text-[var(--text)] leading-relaxed">Non. La sophrologie est une pratique concrète : les effets viennent de l’expérience et de la répétition des exercices.</p>
-      </details>
-      <details class="summary-marker soft-card rounded-[1.5rem] p-6">
-        <summary class="font-semibold text-[var(--forest)]">Que ressent-on pendant une séance ?</summary>
-        <p class="mt-4 text-[var(--text)] leading-relaxed">Chaque personne vit l’expérience différemment. Certaines ressentent un apaisement profond, d’autres simplement un moment de calme. Tout est juste.</p>
-      </details>
-      <details class="summary-marker soft-card rounded-[1.5rem] p-6">
-        <summary class="font-semibold text-[var(--forest)]">Les séances peuvent-elles se faire à distance ?</summary>
-        <p class="mt-4 text-[var(--text)] leading-relaxed">Oui, les séances peuvent se faire en visio dans un cadre tout aussi confidentiel et bienveillant.</p>
-      </details>
-      <details class="summary-marker soft-card rounded-[1.5rem] p-6">
-        <summary class="font-semibold text-[var(--forest)]">Les séances sont-elles remboursées ?</summary>
-        <p class="mt-4 text-[var(--text)] leading-relaxed">Certaines mutuelles remboursent partiellement la sophrologie. Une facture peut être fournie sur demande.</p>
-      </details>
-    </div>
-</section>
-    <div class="mt-8">
-      <a href="/contact" class="soft-btn bg-[var(--forest)] text-white px-7 py-3.5 font-medium inline-block hover:bg-[var(--sage-deep)]">Prendre rendez-vous</a>
-    </div>
+
+   <AnimatedFAQ />
+
   </main>
+
   <Footer />
+  <ScrollReveal />
 </BaseLayout>

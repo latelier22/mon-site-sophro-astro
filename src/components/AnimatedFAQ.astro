@@ -1,0 +1,349 @@
+---
+const questions = [
+  {
+    icon: "/icons/ecoute.png",
+    question: "Qu’est-ce que la sophrologie ?",
+    answer:
+      "La sophrologie associe respiration, mouvements doux et visualisations pour apaiser le mental, relâcher les tensions et se reconnecter à ses ressources.",
+  },
+  {
+    icon: "/icons/respiration.png",
+    question: "Faut-il croire à la sophrologie pour que cela fonctionne ?",
+    answer:
+      "Non. La sophrologie est une pratique concrète : les effets viennent de l’expérience et de la répétition des exercices.",
+  },
+  {
+    icon: "/icons/ancrage.png",
+    question: "Que ressent-on pendant une séance ?",
+    answer:
+      "Chaque personne vit l’expérience différemment. Certaines ressentent un apaisement profond, d’autres simplement un moment de calme. Tout est juste.",
+  },
+  {
+    icon: "/icons/souffle.png",
+    question: "Et si je n’arrive pas à me détendre ?",
+    answer:
+      "Ce n’est pas un problème. Il n’y a rien à réussir. L’accompagnement se fait à votre rythme, avec des exercices progressifs et adaptés.",
+  },
+  {
+    icon: "/icons/feuille.png",
+    question: "Les séances peuvent-elles se faire à distance ?",
+    answer:
+      "Oui, les séances peuvent se faire en visio, dans un cadre confidentiel, calme et bienveillant.",
+  },
+  {
+    icon: "/icons/soleil.png",
+    question: "Combien de séances faut-il prévoir ?",
+    answer:
+      "Cela dépend de votre besoin. Une séance peut déjà apporter un apaisement, mais un parcours permet souvent d’ancrer les changements plus durablement.",
+  },
+  {
+    icon: "/icons/racine.png",
+    question: "La sophrologie remplace-t-elle un suivi médical ?",
+    answer:
+      "Non. Elle ne remplace pas un suivi médical ou psychologique, mais elle peut être un complément précieux pour mieux vivre ce que vous traversez.",
+  },
+  {
+    icon: "/icons/feuille.png",
+    question: "Les séances sont-elles remboursées ?",
+    answer:
+      "Certaines mutuelles remboursent partiellement la sophrologie. Une facture peut être fournie sur demande.",
+  },
+];
+---
+
+<section class="faq-animated soft-card rounded-[2.5rem] p-8 md:p-10">
+  <div class="grid lg:grid-cols-[0.9fr_1.1fr] gap-8 items-start">
+    <div>
+  <p class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]">
+    Questions fréquentes
+  </p>
+
+  <h2 class="mt-4 text-3xl md:text-4xl font-semibold text-[var(--brown-deep)]">
+    Avant de commencer
+  </h2>
+
+  <p class="mt-5 leading-relaxed text-[var(--text)]">
+    Les questions apparaissent progressivement. Les réponses défilent automatiquement,
+    mais vous pouvez aussi choisir celle qui vous intéresse.
+  </p>
+
+  <div class="mt-8 flex gap-3">
+    <span class="faq-dot"></span>
+    <span class="faq-dot"></span>
+    <span class="faq-dot"></span>
+  </div>
+
+  <div class="mt-4 mb-4 h-[82%] min-h-[620px] max-lg:h-auto max-lg:min-h-0 max-lg:aspect-square rounded-[2rem] overflow-hidden soft-card p-3 fade-in">
+  <img
+    src="/images/faq-avant-de-commencer.png"
+    alt="Prendre un temps pour soi, respirer et avancer avec douceur"
+    class="scroll-blur-image faq-side-image h-full w-full rounded-[1.6rem] object-cover"
+    loading="lazy"
+  />
+</div>
+</div>
+
+    <div class="faq-list">
+      {questions.map((item, index) => (
+        <button
+          type="button"
+          class="faq-item"
+          data-faq-item
+          data-index={index}
+          style={`--delay:${index * 120}ms`}
+        >
+          <span class="faq-icon-wrap" aria-hidden="true">
+  ?
+</span>
+
+          <span class="faq-content">
+            <span class="faq-question">{item.question}</span>
+            <span class="faq-answer">{item.answer}</span>
+          </span>
+        </button>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  (() => {
+    const sections = document.querySelectorAll(".faq-animated");
+
+    sections.forEach((section) => {
+      const items = Array.from(section.querySelectorAll("[data-faq-item]"));
+      if (!items.length) return;
+
+      let activeIndex = 0;
+      let timer = null;
+
+      const setActive = (index) => {
+        activeIndex = index;
+
+        items.forEach((item, i) => {
+          item.classList.toggle("is-active", i === activeIndex);
+        });
+      };
+
+      const startAuto = () => {
+        clearInterval(timer);
+
+        timer = setInterval(() => {
+          activeIndex = (activeIndex + 1) % items.length;
+          setActive(activeIndex);
+        }, 4200);
+      };
+
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              section.classList.add("is-visible");
+              setActive(0);
+              startAuto();
+              revealObserver.unobserve(section);
+            }
+          });
+        },
+        { threshold: 0.25 }
+      );
+
+      revealObserver.observe(section);
+
+      items.forEach((item, index) => {
+        item.addEventListener("click", () => {
+          setActive(index);
+          startAuto();
+        });
+      });
+    });
+  })();
+</script>
+
+<style>
+  .faq-animated {
+    overflow: hidden;
+  }
+
+  .faq-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 999px;
+    background: var(--brown-soft);
+    opacity: 0.35;
+    animation: faqPulse 1.8s ease-in-out infinite;
+  }
+
+  .faq-dot:nth-child(2) {
+    animation-delay: 0.25s;
+  }
+
+  .faq-dot:nth-child(3) {
+    animation-delay: 0.5s;
+  }
+
+  .faq-list {
+    display: grid;
+    gap: 14px;
+  }
+
+  .faq-item {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    text-align: left;
+    border: 0;
+    cursor: pointer;
+    border-radius: 1.5rem;
+    background: rgba(255, 255, 255, 0.68);
+    padding: 18px;
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+      opacity 700ms ease,
+      transform 700ms ease,
+      background 300ms ease,
+      box-shadow 300ms ease;
+    transition-delay: var(--delay);
+  }
+
+  .faq-animated.is-visible .faq-item {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .faq-item.is-active {
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 18px 45px rgba(94, 74, 66, 0.12);
+  }
+
+  .faq-icon-wrap {
+    flex: 0 0 auto;
+    width: 48px;
+    height: 48px;
+    border-radius: 999px;
+    display: grid;
+    place-items: center;
+    background: rgba(255, 236, 224, 0.8);
+  }
+
+  .faq-icon {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+  }
+
+  .faq-question {
+    display: block;
+    font-weight: 600;
+    color: var(--brown-deep);
+    font-size: 1.05rem;
+  }
+
+  .faq-answer {
+    display: grid;
+    grid-template-rows: 0fr;
+    opacity: 0;
+    margin-top: 0;
+    color: var(--text);
+    line-height: 1.7;
+    transition:
+      grid-template-rows 450ms ease,
+      opacity 350ms ease,
+      margin-top 350ms ease;
+  }
+
+  .faq-answer::before {
+    content: attr(data-empty);
+  }
+
+  .faq-answer {
+    overflow: hidden;
+  }
+
+  .faq-item.is-active .faq-answer,
+.faq-item:hover .faq-answer {
+  display: block;
+  opacity: 1;
+  margin-top: 10px;
+}
+
+  .faq-icon-wrap {
+  flex: 0 0 auto;
+  width: 54px;
+  height: 54px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 236, 224, 0.85);
+  border: 2px solid rgba(154, 103, 80, 0.28);
+  box-shadow:
+    0 10px 24px rgba(94, 74, 66, 0.14),
+    inset 0 0 0 6px rgba(255, 255, 255, 0.35);
+  color: var(--brown-deep);
+  font-size: 1.65rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.faq-item:hover {
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 18px 45px rgba(94, 74, 66, 0.12);
+}
+
+.faq-item:hover .faq-answer {
+  display: block;
+  opacity: 1;
+  margin-top: 10px;
+}
+
+
+.faq-item:nth-child(2n) .faq-icon-wrap {
+  background: rgba(217, 222, 199, 0.9);
+  border-color: rgba(101, 117, 82, 0.28);
+}
+
+.faq-animated > .grid {
+  align-items: stretch;
+}
+
+..faq-side-image {
+  height: 100%;
+  min-height: 620px;
+  object-fit: cover;
+  object-position: right 28%;
+}
+
+@media (max-width: 1023px) {
+  .faq-side-image {
+    min-height: 0;
+    object-position: center top;
+  }
+}
+
+.faq-item:nth-child(3n) .faq-icon-wrap {
+  background: rgba(231, 186, 166, 0.75);
+  border-color: rgba(154, 103, 80, 0.25);
+
+  @keyframes faqPulse {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 0.25;
+    }
+
+    50% {
+      transform: scale(1.35);
+      opacity: 0.65;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .faq-item,
+    .faq-answer,
+    .faq-dot {
+      animation: none;
+      transition: none;
+    }
+  }
+</style>

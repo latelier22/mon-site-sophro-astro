@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import ScrollReveal from "../components/ScrollReveal.astro";
+import ScrollBlurImage from "../components/ScrollBlurImage.astro";
 ---
 
 <BaseLayout
@@ -18,13 +19,16 @@ import ScrollReveal from "../components/ScrollReveal.astro";
           Tarifs et fonctionnement
         </p>
 
-        <h1 class="mt-4 text-4xl md:text-5xl font-semibold text-[var(--brown-deep)]">
+        <h1
+          class="mt-4 text-4xl md:text-5xl font-semibold text-[var(--brown-deep)]"
+        >
           Tarifs et modalités
         </h1>
 
         <p class="mt-5 text-lg leading-relaxed text-[var(--text)]">
-          Je propose des séances à l’unité pour un besoin ponctuel, ainsi que des parcours
-          d’accompagnement pour installer des changements plus profonds et durables.
+          Je propose des séances à l’unité pour un besoin ponctuel, ainsi que
+          des parcours d’accompagnement pour installer des changements plus
+          profonds et durables.
         </p>
       </div>
 
@@ -35,9 +39,7 @@ import ScrollReveal from "../components/ScrollReveal.astro";
               Première séance
             </h2>
 
-            <p class="mt-4 text-[var(--text)]">
-              Analyse + découverte
-            </p>
+            <p class="mt-4 text-[var(--text)]">Analyse + découverte</p>
 
             <p class="mt-6 text-4xl font-semibold text-[var(--brown-deep)]">
               60 €
@@ -49,9 +51,7 @@ import ScrollReveal from "../components/ScrollReveal.astro";
               Séance de suivi
             </h2>
 
-            <p class="mt-4 text-[var(--text)]">
-              Séance personnalisée
-            </p>
+            <p class="mt-4 text-[var(--text)]">Séance personnalisée</p>
 
             <p class="mt-6 text-4xl font-semibold text-[var(--brown-deep)]">
               60 €
@@ -63,9 +63,7 @@ import ScrollReveal from "../components/ScrollReveal.astro";
               Duo parent-enfant
             </h2>
 
-            <p class="mt-4 text-[var(--text)]">
-              Séance en duo
-            </p>
+            <p class="mt-4 text-[var(--text)]">Séance en duo</p>
 
             <p class="mt-6 text-4xl font-semibold text-[var(--brown-deep)]">
               70 €
@@ -84,8 +82,9 @@ import ScrollReveal from "../components/ScrollReveal.astro";
                 Première séance
               </p>
               <p class="mt-2 leading-relaxed text-[var(--text)]">
-                Une séance d’analyse et de découverte pour faire le point sur votre situation,
-                vos besoins et la direction que vous souhaitez prendre.
+                Une séance d’analyse et de découverte pour faire le point sur
+                votre situation, vos besoins et la direction que vous souhaitez
+                prendre.
               </p>
               <p class="mt-4 text-2xl font-semibold text-[var(--brown-deep)]">
                 60 €
@@ -107,19 +106,20 @@ import ScrollReveal from "../components/ScrollReveal.astro";
           </div>
 
           <div class="mt-6 rounded-[1.5rem] bg-white/70 p-6">
-            <p class="font-semibold text-[var(--brown-deep)]">
-              Acompte
-            </p>
+            <p class="font-semibold text-[var(--brown-deep)]">Acompte</p>
             <p class="mt-2 leading-relaxed text-[var(--text)]">
-              Un acompte de 30 € est demandé pour toute réservation de séance de suivi.
-              Il soutient la préparation de votre accompagnement et confirme votre engagement.
+              Un acompte de 30 € est demandé pour toute réservation de séance de
+              suivi. Il soutient la préparation de votre accompagnement et
+              confirme votre engagement.
             </p>
           </div>
         </section>
 
         <section class="mt-8 grid md:grid-cols-2 gap-6">
           <div class="soft-card rounded-[2rem] p-8 slide-right">
-            <p class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]">
+            <p
+              class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]"
+            >
               Parcours
             </p>
 
@@ -128,8 +128,9 @@ import ScrollReveal from "../components/ScrollReveal.astro";
             </h2>
 
             <p class="mt-4 leading-relaxed text-[var(--text)]">
-              Découverte et transformation — 6 séances personnalisées.
-              Un suivi structuré avec des outils additionnels pour avancer progressivement.
+              Découverte et transformation — 6 séances personnalisées. Un suivi
+              structuré avec des outils additionnels pour avancer
+              progressivement.
             </p>
 
             <ul class="mt-5 space-y-3 text-[var(--text)] leading-relaxed">
@@ -140,7 +141,9 @@ import ScrollReveal from "../components/ScrollReveal.astro";
           </div>
 
           <div class="soft-card rounded-[2rem] p-8 slide-left">
-            <p class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]">
+            <p
+              class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]"
+            >
               Parcours
             </p>
 
@@ -149,8 +152,8 @@ import ScrollReveal from "../components/ScrollReveal.astro";
             </h2>
 
             <p class="mt-4 leading-relaxed text-[var(--text)]">
-              Stabilisation et ancrage — 4 à 5 séances personnalisées.
-              Ce parcours permet de consolider les changements amorcés.
+              Stabilisation et ancrage — 4 à 5 séances personnalisées. Ce
+              parcours permet de consolider les changements amorcés.
             </p>
 
             <ul class="mt-5 space-y-3 text-[var(--text)] leading-relaxed">
@@ -168,14 +171,15 @@ import ScrollReveal from "../components/ScrollReveal.astro";
 
           <div class="mt-5 space-y-4 leading-relaxed text-[var(--text)]">
             <p>
-              Le parcours de 6 séances permet un suivi structuré avec des outils additionnels :
-              audios personnalisés, pratiques entre les séances, messages de soutien si nécessaire
-              et temps d’intégration.
+              Le parcours de 6 séances permet un suivi structuré avec des outils
+              additionnels : audios personnalisés, pratiques entre les séances,
+              messages de soutien si nécessaire et temps d’intégration.
             </p>
 
             <p>
-              Les tarifs et modalités sont définis selon le type d’accompagnement choisi :
-              individuel, duo parent-enfant ou besoin spécifique.
+              Les tarifs et modalités sont définis selon le type
+              d’accompagnement choisi : individuel, duo parent-enfant ou besoin
+              spécifique.
             </p>
           </div>
 
@@ -195,16 +199,28 @@ import ScrollReveal from "../components/ScrollReveal.astro";
           </h2>
 
           <ul class="mt-5 space-y-3 text-[var(--text)] leading-relaxed">
-            <li>• Modification ou report possible jusqu’à 48h avant le rendez-vous.</li>
+            <li>
+              • Modification ou report possible jusqu’à 48h avant le
+              rendez-vous.
+            </li>
             <li>• En cas d’annulation tardive, l’acompte est conservé.</li>
-            <li>• En situation exceptionnelle, hospitalisation ou urgence, un report reste possible.</li>
-            <li>• Les séances peuvent se dérouler en cabinet, en visio ou à domicile selon les possibilités.</li>
-            <li>• Un enregistrement audio personnalisé peut être proposé pour poursuivre la pratique chez vous.</li>
+            <li>
+              • En situation exceptionnelle, hospitalisation ou urgence, un
+              report reste possible.
+            </li>
+            <li>
+              • Les séances peuvent se dérouler en cabinet, en visio ou à
+              domicile selon les possibilités.
+            </li>
+            <li>
+              • Un enregistrement audio personnalisé peut être proposé pour
+              poursuivre la pratique chez vous.
+            </li>
           </ul>
 
           <p class="mt-6 font-medium text-[var(--brown-deep)] leading-relaxed">
-            Ce cadre garantit un espace respectueux et pleinement dédié à votre cheminement.
-            Merci pour votre confiance dans cette démarche.
+            Ce cadre garantit un espace respectueux et pleinement dédié à votre
+            cheminement. Merci pour votre confiance dans cette démarche.
           </p>
         </section>
 
@@ -214,8 +230,8 @@ import ScrollReveal from "../components/ScrollReveal.astro";
           </h2>
 
           <p class="mt-5 leading-relaxed text-[var(--text)]">
-            Vous pouvez me contacter pour poser une question, échanger sur votre situation
-            ou convenir ensemble d’un premier rendez-vous.
+            Vous pouvez me contacter pour poser une question, échanger sur votre
+            situation ou convenir ensemble d’un premier rendez-vous.
           </p>
 
           <div class="mt-8 flex flex-wrap justify-center gap-4">
@@ -235,6 +251,10 @@ import ScrollReveal from "../components/ScrollReveal.astro";
           </div>
         </section>
       </section>
+      <ScrollBlurImage
+        src="/images/tarifs.png"
+        alt="Tarifs et fonctionnement des séances de sophrologie"
+      />
     </section>
   </main>
 
