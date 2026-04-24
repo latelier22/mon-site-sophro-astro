@@ -1,0 +1,73 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<BaseLayout title="TESTTarifs – Alexandra Coirier" description="Tarifs et modalités des séances et parcours de sophrologie.">
+  <Header />
+  <main class="mx-auto max-w-6xl px-4 sm:px-6 py-10 md:py-16">
+    <div class="soft-card rounded-[2.5rem] p-8 md:p-10">
+      <h1 class="text-4xl md:text-5xl font-semibold text-[var(--forest)]">Tarifs et modalités</h1>
+      <p class="mt-5 text-lg leading-relaxed text-[var(--text)]">Je propose des séances à l’unité pour un besoin ponctuel, ainsi que des parcours d’accompagnement pour installer des changements plus profonds et durables.</p>
+    </div>
+
+    <section class="mt-8 section-bg rounded-[2.5rem] p-8 md:p-10">
+
+      <section class="mt-8 grid md:grid-cols-3 gap-6">
+        <div class="soft-card rounded-[2rem] p-8">
+          <h2 class="text-2xl font-semibold text-[var(--forest)]">Première séance</h2>
+          <p class="mt-4 text-[var(--text)]">Analyse + séance découverte</p>
+          <p class="mt-6 text-4xl font-semibold text-[var(--forest)]">60 €</p>
+        </div>
+        <div class="soft-card rounded-[2rem] p-8">
+          <h2 class="text-2xl font-semibold text-[var(--forest)]">Suivi individuel</h2>
+          <p class="mt-4 text-[var(--text)]">Séance personnalisée</p>
+          <p class="mt-6 text-4xl font-semibold text-[var(--forest)]">60 €</p>
+        </div>
+        <div class="soft-card rounded-[2rem] p-8">
+          <h2 class="text-2xl font-semibold text-[var(--forest)]">Duo parent-enfant</h2>
+          <p class="mt-4 text-[var(--text)]">Séance en duo</p>
+          <p class="mt-6 text-4xl font-semibold text-[var(--forest)]">70 €</p>
+        </div>
+      </section>
+      
+      <section class="mt-8 grid md:grid-cols-2 gap-6">
+        <div class="soft-card rounded-[2rem] p-8">
+        <h2 class="text-2xl font-semibold text-[var(--forest)]">Parcours Envol</h2>
+        <p class="mt-4 text-[var(--text)]">Découverte et transformation – 6 séances personnalisées</p>
+        <ul class="mt-5 space-y-3 text-[var(--text)] leading-relaxed">
+          <li>Solo : 360 €</li>
+          <li>Duo parent-enfant : 420 €</li>
+          <li>Paiement possible en 1 ou 2 fois</li>
+        </ul>
+      </div>
+      <div class="soft-card rounded-[2rem] p-8">
+        <h2 class="text-2xl font-semibold text-[var(--forest)]">Parcours Harmonie</h2>
+        <p class="mt-4 text-[var(--text)]">Stabilisation et ancrage – 4 à 5 séances personnalisées</p>
+        <ul class="mt-5 space-y-3 text-[var(--text)] leading-relaxed">
+          <li>Solo : 240 € à 300 €</li>
+          <li>Duo parent-enfant : 280 € à 350 €</li>
+          <li>Paiement possible en 1 ou 2 fois</li>
+        </ul>
+      </div>
+    </section>
+    
+    <section class="mt-8 soft-card rounded-[2rem] p-8">
+      <h2 class="text-2xl font-semibold text-[var(--forest)]">Modalités</h2>
+      <ul class="mt-5 space-y-3 text-[var(--text)] leading-relaxed">
+        <li>Acompte de 30 € demandé pour toute réservation de séance de suivi</li>
+        <li>Séances possibles en cabinet, en visio ou à domicile selon les possibilités</li>
+        <li>Un enregistrement audio personnalisé peut être proposé</li>
+        <li>Modification ou report possible jusqu’à 48h avant le rendez-vous</li>
+      </ul>
+      
+    </section>
+    
+    </section>
+    <div class="mt-8">
+        <a href="/contact" class="soft-btn bg-[var(--bg-soft)] text-white px-7 py-3.5 font-medium inline-block hover:bg-[var(--sage-deep)]">Prendre rendez-vous</a>
+      </div>
+  </main>
+  <Footer />
+</BaseLayout>

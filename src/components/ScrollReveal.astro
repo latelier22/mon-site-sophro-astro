@@ -1,0 +1,28 @@
+<script>
+  const revealElements = () => {
+    const elements = document.querySelectorAll(
+      ".fade-in, .zoom-in, .slide-left, .slide-right"
+    );
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      {
+        threshold: 0.15,
+      }
+    );
+
+    elements.forEach((el) => observer.observe(el));
+  };
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", revealElements);
+  } else {
+    revealElements();
+  }
+</script>

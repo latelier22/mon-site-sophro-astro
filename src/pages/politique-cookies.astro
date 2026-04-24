@@ -1,0 +1,80 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<BaseLayout title="TESTPolitique de cookies">
+  <Header />
+
+  <main class="mx-auto max-w-4xl px-4 sm:px-6 py-16">
+    <div class="soft-card rounded-[2.5rem] p-8 md:p-10">
+      <h1 class="text-4xl font-semibold text-[var(--brown-deep)]">Politique de cookies</h1>
+
+      <section class="mt-8 space-y-4 text-[var(--text)] leading-relaxed">
+        <p>
+          Cette politique explique comment le site utilise des cookies et autres traceurs.
+        </p>
+      </section>
+
+      <section class="mt-10 space-y-4 text-[var(--text)] leading-relaxed">
+        <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">Qu’est-ce qu’un cookie ?</h2>
+        <p>
+          Un cookie est un petit fichier enregistré sur votre terminal lors de la consultation
+          d’un site web. Il permet notamment de mémoriser certaines informations relatives à votre navigation.
+        </p>
+      </section>
+
+      <section class="mt-10 space-y-4 text-[var(--text)] leading-relaxed">
+        <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">Cookies utilisés sur le site</h2>
+        <p>Le site peut utiliser les catégories suivantes :</p>
+        <ul class="list-disc pl-6 space-y-2">
+          <li><strong>Cookies strictement nécessaires</strong> au fonctionnement du site ;</li>
+          <li><strong>Cookies de mesure d’audience</strong>, si un outil statistique est activé ;</li>
+          <li><strong>Cookies liés à des services tiers</strong>, notamment si un module de prise de rendez-vous Calendly est affiché.</li>
+        </ul>
+      </section>
+
+      <section class="mt-10 space-y-4 text-[var(--text)] leading-relaxed">
+        <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">Consentement</h2>
+        <p>
+          Lorsque la loi l’exige, les cookies non nécessaires ne sont déposés qu’après votre consentement.
+        </p>
+        <p>
+          Vous pouvez accepter, refuser ou retirer votre consentement à tout moment.
+        </p>
+      </section>
+
+      <section class="mt-10 space-y-4 text-[var(--text)] leading-relaxed">
+        <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">Calendly</h2>
+        <p>
+          Le site peut proposer une prise de rendez-vous via Calendly. L’affichage de ce service
+          peut entraîner le dépôt de cookies par Calendly.
+        </p>
+        <p>
+          Pour cette raison, le module de prise de rendez-vous ne devrait être chargé
+          qu’après acceptation des cookies ou services externes.
+        </p>
+      </section>
+
+      <section class="mt-10 space-y-4 text-[var(--text)] leading-relaxed">
+        <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">Durée de conservation</h2>
+        <p>
+          Les cookies sont conservés pour une durée limitée, conformément à leur finalité
+          et à la réglementation applicable.
+        </p>
+      </section>
+
+      <section class="mt-10 space-y-4 text-[var(--text)] leading-relaxed">
+        <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">Gérer les cookies</h2>
+        <p>
+          Vous pouvez configurer votre navigateur pour bloquer ou supprimer les cookies.
+          Vous pouvez également modifier votre choix à tout moment via l’outil de gestion
+          du consentement mis à disposition sur le site, lorsqu’il est présent.
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <Footer />
+</BaseLayout>

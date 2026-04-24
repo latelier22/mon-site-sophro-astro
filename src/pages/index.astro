@@ -1,0 +1,454 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import ScrollReveal from "../components/ScrollReveal.astro";
+import SophroCarousel from "../components/SophroCarousel.astro";
+import SophroMozaicFlip from "../components/SophroMozaicFlip.astro";
+---
+
+<BaseLayout
+  title="TESTAlexandra Coirier – Sophrologue"
+  description="TEST : Sophrologue à Loudéac – accompagnement apaisant, émotions, sérénité et mieux-être."
+>
+  <Header />
+
+  <main>
+    <section class="mx-auto max-w-7xl px-4 sm:px-6 py-16">
+      <section
+        class="section-bg relative overflow-hidden min-h-[40vh] flex items-center"
+      >
+        <div
+          class="absolute left-10 top-24 h-40 w-40 rounded-full bg-[var(--rose-powder)]/40 blur-3xl float-slow"
+        >
+        </div>
+        <div
+          class="absolute right-10 top-36 h-52 w-52 rounded-full bg-[var(--rose-muted)]/30 blur-3xl float-slow"
+        >
+        </div>
+
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 py-12 md:py-20 w-full">
+          <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            <div class="slide-right">
+              <div
+                class="inline-flex items-center gap-2 rounded-full bg-white/60 px-4 py-2 text-sm text-[var(--brown-soft)] soft-card"
+              >
+                <span class="h-2.5 w-2.5 rounded-full bg-[var(--brown-soft)]"
+                ></span>
+                Se faire accompagner par une sophrologue certifiée
+              </div>
+
+              <h1
+                class="mt-6 text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight text-[var(--brown-deep)]"
+              >
+                APAISER enfin l’anxiété
+              </h1>
+
+              <p
+                class="mt-4 text-xl sm:text-2xl text-[var(--brown-soft)] leading-relaxed"
+              >
+                La sérénité, la confiance, la paix intérieure… c’est possible.
+                Pour de vrai.
+              </p>
+
+              <p
+                class="mt-6 max-w-xl text-lg leading-relaxed text-[var(--text)]"
+              >
+                Spécialisée en stress, anxiété et émotions — à Loudéac, en
+                Centre-Bretagne.
+              </p>
+
+              <div class="mt-8 flex flex-wrap gap-4">
+                <a
+                  href="/contact"
+                  class="soft-btn bg-[var(--brown-soft)] text-white px-7 py-3.5 font-medium hover:bg-[var(--brown-deep)]"
+                >
+                  Prendre rendez-vous
+                </a>
+                <a
+                  href="/a-quoi-s-attendre"
+                  class="soft-btn border border-[var(--brown-soft)]/20 bg-white/70 px-7 py-3.5 text-[var(--brown-deep)] hover:bg-white"
+                >
+                  À quoi s’attendre
+                </a>
+              </div>
+            </div>
+
+            <div class="relative slide-left">
+              <div
+                class="absolute -inset-4 rounded-[2.5rem] bg-white/30 blur-2xl"
+              >
+              </div>
+              <div class="relative soft-card rounded-[2.5rem] p-4">
+                <img
+                  src="/images/sophro-hero.jpg"
+                  alt="Ambiance douce et apaisante de sophrologie"
+                  class="h-[520px] w-full rounded-[2rem] object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-waves"></div>
+      </section>
+    </section>
+    <section class="mx-auto max-w-7xl px-4 sm:px-6 py-16">
+      <section
+        class="section-bg relative overflow-hidden min-h-[40vh] flex items-center"
+      >
+        <SophroMozaicFlip/>
+      </section>
+    </section>
+
+    <section class="mx-auto max-w-7xl px-4 sm:px-6 py-8 md:py-14">
+      <div class="soft-card rounded-[2.5rem] p-8 md:p-10 fade-in">
+        <h2 class="text-3xl md:text-4xl font-semibold text-[var(--brown-deep)]">
+          Tu en as assez de te sentir submergée ? Il est temps de t’offrir un
+          vrai moment pour toi.
+        </h2>
+
+        <p class="mt-6 text-lg leading-relaxed text-[var(--text)]">
+          Tu te dis parfois que tu es « née anxieuse », comme si c’était une
+          fatalité. Toujours en train d’anticiper, de ressasser, d’imaginer le
+          pire même quand tout va bien… et ça t’épuise.
+        </p>
+
+        <details class="mt-6 rounded-[1.5rem] bg-white/70 p-5">
+          <summary
+            class="cursor-pointer font-semibold text-[var(--brown-deep)]"
+          >
+            Lire la suite
+          </summary>
+          <div class="mt-4 space-y-4 leading-relaxed text-[var(--text)]">
+            <p>
+              Tu ressens ce mal-être diffus, cette perte de sens : « Je ne me
+              reconnais plus. » « Je n’ai plus envie de rien. » Tes émotions
+              débordent : hypersensibilité, culpabilité, peur de l’échec, charge
+              mentale constante.
+            </p>
+            <p>
+              Dans tes relations, tu te sens parfois en décalage, comme une
+              éponge émotionnelle face aux autres. Et ton corps, lui aussi, crie
+              « stop » : fatigue, tensions, douleurs, troubles du sommeil…
+            </p>
+            <p class="font-medium text-[var(--brown-deep)]">
+              Au fond, tu ne veux pas “tout changer” — tu veux simplement te
+              sentir bien, reprendre confiance, retrouver ta joie, ton élan, ton
+              équilibre, et vivre en paix avec toi-même et avec les autres.
+            </p>
+            <p>
+              La bonne nouvelle, c’est que rien n’est figé. Tu peux apprendre à
+              comprendre ce qui se passe en toi, à apaiser ce tumulte intérieur
+              et à réinstaller un équilibre durable.
+            </p>
+          </div>
+        </details>
+
+        <div class="mt-8">
+          <a
+            href="/contact"
+            class="soft-btn bg-[var(--brown-soft)] text-white px-7 py-3.5 font-medium inline-block hover:bg-[var(--brown-deep)]"
+          >
+            Prendre rendez-vous
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="mx-auto max-w-7xl px-4 sm:px-6 py-16">
+      <section
+        class="section-bg relative overflow-hidden min-h-[50vh] flex items-center"
+      >
+        <section class="mx-auto max-w-7xl px-4 sm:px-6 py-8 md:py-14">
+          <div class="grid lg:grid-cols-2 gap-8 items-stretch">
+            <div class="soft-card rounded-[2.5rem] p-8 md:p-10 slide-right">
+              <h2
+                class="text-3xl md:text-4xl font-semibold text-[var(--brown-deep)]"
+              >
+                Et si tu décidais de reprendre les rênes ?
+              </h2>
+
+              <ul class="mt-8 space-y-4 text-[var(--text)] leading-relaxed">
+                <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
+                  Tu sens bien que vivre ainsi t’épuise et t’empêche d’être à
+                  l’aise dans tes relations, au travail ou dans ta vie
+                  personnelle.
+                </li>
+                <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
+                  L’anxiété ronge peu à peu la confiance et l’estime de soi.
+                </li>
+                <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
+                  La sophrologie donne des outils concrets et simples pour
+                  apaiser tes émotions et retrouver une clarté intérieure.
+                </li>
+                <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
+                  Tu peux reprendre confiance, avancer pas à pas et retrouver la
+                  simplicité d’être bien avec toi-même.
+                </li>
+              </ul>
+            </div>
+
+            <div class="soft-card rounded-[2.5rem] p-8 md:p-10 slide-left">
+              <h2
+                class="text-3xl md:text-4xl font-semibold text-[var(--brown-deep)]"
+              >
+                Vers une vie plus légère et sereine
+              </h2>
+
+              <ul class="mt-8 space-y-4 text-[var(--text)]">
+                <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
+                  Te réveiller sans boule au ventre et sans angoisse qui
+                  t’épuise avant même que la journée ne commence.
+                </li>
+                <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
+                  Retrouver la joie de vivre, l’élan et l’envie de faire des
+                  projets.
+                </li>
+                <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
+                  Vivre des relations plus apaisées et te sentir plus libre
+                  d’être toi-même.
+                </li>
+                <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
+                  Sentir les crises d’angoisse perdre peu à peu en intensité
+                  jusqu’à ne plus dicter tes choix.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="mx-auto max-w-7xl px-4 sm:px-6 py-8 md:py-14">
+        <div class="soft-card rounded-[2.5rem] p-8 md:p-10 zoom-in">
+          <p
+            class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]"
+          >
+            Mon approche
+          </p>
+
+          <h2
+            class="mt-4 text-3xl md:text-4xl font-semibold text-[var(--brown-deep)]"
+          >
+            Alexandra Coirier, sophrologue — stress, anxiété et émotions
+          </h2>
+
+          <div class="mt-8 grid md:grid-cols-3 gap-6">
+            <div class="rounded-[1.5rem] bg-white/70 p-6">
+              <h3 class="text-xl font-semibold text-[var(--brown-deep)]">
+                Écouter
+              </h3>
+              <p class="mt-3 text-[var(--text)]">
+                Dès la première séance, un temps d’écoute attentif pour
+                comprendre tes difficultés, tes ressentis et tes objectifs.
+              </p>
+            </div>
+
+            <div class="rounded-[1.5rem] bg-white/70 p-6">
+              <h3 class="text-xl font-semibold text-[var(--brown-deep)]">
+                Apaiser
+              </h3>
+              <p class="mt-3 text-[var(--text)]">
+                Respiration, mouvements, visualisations et outils simples pour
+                relâcher les tensions et retrouver du calme.
+              </p>
+            </div>
+
+            <div class="rounded-[1.5rem] bg-white/70 p-6">
+              <h3 class="text-xl font-semibold text-[var(--brown-deep)]">
+                Ancrer
+              </h3>
+              <p class="mt-3 text-[var(--text)]">
+                Tu repars avec des supports concrets pour progresser à ton
+                rythme entre les séances.
+              </p>
+            </div>
+          </div>
+
+          <details class="mt-8 rounded-[1.5rem] bg-white/70 p-5">
+            <summary
+              class="cursor-pointer font-semibold text-[var(--brown-deep)]"
+            >
+              Voir le détail de mon approche
+            </summary>
+            <div class="mt-4 space-y-4 text-[var(--text)] leading-relaxed">
+              <p>
+                Mon approche est globale : corps, esprit et émotions. Je t’aide
+                à apaiser les tensions, clarifier les situations bloquées et
+                renforcer les ressources déjà présentes en toi.
+              </p>
+              <p>
+                Nous travaillons ensemble sur des techniques simples que tu peux
+                reproduire au quotidien. Parfois c’est la pratique, parfois
+                c’est l’échange qui prime.
+              </p>
+              <p>
+                Mon but est que tu retrouves calme, sécurité intérieure, clarté
+                et énergie, tout en restant actrice de ton parcours.
+              </p>
+            </div>
+          </details>
+
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a
+              href="/qui-suis-je"
+              class="soft-btn border border-[var(--brown-soft)]/20 bg-white/70 px-7 py-3.5 text-[var(--brown-deep)] hover:bg-white"
+            >
+              Qui suis-je ?
+            </a>
+            <a
+              href="/contact"
+              class="soft-btn bg-[var(--brown-soft)] text-white px-7 py-3.5 font-medium inline-block hover:bg-[var(--brown-deep)]"
+            >
+              Prendre rendez-vous
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-7xl px-4 sm:px-6 py-8 md:py-14">
+        <div class="soft-card rounded-[2.5rem] p-8 md:p-10 fade-in">
+          <h2
+            class="text-3xl md:text-4xl font-semibold text-[var(--brown-deep)]"
+          >
+            Ce qu’ils en ont pensé
+          </h2>
+
+          <div class="mt-8 grid md:grid-cols-3 gap-6">
+            <blockquote class="rounded-[1.5rem] bg-white/70 p-6">
+              <p class="leading-relaxed">
+                « Je suis très heureuse d’avoir fait la rencontre d’Alexandra et
+                je la recommande vivement. Mon stress s’en est allé au fil des
+                séances. »
+              </p>
+              <footer class="mt-4 text-sm text-[var(--brown-soft)]">M-A</footer>
+            </blockquote>
+
+            <blockquote class="rounded-[1.5rem] bg-white/70 p-6">
+              <p class="leading-relaxed">
+                « J’ai retrouvé un vrai apaisement intérieur et des outils
+                concrets pour mieux vivre mes émotions au quotidien. »
+              </p>
+              <footer class="mt-4 text-sm text-[var(--brown-soft)]">
+                Témoignage
+              </footer>
+            </blockquote>
+
+            <blockquote class="rounded-[1.5rem] bg-white/70 p-6">
+              <p class="leading-relaxed">
+                « Les séances m’ont permis de reprendre confiance et de me
+                reconnecter à mes besoins avec plus de douceur. »
+              </p>
+              <footer class="mt-4 text-sm text-[var(--brown-soft)]">
+                Témoignage
+              </footer>
+            </blockquote>
+          </div>
+
+          <div class="mt-8">
+            <a
+              href="/contact"
+              class="soft-btn bg-[var(--brown-soft)] text-white px-7 py-3.5 font-medium inline-block hover:bg-[var(--brown-deep)]"
+            >
+              Prendre rendez-vous
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-7xl px-4 sm:px-6 py-8 md:py-14">
+        <div class="grid lg:grid-cols-2 gap-8 items-start">
+          <div class="soft-card rounded-[2.5rem] p-8 md:p-10 slide-right">
+            <h2
+              class="text-3xl md:text-4xl font-semibold text-[var(--brown-deep)]"
+            >
+              Est-ce que la sophrologie est faite pour toi ?
+            </h2>
+
+            <ul class="mt-8 space-y-4 text-[var(--text)]">
+              <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
+                Tu sens que tu ne peux plus continuer ainsi et que tu as besoin
+                de retrouver souffle, énergie et sérénité.
+              </li>
+              <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
+                Tu cherches à comprendre ce qui se passe en toi plutôt que de
+                subir tes émotions, tes peurs ou tes crises.
+              </li>
+              <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
+                Tu recherches une pratique incarnée avec des outils concrets
+                pour te recentrer et t’ancrer dans le présent.
+              </li>
+              <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
+                Tu souhaites compléter un suivi psychologique ou t’offrir une
+                alternative aux solutions médicamenteuses.
+              </li>
+            </ul>
+
+            <p class="mt-8 italic text-[var(--brown-soft)]">
+              « La vie, ce n’est pas d’attendre que les orages passent, c’est
+              d’apprendre comment danser sous la pluie. »
+            </p>
+
+            <div class="mt-8">
+              <a
+                href="/contact"
+                class="soft-btn bg-[var(--brown-soft)] text-white px-7 py-3.5 font-medium inline-block hover:bg-[var(--brown-deep)]"
+              >
+                Prendre rendez-vous
+              </a>
+            </div>
+          </div>
+
+          <div class="soft-card rounded-[2.5rem] p-8 md:p-10 slide-left">
+            <h2
+              class="text-3xl md:text-4xl font-semibold text-[var(--brown-deep)]"
+            >
+              Tarifs
+            </h2>
+
+            <div class="mt-8 space-y-4">
+              <div
+                class="rounded-[1.5rem] bg-white/70 p-5 flex items-center justify-between gap-4"
+              >
+                <span>Première séance</span>
+                <strong class="text-[var(--brown-deep)]">60 €</strong>
+              </div>
+              <div
+                class="rounded-[1.5rem] bg-white/70 p-5 flex items-center justify-between gap-4"
+              >
+                <span>Séance de suivi</span>
+                <strong class="text-[var(--brown-deep)]">60 €</strong>
+              </div>
+              <div
+                class="rounded-[1.5rem] bg-white/70 p-5 flex items-center justify-between gap-4"
+              >
+                <span>Duo parent-enfant</span>
+                <strong class="text-[var(--brown-deep)]">70 €</strong>
+              </div>
+            </div>
+
+            <div class="mt-8 flex flex-wrap gap-4">
+              <a
+                href="/tarifs"
+                class="soft-btn border border-[var(--brown-soft)]/20 bg-white/70 px-7 py-3.5 text-[var(--brown-deep)] hover:bg-white"
+              >
+                Voir tous les tarifs
+              </a>
+              <a
+                href="/contact"
+                class="soft-btn bg-[var(--brown-soft)] text-white px-7 py-3.5 font-medium inline-block hover:bg-[var(--brown-deep)]"
+              >
+                Prendre rendez-vous
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <section class="mx-auto max-w-7xl px-4 sm:px-6 py-8 md:py-14">
+      <SophroCarousel autoplayMs={3800} />
+    </section>
+
+    <Footer />
+    <ScrollReveal />
+  </main></BaseLayout
+>

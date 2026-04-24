@@ -1,0 +1,191 @@
+:root {
+  --bg: #f6efec;
+  --rose-powder: #d9b7aa;
+  --rose-muted: #c79e91;
+  --brown-soft: #9a6750;
+  --brown-deep: #6f4a3a;
+  --text: #5e4a42;
+  --white-soft: rgba(255, 255, 255, 0.72);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Cormorant Garamond", serif;
+  color: var(--brown-deep);
+}
+
+/* Ne pas contraindre tout le site globalement */
+.wp-site-blocks {
+  margin: 0 auto;
+}
+
+/* Largeur confortable pour les groupes de contenu */
+.wp-block-group.alignwide,
+.wp-block-cover.alignwide,
+.wp-block-group.alignfull,
+.wp-block-cover.alignfull {
+  width: 100%;
+}
+
+.wp-block-group__inner-container,
+.wp-block-cover__inner-container {
+  width: 100%;
+  max-width: none;
+}
+
+/* Carte douce */
+.soft-card {
+  padding: 40px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Boutons */
+.soft-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 999px;
+  text-decoration: none;
+  background: var(--brown-soft);
+  color: white;
+  transition: 0.3s;
+}
+
+.soft-btn:hover {
+  background: var(--brown-deep);
+  transform: translateY(-2px);
+}
+
+/* Hero */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  padding: 80px 20px;
+  border-radius: 2.5rem;
+}
+
+.hero-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.hero-title {
+  margin-top: 24px;
+  font-size: 56px;
+  line-height: 1.1;
+  color: var(--brown-deep);
+}
+
+.hero-subtitle {
+  margin-top: 16px;
+  font-size: 26px;
+  color: var(--brown-soft);
+}
+
+.hero-description {
+  max-width: 520px;
+  margin-top: 24px;
+  font-size: 18px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.hero-btn-primary {
+  padding: 14px 28px;
+  background: var(--brown-soft);
+  color: white;
+}
+
+.hero-btn-secondary {
+  padding: 14px 28px;
+  color: var(--brown-deep);
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(154, 103, 80, 0.2);
+}
+
+.hero-image-card {
+  padding: 16px;
+  border-radius: 2rem;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  border-radius: 2rem;
+}
+
+.hero-bg-bubble {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+}
+
+.hero-bubble-left {
+  top: 120px;
+  left: 40px;
+  width: 160px;
+  height: 160px;
+  background: rgba(217, 183, 170, 0.4);
+}
+
+.hero-bubble-right {
+  top: 180px;
+  right: 40px;
+  width: 220px;
+  height: 220px;
+  background: rgba(199, 158, 145, 0.3);
+}
+
+/* Forcer le contenu de certains blocs à prendre toute la largeur */
+.ac-full-inner,
+.ac-full-inner > .wp-block-group__inner-container,
+.ac-full-inner > .wp-block-cover__inner-container {
+  width: 100%;
+  max-width: none;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .hero-title {
+    font-size: 42px;
+  }
+
+  .hero-subtitle {
+    font-size: 22px;
+  }
+
+  .hero-image img {
+    height: 380px;
+  }
+}

@@ -1,0 +1,28 @@
+<script is:inline>
+  (() => {
+    const box = document.getElementById("form-status");
+    if (!box) return;
+
+    const params = new URLSearchParams(window.location.search);
+    const success = params.get("success");
+    const error = params.get("error");
+
+    if (success === "1") {
+      box.hidden = false;
+      box.innerHTML = `
+        <div class="rounded-[1.5rem] border border-green-200 bg-green-50 px-5 py-4 text-green-800">
+          Votre message a bien été envoyé.
+        </div>
+      `;
+    }
+
+    if (error === "1") {
+      box.hidden = false;
+      box.innerHTML = `
+        <div class="rounded-[1.5rem] border border-red-200 bg-red-50 px-5 py-4 text-red-800">
+          Une erreur est survenue. Merci de réessayer.
+        </div>
+      `;
+    }
+  })();
+</script>

@@ -1,0 +1,81 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<BaseLayout title="TESTMentions légales">
+  <Header />
+
+  <main class="mx-auto max-w-4xl px-4 sm:px-6 py-16">
+    <div class="soft-card rounded-[2.5rem] p-8 md:p-10">
+      <h1 class="text-4xl font-semibold text-[var(--brown-deep)]">Mentions légales</h1>
+
+      <section class="mt-8 space-y-4 text-[var(--text)] leading-relaxed">
+        <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">Éditeur du site</h2>
+        <p>
+          Le présent site est édité par :
+        </p>
+        <p>
+          <strong>[Nom / activité]</strong><br />
+          Sophrologue<br />
+          Adresse : [adresse postale]<br />
+          Email : [email]<br />
+          Téléphone : [téléphone]
+        </p>
+        <p>
+          Directeur / directrice de la publication : [Nom complet]
+        </p>
+      </section>
+
+      <section class="mt-10 space-y-4 text-[var(--text)] leading-relaxed">
+        <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">Hébergement</h2>
+        <p>
+          Le site est hébergé par :
+        </p>
+        <p>
+          <strong>o2switch</strong><br />
+          Chem. des Pardiaux, 63000 Clermont-Ferrand, France<br />
+          Téléphone : 04 44 44 60 40<br />
+          Site : o2switch.fr
+        </p>
+      </section>
+
+      <section class="mt-10 space-y-4 text-[var(--text)] leading-relaxed">
+        <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">Propriété intellectuelle</h2>
+        <p>
+          L’ensemble des contenus présents sur ce site, notamment les textes, images, graphismes,
+          logos, icônes, éléments visuels, structure et mise en page, est protégé par le droit de
+          la propriété intellectuelle.
+        </p>
+        <p>
+          Sauf autorisation écrite préalable, toute reproduction, représentation, adaptation,
+          diffusion ou exploitation, totale ou partielle, de tout ou partie du site, par quelque
+          procédé que ce soit, est interdite.
+        </p>
+      </section>
+
+      <section class="mt-10 space-y-4 text-[var(--text)] leading-relaxed">
+        <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">Responsabilité</h2>
+        <p>
+          Les informations publiées sur ce site sont fournies à titre informatif. Malgré le soin
+          apporté à leur rédaction, elles peuvent être modifiées, complétées ou mises à jour à tout
+          moment.
+        </p>
+        <p>
+          L’éditeur du site ne pourra être tenu responsable d’éventuelles erreurs, omissions
+          ou d’une indisponibilité temporaire du service.
+        </p>
+      </section>
+
+      <section class="mt-10 space-y-4 text-[var(--text)] leading-relaxed">
+        <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">Contact</h2>
+        <p>
+          Pour toute question concernant le site, vous pouvez écrire à : <strong>[email]</strong>
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <Footer />
+</BaseLayout>

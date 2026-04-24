@@ -1,0 +1,317 @@
+---
+import { readdir } from "node:fs/promises";
+import path from "node:path";
+
+const {
+  images = [
+    "/diapos/1.atelier-réguler-stress-ball-5586847_640.jpg",
+    "/diapos/1650379616089.jpg",
+    "/diapos/2.-atelier-sommeil-icons8-team-dhZtNlvNE8M-unsplash.jpg",
+    "/diapos/2021-LOGO-MEMBRE-ADHERENT-en-Magenta_Version-de-travail-pdf.jpg",
+    "/diapos/3.-atelier-réviser-efficacement-notebook-2152429_640-500x383@2x.jpg",
+    "/diapos/4.-atelier-sohro-et-anglais-tim-goedhart-vnpTRdmtQ30-unsplash.jpg",
+    "/diapos/accomp-enfants-ados-xavi-cabrera-6bnH1v-IQK0-unsplash.jpg",
+    "/diapos/accompagnement-adultes-et-séniors-chris-lawton-5IHz5WhosQE-unsplash.jpg",
+    "/diapos/ALC-FLYER-A6-pdf.jpg",
+    "/diapos/angiola-harry-nJv6xnlpNaA-unsplash.jpg",
+    "/diapos/Annonce-Sophro-Rose-.-J1-et-J2-pub.png",
+    "/diapos/arbre.jpg",
+    "/diapos/chang-duong-Sj0iMtq_Z4w-unsplash.jpg",
+    "/diapos/exam-gf8d7562f2_1920.jpg",
+    "/diapos/family-1866868_1280.jpg",
+    "/diapos/feps-logo.png",
+    "/diapos/Flyer-Atelier-.jpg",
+    "/diapos/fond.jpg",
+    "/diapos/gabriele-stravinskaite-fzcluHBur3o-unsplash.jpg",
+    "/diapos/gouttes-deau-sur-vitre-.jpg",
+    "/diapos/hans-peter-gauster-Institutions-et-etablissements-scolaires-unsplash.jpg",
+    "/diapos/I-changements-de-vie-hakon-grimstad-hteXWSF9jA4-unsplash.jpg",
+    "/diapos/I-Confiance-préparation-examenspexels-dio-hasbi-saniskoro-3280130-1.jpg",
+    "/diapos/I-Confiance-préparation-examenspexels-dio-hasbi-saniskoro-3280130.jpg",
+    "/diapos/I-gestion-douleur-man-2546791_640-500x383@2x.jpg",
+    "/diapos/I-gestion-émotions-nick-fewings-0ogq3xndxG0-unsplash1-500x383@2x.jpg",
+    "/diapos/I-sommeil-noemi-rodriguez-DMAg4eoMTZA-unsplash1.jpg",
+    "/diapos/I-stress-burn-out-engin-akyurt-5aDlYurwc34-unsplash.jpg",
+    "/diapos/IMG_20210919_124439-2.jpg",
+    "/diapos/inee-decouverte.png",
+    "/diapos/man-and-stars.jpg",
+    "/diapos/Matinee-decouverte-Mettre-de-la-sophrologie-dans-sa-vie.png",
+    "/diapos/moon-and-sea.jpg",
+    "/diapos/motoki-tonn-X00q3RXcyZ4-unsplash-1.jpg",
+    "/diapos/nadine-shaabana-VA9xSQekC8c-unsplash.jpg",
+    "/diapos/natalie-grainger-8uB5kFKWWkk-unsplash.jpg",
+    "/diapos/pat-whelen-ba8hFPvg8iU-unsplash.jpg",
+    "/diapos/people-g0a9f5e761_1920.jpg",
+    "/diapos/people-g625ab9d97_1920.jpg",
+    "/diapos/Rose-et-Indigo-Lumieres-Gras-Typographie-Personnel-Noel-Cheque-Cadeau.png",
+    "/diapos/rupert-britton-l37N7a1lL6w-unsplash.jpg",
+    "/diapos/section-bg.png",
+    "/diapos/ssp.jpeg",
+    "/diapos/stick-etincelles.jpg",
+    "/diapos/sunflowers-.jpg",
+    "/diapos/testimonials-background.jpg",
+    "/diapos/Vert-Lys-Dessine-a-la-main-Lundi-de-la-pleine-conscience-Bien-etre-Apprentissage-social-et-emotionnel-Affiche.png",
+    "/diapos/White-Brown-Forest-Lets-Explore-The-Forest-Photo-Collage.png",
+    "/diapos/woman-g080ccb21d_1920.jpg",
+    "/diapos/yoshi-sugimoto-VTfJu_22eSw-unsplash.jpg",
+  ],
+  intervalMs = 2400,
+} = Astro.props;
+
+
+const id = `mosaic-flip-${Math.random().toString(36).slice(2, 9)}`;
+
+const tiles = [
+  { col: 1, row: 1, colSpan: 2, rowSpan: 2 },
+  { col: 3, row: 1, colSpan: 2, rowSpan: 3 },
+  { col: 5, row: 1, colSpan: 2, rowSpan: 2 },
+  { col: 1, row: 3, colSpan: 2, rowSpan: 1 },
+  { col: 5, row: 3, colSpan: 2, rowSpan: 1 },
+  { col: 1, row: 4, colSpan: 3, rowSpan: 3 },
+  { col: 4, row: 4, colSpan: 1, rowSpan: 2 },
+  { col: 5, row: 4, colSpan: 2, rowSpan: 3 },
+  { col: 4, row: 6, colSpan: 1, rowSpan: 1 },
+];
+
+const publicDiaposPath = path.join(process.cwd(), "public", "diapos");
+const allowedExts = new Set([".jpg", ".jpeg", ".png", ".webp", ".gif", ".avif"]);
+
+let existingUrls: string[] = [];
+try {
+  const files = await readdir(publicDiaposPath, { withFileTypes: true });
+  existingUrls = files
+    .filter((f) => f.isFile())
+    .map((f) => f.name)
+    .filter((name) => allowedExts.has(path.extname(name).toLowerCase()))
+    .map((name) => `/diapos/${name}`);
+} catch (e) {
+  existingUrls = [];
+}
+
+const existingSet = new Set(existingUrls);
+const finalImages =
+  images && images.length
+    ? images.filter((src) => existingSet.has(src))
+    : existingUrls;
+
+const safeImages = finalImages.length ? finalImages : [];
+---
+
+{safeImages.length > 0 && (
+  <section id={id} class="sophro-mosaic" data-interval={intervalMs}>
+    <div class="sophro-mosaic__grid">
+      {tiles.map((tile, index) => (
+        <article
+          class="sophro-mosaic__tile"
+          style={`grid-column:${tile.col} / span ${tile.colSpan}; grid-row:${tile.row} / span ${tile.rowSpan};`}
+          data-tile={index}
+        >
+          <div class="sophro-mosaic__flip">
+            <button
+              type="button"
+              class="sophro-mosaic__face sophro-mosaic__face--front"
+              data-open-modal
+              data-image-index={index % safeImages.length}
+              aria-label={`Ouvrir l’image ${index + 1}`}
+            >
+              <img
+                src={safeImages[index % safeImages.length]}
+                alt={`Image ${index + 1}`}
+                class="sophro-mosaic__img"
+                data-front
+                loading="eager"
+              />
+            </button>
+
+            <button
+              type="button"
+              class="sophro-mosaic__face sophro-mosaic__face--back"
+              data-open-modal
+              data-image-index={(index + tiles.length) % safeImages.length}
+              aria-label={`Ouvrir l’image ${index + 1}`}
+            >
+              <img
+                src={safeImages[(index + tiles.length) % safeImages.length]}
+                alt={`Image ${index + 1}`}
+                class="sophro-mosaic__img"
+                data-back
+                loading="lazy"
+              />
+            </button>
+          </div>
+        </article>
+      ))}
+    </div>
+
+<div class="sophro-overlay" data-lightbox hidden>
+  <div class="sophro-overlay__backdrop" data-close-lightbox></div>
+
+  <div class="sophro-overlay__panel" role="dialog" aria-modal="false" aria-label="Galerie d’images">
+    <button
+      type="button"
+      class="sophro-overlay__close"
+      data-close-lightbox
+      aria-label="Fermer"
+    >
+      ×
+    </button>
+
+    <button
+      type="button"
+      class="sophro-overlay__arrow sophro-overlay__arrow--prev"
+      data-lightbox-prev
+      aria-label="Image précédente"
+    >
+      ‹
+    </button>
+
+    <div class="sophro-overlay__content">
+      <img src="" alt="Image agrandie" class="sophro-overlay__img" data-lightbox-image />
+    </div>
+
+    <button
+      type="button"
+      class="sophro-overlay__arrow sophro-overlay__arrow--next"
+      data-lightbox-next
+      aria-label="Image suivante"
+    >
+      ›
+    </button>
+  </div>
+</div>
+  </section>
+)}
+
+<script is:inline define:vars={{ id, safeImages }}>
+  (() => {
+    const root = document.getElementById(id);
+    if (!root) return;
+
+    const tiles = Array.from(root.querySelectorAll("[data-tile]"));
+    const intervalMs = Number(root.dataset.interval || 2400);
+
+    const pool = safeImages.slice();
+    let globalIndex = tiles.length * 2;
+
+    const nextImage = () => {
+      if (!pool.length) return "";
+      const src = pool[globalIndex % pool.length];
+      globalIndex += 1;
+      return src;
+    };
+
+    let current = 0;
+
+    const flipTile = (tile) => {
+      if (!tile) return;
+
+      const flip = tile.querySelector(".sophro-mosaic__flip");
+      const front = tile.querySelector("[data-front]");
+      const back = tile.querySelector("[data-back]");
+
+      if (!flip || !front || !back) return;
+
+      const isFlipped = flip.classList.contains("is-flipped");
+
+      if (!isFlipped) {
+        const nextSrc = nextImage();
+        if (nextSrc) {
+          back.src = nextSrc;
+          const backBtn = back.closest("[data-open-modal]");
+          if (backBtn) backBtn.setAttribute("data-image-index", String(globalIndex - 1 < 0 ? 0 : (globalIndex - 1) % pool.length));
+        }
+        flip.classList.add("is-flipped");
+      } else {
+        const nextSrc = nextImage();
+        if (nextSrc) {
+          front.src = nextSrc;
+          const frontBtn = front.closest("[data-open-modal]");
+          if (frontBtn) frontBtn.setAttribute("data-image-index", String(globalIndex - 1 < 0 ? 0 : (globalIndex - 1) % pool.length));
+        }
+        flip.classList.remove("is-flipped");
+      }
+    };
+
+    const tick = () => {
+      if (!tiles.length) return;
+      const tile = tiles[current % tiles.length];
+      flipTile(tile);
+      current += 1;
+    };
+
+    let timer = window.setInterval(tick, intervalMs);
+
+    root.addEventListener("mouseenter", () => {
+      if (timer) clearInterval(timer);
+    });
+
+    root.addEventListener("mouseleave", () => {
+      if (timer) clearInterval(timer);
+      timer = window.setInterval(tick, intervalMs);
+    });
+
+    // Lightbox
+    const lightbox = root.querySelector("[data-lightbox]");
+    const lightboxImg = root.querySelector("[data-lightbox-image]");
+    const closeButtons = root.querySelectorAll("[data-close-lightbox]");
+    const prevBtn = root.querySelector("[data-lightbox-prev]");
+    const nextBtn = root.querySelector("[data-lightbox-next]");
+    const openButtons = root.querySelectorAll("[data-open-modal]");
+
+    let modalIndex = 0;
+
+    const setModalImage = () => {
+      if (!lightboxImg || !pool.length) return;
+      modalIndex = (modalIndex + pool.length) % pool.length;
+      lightboxImg.src = pool[modalIndex];
+    };
+
+    const openModal = (index) => {
+  if (!lightbox) return;
+  modalIndex = index;
+  setModalImage();
+  lightbox.hidden = false;
+  requestAnimationFrame(() => lightbox.classList.add("is-open"));
+};
+
+    const closeModal = () => {
+  if (!lightbox) return;
+  lightbox.classList.remove("is-open");
+  setTimeout(() => {
+    lightbox.hidden = true;
+  }, 240);
+};
+
+    const nextModal = () => {
+      modalIndex += 1;
+      setModalImage();
+    };
+
+    const prevModal = () => {
+      modalIndex -= 1;
+      setModalImage();
+    };
+
+    openButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const index = Number(btn.getAttribute("data-image-index") || "0");
+        openModal(index);
+      });
+    });
+
+    closeButtons.forEach((btn) => {
+      btn.addEventListener("click", closeModal);
+    });
+
+    prevBtn?.addEventListener("click", prevModal);
+    nextBtn?.addEventListener("click", nextModal);
+
+    document.addEventListener("keydown", (e) => {
+      if (!lightbox || lightbox.hidden) return;
+
+      if (e.key === "Escape") closeModal();
+      if (e.key === "ArrowRight") nextModal();
+      if (e.key === "ArrowLeft") prevModal();
+    });
+  })();
+</script>

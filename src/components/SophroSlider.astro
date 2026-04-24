@@ -1,0 +1,204 @@
+---
+const {
+  images = [
+  "images/diapos/1.atelier-réguler-stress-ball-5586847_640.jpg",
+  "images/diapos/1650379616089.jpg",
+  "images/diapos/2.-atelier-sommeil-icons8-team-dhZtNlvNE8M-unsplash.jpg",
+  "images/diapos/2021-LOGO-MEMBRE-ADHERENT-en-Magenta_Version-de-travail-pdf.jpg",
+  "images/diapos/3.-atelier-réviser-efficacement-notebook-2152429_640-500x383@2x.jpg",
+  "images/diapos/4.-atelier-sohro-et-anglais-tim-goedhart-vnpTRdmtQ30-unsplash.jpg",
+  "images/diapos/AC_logoGF.png",
+  "images/diapos/AC_logoH.png",
+  "images/diapos/accomp-enfants-ados-xavi-cabrera-6bnH1v-IQK0-unsplash.jpg",
+  "images/diapos/accompagnement-adultes-et-séniors-chris-lawton-5IHz5WhosQE-unsplash.jpg",
+  "images/diapos/ALC-FLYER-A6-pdf.jpg",
+  "images/diapos/angiola-harry-nJv6xnlpNaA-unsplash.jpg",
+  "images/diapos/Annonce-Sophro-Rose-.-J1-et-J2-pub.png",
+  "images/diapos/arbre.jpg",
+  "images/diapos/chang-duong-Sj0iMtq_Z4w-unsplash.jpg",
+  "images/diapos/exam-gf8d7562f2_1920.jpg",
+  "images/diapos/family-1866868_1280.jpg",
+  "images/diapos/feps-logo.png",
+  "images/diapos/Flyer-Atelier-.jpg",
+  "images/diapos/fond.jpg",
+  "images/diapos/gabriele-stravinskaite-fzcluHBur3o-unsplash.jpg",
+  "images/diapos/gouttes-deau-sur-vitre-.jpg",
+  "images/diapos/hans-peter-gauster-Institutions-et-etablissements-scolaires-unsplash.jpg",
+  "images/diapos/I-changements-de-vie-hakon-grimstad-hteXWSF9jA4-unsplash.jpg",
+  "images/diapos/I-Confiance-préparation-examenspexels-dio-hasbi-saniskoro-3280130-1.jpg",
+  "images/diapos/I-Confiance-préparation-examenspexels-dio-hasbi-saniskoro-3280130.jpg",
+  "images/diapos/I-gestion-douleur-man-2546791_640-500x383@2x.jpg",
+  "images/diapos/I-gestion-émotions-nick-fewings-0ogq3xndxG0-unsplash1-500x383@2x.jpg",
+  "images/diapos/I-sommeil-noemi-rodriguez-DMAg4eoMTZA-unsplash1.jpg",
+  "images/diapos/I-stress-burn-out-engin-akyurt-5aDlYurwc34-unsplash.jpg",
+  "images/diapos/IMG_20210919_124439-2.jpg",
+  "images/diapos/inee-decouverte.png",
+  "images/diapos/Logo-2019@500ppi.jpg",
+  "images/diapos/logo-header.png",
+  "images/diapos/LOGO-ISR_ISPL.png",
+  "images/diapos/LogoB_AC.png",
+  "images/diapos/LogoG_AC.png",
+  "images/diapos/LogoGF_AC.png",
+  "images/diapos/LogoN_AC.png",
+  "images/diapos/man-and-stars.jpg",
+  "images/diapos/Matinee-decouverte-Mettre-de-la-sophrologie-dans-sa-vie.png",
+  "images/diapos/moon-and-sea.jpg",
+  "images/diapos/motoki-tonn-X00q3RXcyZ4-unsplash-1.jpg",
+  "images/diapos/nadine-shaabana-VA9xSQekC8c-unsplash.jpg",
+  "images/diapos/natalie-grainger-8uB5kFKWWkk-unsplash.jpg",
+  "images/diapos/pat-whelen-ba8hFPvg8iU-unsplash.jpg",
+  "images/diapos/people-g0a9f5e761_1920.jpg",
+  "images/diapos/people-g625ab9d97_1920.jpg",
+  "images/diapos/Rose-et-Indigo-Lumieres-Gras-Typographie-Personnel-Noel-Cheque-Cadeau.png",
+  "images/diapos/rupert-britton-l37N7a1lL6w-unsplash.jpg",
+  "images/diapos/section-bg.png",
+  "images/diapos/sophro-hero.jpg",
+  "images/diapos/Sophro-Rose.jpg",
+  "images/diapos/ssp.jpeg",
+  "images/diapos/stick-etincelles.jpg",
+  "images/diapos/sunflowers-.jpg",
+  "images/diapos/testimonials-background.jpg",
+  "images/diapos/Vert-Lys-Dessine-a-la-main-Lundi-de-la-pleine-conscience-Bien-etre-Apprentissage-social-et-emotionnel-Affiche.png",
+  "images/diapos/White-Brown-Forest-Lets-Explore-The-Forest-Photo-Collage.png",
+  "images/diapos/woman-g080ccb21d_1920.jpg",
+  "images/diapos/yoshi-sugimoto-VTfJu_22eSw-unsplash.jpg",
+  ],
+  heightClass = "h-[420px] md:h-[560px]",
+  autoplayMs = 5000,
+  overlay = true,
+} = Astro.props;
+
+const sliderId = `sophro-slider-${Math.random().toString(36).slice(2, 9)}`;
+---
+
+<section
+  id={sliderId}
+  class={`sophro-slider relative overflow-hidden rounded-[2.5rem] ${heightClass}`}
+  data-autoplay={autoplayMs}
+>
+  <div class="absolute inset-0">
+    {images.map((src, index) => (
+      <figure
+        class={`sophro-slide absolute inset-0 ${index === 0 ? "is-active" : ""}`}
+        data-slide={index}
+      >
+        <img
+          src={src}
+          alt={`Diapositive ${index + 1}`}
+          class="sophro-slide__img"
+          loading={index === 0 ? "eager" : "lazy"}
+        />
+      </figure>
+    ))}
+  </div>
+
+  {overlay && (
+    <>
+      <div class="sophro-slider__veil"></div>
+      <div class="sophro-slider__glow"></div>
+    </>
+  )}
+
+  <div class="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+
+  <div class="absolute inset-x-0 bottom-0 z-20 flex items-center justify-between gap-4 p-4 md:p-6">
+    <div class="pointer-events-auto flex items-center gap-2">
+      <button
+        type="button"
+        class="sophro-arrow"
+        data-prev
+        aria-label="Image précédente"
+      >
+        <span>‹</span>
+      </button>
+
+      <button
+        type="button"
+        class="sophro-arrow"
+        data-next
+        aria-label="Image suivante"
+      >
+        <span>›</span>
+      </button>
+    </div>
+
+    <div class="pointer-events-auto sophro-dots" role="tablist" aria-label="Navigation du diaporama">
+      {images.map((_, index) => (
+        <button
+          type="button"
+          class={`sophro-dot ${index === 0 ? "is-active" : ""}`}
+          data-dot={index}
+          aria-label={`Aller à l’image ${index + 1}`}
+        />
+      ))}
+    </div>
+  </div>
+</section>
+
+<script is:inline define:vars={{ sliderId }}>
+  (() => {
+    const root = document.getElementById(sliderId);
+    if (!root) return;
+
+    const slides = Array.from(root.querySelectorAll("[data-slide]"));
+    const dots = Array.from(root.querySelectorAll("[data-dot]"));
+    const prevBtn = root.querySelector("[data-prev]");
+    const nextBtn = root.querySelector("[data-next]");
+    const autoplayMs = Number(root.dataset.autoplay || 5000);
+
+    let current = 0;
+    let timer = null;
+
+    const show = (index) => {
+      current = (index + slides.length) % slides.length;
+
+      slides.forEach((slide, i) => {
+        slide.classList.toggle("is-active", i === current);
+      });
+
+      dots.forEach((dot, i) => {
+        dot.classList.toggle("is-active", i === current);
+      });
+    };
+
+    const next = () => show(current + 1);
+    const prev = () => show(current - 1);
+
+    const start = () => {
+      stop();
+      timer = window.setInterval(next, autoplayMs);
+    };
+
+    const stop = () => {
+      if (timer) {
+        clearInterval(timer);
+        timer = null;
+      }
+    };
+
+    prevBtn?.addEventListener("click", () => {
+      prev();
+      start();
+    });
+
+    nextBtn?.addEventListener("click", () => {
+      next();
+      start();
+    });
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener("click", () => {
+        show(index);
+        start();
+      });
+    });
+
+    root.addEventListener("mouseenter", stop);
+    root.addEventListener("mouseleave", start);
+    root.addEventListener("focusin", stop);
+    root.addEventListener("focusout", start);
+
+    show(0);
+    start();
+  })();
+</script>

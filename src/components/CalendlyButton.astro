@@ -1,0 +1,107 @@
+---
+const {
+  label = "Prendre rendez-vous",
+  className = "",
+  url="https://calendly.com/alexandracoirier-sophrologue/?hide_gdpr_banner=1&primary_color=9a6750&text_color=5e4a42&background_color=f8f2ef"
+} = Astro.props;
+---
+
+<button
+  type="button"
+  class={`soft-btn bg-[var(--brown-soft)] text-white font-medium hover:bg-[var(--brown-deep)] ${className}`}
+  data-calendly-trigger
+  data-calendly-url={url}
+>
+  {label}
+</button>
+
+<script is:inline>
+  (() => {
+    const STORAGE_KEY = "ac_cookie_choice";
+    const CALENDLY_SRC = "https://assets.calendly.com/assets/external/widget.js";
+
+    const loadCalendly = () => {
+      return new Promise((resolve, reject) => {
+        if (window.Calendly) {
+          resolve(window.Calendly);
+          return;
+        }
+
+        let script = document.querySelector('script[data-calendly-script="true"]');
+
+        if (!script) {
+          script = document.createElement("script");
+          script.src = CALENDLY_SRC;
+          script.async = true;
+          script.dataset.calendlyScript = "true";
+          script.onload = () => resolve(window.Calendly);
+          script.onerror = reject;
+          document.head.appendChild(script);
+        } else {
+          script.addEventListener("load", () => resolve(window.Calendly), { once: true });
+          script.addEventListener("error", reject, { once: true });
+        }
+      });
+    };
+
+    const canUseCalendly = () => {
+      const value = localStorage.getItem(STORAGE_KEY);
+      return value === "accepted" || value === "external";
+    };
+
+    const openConsentModal = () => {
+      const ok = window.confirm(
+        "Pour ouvrir la prise de rendez-vous Calendly, vous devez autoriser les services externes. Voulez-vous les activer ?"
+      );
+
+      if (!ok) return false;
+
+      localStorage.setItem(STORAGE_KEY, "external");
+      window.dispatchEvent(
+        new CustomEvent("cookie-consent-updated", {
+          detail: { value: "external" },
+        })
+      );
+      return true;
+    };
+
+    const openCalendly = async (url) => {
+      try {
+        await loadCalendly();
+        if (window.Calendly) {
+          window.Calendly.initPopupWidget({ url });
+        } else {
+          window.location.href = url;
+        }
+      } catch (e) {
+        console.error("Calendly error:", e);
+        window.location.href = url;
+      }
+    };
+
+    const bindButtons = () => {
+      document.querySelectorAll("[data-calendly-trigger]").forEach((btn) => {
+        if (btn.dataset.bound === "true") return;
+        btn.dataset.bound = "true";
+
+        btn.addEventListener("click", async () => {
+          const url = btn.getAttribute("data-calendly-url");
+          if (!url) return;
+
+          if (!canUseCalendly()) {
+            const granted = openConsentModal();
+            if (!granted) return;
+          }
+
+          await openCalendly(url);
+        });
+      });
+    };
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", bindButtons);
+    } else {
+      bindButtons();
+    }
+  })();
+</script>

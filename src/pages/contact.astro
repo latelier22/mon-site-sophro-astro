@@ -1,0 +1,139 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import CalendlyButton from "../components/CalendlyButton.astro";
+import ConfirmSript from "../components/ConfirmScript.astro";
+
+const success = Astro.url.searchParams.get("success");
+const error = Astro.url.searchParams.get("error");
+---
+
+<BaseLayout
+  title="TESTContact – Alexandra Coirier"
+  description="Contacter Alexandra Coirier, sophrologue à Loudéac."
+>
+  <Header />
+
+  <main class="section-bg mx-auto max-w-7xl px-4 sm:px-6 py-10 md:py-16">
+    <div class="grid lg:grid-cols-2 gap-8 items-start">
+      <div class="soft-card rounded-[2.5rem] p-8 md:p-10">
+        <p class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]">
+          Contact
+        </p>
+
+        <h1 class="mt-4 text-4xl md:text-5xl font-semibold text-[var(--brown-deep)]">
+          Prendre contact en toute simplicité
+        </h1>
+
+        <p class="mt-5 text-lg leading-relaxed text-[var(--text)]">
+          Vous pouvez me contacter pour poser une question, demander un premier échange ou convenir d’un rendez-vous.
+        </p>
+
+        <div class="mt-8 space-y-4 text-[var(--text)]">
+          <div class="rounded-[1.25rem] bg-white/70 p-5">
+            <p class="font-semibold text-[var(--brown-deep)]">Cabinet</p>
+            <p class="mt-1">Loudéac</p>
+            <p class="mt-1">26 Rue du Dr Robin</p>
+            <p class="mt-1">22600 Loudéac</p>
+          </div>
+
+          <div class="rounded-[1.25rem] bg-white/70 p-5">
+            <p class="font-semibold text-[var(--brown-deep)]">Téléphone</p>
+            <p class="mt-1">07 81 52 85 17</p>
+          </div>
+
+          <div class="rounded-[1.25rem] bg-white/70 p-5">
+            <p class="font-semibold text-[var(--brown-deep)]">Email</p>
+            <p class="mt-1">contact@alexandracoirier-sophrologue.fr</p>
+          </div>
+
+          <div class="rounded-[1.25rem] bg-white/70 p-5">
+            <p class="font-semibold text-[var(--brown-deep)]">Horaires</p>
+            <p class="mt-1">À compléter</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="soft-card rounded-[2.5rem] p-8 md:p-10">
+        <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+          Écrivez-moi
+        </h2>
+
+       <div id="form-status" class="mt-6" hidden></div>
+
+        <form action="/contact.php" method="POST" class="mt-8 space-y-5">
+          <div>
+            <label class="mb-2 block text-sm font-medium text-[var(--brown-deep)]">
+              Nom
+            </label>
+            <input
+              name="nom"
+              type="text"
+              class="input-soft"
+              placeholder="Votre nom"
+              required
+            />
+          </div>
+
+          <div>
+            <label class="mb-2 block text-sm font-medium text-[var(--brown-deep)]">
+              Email
+            </label>
+            <input
+              name="email"
+              type="email"
+              class="input-soft"
+              placeholder="votre@email.com"
+              required
+            />
+          </div>
+
+          <div>
+            <label class="mb-2 block text-sm font-medium text-[var(--brown-deep)]">
+              Téléphone
+            </label>
+            <input
+              name="telephone"
+              type="text"
+              class="input-soft"
+              placeholder="Votre numéro"
+            />
+          </div>
+
+          <div>
+            <label class="mb-2 block text-sm font-medium text-[var(--brown-deep)]">
+              Message
+            </label>
+            <textarea
+              name="message"
+              class="input-soft min-h-[160px] resize-none"
+              placeholder="Expliquez brièvement votre besoin..."
+              required
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="soft-btn w-full bg-[var(--brown-soft)] py-4 text-white font-medium hover:bg-[var(--brown-deep)]"
+          >
+            Envoyer le message
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="mt-10 flex justify-center">
+      <CalendlyButton
+        label="Prendre rendez-vous"
+        className="px-6 py-3"
+        url="https://calendly.com/alexandracoirier-sophrologue/?hide_gdpr_banner=1&primary_color=9a6750&text_color=5e4a42&background_color=f8f2ef"
+      />
+    </div>
+  </main>
+
+  <Footer />
+
+<ConfirmSript />
+
+</BaseLayout>

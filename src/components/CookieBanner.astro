@@ -1,0 +1,60 @@
+<div
+  id="cookie-banner"
+  class="cookie-banner"
+  hidden
+>
+  <div class="cookie-banner__inner soft-card">
+    <div class="cookie-banner__text">
+      <p class="cookie-banner__title">Respect de votre vie privée</p>
+      <p>
+        Ce site utilise des services externes, notamment pour la prise de rendez-vous avec Calendly.
+        Vous pouvez accepter, refuser, ou autoriser uniquement ces services externes.
+      </p>
+    </div>
+
+    <div class="cookie-banner__actions">
+      <button type="button" class="cookie-btn cookie-btn--ghost" data-cookie-choice="refused">
+        Refuser
+      </button>
+      <button type="button" class="cookie-btn cookie-btn--soft" data-cookie-choice="external">
+        Services externes
+      </button>
+      <button type="button" class="cookie-btn cookie-btn--primary" data-cookie-choice="accepted">
+        Tout accepter
+      </button>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+  (() => {
+    const STORAGE_KEY = "ac_cookie_choice";
+
+    const banner = document.getElementById("cookie-banner");
+    if (!banner) return;
+
+    const current = localStorage.getItem(STORAGE_KEY);
+
+    if (!current) {
+      banner.hidden = false;
+      requestAnimationFrame(() => banner.classList.add("is-visible"));
+    }
+
+    banner.querySelectorAll("[data-cookie-choice]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const value = btn.getAttribute("data-cookie-choice");
+        localStorage.setItem(STORAGE_KEY, value || "refused");
+        banner.classList.remove("is-visible");
+        setTimeout(() => {
+          banner.hidden = true;
+        }, 250);
+
+        window.dispatchEvent(
+          new CustomEvent("cookie-consent-updated", {
+            detail: { value },
+          })
+        );
+      });
+    });
+  })();
+</script>

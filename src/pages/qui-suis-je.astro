@@ -1,0 +1,39 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<BaseLayout title="TESTQui suis-je ? – Alexandra Coirier" description="Présentation d’Alexandra Coirier, sophrologue à Loudéac.">
+  <Header />
+  <main class="mx-auto max-w-5xl px-4 sm:px-6 py-10 md:py-16">
+    <div class="soft-card rounded-[2.5rem] p-8 md:p-10">
+      <h1 class="text-4xl md:text-5xl font-semibold text-[var(--forest)]">Qui suis-je ?</h1>
+      <p class="mt-5 text-lg leading-relaxed text-[var(--text)]">Je m’appelle Alexandra, je suis sophrologue à Loudéac, et j’accompagne les personnes qui traversent une période de fatigue, de surcharge mentale, de perte de sens ou de transition.</p>
+    </div>
+
+    <section class="mt-8 section-bg rounded-[2.5rem] p-8 md:p-10">
+
+      <section class="mt-8 soft-card rounded-[2rem] p-8">
+        <h2 class="text-2xl font-semibold text-[var(--forest)]">Ce qui m’anime</h2>
+        <div class="mt-5 space-y-4 text-[var(--text)] leading-relaxed">
+          <p>Ce qui me fait profondément vibrer, c’est la rencontre. La rencontre avec l’autre, mais aussi celle que chacun peut faire avec lui-même lorsqu’il s’autorise enfin à ralentir, à respirer et à écouter ce qui se passe à l’intérieur.</p>
+          <p>Ma douceur, mon écoute attentive et ma présence stable sont au cœur de ma pratique. J’offre un espace sécurisant où l’on peut déposer ce qui pèse, se découvrir sans jugement et se reconnecter à ses propres ressources.</p>
+        </div>
+      </section>
+      
+      <section class="mt-8 soft-card rounded-[2rem] p-8">
+        <h2 class="text-2xl font-semibold text-[var(--forest)]">Quelques mots sur mon parcours</h2>
+        <div class="mt-5 space-y-4 text-[var(--text)] leading-relaxed">
+          <p>Avant d’accompagner les autres, j’ai moi-même traversé une période de profonde transition. Pendant 18 ans, j’ai exercé le métier d’enseignante. Puis un jour, j’ai dû accepter que je n’y trouvais plus ma place.</p>
+          <p>C’est dans ce moment de reconstruction que j’ai découvert la sophrologie. Elle m’a aidée à me réancrer, à clarifier mes valeurs et à retrouver ma boussole intérieure.</p>
+          <p>Aujourd’hui, j’accompagne adultes, parents et enfants à apaiser leurs émotions, à se reconnecter à leur corps et à retrouver plus de sens et d’élan dans leur vie.</p>
+        </div>
+        <div class="mt-8">
+          <a href="/contact" class="soft-btn bg-[var(--bg-soft)] text-white px-7 py-3.5 font-medium inline-block hover:bg-[var(--sage-deep)]">Prendre rendez-vous</a>
+        </div>
+      </section>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

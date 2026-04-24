@@ -1,0 +1,92 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/theme.json",
+    "version": 3,
+    "settings": {
+        "appearanceTools": true,
+        "layout": {
+            "contentSize": "1000px",
+            "wideSize": "1400px"
+        },
+        "color": {
+            "palette": [
+                {
+                    "slug": "bg",
+                    "name": "Fond",
+                    "color": "#f6efec"
+                },
+                {
+                    "slug": "rose-powder",
+                    "name": "Rose poudré",
+                    "color": "#d9b7aa"
+                },
+                {
+                    "slug": "rose-muted",
+                    "name": "Rose doux",
+                    "color": "#c79e91"
+                },
+                {
+                    "slug": "brown-soft",
+                    "name": "Brun doux",
+                    "color": "#9a6750"
+                },
+                {
+                    "slug": "brown-deep",
+                    "name": "Brun profond",
+                    "color": "#6f4a3a"
+                },
+                {
+                    "slug": "text",
+                    "name": "Texte",
+                    "color": "#5e4a42"
+                }
+            ]
+        },
+        "typography": {
+            "fluid": true,
+            "fontFamilies": [
+                {
+                    "slug": "body",
+                    "name": "Inter",
+                    "fontFamily": "Inter, sans-serif"
+                },
+                {
+                    "slug": "heading",
+                    "name": "Cormorant Garamond",
+                    "fontFamily": "\"Cormorant Garamond\", serif"
+                }
+            ]
+        }
+    },
+    "styles": {
+        "color": {
+            "background": "#f6efec",
+            "text": "#5e4a42"
+        },
+        "typography": {
+            "fontFamily": "var:preset|font-family|body"
+        },
+        "elements": {
+            "heading": {
+                "typography": {
+                    "fontFamily": "var:preset|font-family|heading",
+                    "fontWeight": "600"
+                },
+                "color": {
+                    "text": "var:preset|color|brown-deep"
+                }
+            },
+            "button": {
+                "border": {
+                    "radius": "999px"
+                },
+                "color": {
+                    "background": "var:preset|color|brown-soft",
+                    "text": "#ffffff"
+                },
+                "typography": {
+                    "fontFamily": "var:preset|font-family|body"
+                }
+            }
+        }
+    }
+}

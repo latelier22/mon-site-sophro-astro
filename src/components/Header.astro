@@ -1,0 +1,115 @@
+---
+import CalendlyButton from "./CalendlyButton.astro";
+
+const links = [
+  { href: "/", label: "Accueil" },
+  { href: "/a-quoi-s-attendre", label: "À quoi s’attendre" },
+  { href: "/tarifs", label: "Tarifs" },
+  { href: "/qui-suis-je", label: "Qui suis-je" },
+  { href: "/faq", label: "FAQ" },
+  { href: "/contact", label: "Contact" },
+];
+---
+
+<header class="sticky top-0 z-50">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 pt-4">
+    <div class="soft-card rounded-[2rem] px-4 sm:px-6 py-4">
+      <div class="flex items-center justify-between gap-4">
+        <a href="/" class="flex min-w-0 items-center gap-3">
+          <span class="header-logo-wrap">
+            <img
+              src="/images/logo-header.png"
+              alt="Logo Alexandra Coirier"
+              class="header-logo"
+            />
+          </span>
+
+          <span class="min-w-0">
+            <span class="block truncate text-lg sm:text-2xl font-semibold tracking-wide text-[var(--brown-deep)]">
+              Alexandra Coirier
+            </span>
+            <span class="block text-xs sm:text-sm uppercase tracking-[0.28em] text-[var(--brown-soft)]">
+              Sophrologue
+            </span>
+          </span>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          {links.map((link) => (
+            <a href={link.href} class="nav-link">
+              {link.label}
+            </a>
+          ))}
+        </nav>
+
+        <div class="hidden md:flex items-center gap-3">
+          <CalendlyButton
+            label="Prendre rendez-vous"
+            className="px-5 py-2.5 text-sm whitespace-nowrap"
+          />
+        </div>
+
+        <button
+          type="button"
+          class="header-burger md:!hidden"
+          aria-label="Ouvrir le menu"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+          data-menu-toggle
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <div id="mobile-menu" class="mobile-menu md:hidden" hidden>
+        <nav class="mt-5 flex flex-col gap-2">
+          {links.map((link) => (
+            <a href={link.href} class="mobile-nav-link">
+              {link.label}
+            </a>
+          ))}
+        </nav>
+
+        <CalendlyButton
+          label="Prendre rendez-vous"
+          className="mt-5 inline-flex w-full items-center justify-center px-5 py-3 text-sm"
+        />
+      </div>
+    </div>
+  </div>
+</header>
+
+<script is:inline>
+  const setupHeaderMenu = () => {
+    const button = document.querySelector("[data-menu-toggle]");
+    const menu = document.getElementById("mobile-menu");
+
+    if (!button || !menu) return;
+
+    button.addEventListener("click", () => {
+      const isOpen = button.getAttribute("aria-expanded") === "true";
+      button.setAttribute("aria-expanded", String(!isOpen));
+      button.classList.toggle("is-open", !isOpen);
+
+      if (isOpen) {
+        menu.classList.remove("open");
+        setTimeout(() => {
+          menu.hidden = true;
+        }, 260);
+      } else {
+        menu.hidden = false;
+        requestAnimationFrame(() => {
+          menu.classList.add("open");
+        });
+      }
+    });
+  };
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", setupHeaderMenu);
+  } else {
+    setupHeaderMenu();
+  }
+</script>
