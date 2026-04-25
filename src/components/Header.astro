@@ -18,29 +18,39 @@ const moreLinks = [
   { href: "/qui-suis-je", label: "Qui suis-je ?" },
   { href: "/faq", label: "FAQ" },
 ];
+
+const calendlyUrl = "https://calendly.com/alexandracoirier-sophrologue/?hide_gdpr_banner=1&primary_color=9a6750&text_color=5e4a42&background_color=f8f2ef";
+
+const ctaDesktop =
+  "header-cta hidden sm:inline-flex h-12 min-w-[170px] items-center justify-center rounded-full bg-[var(--brown-soft)] px-6 text-sm font-semibold text-white hover:bg-[var(--brown-deep)]";
+
+const ctaMobile =
+  "header-cta sm:hidden inline-flex h-10 flex-1 items-center justify-center rounded-full bg-[var(--brown-soft)] px-3 text-[0.78rem] font-semibold text-white hover:bg-[var(--brown-deep)]";
 ---
 
 <header id="site-top" class="sticky top-0 z-50">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 pt-4">
+  <div class="mx-auto max-w-7xl px-0 sm:px-6 pt-0 sm:pt-4">
     <div class="header-panel relative overflow-visible rounded-[2.5rem] shadow-xl">
       <div class="header-bg-mask absolute inset-0 overflow-hidden rounded-[2.5rem]">
-  <div class="header-bg"></div>
-</div>
+        <div class="header-bg"></div>
+      </div>
 
       <div class="header-dark relative z-10 px-4 sm:px-6 py-4">
         <div class="flex items-center justify-between gap-4">
           <a href="/" class="flex min-w-0 items-center gap-3">
             <img
-              src="/images/alexandra-coirier.png"
+              src="/images/alexandra-coirier.webp"
               alt="Alexandra Coirier"
-              class="h-14 w-14 rounded-full object-cover ring-2 ring-white/70 shadow-lg"
+              width="56"
+              height="56"
+              class="header-portrait h-14 w-14 rounded-full object-cover ring-2 ring-white/70 shadow-lg"
             />
 
             <span class="min-w-0">
-              <span class="block truncate text-lg sm:text-2xl font-semibold tracking-wide text-white">
+              <span class="header-name block truncate text-lg sm:text-2xl font-semibold tracking-wide text-white">
                 Alexandra Coirier
               </span>
-              <span class="block text-xs sm:text-sm uppercase tracking-[0.28em] text-white/75">
+              <span class="header-job block text-xs sm:text-sm uppercase tracking-[0.28em] text-white/75">
                 Sophrologue
               </span>
             </span>
@@ -48,44 +58,32 @@ const moreLinks = [
 
           <nav class="hidden lg:flex items-center gap-5 text-sm">
             {links.slice(0, 4).map((link) => (
-              <a href={link.href} class="header-dark-link">
-                {link.label}
-              </a>
+              <a href={link.href} class="header-dark-link">{link.label}</a>
             ))}
 
             <div class="relative group">
               <button type="button" class="header-dark-link flex items-center gap-1">
-                En savoir plus
-                <span>▾</span>
+                En savoir plus <span>▾</span>
               </button>
 
-              <div class="absolute right-0 top-full pt-3 opacity-0 invisible group-hover:opacity-80 group-hover:visible transition z-[9999]">
-  <div class="w-[340px] rounded-[1.5rem] bg-[#3f302a] p-3 shadow-2xl border border-white/20">
-    {moreLinks.map((link) => (
-      <a
-        href={link.href}
-        class="block rounded-[1rem] px-4 py-3 text-white hover:bg-[#5e4a42] hover:text-white"
-      >
-        {link.label}
-      </a>
-    ))}
-  </div>
-</div>
+              <div class="absolute right-0 top-full pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition z-[9999]">
+                <div class="w-[340px] rounded-[1.5rem] bg-[#3f302a] p-3 shadow-2xl border border-white/20">
+                  {moreLinks.map((link) => (
+                    <a
+                      href={link.href}
+                      class="block rounded-[1rem] px-4 py-3 text-white hover:bg-[#5e4a42] hover:text-white"
+                    >
+                      {link.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
             </div>
 
             {links.slice(4).map((link) => (
-              <a href={link.href} class="header-dark-link">
-                {link.label}
-              </a>
+              <a href={link.href} class="header-dark-link">{link.label}</a>
             ))}
           </nav>
-
-          <!-- <div class="hidden lg:flex items-center gap-3">
-            <CalendlyButton
-              label="Prendre rendez-vous"
-              className="px-5 py-2.5 text-sm whitespace-nowrap bg-white/90 text-[var(--brown-deep)] hover:bg-white"
-            />
-          </div> -->
 
           <button
             type="button"
@@ -102,9 +100,7 @@ const moreLinks = [
         <div id="mobile-menu" class="mobile-menu lg:hidden" hidden>
           <nav class="mt-5 flex flex-col gap-2">
             {links.map((link) => (
-              <a href={link.href} class="mobile-dark-link">
-                {link.label}
-              </a>
+              <a href={link.href} class="mobile-dark-link">{link.label}</a>
             ))}
 
             <div class="mt-3 rounded-[1.5rem] bg-white/12 p-3">
@@ -113,38 +109,40 @@ const moreLinks = [
               </p>
 
               {moreLinks.map((link) => (
-                <a href={link.href} class="mobile-dark-link">
-                  {link.label}
-                </a>
+                <a href={link.href} class="mobile-dark-link">{link.label}</a>
               ))}
             </div>
           </nav>
         </div>
       </div>
 
-  <div class="header-light relative z-0">
-    <a
-  href="#site-footer"
-  class="header-scroll-link"
-  aria-label="Aller en bas de page"
->
-  ↓
-</a>
-  <div class="header-light-buttons">
-    <CalendlyButton
-            label="Prendre rendez-vous"
-            className="px-6 py-3"
-            url="https://calendly.com/alexandracoirier-sophrologue/?hide_gdpr_banner=1&primary_color=9a6750&text_color=5e4a42&background_color=f8f2ef"
-          /> 
+      <div class="header-light relative z-0">
+        <a href="#site-footer" class="header-scroll-link" aria-label="Aller en bas de page">
+          ↓
+        </a>
 
-    <a
-      href="/contact"
-      class="soft-btn border border-[var(--brown-soft)]/25 bg-white/75 px-6 py-3 text-sm font-medium text-[var(--brown-deep)] hover:bg-white"
-    >
-      Me contacter
-    </a>
-  </div>
-</div>
+        <div class="header-light-buttons">
+          <CalendlyButton
+            label="Prendre rendez-vous"
+            className={ctaDesktop}
+            url={calendlyUrl}
+          />
+
+          <CalendlyButton
+            label="RDV"
+            className={ctaMobile}
+            url={calendlyUrl}
+          />
+
+          <a href="/contact" class={`${ctaDesktop} !bg-white/90 !text-[var(--brown-deep)] border border-[var(--brown-soft)]/25 hover:!bg-white`}>
+            Me contacter
+          </a>
+
+          <a href="/contact" class={`${ctaMobile} !bg-white/90 !text-[var(--brown-deep)] border border-[var(--brown-soft)]/25 hover:!bg-white`}>
+            Me contacter
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </header>
@@ -188,32 +186,30 @@ const moreLinks = [
   }
 
   .header-bg {
-  position: absolute;
-  inset: 0;
-  background-image: url("/images/header-bg.png");
-  background-size: cover;
-  background-position: center 90%;
-  transform: scale(1.03);
-}
+    position: absolute;
+    inset: 0;
+    background-image: url("/images/header-bg.webp");
+    background-size: cover;
+    background-position: center 90%;
+    transform: scale(1.03);
+  }
 
   .header-dark {
-    background:
-      linear-gradient(
-        to right,
-        rgba(65, 73, 48, 0.92),
-        rgba(94, 74, 66, 0.84)
-      );
+    background: linear-gradient(
+      to right,
+      rgba(65, 73, 48, 0.92),
+      rgba(94, 74, 66, 0.84)
+    );
     backdrop-filter: blur(4px);
   }
 
   .header-light {
     height: 200px;
-    background:
-      linear-gradient(
-        to bottom,
-        rgba(255, 255, 255, 0.5),
-        rgba(255, 255, 255, 0.2)
-      );
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.2)
+    );
   }
 
   .header-dark-link {
@@ -240,75 +236,111 @@ const moreLinks = [
     color: white;
   }
 
-  @media (max-width: 1023px) {
-  .header-light {
-    height: 100%;
+  .mobile-menu.open {
+    max-height: 1500px;
   }
 
-  .header-light-buttons {
-    left: 1rem;
-    right: 1rem;
-    bottom: 1.25rem;
-    justify-content: center;
-  }
-}
-
-  .header-light-buttons {
-  position: absolute;
-  right: 1.5rem;
-  bottom: 1.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 0.75rem;
-  color :black;
-}
-
-.header-scroll-link {
-  position: absolute;
-  left: 1.5rem;
-  bottom: 1.5rem;
-  width: 52px;
-  height: 52px;
-  border-radius: 999px;
-  display: grid;
-  place-items: center;
-  background: var(--brown-soft);
-  color: white;
-  font-size: 1.8rem;
-  font-weight: 700;
-  box-shadow: 0 12px 28px rgba(94, 74, 66, 0.18);
-}
-
-@media (max-width: 1023px) {
   .header-scroll-link {
-    left: 1rem;
-    bottom: 5.2rem;
-    width: 46px;
-    height: 46px;
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 1023px) {
-  .header-panel {
-    min-height: 300px;
-  }
-
-  .header-light {
-    height: 130px;
+    position: absolute;
+    left: 1.5rem;
+    bottom: 1.5rem;
+    width: 52px;
+    height: 52px;
+    border-radius: 999px;
+    display: grid;
+    place-items: center;
+    background: var(--brown-soft);
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 700;
+    box-shadow: 0 12px 28px rgba(94, 74, 66, 0.18);
+    text-decoration: none;
   }
 
   .header-light-buttons {
-    left: 1rem;
-    right: 1rem;
-    bottom: 1rem;
-    justify-content: center;
+    position: absolute;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.75rem;
   }
 
-  .header-light-buttons .soft-btn {
-    padding: 0.75rem 1rem;
-    font-size: 0.85rem;
+  .header-cta {
+    box-shadow: 0 10px 24px rgba(94, 74, 66, 0.12);
+    transition: transform 220ms ease, background 220ms ease;
   }
-}
+
+  .header-cta:hover {
+    transform: translateY(-1px);
+  }
+
+  @media (max-width: 1023px) {
+    .header-panel {
+      min-height: auto;
+    }
+
+    .header-dark {
+      padding-top: 0.85rem;
+      padding-bottom: 0.85rem;
+    }
+
+    .header-light {
+      height: 100px;
+    }
+
+    .header-light-buttons {
+      left: 1rem;
+      right: 1rem;
+      bottom: 1rem;
+      justify-content: center;
+    }
+
+    .header-scroll-link {
+      display: none;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .header-panel,
+    .header-bg-mask {
+      border-radius: 1.5rem;
+    }
+
+    .header-bg {
+      background-position: center 86%;
+    }
+
+    .header-dark {
+      padding: 0.7rem 0.85rem;
+    }
+
+    .header-portrait {
+      width: 44px;
+      height: 44px;
+    }
+
+    .header-name {
+      font-size: 1rem;
+    }
+
+    .header-job {
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+    }
+
+    .header-light {
+      height: 68px;
+    }
+
+    .header-light-buttons {
+      left: 0.75rem;
+      right: 0.75rem;
+      bottom: 0.7rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+    }
+  }
 </style>

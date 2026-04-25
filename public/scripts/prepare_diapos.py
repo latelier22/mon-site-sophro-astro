@@ -5,7 +5,7 @@ import shutil
 # === À ADAPTER ===
 SOURCE_DIR = Path("../images")   # ex: export WP
 TARGET_DIR = Path("../images/diapos")
-IMAGE_EXTS = {".jpg", ".jpeg", ".png", ".webp"}
+IMAGE_EXTS = {".jpg", ".jpeg", ".webp", ".webp"}
 # suffixes WP / retina / scaled
 WP_SUFFIX_RE = re.compile(
     r"(?i)(?:-\d+x\d+(?:@2x)?|-scaled)$"
