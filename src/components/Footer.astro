@@ -1,4 +1,8 @@
-<footer class="mt-24 pb-10">
+---
+import CalendlyButton from "./CalendlyButton.astro";
+---
+
+<footer id="site-footer" class="mt-24 pb-10">
   <div class="mx-auto max-w-7xl px-4 sm:px-6">
     <div
       class="relative overflow-hidden rounded-[2.5rem] bg-[url('/images/footer-bg.png')] bg-cover bg-center"
@@ -6,6 +10,13 @@
       <div class="absolute inset-0 bg-white/35 backdrop-blur-[1px]"></div>
 
       <div class="relative px-6 pt-20 pb-8 md:px-10 md:pt-28">
+        <a
+  href="#top"
+  class="footer-scroll-link"
+  aria-label="Retour en haut de page"
+>
+  ↑
+</a>
         <div class="mx-auto max-w-2xl text-center">
           <p class="text-2xl md:text-3xl font-semibold leading-relaxed text-[var(--brown-deep)]">
             Prendre soin de soi, c’est se donner la possibilité de vivre plus aligné et plus serein.
@@ -37,13 +48,11 @@
                 </p>
 
                 <div class="mt-6">
-                  <a
-                    href="/contact"
-                    class="soft-btn bg-[var(--brown-soft)] text-white px-6 py-3 font-medium inline-block hover:bg-[var(--brown-deep)]"
-                  >
-                    Prendre rendez-vous
-                  </a>
-                </div>
+<CalendlyButton
+            label="Prendre rendez-vous"
+            className="px-6 py-3"
+            url="https://calendly.com/alexandracoirier-sophrologue/?hide_gdpr_banner=1&primary_color=9a6750&text_color=5e4a42&background_color=f8f2ef"
+          />  </div>
               </div>
             </div>
 
@@ -107,7 +116,7 @@
 
     <div class="flex gap-3">
       <a href="https://www.facebook.com/p/Alexandra-Coirier-Sophrologue-100072807305535/" class="footer-social" aria-label="Facebook">f</a>
-      <a href="#" class="footer-social" aria-label="Instagram">◎</a>
+      <a href="https://www.instagram.com/alexandracoirier_sophrologie/" class="footer-social" aria-label="Instagram">◎</a>
     </div>
   </div>
 </div>
@@ -143,4 +152,23 @@
     transform: translateY(-2px);
     background: rgba(255, 255, 255, 0.18);
   }
+
+  .footer-scroll-link {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  z-index: 20;
+  width: 52px;
+  height: 52px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: var(--brown-soft);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.65);
+  box-shadow: 0 12px 28px rgba(94, 74, 66, 0.25);
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-decoration: none;
+}
 </style>

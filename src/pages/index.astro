@@ -7,6 +7,7 @@ import SophroCarousel from "../components/SophroCarousel.astro";
 import SophroMozaicFlip from "../components/SophroMozaicFlip.astro";
 import ScrollBlurImage from "../components/ScrollBlurImage.astro";
 import ImageBlock from "../components/ImageBlock.astro";
+import CalendlyButton from "../components/CalendlyButton.astro";
 ---
 
 <BaseLayout
@@ -61,12 +62,11 @@ import ImageBlock from "../components/ImageBlock.astro";
               </p>
 
               <div class="mt-8 flex flex-wrap gap-4">
-                <a
-                  href="/contact"
-                  class="soft-btn bg-[var(--brown-soft)] text-white px-7 py-3.5 font-medium hover:bg-[var(--brown-deep)]"
-                >
-                  Prendre rendez-vous
-                </a>
+                <CalendlyButton
+                  label="Prendre rendez-vous"
+                  className="px-6 py-3"
+                  url="https://calendly.com/alexandracoirier-sophrologue/?hide_gdpr_banner=1&primary_color=9a6750&text_color=5e4a42&background_color=f8f2ef"
+                />
 
                 <a
                   href="/anxiete-stress-emotions"
@@ -102,7 +102,10 @@ import ImageBlock from "../components/ImageBlock.astro";
 
         <div class="hero-waves"></div>
       </section>
-      <ImageBlock src="/images/accueil-triptyque.png" alt="Souffler, s’ancrer, se retrouver" />
+      <ImageBlock
+        src="/images/accueil-triptyque.png"
+        alt="Souffler, s’ancrer, se retrouver"
+      />
     </section>
 
     <!-- <section class="mx-auto max-w-7xl px-4 sm:px-6 py-16">
@@ -112,8 +115,6 @@ import ImageBlock from "../components/ImageBlock.astro";
         <SophroMozaicFlip />
       </section>
     </section> -->
-
-    
 
     <section class="mx-auto max-w-7xl px-4 sm:px-6 py-8 md:py-14">
       <div class="soft-card rounded-[2.5rem] p-8 md:p-10 fade-in">
@@ -129,7 +130,9 @@ import ImageBlock from "../components/ImageBlock.astro";
         </p>
 
         <details class="mt-6 rounded-[1.5rem] bg-white/70 p-5">
-          <summary class="cursor-pointer font-semibold text-[var(--brown-deep)]">
+          <summary
+            class="cursor-pointer font-semibold text-[var(--brown-deep)]"
+          >
             Lire la suite
           </summary>
 
@@ -169,89 +172,91 @@ import ImageBlock from "../components/ImageBlock.astro";
             Comprendre ce que je ressens
           </a>
 
-          <a
-            href="/contact"
-            class="soft-btn bg-[var(--brown-soft)] text-white px-7 py-3.5 font-medium inline-block hover:bg-[var(--brown-deep)]"
-          >
-            Prendre rendez-vous
-          </a>
+          <CalendlyButton
+            label="Prendre rendez-vous"
+            className="px-6 py-3"
+            url="https://calendly.com/alexandracoirier-sophrologue/?hide_gdpr_banner=1&primary_color=9a6750&text_color=5e4a42&background_color=f8f2ef"
+          /> 
         </div>
       </div>
     </section>
     <section class="mx-auto max-w-7xl px-4 sm:px-6 py-16">
-      <ImageBlock src="/images/accueil-diptyque-1.png" alt="Souffler, s’ancrer, se retrouver" />
+      <ImageBlock
+        src="/images/accueil-diptyque-1.png"
+        alt="Souffler, s’ancrer, se retrouver"
+      />
       <section
-      class="section-bg relative overflow-hidden min-h-[50vh] flex items-center"
+        class="section-bg relative overflow-hidden min-h-[50vh] flex items-center"
       >
-      <section class="mx-auto max-w-7xl px-4 sm:px-6 py-8 md:py-14">
-        <div class="grid lg:grid-cols-2 gap-8 items-stretch">
-          <div class="soft-card rounded-[2.5rem] p-8 md:p-10 slide-right">
-            <h2
-            class="text-3xl md:text-4xl font-semibold text-[var(--brown-deep)]"
+        <section class="mx-auto max-w-7xl px-4 sm:px-6 py-8 md:py-14">
+          <div class="grid lg:grid-cols-2 gap-8 items-stretch">
+            <div class="soft-card rounded-[2.5rem] p-8 md:p-10 slide-right">
+              <h2
+                class="text-3xl md:text-4xl font-semibold text-[var(--brown-deep)]"
               >
-              Et si tu décidais de reprendre les rênes ?
-            </h2>
-            
-            <ul class="mt-8 space-y-4 text-[var(--text)] leading-relaxed">
-              <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
-                Tu sens bien que vivre ainsi t’épuise et t’empêche d’être à
-                l’aise dans tes relations, au travail ou dans ta vie
-                personnelle.
-              </li>
-              <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
-                L’anxiété ronge peu à peu la confiance et l’estime de soi.
-              </li>
-              <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
-                La sophrologie donne des outils concrets et simples pour
-                apaiser tes émotions et retrouver une clarté intérieure.
-              </li>
-              <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
-                Tu peux reprendre confiance, avancer pas à pas et retrouver la
-                simplicité d’être bien avec toi-même.
-              </li>
-            </ul>
-            
-            <div class="mt-8">
-              <a
-              href="/anxiete-stress-emotions"
-              class="soft-btn border border-[var(--brown-soft)]/20 bg-white/70 px-7 py-3.5 text-[var(--brown-deep)] hover:bg-white"
-              >
-              En savoir plus sur l’anxiété
-            </a>
-          </div>
-        </div>
-        
-        <div class="soft-card rounded-[2.5rem] p-8 md:p-10 slide-left">
-          <h2
-          class="text-3xl md:text-4xl font-semibold text-[var(--brown-deep)]"
-          >
-          Vers une vie plus légère et sereine
-        </h2>
-        
-        <ul class="mt-8 space-y-4 text-[var(--text)]">
-          <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
-            Te réveiller sans boule au ventre et sans angoisse qui
-            t’épuise avant même que la journée ne commence.
-          </li>
-          <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
-            Retrouver la joie de vivre, l’élan et l’envie de faire des
-            projets.
-          </li>
-          <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
-            Vivre des relations plus apaisées et te sentir plus libre
-            d’être toi-même.
-          </li>
-          <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
-            Sentir les crises d’angoisse perdre peu à peu en intensité
-            jusqu’à ne plus dicter tes choix.
-          </li>
-        </ul>
-        
-        <div class="mt-8">
-          <a
-          href="/sophrologie-pour-qui"
+                Et si tu décidais de reprendre les rênes ?
+              </h2>
+
+              <ul class="mt-8 space-y-4 text-[var(--text)] leading-relaxed">
+                <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
+                  Tu sens bien que vivre ainsi t’épuise et t’empêche d’être à
+                  l’aise dans tes relations, au travail ou dans ta vie
+                  personnelle.
+                </li>
+                <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
+                  L’anxiété ronge peu à peu la confiance et l’estime de soi.
+                </li>
+                <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
+                  La sophrologie donne des outils concrets et simples pour
+                  apaiser tes émotions et retrouver une clarté intérieure.
+                </li>
+                <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
+                  Tu peux reprendre confiance, avancer pas à pas et retrouver la
+                  simplicité d’être bien avec toi-même.
+                </li>
+              </ul>
+
+              <div class="mt-8">
+                <a
+                  href="/anxiete-stress-emotions"
                   class="soft-btn border border-[var(--brown-soft)]/20 bg-white/70 px-7 py-3.5 text-[var(--brown-deep)] hover:bg-white"
-                  >
+                >
+                  En savoir plus sur l’anxiété
+                </a>
+              </div>
+            </div>
+
+            <div class="soft-card rounded-[2.5rem] p-8 md:p-10 slide-left">
+              <h2
+                class="text-3xl md:text-4xl font-semibold text-[var(--brown-deep)]"
+              >
+                Vers une vie plus légère et sereine
+              </h2>
+
+              <ul class="mt-8 space-y-4 text-[var(--text)]">
+                <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
+                  Te réveiller sans boule au ventre et sans angoisse qui
+                  t’épuise avant même que la journée ne commence.
+                </li>
+                <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
+                  Retrouver la joie de vivre, l’élan et l’envie de faire des
+                  projets.
+                </li>
+                <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
+                  Vivre des relations plus apaisées et te sentir plus libre
+                  d’être toi-même.
+                </li>
+                <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
+                  Sentir les crises d’angoisse perdre peu à peu en intensité
+                  jusqu’à ne plus dicter tes choix.
+                </li>
+              </ul>
+
+              <div class="mt-8">
+                <a
+                  href="/sophrologie-pour-qui"
+                  class="soft-btn border border-[var(--brown-soft)]/20 bg-white/70 px-7 py-3.5 text-[var(--brown-deep)] hover:bg-white"
+                >
                   Voir si la sophrologie est faite pour moi
                 </a>
               </div>
@@ -259,11 +264,12 @@ import ImageBlock from "../components/ImageBlock.astro";
           </div>
         </section>
       </section>
-      <ImageBlock src="/images/accueil-diptyque-2.png" alt="Souffler, s’ancrer, se retrouver" />
-      
-     
+      <ImageBlock
+        src="/images/accueil-diptyque-2.png"
+        alt="Souffler, s’ancrer, se retrouver"
+      />
     </section>
- 
+
     <section class="mx-auto max-w-7xl px-4 sm:px-6 py-8 md:py-14">
       <div class="soft-card rounded-[2.5rem] p-8 md:p-10 zoom-in">
         <p class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]">
@@ -302,21 +308,23 @@ import ImageBlock from "../components/ImageBlock.astro";
               Ancrer
             </h3>
             <p class="mt-3 text-[var(--text)]">
-              Tu repars avec des supports concrets pour progresser à ton
-              rythme entre les séances.
+              Tu repars avec des supports concrets pour progresser à ton rythme
+              entre les séances.
             </p>
           </div>
         </div>
 
         <details class="mt-8 rounded-[1.5rem] bg-white/70 p-5">
-          <summary class="cursor-pointer font-semibold text-[var(--brown-deep)]">
+          <summary
+            class="cursor-pointer font-semibold text-[var(--brown-deep)]"
+          >
             Voir le détail de mon approche
           </summary>
 
           <div class="mt-4 space-y-4 text-[var(--text)] leading-relaxed">
             <p>
-              Mon approche est globale : corps, esprit et émotions. Je t’aide
-              à apaiser les tensions, clarifier les situations bloquées et
+              Mon approche est globale : corps, esprit et émotions. Je t’aide à
+              apaiser les tensions, clarifier les situations bloquées et
               renforcer les ressources déjà présentes en toi.
             </p>
 
@@ -348,77 +356,76 @@ import ImageBlock from "../components/ImageBlock.astro";
             Qui suis-je ?
           </a>
 
-          <a
-            href="/contact"
-            class="soft-btn bg-[var(--brown-soft)] text-white px-7 py-3.5 font-medium inline-block hover:bg-[var(--brown-deep)]"
-          >
-            Prendre rendez-vous
-          </a>
+          <CalendlyButton
+            label="Prendre rendez-vous"
+            className="px-6 py-3"
+            url="https://calendly.com/alexandracoirier-sophrologue/?hide_gdpr_banner=1&primary_color=9a6750&text_color=5e4a42&background_color=f8f2ef"
+          /> 
         </div>
       </div>
 
       <section class="mt-8 soft-card rounded-[2.5rem] overflow-hidden">
-  <div class="grid lg:grid-cols-2 items-stretch">
-    <!-- <div class="relative min-h-[320px]">
+        <div class="grid lg:grid-cols-2 items-stretch">
+          <!-- <div class="relative min-h-[320px]">
       <img
         src="/images/parent-enfant.jpg"
         alt="Parent et enfant main dans la main"
         class="absolute inset-0 h-full w-full object-cover"
       />
     </div> -->
-    <ScrollBlurImage
-  src="/images/parent-enfant.jpg"
-  alt="Tarifs et fonctionnement des séances de sophrologie"
-/>
+          <ScrollBlurImage
+            src="/images/parent-enfant.jpg"
+            alt="Tarifs et fonctionnement des séances de sophrologie"
+          />
 
-    <div class="p-8 md:p-10 flex flex-col justify-center">
-      <p class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]">
-        Parent · Enfant
-      </p>
+          <div class="p-8 md:p-10 flex flex-col justify-center">
+            <p
+              class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]"
+            >
+              Parent · Enfant
+            </p>
 
-      <h2 class="mt-4 text-3xl md:text-4xl font-semibold text-[var(--brown-deep)]">
-        Avancer ensemble, en douceur
-      </h2>
+            <h2
+              class="mt-4 text-3xl md:text-4xl font-semibold text-[var(--brown-deep)]"
+            >
+              Avancer ensemble, en douceur
+            </h2>
 
-      <p class="mt-5 leading-relaxed text-[var(--text)]">
-        Certaines périodes peuvent être sensibles pour un enfant comme pour un parent :
-        émotions fortes, fatigue, stress, besoin de retrouver un lien plus apaisé.
-      </p>
+            <p class="mt-5 leading-relaxed text-[var(--text)]">
+              Certaines périodes peuvent être sensibles pour un enfant comme
+              pour un parent : émotions fortes, fatigue, stress, besoin de
+              retrouver un lien plus apaisé.
+            </p>
 
-      <p class="mt-4 leading-relaxed text-[var(--text)]">
-        Les séances parent-enfant offrent un espace sécurisant pour se déposer,
-        mieux se comprendre et retrouver ensemble plus de calme et de confiance.
-      </p>
+            <p class="mt-4 leading-relaxed text-[var(--text)]">
+              Les séances parent-enfant offrent un espace sécurisant pour se
+              déposer, mieux se comprendre et retrouver ensemble plus de calme
+              et de confiance.
+            </p>
 
-      <div class="mt-8 flex flex-wrap gap-4">
-        <a
-          href="/accompagnement"
-          class="soft-btn border border-[var(--brown-soft)]/20 bg-white/70 px-7 py-3.5 text-[var(--brown-deep)] hover:bg-white"
-        >
-          Découvrir les accompagnements
-        </a>
+            <div class="mt-8 flex flex-wrap gap-4">
+              <a
+                href="/accompagnement"
+                class="soft-btn border border-[var(--brown-soft)]/20 bg-white/70 px-7 py-3.5 text-[var(--brown-deep)] hover:bg-white"
+              >
+                Découvrir les accompagnements
+              </a>
 
-        <a
-          href="/contact"
-          class="soft-btn bg-[var(--brown-soft)] text-white px-7 py-3.5 font-medium hover:bg-[var(--brown-deep)]"
-        >
-          Me contacter
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
+              <a
+                href="/contact"
+                class="soft-btn bg-[var(--brown-soft)] text-white px-7 py-3.5 font-medium hover:bg-[var(--brown-deep)]"
+              >
+                Me contacter
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
     </section>
 
-
-
-
-
-    <section class="mx-auto max-w-5xl px-4 sm:px-6 py-8 md:py-14">
+    <section class="mx-auto max-w-7xl px-4 sm:px-6 py-8 md:py-14">
       <div class="soft-card rounded-[2.5rem] p-8 md:p-10 fade-in">
-        <h2
-          class="text-3xl md:text-4xl font-semibold text-[var(--brown-deep)]"
-        >
+        <h2 class="text-3xl md:text-4xl font-semibold text-[var(--brown-deep)]">
           Ce qu’ils en ont pensé
         </h2>
 
@@ -461,12 +468,11 @@ import ImageBlock from "../components/ImageBlock.astro";
             Lire les témoignages
           </a>
 
-          <a
-            href="/contact"
-            class="soft-btn bg-[var(--brown-soft)] text-white px-7 py-3.5 font-medium inline-block hover:bg-[var(--brown-deep)]"
-          >
-            Prendre rendez-vous
-          </a>
+          <CalendlyButton
+            label="Prendre rendez-vous"
+            className="px-6 py-3"
+            url="https://calendly.com/alexandracoirier-sophrologue/?hide_gdpr_banner=1&primary_color=9a6750&text_color=5e4a42&background_color=f8f2ef"
+          /> 
         </div>
       </div>
     </section>
@@ -512,12 +518,11 @@ import ImageBlock from "../components/ImageBlock.astro";
               Voir si c’est fait pour moi
             </a>
 
-            <a
-              href="/contact"
-              class="soft-btn bg-[var(--brown-soft)] text-white px-7 py-3.5 font-medium inline-block hover:bg-[var(--brown-deep)]"
-            >
-              Prendre rendez-vous
-            </a>
+            <CalendlyButton
+            label="Prendre rendez-vous"
+            className="px-6 py-3"
+            url="https://calendly.com/alexandracoirier-sophrologue/?hide_gdpr_banner=1&primary_color=9a6750&text_color=5e4a42&background_color=f8f2ef"
+          /> 
           </div>
         </div>
 
@@ -566,12 +571,11 @@ import ImageBlock from "../components/ImageBlock.astro";
               Voir les accompagnements
             </a>
 
-            <a
-              href="/contact"
-              class="soft-btn bg-[var(--brown-soft)] text-white px-7 py-3.5 font-medium inline-block hover:bg-[var(--brown-deep)]"
-            >
-              Prendre rendez-vous
-            </a>
+            <CalendlyButton
+            label="Prendre rendez-vous"
+            className="px-6 py-3"
+            url="https://calendly.com/alexandracoirier-sophrologue/?hide_gdpr_banner=1&primary_color=9a6750&text_color=5e4a42&background_color=f8f2ef"
+          /> 
           </div>
         </div>
       </div>

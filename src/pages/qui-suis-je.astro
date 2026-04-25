@@ -4,6 +4,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import ScrollReveal from "../components/ScrollReveal.astro";
 import SophroMozaicFlip from "../components/SophroMozaicFlip.astro";
+import CalendlyButton from "../components/CalendlyButton.astro";
 ---
 
 <BaseLayout
@@ -257,12 +258,11 @@ import SophroMozaicFlip from "../components/SophroMozaicFlip.astro";
                 Voir les accompagnements
               </a>
 
-              <a
-                href="/contact"
-                class="soft-btn bg-[var(--brown-soft)] text-white px-7 py-3.5 font-medium hover:bg-[var(--brown-deep)]"
-              >
-                Prendre rendez-vous
-              </a>
+              <CalendlyButton
+            label="Prendre rendez-vous"
+            className="px-6 py-3"
+            url="https://calendly.com/alexandracoirier-sophrologue/?hide_gdpr_banner=1&primary_color=9a6750&text_color=5e4a42&background_color=f8f2ef"
+          /> 
             </div>
           </div>
         </div>

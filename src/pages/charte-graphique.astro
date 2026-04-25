@@ -1,0 +1,185 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<BaseLayout
+  title="Charte graphique – Alexandra Coirier"
+  description="Présentation de l’univers visuel du site : couleurs, typographies, icônes et conseils d’utilisation."
+>
+  <Header />
+
+  <main class="mx-auto max-w-6xl px-4 sm:px-6 py-10 md:py-16">
+
+    <!-- INTRO -->
+    <section class="soft-card rounded-[2.5rem] p-8 md:p-10">
+      <h1 class="text-4xl md:text-5xl font-semibold text-[var(--brown-deep)]">
+        Avant de découvrir ton nouveau site…
+      </h1>
+
+      <p class="mt-6 text-lg leading-relaxed text-[var(--text)]">
+        Alexandra, voici l’univers visuel qui a été imaginé pour toi.
+      </p>
+
+      <p class="mt-4 text-lg leading-relaxed text-[var(--text)]">
+        Cette charte graphique va t’aider à comprendre les choix qui ont été faits,
+        et surtout à garder une cohérence si tu souhaites faire évoluer ton site,
+        créer des supports ou communiquer ailleurs.
+      </p>
+
+      <p class="mt-4 text-lg leading-relaxed text-[var(--text)]">
+        Tout a été pensé pour refléter ce que tu proposes :
+        <strong class="text-[var(--brown-deep)]">douceur, apaisement, confiance et transformation.</strong>
+      </p>
+    </section>
+
+    <!-- COULEURS -->
+    <section class="mt-8 soft-card rounded-[2rem] p-8">
+      <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+        Les couleurs du site
+      </h2>
+
+      <p class="mt-4 text-[var(--text)]">
+        Les couleurs ont été choisies pour créer une atmosphère rassurante, naturelle et douce.
+      </p>
+
+      <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="p-6 rounded-[1.5rem] bg-[#5e4a42] text-white">Brun profond</div>
+        <div class="p-6 rounded-[1.5rem] bg-[#9a6750] text-white">Brun doux</div>
+        <div class="p-6 rounded-[1.5rem] bg-[#8a9a7b] text-white">Vert sauge</div>
+        <div class="p-6 rounded-[1.5rem] bg-[#f6efec] text-[var(--brown-deep)]">Fond doux</div>
+      </div>
+
+      <p class="mt-6 text-[var(--text)]">
+        👉 Le brun apporte la stabilité et la confiance  
+        👉 Le vert évoque le calme et la nature  
+        👉 Les tons clairs permettent de respirer visuellement
+      </p>
+    </section>
+
+    <!-- TYPO -->
+    <section class="mt-8 soft-card rounded-[2rem] p-8">
+      <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+        Les typographies
+      </h2>
+
+      <p class="mt-4 text-[var(--text)]">
+        Le site utilise une police simple et élégante pour rester accessible et apaisant.
+      </p>
+
+      <div class="mt-6 space-y-4">
+        <p class="text-4xl font-semibold text-[var(--brown-deep)]">
+          Titres principaux
+        </p>
+
+        <p class="text-lg text-[var(--text)]">
+          Texte courant lisible et fluide pour accompagner la lecture en douceur.
+        </p>
+      </div>
+    </section>
+
+    <!-- ICONES -->
+    <section class="mt-8 soft-card rounded-[2rem] p-8">
+      <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+        Les icônes
+      </h2>
+
+      <p class="mt-4 text-[var(--text)]">
+        Les icônes sont volontairement simples, arrondies et légères.
+        Elles servent à guider sans surcharger.
+      </p>
+
+      <div class="mt-8">
+        <img
+          src="/images/icon-planche.png"
+          alt="Planche d'icônes du site"
+          class="rounded-[1.5rem] shadow-md"
+        />
+      </div>
+
+      <p class="mt-6 text-[var(--text)]">
+        👉 Utiliser les icônes pour illustrer une idée  
+        👉 Ne pas en abuser pour garder de la clarté  
+      </p>
+    </section>
+
+    <!-- SEPARATEURS -->
+    <section class="mt-8 soft-card rounded-[2rem] p-8">
+      <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+        Les séparateurs visuels
+      </h2>
+
+      <p class="mt-4 text-[var(--text)]">
+        Des éléments graphiques légers permettent de structurer la page
+        tout en conservant une sensation de fluidité.
+      </p>
+
+      <div class="mt-8 space-y-6 text-center">
+        <div class="h-[2px] w-24 mx-auto bg-[var(--brown-soft)] rounded-full"></div>
+        <div class="flex justify-center gap-2">
+          <span class="w-2 h-2 bg-[var(--brown-soft)] rounded-full"></span>
+          <span class="w-2 h-2 bg-[var(--brown-soft)] rounded-full"></span>
+          <span class="w-2 h-2 bg-[var(--brown-soft)] rounded-full"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- STYLE GLOBAL -->
+    <section class="mt-8 soft-card rounded-[2rem] p-8">
+      <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+        L’ambiance générale
+      </h2>
+
+      <p class="mt-5 text-[var(--text)] leading-relaxed">
+        Le site a été conçu pour être respirant, fluide et rassurant.
+      </p>
+
+      <ul class="mt-5 space-y-3 text-[var(--text)]">
+        <li>• Beaucoup d’espace pour laisser respirer</li>
+        <li>• Des animations lentes et douces</li>
+        <li>• Des formes arrondies</li>
+        <li>• Une navigation simple et intuitive</li>
+      </ul>
+    </section>
+
+    <!-- CONSEILS -->
+    <section class="mt-8 soft-card rounded-[2rem] p-8">
+      <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+        Conseils d’utilisation
+      </h2>
+
+      <div class="mt-5 space-y-4 text-[var(--text)] leading-relaxed">
+        <p>
+          Garde toujours cette logique : simplicité, douceur, clarté.
+        </p>
+
+        <p>
+          Si tu ajoutes du contenu, demande-toi :
+          “Est-ce que cela apaise ou surcharge ?”
+        </p>
+
+        <p>
+          Privilégie toujours la lisibilité plutôt que la quantité.
+        </p>
+
+        <p class="font-medium text-[var(--brown-deep)]">
+          Le site doit rester un espace où l’on respire.
+        </p>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="mt-10 text-center">
+      <a
+        href="/"
+        class="soft-btn px-8 py-4 text-lg"
+      >
+        Découvrir le site
+      </a>
+    </section>
+
+  </main>
+
+  <Footer />
+</BaseLayout>

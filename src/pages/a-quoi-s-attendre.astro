@@ -4,6 +4,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import ScrollReveal from "../components/ScrollReveal.astro";
 import ScrollBlurImage from "../components/ScrollBlurImage.astro";
+import CalendlyButton from "../components/CalendlyButton.astro";
 ---
 
 <BaseLayout
@@ -13,7 +14,7 @@ import ScrollBlurImage from "../components/ScrollBlurImage.astro";
   <Header />
 
   <main>
-    <section class="mx-auto max-w-6xl px-4 sm:px-6 py-10 md:py-16">
+    <section class="mx-auto max-w-7xl px-4 sm:px-6 py-10 md:py-16">
       <div class="soft-card rounded-[2.5rem] p-8 md:p-10 slide-right">
         <p class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]">
           Déroulé des séances
@@ -30,11 +31,13 @@ import ScrollBlurImage from "../components/ScrollBlurImage.astro";
       </div>
 
 
+<div class="mt-8">
 
-<ScrollBlurImage
+  <ScrollBlurImage
   src="/images/deroule-seance-triptyque.png"
   alt="Tarifs et fonctionnement des séances de sophrologie"
-/>
+  />
+</div>
 
       <section class="mt-8 section-bg rounded-[2.5rem] p-8 md:p-10">
         <section class="soft-card rounded-[2rem] p-8 fade-in">
@@ -210,12 +213,11 @@ import ScrollBlurImage from "../components/ScrollBlurImage.astro";
           </p>
 
           <div class="mt-8 flex flex-wrap justify-center gap-4">
-            <a
-              href="/contact"
-              class="soft-btn bg-[var(--brown-soft)] text-white px-7 py-3.5 font-medium inline-block hover:bg-[var(--brown-deep)]"
-            >
-              Prendre rendez-vous
-            </a>
+            <CalendlyButton
+            label="Prendre rendez-vous"
+            className="px-6 py-3"
+            url="https://calendly.com/alexandracoirier-sophrologue/?hide_gdpr_banner=1&primary_color=9a6750&text_color=5e4a42&background_color=f8f2ef"
+          /> 
 
             <a
               href="/tarifs"

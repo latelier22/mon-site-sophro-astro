@@ -3,7 +3,7 @@ import CalendlyButton from "./CalendlyButton.astro";
 
 const links = [
   { href: "/", label: "Accueil" },
-  { href: "/a-quoi-s-attendre", label: "À quoi s’attendre?" },
+  { href: "/a-quoi-s-attendre", label: "À quoi s’attendre ?" },
   { href: "/accompagnement", label: "Accompagnements" },
   { href: "/tarifs", label: "Tarifs et modalités" },
   { href: "/contact", label: "Contact" },
@@ -20,107 +20,130 @@ const moreLinks = [
 ];
 ---
 
-<header class="sticky top-0 z-50">
+<header id="site-top" class="sticky top-0 z-50">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 pt-4">
-    <div class="soft-card rounded-[2rem] px-4 sm:px-6 py-4">
-      <div class="flex items-center justify-between gap-4">
-        <a href="/" class="flex min-w-0 items-center gap-3">
-          <span class="header-logo-wrap">
+    <div class="header-panel relative overflow-visible rounded-[2.5rem] shadow-xl">
+      <div class="header-bg-mask absolute inset-0 overflow-hidden rounded-[2.5rem]">
+  <div class="header-bg"></div>
+</div>
+
+      <div class="header-dark relative z-10 px-4 sm:px-6 py-4">
+        <div class="flex items-center justify-between gap-4">
+          <a href="/" class="flex min-w-0 items-center gap-3">
             <img
-              src="/images/logo-header.png"
-              alt="Logo Alexandra Coirier"
-              class="header-logo"
+              src="/images/alexandra-coirier.png"
+              alt="Alexandra Coirier"
+              class="h-14 w-14 rounded-full object-cover ring-2 ring-white/70 shadow-lg"
             />
-          </span>
 
-          <span class="min-w-0">
-            <span class="block truncate text-lg sm:text-2xl font-semibold tracking-wide text-[var(--brown-deep)]">
-              Alexandra Coirier
+            <span class="min-w-0">
+              <span class="block truncate text-lg sm:text-2xl font-semibold tracking-wide text-white">
+                Alexandra Coirier
+              </span>
+              <span class="block text-xs sm:text-sm uppercase tracking-[0.28em] text-white/75">
+                Sophrologue
+              </span>
             </span>
-            <span class="block text-xs sm:text-sm uppercase tracking-[0.28em] text-[var(--brown-soft)]">
-              Sophrologue
-            </span>
-          </span>
-        </a>
-
-       <nav class="hidden md:flex items-center gap-6 text-sm">
-  {links.slice(0, 4).map((link) => (
-    <a href={link.href} class="nav-link">
-      {link.label}
-    </a>
-  ))}
-
-  <div class="relative group">
-    <button type="button" class="nav-link flex items-center gap-1">
-      En savoir plus
-      <span>▾</span>
-    </button>
-
-    <div class="absolute left-0 top-full pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition">
-      <div class="soft-card min-w-[260px] rounded-[1.5rem] p-3">
-        {moreLinks.map((link) => (
-          <a
-            href={link.href}
-            class="block rounded-[1rem] px-4 py-3 text-[var(--text)] hover:bg-white/70 hover:text-[var(--brown-deep)]"
-          >
-            {link.label}
           </a>
-        ))}
-      </div>
-    </div>
-  </div>
 
-  {links.slice(4).map((link) => (
-    <a href={link.href} class="nav-link">
-      {link.label}
-    </a>
-  ))}
-</nav>
+          <nav class="hidden lg:flex items-center gap-5 text-sm">
+            {links.slice(0, 4).map((link) => (
+              <a href={link.href} class="header-dark-link">
+                {link.label}
+              </a>
+            ))}
 
-        <div class="hidden md:flex items-center gap-3">
-          <CalendlyButton
-            label="Prendre rendez-vous"
-            className="px-5 py-2.5 text-sm whitespace-nowrap"
-          />
-        </div>
+            <div class="relative group">
+              <button type="button" class="header-dark-link flex items-center gap-1">
+                En savoir plus
+                <span>▾</span>
+              </button>
 
-        <button
-  type="button"
-  class="md:hidden flex h-11 w-11 items-center justify-center rounded-full bg-white/70 border border-[var(--brown-soft)]/20 text-[var(--brown-deep)] shadow-sm"
-  aria-label="Ouvrir le menu"
-  aria-controls="mobile-menu"
-  aria-expanded="false"
-  data-menu-toggle
->
-  <span class="text-3xl font-black leading-none">☰</span>
-</button>
-      </div>
-
-     <div id="mobile-menu" class="mobile-menu md:hidden" hidden>
-  <nav class="mt-5 flex flex-col gap-2">
-    {links.map((link) => (
-      <a href={link.href} class="mobile-nav-link">
+              <div class="absolute right-0 top-full pt-3 opacity-0 invisible group-hover:opacity-80 group-hover:visible transition z-[9999]">
+  <div class="w-[340px] rounded-[1.5rem] bg-[#3f302a] p-3 shadow-2xl border border-white/20">
+    {moreLinks.map((link) => (
+      <a
+        href={link.href}
+        class="block rounded-[1rem] px-4 py-3 text-white hover:bg-[#5e4a42] hover:text-white"
+      >
         {link.label}
       </a>
     ))}
+  </div>
+</div>
+            </div>
 
-    <div class="mt-3 rounded-[1.5rem] bg-white/50 p-3">
-      <p class="px-3 pb-2 text-xs uppercase tracking-[0.2em] text-[var(--brown-soft)]">
-        En savoir plus
-      </p>
+            {links.slice(4).map((link) => (
+              <a href={link.href} class="header-dark-link">
+                {link.label}
+              </a>
+            ))}
+          </nav>
 
-      {moreLinks.map((link) => (
-        <a href={link.href} class="mobile-nav-link">
-          {link.label}
-        </a>
-      ))}
-    </div>
-  </nav>
+          <!-- <div class="hidden lg:flex items-center gap-3">
+            <CalendlyButton
+              label="Prendre rendez-vous"
+              className="px-5 py-2.5 text-sm whitespace-nowrap bg-white/90 text-[var(--brown-deep)] hover:bg-white"
+            />
+          </div> -->
 
-  <CalendlyButton
-    label="Prendre rendez-vous"
-    className="mt-5 inline-flex w-full items-center justify-center px-5 py-3 text-sm"
-  />
+          <button
+            type="button"
+            class="lg:hidden flex h-11 w-11 items-center justify-center rounded-full bg-white/85 border border-white/40 text-[var(--brown-deep)] shadow-sm"
+            aria-label="Ouvrir le menu"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+            data-menu-toggle
+          >
+            <span class="text-3xl font-black leading-none">☰</span>
+          </button>
+        </div>
+
+        <div id="mobile-menu" class="mobile-menu lg:hidden" hidden>
+          <nav class="mt-5 flex flex-col gap-2">
+            {links.map((link) => (
+              <a href={link.href} class="mobile-dark-link">
+                {link.label}
+              </a>
+            ))}
+
+            <div class="mt-3 rounded-[1.5rem] bg-white/12 p-3">
+              <p class="px-3 pb-2 text-xs uppercase tracking-[0.2em] text-white/65">
+                En savoir plus
+              </p>
+
+              {moreLinks.map((link) => (
+                <a href={link.href} class="mobile-dark-link">
+                  {link.label}
+                </a>
+              ))}
+            </div>
+          </nav>
+        </div>
+      </div>
+
+  <div class="header-light relative z-0">
+    <a
+  href="#site-footer"
+  class="header-scroll-link"
+  aria-label="Aller en bas de page"
+>
+  ↓
+</a>
+  <div class="header-light-buttons">
+    <CalendlyButton
+            label="Prendre rendez-vous"
+            className="px-6 py-3"
+            url="https://calendly.com/alexandracoirier-sophrologue/?hide_gdpr_banner=1&primary_color=9a6750&text_color=5e4a42&background_color=f8f2ef"
+          /> 
+
+    <a
+      href="/contact"
+      class="soft-btn border border-[var(--brown-soft)]/25 bg-white/75 px-6 py-3 text-sm font-medium text-[var(--brown-deep)] hover:bg-white"
+    >
+      Me contacter
+    </a>
+  </div>
 </div>
     </div>
   </div>
@@ -158,3 +181,134 @@ const moreLinks = [
     setupHeaderMenu();
   }
 </script>
+
+<style>
+  .header-panel {
+    min-height: 200px;
+  }
+
+  .header-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url("/images/header-bg.png");
+  background-size: cover;
+  background-position: center 90%;
+  transform: scale(1.03);
+}
+
+  .header-dark {
+    background:
+      linear-gradient(
+        to right,
+        rgba(65, 73, 48, 0.92),
+        rgba(94, 74, 66, 0.84)
+      );
+    backdrop-filter: blur(4px);
+  }
+
+  .header-light {
+    height: 200px;
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.5),
+        rgba(255, 255, 255, 0.2)
+      );
+  }
+
+  .header-dark-link {
+    color: rgba(255, 255, 255, 0.86);
+    transition: color 220ms ease, transform 220ms ease;
+    white-space: nowrap;
+  }
+
+  .header-dark-link:hover {
+    color: white;
+    transform: translateY(-1px);
+  }
+
+  .mobile-dark-link {
+    display: block;
+    border-radius: 1rem;
+    padding: 0.85rem 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .mobile-dark-link:hover {
+    background: rgba(255, 255, 255, 0.16);
+    color: white;
+  }
+
+  @media (max-width: 1023px) {
+  .header-light {
+    height: 100%;
+  }
+
+  .header-light-buttons {
+    left: 1rem;
+    right: 1rem;
+    bottom: 1.25rem;
+    justify-content: center;
+  }
+}
+
+  .header-light-buttons {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  color :black;
+}
+
+.header-scroll-link {
+  position: absolute;
+  left: 1.5rem;
+  bottom: 1.5rem;
+  width: 52px;
+  height: 52px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: var(--brown-soft);
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 700;
+  box-shadow: 0 12px 28px rgba(94, 74, 66, 0.18);
+}
+
+@media (max-width: 1023px) {
+  .header-scroll-link {
+    left: 1rem;
+    bottom: 5.2rem;
+    width: 46px;
+    height: 46px;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 1023px) {
+  .header-panel {
+    min-height: 300px;
+  }
+
+  .header-light {
+    height: 130px;
+  }
+
+  .header-light-buttons {
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    justify-content: center;
+  }
+
+  .header-light-buttons .soft-btn {
+    padding: 0.75rem 1rem;
+    font-size: 0.85rem;
+  }
+}
+</style>
