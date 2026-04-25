@@ -2,66 +2,67 @@
 import CalendlyButton from "./CalendlyButton.astro";
 ---
 
-<footer id="site-footer" class="mt-24 pb-10">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6">
+<footer id="site-footer" class="mt-24 pb-10 max-md:mt-14 max-md:pb-0">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 max-md:px-0">
     <div
-      class="relative overflow-hidden rounded-[2.5rem] bg-[url('/images/footer-bg.png')] bg-cover bg-center"
+      class="relative overflow-hidden rounded-[2.5rem] bg-[url('/images/footer-bg.png')] bg-cover bg-center max-md:rounded-none"
     >
       <div class="absolute inset-0 bg-white/35 backdrop-blur-[1px]"></div>
 
-      <div class="relative px-6 pt-20 pb-8 md:px-10 md:pt-28">
+      <div class="relative px-6 pt-20 pb-8 md:px-10 md:pt-28 max-md:px-0 max-md:pt-12 max-md:pb-0">
         <a
-  href="#top"
-  class="footer-scroll-link"
-  aria-label="Retour en haut de page"
->
-  ↑
-</a>
-        <div class="mx-auto max-w-2xl text-center">
-          <p class="text-2xl md:text-3xl font-semibold leading-relaxed text-[var(--brown-deep)]">
+          href="#site-top"
+          class="footer-scroll-link"
+          aria-label="Retour en haut de page"
+        >
+          ↑
+        </a>
+
+        <div class="mx-auto max-w-2xl px-4 text-center max-md:max-w-none">
+          <p class="text-2xl md:text-3xl font-semibold leading-relaxed text-[var(--brown-deep)] max-md:text-xl">
             Prendre soin de soi, c’est se donner la possibilité de vivre plus aligné et plus serein.
           </p>
         </div>
 
-        <div class="mt-16 soft-card rounded-t-[2.5rem] rounded-b-none p-8 md:p-10">
-          <div class="grid gap-10 lg:grid-cols-[1.3fr_0.8fr_0.9fr]">
-            <div class="flex flex-col sm:flex-row gap-6">
-              
+        <div class="mt-16 soft-card rounded-t-[2.5rem] rounded-b-none p-8 md:p-10 max-md:mt-10 max-md:rounded-none max-md:p-4">
+          <div class="grid gap-10 lg:grid-cols-[1.3fr_0.8fr_0.9fr] max-md:grid-cols-2 max-md:gap-5">
+            <div class="flex flex-col sm:flex-row gap-6 max-md:col-span-2 max-md:flex-row max-md:items-start max-md:gap-4">
               <img
-  src="/images/alexandra-coirier.webp"
-  alt="Alexandra Coirier, sophrologue à Loudéac"
-  class="h-60 w-40 rounded-full object-cover shadow-lg"
-/>
+                src="/images/alexandra-coirier.webp"
+                alt="Alexandra Coirier, sophrologue à Loudéac"
+                class="h-60 w-40 rounded-full object-cover shadow-lg max-md:h-28 max-md:w-20 max-md:flex-none"
+              />
 
-              <div>
-                <p class="text-2xl font-semibold text-[var(--brown-deep)]">
+              <div class="min-w-0">
+                <p class="text-2xl font-semibold text-[var(--brown-deep)] max-md:text-lg">
                   Alexandra Coirier
                 </p>
 
-                <p class="mt-2 text-xs uppercase tracking-[0.3em] text-[var(--brown-soft)]">
+                <p class="mt-2 text-xs uppercase tracking-[0.3em] text-[var(--brown-soft)] max-md:text-[0.65rem] max-md:tracking-[0.18em]">
                   Sophrologue à Loudéac
                 </p>
 
-                <p class="mt-5 leading-relaxed text-[var(--text)]">
+                <p class="mt-5 leading-relaxed text-[var(--text)] max-md:mt-3 max-md:text-sm">
                   J’accompagne les personnes qui traversent une période de stress,
                   d’anxiété, de fatigue, de surcharge mentale ou de transition de vie.
                 </p>
 
-                <div class="mt-6">
-<CalendlyButton
-            label="Prendre rendez-vous"
-            className="px-6 py-3"
-            url="https://calendly.com/alexandracoirier-sophrologue/?hide_gdpr_banner=1&primary_color=9a6750&text_color=5e4a42&background_color=f8f2ef"
-          />  </div>
+                <div class="mt-6 max-md:mt-4">
+                  <CalendlyButton
+                    label="Prendre rendez-vous"
+                    className="px-6 py-3 max-md:px-4 max-md:py-2 max-md:text-sm"
+                    url="https://calendly.com/alexandracoirier-sophrologue/?hide_gdpr_banner=1&primary_color=9a6750&text_color=5e4a42&background_color=f8f2ef"
+                  />
+                </div>
               </div>
             </div>
 
             <div>
-              <p class="text-xl font-semibold text-[var(--brown-deep)]">
+              <p class="text-xl font-semibold text-[var(--brown-deep)] max-md:text-base">
                 Navigation
               </p>
 
-              <nav class="mt-5 grid gap-3 text-[var(--text)]">
+              <nav class="mt-5 grid gap-3 text-[var(--text)] max-md:mt-3 max-md:gap-2">
                 <a href="/" class="footer-link">Accueil</a>
                 <a href="/a-quoi-s-attendre" class="footer-link">À quoi s’attendre</a>
                 <a href="/accompagnement" class="footer-link">Accompagnements</a>
@@ -73,11 +74,11 @@ import CalendlyButton from "./CalendlyButton.astro";
             </div>
 
             <div>
-              <p class="text-xl font-semibold text-[var(--brown-deep)]">
+              <p class="text-xl font-semibold text-[var(--brown-deep)] max-md:text-base">
                 Informations
               </p>
 
-              <div class="mt-5 space-y-3 text-[var(--text)]">
+              <div class="mt-5 space-y-3 text-[var(--text)] max-md:mt-3 max-md:space-y-2">
                 <p>
                   <a href="tel:+33781528517" class="footer-link">
                     07 81 52 85 17
@@ -99,27 +100,44 @@ import CalendlyButton from "./CalendlyButton.astro";
                 </p>
               </div>
 
-              <nav class="mt-6 grid gap-3 text-sm">
+              <nav class="mt-6 grid gap-3 text-sm max-md:mt-4 max-md:gap-2">
                 <a href="/mentions-legales" class="footer-link">Mentions légales</a>
-                <a href="/politique-confidentialite" class="footer-link">Politique de confidentialité</a>
-                <a href="/politique-cookies" class="footer-link">Politique de cookies</a>
+                <a href="/politique-confidentialite" class="footer-link">Confidentialité</a>
+                <a href="/politique-cookies" class="footer-link">Cookies</a>
               </nav>
             </div>
           </div>
         </div>
 
-  <div class="-mt-1 rounded-b-[2.5rem] bg-[var(--brown-deep)]/85 px-6 py-5 md:px-10">
-  <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/90">
-    <p>
-      © 2025 Alexandra Coirier – Sophrologue à Loudéac • Tous droits réservés
-    </p>
+        <div class="-mt-1 rounded-b-[2.5rem] bg-[var(--brown-deep)]/85 px-6 py-5 md:px-10 max-md:rounded-none max-md:px-4 max-md:py-4">
+          <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/90 max-md:text-center">
+            <p class="max-md:text-xs">
+              © 2025 Alexandra Coirier – Sophrologue à Loudéac • Tous droits réservés
+            </p>
 
-    <div class="flex gap-3">
-      <a href="https://www.facebook.com/p/Alexandra-Coirier-Sophrologue-100072807305535/" class="footer-social" aria-label="Facebook">f</a>
-      <a href="https://www.instagram.com/alexandracoirier_sophrologie/" class="footer-social" aria-label="Instagram">◎</a>
-    </div>
-  </div>
-</div>
+            <div class="flex gap-3">
+              <a
+                href="https://www.facebook.com/p/Alexandra-Coirier-Sophrologue-100072807305535/"
+                class="footer-social"
+                aria-label="Facebook"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                f
+              </a>
+
+              <a
+                href="https://www.instagram.com/alexandracoirier_sophrologie/"
+                class="footer-social"
+                aria-label="Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                ◎
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -128,6 +146,7 @@ import CalendlyButton from "./CalendlyButton.astro";
 <style>
   .footer-link {
     color: var(--text);
+    text-decoration: none;
     transition: color 220ms ease, transform 220ms ease;
   }
 
@@ -145,6 +164,7 @@ import CalendlyButton from "./CalendlyButton.astro";
     border: 1px solid rgba(255, 255, 255, 0.55);
     color: white;
     font-weight: 600;
+    text-decoration: none;
     transition: transform 220ms ease, background 220ms ease;
   }
 
@@ -154,21 +174,50 @@ import CalendlyButton from "./CalendlyButton.astro";
   }
 
   .footer-scroll-link {
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
-  z-index: 20;
-  width: 52px;
-  height: 52px;
-  border-radius: 999px;
-  display: grid;
-  place-items: center;
-  background: var(--brown-soft);
-  color: white;
-  border: 2px solid rgba(255, 255, 255, 0.65);
-  box-shadow: 0 12px 28px rgba(94, 74, 66, 0.25);
-  font-size: 1.8rem;
-  font-weight: 700;
-  text-decoration: none;
-}
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    z-index: 20;
+    width: 52px;
+    height: 52px;
+    border-radius: 999px;
+    display: grid;
+    place-items: center;
+    background: var(--brown-soft);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.65);
+    box-shadow: 0 12px 28px rgba(94, 74, 66, 0.25);
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  @media (max-width: 767px) {
+    #site-footer {
+      width: 100%;
+    }
+
+    #site-footer .soft-card {
+      border-left: 0;
+      border-right: 0;
+    }
+
+    #site-footer p,
+    #site-footer a {
+      line-height: 1.4;
+    }
+
+    .footer-scroll-link {
+      top: 1rem;
+      right: 1rem;
+      width: 42px;
+      height: 42px;
+      font-size: 1.4rem;
+    }
+
+    .footer-social {
+      width: 34px;
+      height: 34px;
+    }
+  }
 </style>
