@@ -197,23 +197,24 @@ const ctaMobile =
   .header-dark {
     background: linear-gradient(
       to right,
-      rgba(65, 73, 48, 0.92),
-      rgba(94, 74, 66, 0.84)
+      rgba(111, 85, 75, 0.94),
+      rgba(176, 145, 131, 0.82)
     );
     backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
   }
 
   .header-light {
     height: 200px;
     background: linear-gradient(
       to bottom,
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.2)
+      rgba(255, 252, 245, 0.62),
+      rgba(254, 212, 188, 0.28)
     );
   }
 
   .header-dark-link {
-    color: rgba(255, 255, 255, 0.86);
+    color: rgba(255, 252, 245, 0.9);
     transition: color 220ms ease, transform 220ms ease;
     white-space: nowrap;
   }
@@ -227,13 +228,16 @@ const ctaMobile =
     display: block;
     border-radius: 1rem;
     padding: 0.85rem 1rem;
-    color: rgba(255, 255, 255, 0.9);
-    background: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 252, 245, 0.94);
+    background: rgba(255, 252, 245, 0.10);
+    border: 1px solid rgba(255, 252, 245, 0.10);
+    transition: background 220ms ease, transform 220ms ease;
   }
 
   .mobile-dark-link:hover {
-    background: rgba(255, 255, 255, 0.16);
+    background: rgba(255, 252, 245, 0.18);
     color: white;
+    transform: translateX(3px);
   }
 
   .mobile-menu.open {
@@ -255,6 +259,12 @@ const ctaMobile =
     font-weight: 700;
     box-shadow: 0 12px 28px rgba(94, 74, 66, 0.18);
     text-decoration: none;
+    transition: transform 220ms ease, background 220ms ease;
+  }
+
+  .header-scroll-link:hover {
+    transform: translateY(2px);
+    background: var(--brown-deep);
   }
 
   .header-light-buttons {
@@ -274,6 +284,10 @@ const ctaMobile =
 
   .header-cta:hover {
     transform: translateY(-1px);
+  }
+
+  .header-portrait {
+    border-color: rgba(255, 252, 245, 0.72);
   }
 
   @media (max-width: 1023px) {
@@ -314,6 +328,11 @@ const ctaMobile =
 
     .header-dark {
       padding: 0.7rem 0.85rem;
+      background: linear-gradient(
+        to right,
+        rgba(111, 85, 75, 0.96),
+        rgba(176, 145, 131, 0.86)
+      );
     }
 
     .header-portrait {
@@ -332,6 +351,11 @@ const ctaMobile =
 
     .header-light {
       height: 68px;
+      background: linear-gradient(
+        to bottom,
+        rgba(255, 252, 245, 0.64),
+        rgba(254, 212, 188, 0.30)
+      );
     }
 
     .header-light-buttons {
