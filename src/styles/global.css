@@ -4,29 +4,147 @@
   /* Palette cliente */
   --cream: #fffcf5;
   --peach: #fed4bc;
-  --taupe: #b09183;
+  --taupe: #b97675;
   --sage-deep: #7a8072;
   --sage-soft: #c7c8b5;
 
   /* Couleurs principales du site */
-  --bg: #fffcf5;
-  --bg-soft: #fed4bc;
+  --bg: var(--cream);
+  --bg-soft: var(--peach);
 
-  --rose-powder: #fed4bc;
+  --rose-powder: var(--peach);
   --rose-muted: #d9a993;
 
-  --brown-soft: #b09183;
-  --brown-deep: #6f554b;
+  --brown-soft: var(--taupe);
+  --brown-deep: #975f5f;
 
-  /* Vert très discret uniquement si nécessaire */
   --forest: #9a9f91;
-  --sage-deep: #9a9f91;
-  --sage-soft: #d9dacb;
+  --forest-soft: #d9dec7;
 
   --text: #5e4a42;
   --text-soft: #7a6a62;
 
-  --white-soft: rgba(255, 252, 245, 0.76);
+--cream: #fffcf5;
+  --peach: #fed4bc;
+  --peach-soft: #fbe3d6;
+  --peach-rose: #f4cbbb;
+  --rose-panel: #efc2b3;
+
+  --taupe: #b09183;
+  --brown-soft: #b09183;
+  --brown-deep: #ad7171;
+  --text: #5e4a42;
+
+
+  /* Blancs / transparences */
+  --cream-10: color-mix(in srgb, var(--cream) 10%, transparent);
+  --cream-12: color-mix(in srgb, var(--cream) 12%, transparent);
+  --cream-16: color-mix(in srgb, var(--cream) 16%, transparent);
+  --cream-18: color-mix(in srgb, var(--cream) 18%, transparent);
+  --cream-20: color-mix(in srgb, var(--cream) 20%, transparent);
+  --cream-24: color-mix(in srgb, var(--cream) 24%, transparent);
+  --cream-30: color-mix(in srgb, var(--cream) 30%, transparent);
+  --cream-34: color-mix(in srgb, var(--cream) 34%, transparent);
+  --cream-42: color-mix(in srgb, var(--cream) 42%, transparent);
+  --cream-50: color-mix(in srgb, var(--cream) 50%, transparent);
+  --cream-52: color-mix(in srgb, var(--cream) 52%, transparent);
+  --cream-56: color-mix(in srgb, var(--cream) 56%, transparent);
+  --cream-62: color-mix(in srgb, var(--cream) 62%, transparent);
+  --cream-64: color-mix(in srgb, var(--cream) 64%, transparent);
+  --cream-66: color-mix(in srgb, var(--cream) 66%, transparent);
+  --cream-68: color-mix(in srgb, var(--cream) 68%, transparent);
+  --cream-72: color-mix(in srgb, var(--cream) 72%, transparent);
+  --cream-85: color-mix(in srgb, var(--cream) 85%, transparent);
+  --cream-88: color-mix(in srgb, var(--cream) 88%, transparent);
+  --cream-90: color-mix(in srgb, var(--cream) 90%, transparent);
+  --cream-94: color-mix(in srgb, var(--cream) 94%, transparent);
+  --cream-95: color-mix(in srgb, var(--cream) 95%, transparent);
+
+  /* Pêche */
+  --peach-14: color-mix(in srgb, var(--peach) 14%, transparent);
+  --peach-20: color-mix(in srgb, var(--peach) 20%, transparent);
+  --peach-24: color-mix(in srgb, var(--peach) 24%, transparent);
+  --peach-28: color-mix(in srgb, var(--peach) 28%, transparent);
+  --peach-30: color-mix(in srgb, var(--peach) 30%, transparent);
+  --peach-36: color-mix(in srgb, var(--peach) 36%, transparent);
+  --peach-42: color-mix(in srgb, var(--peach) 42%, transparent);
+  --peach-70: color-mix(in srgb, var(--peach) 70%, transparent);
+
+  /* Taupe / brun */
+  --taupe-10: color-mix(in srgb, var(--taupe) 10%, transparent);
+  --taupe-16: color-mix(in srgb, var(--taupe) 16%, transparent);
+  --taupe-18: color-mix(in srgb, var(--taupe) 18%, transparent);
+  --taupe-24: color-mix(in srgb, var(--taupe) 24%, transparent);
+  --taupe-25: color-mix(in srgb, var(--taupe) 25%, transparent);
+  --taupe-28: color-mix(in srgb, var(--taupe) 28%, transparent);
+  --taupe-32: color-mix(in srgb, var(--taupe) 32%, transparent);
+  --taupe-58: color-mix(in srgb, var(--taupe) 58%, transparent);
+  --taupe-82: color-mix(in srgb, var(--taupe) 82%, transparent);
+  --taupe-86: color-mix(in srgb, var(--taupe) 86%, transparent);
+
+  --brown-deep-04: color-mix(in srgb, var(--brown-deep) 4%, transparent);
+  --brown-deep-05: color-mix(in srgb, var(--brown-deep) 5%, transparent);
+  --brown-deep-06: color-mix(in srgb, var(--brown-deep) 6%, transparent);
+  --brown-deep-08: color-mix(in srgb, var(--brown-deep) 8%, transparent);
+  --brown-deep-10: color-mix(in srgb, var(--brown-deep) 10%, transparent);
+  --brown-deep-12: color-mix(in srgb, var(--brown-deep) 12%, transparent);
+  --brown-deep-16: color-mix(in srgb, var(--brown-deep) 16%, transparent);
+  --brown-deep-18: color-mix(in srgb, var(--brown-deep) 18%, transparent);
+  --brown-deep-46: color-mix(in srgb, var(--brown-deep) 46%, transparent);
+  --brown-deep-94: color-mix(in srgb, var(--brown-deep) 94%, transparent);
+  --brown-deep-96: color-mix(in srgb, var(--brown-deep) 96%, transparent);
+
+  /* Menu déroulant */
+  --more-panel-bg: linear-gradient(
+    145deg,
+    var(--taupe),
+    var(--brown-deep)
+  );
+  --more-panel-border: var(--cream-28);
+  --more-link-text: var(--cream);
+  --more-link-hover-bg: var(--peach-24);
+  --more-link-hover-text: var(--cream);
+
+  /* Header */
+  --header-dark-bg: linear-gradient(
+    to right,
+    var(--brown-deep-94),
+    var(--taupe-82)
+  );
+
+  --header-dark-bg-mobile: linear-gradient(
+    to right,
+    var(--brown-deep-96),
+    var(--taupe-86)
+  );
+
+  --header-light-bg: linear-gradient(
+    to bottom,
+    var(--cream-62),
+    var(--peach-28)
+  );
+
+  --header-light-bg-mobile: linear-gradient(
+    to bottom,
+    var(--cream-64),
+    var(--peach-30)
+  );
+
+  --header-link-text: var(--cream-90);
+  --header-link-hover: var(--cream);
+
+  --white-soft: var(--cream-76);
+
+  --more-panel-bg: linear-gradient(
+    145deg,
+    var(--peach-soft),
+    var(--rose-panel)
+  );
+
+  --more-panel-border: var(--peach);
+  --more-link-text: var(--brown-deep);
+  --more-link-hover-bg: var(--cream);
+  --more-link-hover-text: var(--brown-deep);
 }
 
 /* Base */
@@ -1039,9 +1157,12 @@ body {
 }
 
 .calendly-green-btn {
-  background: #7a8072;
+  /* background: #7a8072; */
+  background: var(--forest-soft);
+
 }
 
 .calendly-green-btn:hover {
-  background: #686d61;
+  background: var(--forest);
+  color: white;
 }

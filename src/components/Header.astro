@@ -67,16 +67,16 @@ const ctaMobile =
               </button>
 
               <div class="absolute right-0 top-full pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition z-[9999]">
-                <div class="w-[340px] rounded-[1.5rem] bg-[#3f302a] p-3 shadow-2xl border border-white/20">
-                  {moreLinks.map((link) => (
-                    <a
-                      href={link.href}
-                      class="block rounded-[1rem] px-4 py-3 text-white hover:bg-[#5e4a42] hover:text-white"
-                    >
-                      {link.label}
-                    </a>
-                  ))}
-                </div>
+               <div class="header-more-panel w-[340px] rounded-[1.5rem] p-3 shadow-2xl border">
+  {moreLinks.map((link) => (
+    <a
+      href={link.href}
+      class="header-more-link block rounded-[1rem] px-4 py-3"
+    >
+      {link.label}
+    </a>
+  ))}
+</div>
               </div>
             </div>
 
@@ -103,15 +103,15 @@ const ctaMobile =
               <a href={link.href} class="mobile-dark-link">{link.label}</a>
             ))}
 
-            <div class="mt-3 rounded-[1.5rem] bg-white/12 p-3">
-              <p class="px-3 pb-2 text-xs uppercase tracking-[0.2em] text-white/65">
-                En savoir plus
-              </p>
+           <div class="mobile-more-panel mt-3 rounded-[1.5rem] p-3">
+  <p class="mobile-more-title px-3 pb-2 text-xs uppercase tracking-[0.2em]">
+    En savoir plus
+  </p>
 
-              {moreLinks.map((link) => (
-                <a href={link.href} class="mobile-dark-link">{link.label}</a>
-              ))}
-            </div>
+  {moreLinks.map((link) => (
+    <a href={link.href} class="mobile-more-link">{link.label}</a>
+  ))}
+</div>
           </nav>
         </div>
       </div>
@@ -134,7 +134,7 @@ const ctaMobile =
             url={calendlyUrl}
           />
 
-          <a href="/contact" class={`${ctaDesktop} !bg-white/90 !text-[var(--brown-deep)] border border-[var(--brown-soft)]/25 hover:!bg-white`}>
+          <a href="/contact" class={`${ctaDesktop} !bg-[var(--peach)] !text-[var(--brown-deep)] border border-[var(--brown-soft)]/25 hover:!bg-white`}>
             Me contacter
           </a>
 
@@ -181,190 +181,215 @@ const ctaMobile =
 </script>
 
 <style>
-  .header-panel {
-    min-height: 200px;
-  }
+.header-panel {
+  min-height: 200px;
+}
 
-  .header-bg {
-    position: absolute;
-    inset: 0;
-    background-image: url("/images/header-bg.webp");
-    background-size: cover;
-    background-position: center 90%;
-    transform: scale(1.03);
+.header-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url("/images/header-bg.webp");
+  background-size: cover;
+  background-position: center 90%;
+  transform: scale(1.03);
+}
+
+.header-dark {
+  background: var(--header-dark-bg);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.header-light {
+  height: 200px;
+  background: var(--header-light-bg);
+}
+
+.header-dark-link {
+  color: var(--header-link-text);
+  transition: color 220ms ease, transform 220ms ease;
+  white-space: nowrap;
+}
+
+.header-dark-link:hover {
+  color: var(--header-link-hover);
+  transform: translateY(-1px);
+}
+
+.mobile-dark-link {
+  display: block;
+  border-radius: 1rem;
+  padding: 0.85rem 1rem;
+  color: var(--cream-94);
+  background: var(--cream-10);
+  border: 1px solid var(--cream-10);
+  transition: background 220ms ease, transform 220ms ease;
+}
+
+.mobile-dark-link:hover {
+  background: var(--cream-18);
+  color: var(--cream);
+  transform: translateX(3px);
+}
+
+.mobile-menu.open {
+  max-height: 1500px;
+}
+
+.header-scroll-link {
+  position: absolute;
+  left: 1.5rem;
+  bottom: 1.5rem;
+  width: 52px;
+  height: 52px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: var(--brown-soft);
+  color: var(--cream);
+  font-size: 1.8rem;
+  font-weight: 700;
+  box-shadow: 0 12px 28px var(--brown-deep-18);
+  text-decoration: none;
+  transition: transform 220ms ease, background 220ms ease;
+}
+
+.header-scroll-link:hover {
+  transform: translateY(2px);
+  background: var(--brown-deep);
+}
+
+.header-light-buttons {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+.header-cta {
+  box-shadow: 0 10px 24px var(--brown-deep-12);
+  transition: transform 220ms ease, background 220ms ease;
+}
+
+.header-cta:hover {
+  transform: translateY(-1px);
+}
+
+.header-portrait {
+  border-color: var(--cream-72);
+}
+
+.header-more-panel {
+  background: var(--more-panel-bg);
+  border-color: var(--more-panel-border);
+}
+
+.header-more-link {
+  color: var(--more-link-text);
+  transition: background 220ms ease, transform 220ms ease, color 220ms ease;
+}
+
+.header-more-link:hover {
+  color: var(--more-link-hover-text);
+  background: var(--more-link-hover-bg);
+  transform: translateX(3px);
+}
+
+@media (max-width: 1023px) {
+  .header-panel {
+    min-height: auto;
   }
 
   .header-dark {
-    background: linear-gradient(
-      to right,
-      rgba(111, 85, 75, 0.94),
-      rgba(176, 145, 131, 0.82)
-    );
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+    padding-top: 0.85rem;
+    padding-bottom: 0.85rem;
   }
 
   .header-light {
-    height: 200px;
-    background: linear-gradient(
-      to bottom,
-      rgba(255, 252, 245, 0.62),
-      rgba(254, 212, 188, 0.28)
-    );
-  }
-
-  .header-dark-link {
-    color: rgba(255, 252, 245, 0.9);
-    transition: color 220ms ease, transform 220ms ease;
-    white-space: nowrap;
-  }
-
-  .header-dark-link:hover {
-    color: white;
-    transform: translateY(-1px);
-  }
-
-  .mobile-dark-link {
-    display: block;
-    border-radius: 1rem;
-    padding: 0.85rem 1rem;
-    color: rgba(255, 252, 245, 0.94);
-    background: rgba(255, 252, 245, 0.10);
-    border: 1px solid rgba(255, 252, 245, 0.10);
-    transition: background 220ms ease, transform 220ms ease;
-  }
-
-  .mobile-dark-link:hover {
-    background: rgba(255, 252, 245, 0.18);
-    color: white;
-    transform: translateX(3px);
-  }
-
-  .mobile-menu.open {
-    max-height: 1500px;
-  }
-
-  .header-scroll-link {
-    position: absolute;
-    left: 1.5rem;
-    bottom: 1.5rem;
-    width: 52px;
-    height: 52px;
-    border-radius: 999px;
-    display: grid;
-    place-items: center;
-    background: var(--brown-soft);
-    color: white;
-    font-size: 1.8rem;
-    font-weight: 700;
-    box-shadow: 0 12px 28px rgba(94, 74, 66, 0.18);
-    text-decoration: none;
-    transition: transform 220ms ease, background 220ms ease;
-  }
-
-  .header-scroll-link:hover {
-    transform: translateY(2px);
-    background: var(--brown-deep);
+    height: 100px;
   }
 
   .header-light-buttons {
-    position: absolute;
-    right: 1.5rem;
-    bottom: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 0.75rem;
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    justify-content: center;
   }
 
-  .header-cta {
-    box-shadow: 0 10px 24px rgba(94, 74, 66, 0.12);
-    transition: transform 220ms ease, background 220ms ease;
+  .header-scroll-link {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .header-panel,
+  .header-bg-mask {
+    border-radius: 1.5rem;
   }
 
-  .header-cta:hover {
-    transform: translateY(-1px);
+  .header-bg {
+    background-position: center 86%;
+  }
+
+  .header-dark {
+    padding: 0.7rem 0.85rem;
+    background: var(--header-dark-bg-mobile);
   }
 
   .header-portrait {
-    border-color: rgba(255, 252, 245, 0.72);
+    width: 44px;
+    height: 44px;
   }
 
-  @media (max-width: 1023px) {
-    .header-panel {
-      min-height: auto;
-    }
-
-    .header-dark {
-      padding-top: 0.85rem;
-      padding-bottom: 0.85rem;
-    }
-
-    .header-light {
-      height: 100px;
-    }
-
-    .header-light-buttons {
-      left: 1rem;
-      right: 1rem;
-      bottom: 1rem;
-      justify-content: center;
-    }
-
-    .header-scroll-link {
-      display: none;
-    }
+  .header-name {
+    font-size: 1rem;
   }
 
-  @media (max-width: 640px) {
-    .header-panel,
-    .header-bg-mask {
-      border-radius: 1.5rem;
-    }
-
-    .header-bg {
-      background-position: center 86%;
-    }
-
-    .header-dark {
-      padding: 0.7rem 0.85rem;
-      background: linear-gradient(
-        to right,
-        rgba(111, 85, 75, 0.96),
-        rgba(176, 145, 131, 0.86)
-      );
-    }
-
-    .header-portrait {
-      width: 44px;
-      height: 44px;
-    }
-
-    .header-name {
-      font-size: 1rem;
-    }
-
-    .header-job {
-      font-size: 0.65rem;
-      letter-spacing: 0.18em;
-    }
-
-    .header-light {
-      height: 68px;
-      background: linear-gradient(
-        to bottom,
-        rgba(255, 252, 245, 0.64),
-        rgba(254, 212, 188, 0.30)
-      );
-    }
-
-    .header-light-buttons {
-      left: 0.75rem;
-      right: 0.75rem;
-      bottom: 0.7rem;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.5rem;
-    }
+  .header-job {
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
   }
+
+  .header-light {
+    height: 68px;
+    background: var(--header-light-bg-mobile);
+  }
+
+  .header-light-buttons {
+    left: 0.75rem;
+    right: 0.75rem;
+    bottom: 0.7rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+}
+
+.mobile-more-panel {
+  background: var(--more-panel-bg);
+  border: 1px solid var(--more-panel-border);
+}
+
+.mobile-more-title {
+  color: var(--brown-deep);
+}
+
+.mobile-more-link {
+  display: block;
+  border-radius: 1rem;
+  padding: 0.85rem 1rem;
+  color: var(--brown-deep);
+  background: var(--cream-30);
+  border: 1px solid var(--cream-34);
+  transition: background 220ms ease, transform 220ms ease, color 220ms ease;
+}
+
+.mobile-more-link:hover {
+  color: var(--brown-deep);
+  background: var(--cream-72);
+  transform: translateX(3px);
+}
 </style>
