@@ -8,6 +8,11 @@ import SophroMozaicFlip from "../components/SophroMozaicFlip.astro";
 import ScrollBlurImage from "../components/ScrollBlurImage.astro";
 import ImageBlock from "../components/ImageBlock.astro";
 import CalendlyButton from "../components/CalendlyButton.astro";
+
+import WideImageBanner from "../components/WideImageBanner.astro";
+import PortraitCard from "../components/PortraitCard.astro";
+import SoftImageTriptych from "../components/SoftImageTriptych.astro";
+import VerticalImageCard from "../components/VerticalImageCard.astro";
 ---
 
 <BaseLayout
@@ -84,28 +89,28 @@ import CalendlyButton from "../components/CalendlyButton.astro";
               </div>
             </div>
 
-            <div class="relative slide-left">
-              <div
-                class="absolute -inset-4 rounded-[2.5rem] bg-white/30 blur-2xl"
-              >
-              </div>
-              <div class="relative soft-card rounded-[2.5rem] p-4">
-                <img
-                  src="/images/sophro-hero.webp"
-                  alt="Ambiance douce et apaisante de sophrologie"
-                  class="h-[520px] w-full rounded-[2rem] object-cover"
-                />
-              </div>
-            </div>
+            <PortraitCard
+              src="/images/sophro/moi-respi-filtre.webp"
+              alt="Ambiance douce et apaisante de sophrologie"
+              ratio="4 / 5"
+              objectPosition="center 35%"
+              animation="slide-left"
+            />
           </div>
         </div>
 
         <div class="hero-waves"></div>
       </section>
-      <!-- <ImageBlock
-        src="/images/accueil-triptyque.webp"
-        alt="Souffler, s’ancrer, se retrouver"
-      /> -->
+    </section>
+
+    <section class="mx-auto max-w-7xl px-4 sm:px-6 pb-8">
+      <WideImageBanner
+        src="/images/sophro/bois-de-cerisiers.webp"
+        alt=""
+        ratio="16 / 7"
+        objectPosition="center"
+        animation="fade-in"
+      />
     </section>
 
     <!-- <section class="mx-auto max-w-7xl px-4 sm:px-6 py-16">
@@ -180,11 +185,54 @@ import CalendlyButton from "../components/CalendlyButton.astro";
         </div>
       </div>
     </section>
-    <section class="mx-auto max-w-7xl px-4 sm:px-6 py-16">
-      <!-- <ImageBlock
-        src="/images/accueil-diptyque-1.webp"
-        alt="Souffler, s’ancrer, se retrouver"
-      /> -->
+
+    <section class="mx-auto max-w-7xl px-4 sm:px-6 py-8 md:py-14 fade-in">
+      <SoftImageTriptych
+        animation="fade-in"
+        images={[
+          {
+            src: "/images/sophro/banc-sous-le-cerisier.webp",
+            alt: "",
+            ratio: "4 / 5",
+            objectPosition: "center 40%",
+          },
+          {
+            src: "/images/sophro/paysage-lac-et-soleil-ponton.webp",
+            alt: "",
+            ratio: "4 / 5",
+            objectPosition: "center",
+          },
+          {
+            src: "/images/sophro/pont-seul-plage-3.webp",
+            alt: "",
+            ratio: "4 / 5",
+            objectPosition: "center",
+          },
+        ]}
+      />
+    </section>
+
+    <!-- <section class="mx-auto max-w-7xl px-4 sm:px-6 py-16">
+      <section class="mb-8">
+       <div class="grid lg:grid-cols-[0.75fr_1.25fr] gap-8 items-center mb-8">
+  <VerticalImageCard
+    src="/images/sophro/lac-ouvrir-le-champs-des-possibles.webp"
+    alt=""
+    ratio="4 / 5"
+    objectPosition="center 45%"
+    animation="slide-right"
+  />
+
+  <WideImageBanner
+    src="/images/sophro/paysage-lac-et-soleil-ponton.webp"
+    alt=""
+    ratio="16 / 9"
+    objectPosition="center 55%"
+    animation="slide-left"
+  />
+</div>
+      </section> -->
+
       <section
         class="section-bg relative overflow-hidden min-h-[50vh] flex items-center"
       >
@@ -264,10 +312,16 @@ import CalendlyButton from "../components/CalendlyButton.astro";
           </div>
         </section>
       </section>
-      <!-- <ImageBlock
-        src="/images/accueil-diptyque-2.webp"
-        alt="Souffler, s’ancrer, se retrouver"
-      /> -->
+
+      <section class="mt-8">
+        <WideImageBanner
+          src="/images/sophro/eaux-rochers-apaisants.webp"
+          alt=""
+          ratio="16 / 7"
+          objectPosition="center 50%"
+          animation="slide-left"
+        />
+      </section>
     </section>
 
     <section class="mx-auto max-w-7xl px-4 sm:px-6 py-8 md:py-14">
@@ -283,7 +337,7 @@ import CalendlyButton from "../components/CalendlyButton.astro";
         </h2>
 
         <div class="mt-8 grid md:grid-cols-3 gap-6">
-          <div class="rounded-[1.5rem] bg-white/70 p-6">
+          <div class="rounded-[1.5rem] bg-white/70 p-6 zoom-in">
             <h3 class="text-xl font-semibold text-[var(--brown-deep)]">
               Écouter
             </h3>
@@ -293,7 +347,7 @@ import CalendlyButton from "../components/CalendlyButton.astro";
             </p>
           </div>
 
-          <div class="rounded-[1.5rem] bg-white/70 p-6">
+          <div class="rounded-[1.5rem] bg-white/70 p-6 zoom-in">
             <h3 class="text-xl font-semibold text-[var(--brown-deep)]">
               Apaiser
             </h3>
@@ -303,7 +357,7 @@ import CalendlyButton from "../components/CalendlyButton.astro";
             </p>
           </div>
 
-          <div class="rounded-[1.5rem] bg-white/70 p-6">
+          <div class="rounded-[1.5rem] bg-white/70 p-6 zoom-in">
             <h3 class="text-xl font-semibold text-[var(--brown-deep)]">
               Ancrer
             </h3>
@@ -364,21 +418,18 @@ import CalendlyButton from "../components/CalendlyButton.astro";
         </div>
       </div>
 
-      <section class="mt-8 soft-card rounded-[2.5rem] overflow-hidden">
+      <section class="mt-8 soft-card rounded-[2.5rem] overflow-hidden fade-in">
         <div class="grid lg:grid-cols-2 items-stretch">
-          <!-- <div class="relative min-h-[320px]">
-      <img
-        src="/images/parent-enfant.webp"
-        alt="Parent et enfant main dans la main"
-        class="absolute inset-0 h-full w-full object-cover"
-      />
-    </div> -->
-          <ScrollBlurImage
-            src="/images/parent-enfant.webp"
-            alt="Tarifs et fonctionnement des séances de sophrologie"
+          <VerticalImageCard
+            src="/images/sophro/respiration-et-centration.webp"
+            alt=""
+            ratio="4 / 5"
+            objectPosition="center 40%"
+            animation="slide-right"
+            className="h-full"
           />
 
-          <div class="p-8 md:p-10 flex flex-col justify-center">
+          <div class="p-8 md:p-10 flex flex-col justify-center slide-left">
             <p
               class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]"
             >
@@ -430,7 +481,7 @@ import CalendlyButton from "../components/CalendlyButton.astro";
         </h2>
 
         <div class="mt-8 grid md:grid-cols-3 gap-6">
-          <blockquote class="rounded-[1.5rem] bg-white/70 p-6">
+          <blockquote class="rounded-[1.5rem] bg-white/70 p-6 zoom-in">
             <p class="leading-relaxed">
               « Je suis très heureuse d’avoir fait la rencontre d’Alexandra et
               je la recommande vivement. Mon stress s’en est allé au fil des
@@ -439,7 +490,7 @@ import CalendlyButton from "../components/CalendlyButton.astro";
             <footer class="mt-4 text-sm text-[var(--brown-soft)]">M-A</footer>
           </blockquote>
 
-          <blockquote class="rounded-[1.5rem] bg-white/70 p-6">
+          <blockquote class="rounded-[1.5rem] bg-white/70 p-6 zoom-in">
             <p class="leading-relaxed">
               « J’ai retrouvé un vrai apaisement intérieur et des outils
               concrets pour mieux vivre mes émotions au quotidien. »
@@ -449,7 +500,7 @@ import CalendlyButton from "../components/CalendlyButton.astro";
             </footer>
           </blockquote>
 
-          <blockquote class="rounded-[1.5rem] bg-white/70 p-6">
+          <blockquote class="rounded-[1.5rem] bg-white/70 p-6 zoom-in">
             <p class="leading-relaxed">
               « Les séances m’ont permis de reprendre confiance et de me
               reconnecter à mes besoins avec plus de douceur. »
@@ -519,10 +570,10 @@ import CalendlyButton from "../components/CalendlyButton.astro";
             </a>
 
             <CalendlyButton
-            label="Prendre rendez-vous"
-            className="px-6 py-3"
-            url="https://calendly.com/alexandracoirier-sophrologue/?hide_gdpr_banner=1&primary_color=9a6750&text_color=5e4a42&background_color=f8f2ef"
-          /> 
+              label="Prendre rendez-vous"
+              className="px-6 py-3"
+              url="https://calendly.com/alexandracoirier-sophrologue/?hide_gdpr_banner=1&primary_color=9a6750&text_color=5e4a42&background_color=f8f2ef"
+            /> 
           </div>
         </div>
 
@@ -572,10 +623,10 @@ import CalendlyButton from "../components/CalendlyButton.astro";
             </a>
 
             <CalendlyButton
-            label="Prendre rendez-vous"
-            className="px-6 py-3"
-            url="https://calendly.com/alexandracoirier-sophrologue/?hide_gdpr_banner=1&primary_color=9a6750&text_color=5e4a42&background_color=f8f2ef"
-          /> 
+              label="Prendre rendez-vous"
+              className="px-6 py-3"
+              url="https://calendly.com/alexandracoirier-sophrologue/?hide_gdpr_banner=1&primary_color=9a6750&text_color=5e4a42&background_color=f8f2ef"
+            /> 
           </div>
         </div>
       </div>

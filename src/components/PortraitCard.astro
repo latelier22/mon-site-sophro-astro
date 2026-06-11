@@ -1,0 +1,64 @@
+---
+const {
+  src,
+  alt = "",
+  objectPosition = "center",
+  ratio = "4 / 5",
+  animation = "slide-left",
+  className = "",
+} = Astro.props;
+---
+
+<article class={`portrait-card ${animation} ${className}`}>
+  <div class="portrait-card__halo"></div>
+
+  <div class="portrait-card__image" style={`aspect-ratio:${ratio};`}>
+    <img
+      src={src}
+      alt={alt}
+      loading="lazy"
+      style={`object-position:${objectPosition};`}
+    />
+  </div>
+</article>
+
+<style>
+  .portrait-card {
+    position: relative;
+    border-radius: 2.5rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.58);
+    box-shadow: 0 22px 60px rgba(94, 74, 66, 0.12);
+    backdrop-filter: blur(14px);
+  }
+
+  .portrait-card__halo {
+    position: absolute;
+    inset: -1rem;
+    z-index: -1;
+    border-radius: 3rem;
+    background:
+      radial-gradient(circle at 30% 20%, var(--rose-powder), transparent 42%),
+      radial-gradient(circle at 70% 80%, var(--rose-muted), transparent 48%);
+    opacity: 0.36;
+    filter: blur(18px);
+  }
+
+  .portrait-card__image {
+    overflow: hidden;
+    border-radius: 2rem;
+  }
+
+  .portrait-card__image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transform: scale(1.02);
+    transition: transform 1.4s ease;
+  }
+
+  .portrait-card:hover img {
+    transform: scale(1.055);
+  }
+</style>

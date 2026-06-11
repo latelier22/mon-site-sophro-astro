@@ -1,0 +1,55 @@
+---
+const {
+  src,
+  alt = "",
+  ratio = "16 / 7",
+  objectPosition = "center",
+  animation = "fade-in",
+  className = "",
+} = Astro.props;
+---
+
+<section class={`wide-image-banner ${animation} ${className}`}>
+  <div class="wide-image-banner__image" style={`aspect-ratio:${ratio};`}>
+    <img
+      src={src}
+      alt={alt}
+      loading="lazy"
+      style={`object-position:${objectPosition};`}
+    />
+  </div>
+</section>
+
+<style>
+  .wide-image-banner {
+    overflow: hidden;
+    border-radius: 2.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    box-shadow: 0 22px 60px rgba(94, 74, 66, 0.12);
+    backdrop-filter: blur(14px);
+  }
+
+  .wide-image-banner__image {
+    overflow: hidden;
+    border-radius: inherit;
+  }
+
+  .wide-image-banner img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transform: scale(1.02);
+    transition: transform 1.6s ease;
+  }
+
+  .wide-image-banner:hover img {
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 768px) {
+    .wide-image-banner__image {
+      aspect-ratio: 4 / 3 !important;
+    }
+  }
+</style>

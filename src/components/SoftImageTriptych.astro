@@ -1,0 +1,86 @@
+---
+const {
+  images = [],
+  animation = "fade-in",
+  className = "",
+} = Astro.props;
+---
+
+<section class={`soft-triptych ${animation} ${className}`}>
+  <div class="soft-triptych__grid">
+    {images.map((image, index) => (
+      <article
+        class={`soft-triptych__card zoom-in ${index === 1 ? "soft-triptych__card--down" : ""}`}
+      >
+        <div
+          class="soft-triptych__image"
+          style={`aspect-ratio:${image.ratio || "4 / 5"};`}
+        >
+          <img
+            src={image.src}
+            alt={image.alt || ""}
+            loading="lazy"
+            style={`object-position:${image.objectPosition || "center"};`}
+          />
+        </div>
+      </article>
+    ))}
+  </div>
+</section>
+
+<style>
+  .soft-triptych {
+    border-radius: 2.5rem;
+    padding: clamp(1.2rem, 4vw, 2rem);
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 22px 60px rgba(94, 74, 66, 0.1);
+    backdrop-filter: blur(14px);
+  }
+
+  .soft-triptych__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
+  .soft-triptych__card {
+    overflow: hidden;
+    border-radius: 2rem;
+    background: rgba(255, 255, 255, 0.7);
+  }
+
+  .soft-triptych__card--down {
+    transform: translateY(1.5rem);
+  }
+
+  .soft-triptych__image {
+    overflow: hidden;
+  }
+
+  .soft-triptych__image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transform: scale(1.02);
+    transition: transform 1.3s ease;
+  }
+
+  .soft-triptych__card:hover img {
+    transform: scale(1.06);
+  }
+
+  @media (max-width: 900px) {
+    .soft-triptych__grid {
+      grid-template-columns: 1fr;
+    }
+
+    .soft-triptych__card--down {
+      transform: none;
+    }
+
+    .soft-triptych__image {
+      aspect-ratio: 16 / 10 !important;
+    }
+  }
+</style>
