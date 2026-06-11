@@ -3,8 +3,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import ScrollReveal from "../components/ScrollReveal.astro";
-import ScrollBlurImage from "../components/ScrollBlurImage.astro";
 import CalendlyButton from "../components/CalendlyButton.astro";
+
+import WideImageBanner from "../components/WideImageBanner.astro";
+import VerticalImageCard from "../components/VerticalImageCard.astro";
 ---
 
 <BaseLayout
@@ -15,29 +17,34 @@ import CalendlyButton from "../components/CalendlyButton.astro";
 
   <main>
     <section class="mx-auto max-w-7xl px-4 sm:px-6 py-10 md:py-16">
-      <div class="soft-card rounded-[2.5rem] p-8 md:p-10 slide-right">
-        <p class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]">
-          Déroulé des séances
-        </p>
+      <section class="grid lg:grid-cols-[0.75fr_1.25fr] gap-8 items-stretch">
+       <VerticalImageCard
+  src="/images/sophro/moi-pont-2-plage.webp"
+  alt=""
+  ratio="4 / 5"
+  objectPosition="center"
+  animation="slide-left"
+  className="h-full"
+  mobileStart="50%%"
+  mobileMiddle="25%"
+  mobileEnd="50%"
+/>
 
-        <h1 class="mt-4 text-4xl md:text-5xl font-semibold text-[var(--brown-deep)]">
-          À quoi s’attendre ?
-        </h1>
+        <div class="soft-card rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-10slide-left flex flex-col justify-center">
+          <p class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]">
+            Déroulé des séances
+          </p>
 
-        <p class="mt-5 text-lg leading-relaxed text-[var(--text)]">
-          Voici comment je fonctionne, pas à pas, pour vous accompagner dans un cadre rassurant,
-          clair et respectueux de votre rythme.
-        </p>
-      </div>
+          <h1 class="mt-4 text-4xl md:text-5xl font-semibold text-[var(--brown-deep)]">
+            À quoi s’attendre ?
+          </h1>
 
-
-<div class="mt-8">
-
-  <!-- <ScrollBlurImage
-  src="/images/deroule-seance-triptyque.webp"
-  alt="Tarifs et fonctionnement des séances de sophrologie"
-  /> -->
-</div>
+          <p class="mt-5 text-lg leading-relaxed text-[var(--text)]">
+            Voici comment je fonctionne, pas à pas, pour vous accompagner dans un cadre rassurant,
+            clair et respectueux de votre rythme.
+          </p>
+        </div>
+      </section>
 
       <section class="mt-8 section-bg rounded-[2.5rem] p-8 md:p-10">
         <section class="soft-card rounded-[2rem] p-8 fade-in">
@@ -125,6 +132,16 @@ import CalendlyButton from "../components/CalendlyButton.astro";
           </div>
         </section>
 
+        <section class="mt-8">
+          <WideImageBanner
+            src="/images/sophro/paysage-lac-et-soleil-ponton.webp"
+            alt=""
+            ratio="16 / 7"
+            objectPosition="center 55%"
+            animation="fade-in"
+          />
+        </section>
+
         <section class="mt-8 grid lg:grid-cols-2 gap-6">
           <div class="soft-card rounded-[2rem] p-8 slide-right">
             <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
@@ -202,29 +219,45 @@ import CalendlyButton from "../components/CalendlyButton.astro";
           </div>
         </section>
 
-        <section class="mt-8 soft-card rounded-[2rem] p-8 text-center zoom-in">
-          <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
-            L’objectif de l’accompagnement
-          </h2>
+        <section class="mt-8 soft-card rounded-[2rem] overflow-hidden fade-in">
+          <div class="grid lg:grid-cols-[0.9fr_1.1fr] items-stretch">
+            <VerticalImageCard
+              src="/images/sophro/respiration-et-centration.webp"
+              alt=""
+  ratio="4 / 5"
+  objectPosition="center 35%"
+  animation="slide-left"
+  className="h-full"
+  mobileStart="0%"
+  mobileMiddle="25%"
+  mobileEnd="50%"
+            />
 
-          <p class="mt-5 mx-auto max-w-3xl leading-relaxed text-[var(--text)]">
-            Se reconnecter à soi, déposer ce qui pèse, désamorcer l’anxiété
-            et retrouver confiance, sérénité et clarté.
-          </p>
+            <div class="p-8 text-center flex flex-col justify-center zoom-in">
+              <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+                L’objectif de l’accompagnement
+              </h2>
 
-          <div class="mt-8 flex flex-wrap justify-center gap-4">
-            <CalendlyButton
-            label="Prendre rendez-vous"
-            className="px-6 py-3"
-            url="https://calendly.com/alexandracoirier-sophrologue/?hide_gdpr_banner=1&primary_color=9a6750&text_color=5e4a42&background_color=f8f2ef"
-          /> 
+              <p class="mt-5 mx-auto max-w-3xl leading-relaxed text-[var(--text)]">
+                Se reconnecter à soi, déposer ce qui pèse, désamorcer l’anxiété
+                et retrouver confiance, sérénité et clarté.
+              </p>
 
-            <a
-              href="/tarifs"
-              class="soft-btn border border-[var(--brown-soft)]/20 bg-white/70 px-7 py-3.5 text-[var(--brown-deep)] hover:bg-white"
-            >
-              Voir les tarifs
-            </a>
+              <div class="mt-8 flex flex-wrap justify-center gap-4">
+                <CalendlyButton
+                  label="Prendre rendez-vous"
+                  className="px-6 py-3"
+                  url="https://calendly.com/alexandracoirier-sophrologue/?hide_gdpr_banner=1&primary_color=9a6750&text_color=5e4a42&background_color=f8f2ef"
+                />
+
+                <a
+                  href="/tarifs"
+                  class="soft-btn border border-[var(--brown-soft)]/20 bg-white/70 px-7 py-3.5 text-[var(--brown-deep)] hover:bg-white"
+                >
+                  Voir les tarifs
+                </a>
+              </div>
+            </div>
           </div>
         </section>
       </section>

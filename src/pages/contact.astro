@@ -4,6 +4,8 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import ConfirmSript from "../components/ConfirmScript.astro";
 import CalendlyButton from "../components/CalendlyButton.astro";
+import VerticalImageCard from "../components/VerticalImageCard.astro";
+import ScrollReveal from "../components/ScrollReveal.astro";
 
 const success = Astro.url.searchParams.get("success");
 const error = Astro.url.searchParams.get("error");
@@ -17,9 +19,9 @@ const error = Astro.url.searchParams.get("error");
 
   <main>
     <section class="mx-auto max-w-7xl px-4 sm:px-6 py-10 md:py-16">
-      <div class="section-bg rounded-[2.5rem] p-6 md:p-10">
+      <div class="section-bg rounded-none sm:rounded-[2.5rem] p-4 sm:p-6 md:p-10">
         <div class="grid lg:grid-cols-2 gap-8 items-start">
-          <div class="soft-card rounded-[2.5rem] p-8 md:p-10">
+          <div class="soft-card rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-10slide-right">
             <p
               class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]"
             >
@@ -38,14 +40,14 @@ const error = Astro.url.searchParams.get("error");
             </p>
 
             <div class="mt-8 space-y-4 text-[var(--text)]">
-              <div class="rounded-[1.25rem] bg-white/70 p-5">
+              <div class="rounded-[1.25rem] bg-white/70 p-5 zoom-in">
                 <p class="font-semibold text-[var(--brown-deep)]">Cabinet</p>
                 <p class="mt-1">Loudéac</p>
                 <p class="mt-1">26 Rue du Dr Robin</p>
                 <p class="mt-1">22600 Loudéac</p>
               </div>
 
-              <div class="rounded-[1.25rem] bg-white/70 p-5">
+              <div class="rounded-[1.25rem] bg-white/70 p-5 zoom-in">
                 <p class="font-semibold text-[var(--brown-deep)]">Téléphone</p>
                 <p class="mt-1">
                   <a
@@ -57,7 +59,7 @@ const error = Astro.url.searchParams.get("error");
                 </p>
               </div>
 
-              <div class="rounded-[1.25rem] bg-white/70 p-5">
+              <div class="rounded-[1.25rem] bg-white/70 p-5 zoom-in">
                 <p class="font-semibold text-[var(--brown-deep)]">Email</p>
                 <p class="mt-1">
                   <a
@@ -69,15 +71,15 @@ const error = Astro.url.searchParams.get("error");
                 </p>
               </div>
 
-              <div class="rounded-[1.25rem] bg-white/70 p-5">
+              <div class="rounded-[1.25rem] bg-white/70 p-5 zoom-in">
                 <p class="font-semibold text-[var(--brown-deep)]">Horaires</p>
 
                 <div class="mt-3 space-y-2 text-sm sm:text-base">
                   <div class="flex justify-between gap-4">
                     <span>Lundi</span>
-                    <span class="text-right"
-                      >09:30–10:30, 11:00–12:00, 14:00–15:00, 18:00–19:00</span
-                    >
+                    <span class="text-right">
+                      09:30–10:30, 11:00–12:00, 14:00–15:00, 18:00–19:00
+                    </span>
                   </div>
 
                   <div class="flex justify-between gap-4">
@@ -92,9 +94,9 @@ const error = Astro.url.searchParams.get("error");
 
                   <div class="flex justify-between gap-4">
                     <span>Jeudi</span>
-                    <span class="text-right"
-                      >09:30–10:30, 11:00–12:00, 14:00–15:00</span
-                    >
+                    <span class="text-right">
+                      09:30–10:30, 11:00–12:00, 14:00–15:00
+                    </span>
                   </div>
 
                   <div class="flex justify-between gap-4">
@@ -117,7 +119,7 @@ const error = Astro.url.searchParams.get("error");
           </div>
 
           <div class="space-y-8">
-            <div class="soft-card rounded-[2.5rem] p-8 md:p-10">
+            <div class="soft-card rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-10slide-left">
               <div
                 class="flex flex-col sm:flex-row gap-6 items-center sm:items-start"
               >
@@ -149,7 +151,15 @@ const error = Astro.url.searchParams.get("error");
               </div>
             </div>
 
-            <div class="soft-card rounded-[2.5rem] p-8 md:p-10">
+            <VerticalImageCard
+              src="/images/sophro/moi-au-cabinet-de-sophrologie.webp"
+              alt=""
+              ratio="4 / 5"
+              objectPosition="center 35%"
+              animation="slide-left"
+            />
+
+            <div class="soft-card rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-10fade-in">
               <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
                 Écrivez-moi
               </h2>
@@ -225,20 +235,18 @@ const error = Astro.url.searchParams.get("error");
           </div>
         </div>
 
-        <div class="mt-10 flex justify-center">
-                           <CalendlyButton
+        <div class="mt-10 flex justify-center zoom-in">
+          <CalendlyButton
             label="Prendre rendez-vous"
             className="px-6 py-3"
             url="https://calendly.com/alexandracoirier-sophrologue/?hide_gdpr_banner=1&primary_color=9a6750&text_color=5e4a42&background_color=f8f2ef"
-          /> 
-              
+          />
+        </div>
       </div>
-
-     
-
-      <ConfirmSript />
     </section>
-     <Footer />
   </main>
-  </BaseLayout
->
+
+  <Footer />
+  <ConfirmSript />
+  <ScrollReveal />
+</BaseLayout>

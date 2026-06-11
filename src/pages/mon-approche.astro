@@ -3,7 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import ScrollReveal from "../components/ScrollReveal.astro";
-import ImageBlock from "../components/ImageBlock.astro";
+import VerticalImageCard from "../components/VerticalImageCard.astro";
 ---
 
 <BaseLayout
@@ -13,118 +13,168 @@ import ImageBlock from "../components/ImageBlock.astro";
   <Header />
 
   <main>
-    <section class="mx-auto max-w-7xl px-4 sm:px-6 py-10 md:py-16">
-      <div class="soft-card rounded-[2.5rem] p-8 md:p-10 slide-right">
-        <p class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]">
-          Mon approche
-        </p>
+    <section class="mx-auto max-w-7xl px-0 sm:px-6 py-8 md:py-16">
+      <!-- INTRO : texte gauche / image droite -->
+      <section class="grid lg:grid-cols-[1.15fr_0.85fr] gap-6 md:gap-8 items-stretch">
+        <div class="soft-card rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-10 slide-right flex flex-col justify-center">
+          <p class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]">
+            Mon approche
+          </p>
 
-        <h1 class="mt-4 text-4xl md:text-5xl font-semibold text-[var(--brown-deep)]">
-          Une sophrologie douce, concrète et personnalisée
-        </h1>
+          <h1 class="mt-4 text-4xl md:text-5xl font-semibold text-[var(--brown-deep)]">
+            Une sophrologie douce, concrète et personnalisée
+          </h1>
 
-        <p class="mt-5 text-lg leading-relaxed text-[var(--text)]">
-          Mon approche est globale : corps, esprit et émotions. Je vous aide à apaiser
-          les tensions, clarifier ce qui se joue en vous et réveiller les ressources déjà présentes.
-        </p>
-      </div>
+          <p class="mt-5 text-lg leading-relaxed text-[var(--text)]">
+            Mon approche est globale : corps, esprit et émotions. Je vous aide à apaiser
+            les tensions, clarifier ce qui se joue en vous et réveiller les ressources déjà présentes.
+          </p>
+        </div>
 
-      <!-- <ImageBlock
-        src="/images/approche-ecouter-apaiser-ancrer.webp"
-        alt="Écouter, apaiser et ancrer avec la sophrologie"
-      /> -->
+        <VerticalImageCard
+          src="/images/sophro/lac-mousses.webp"
+          alt=""
+          ratio="4 / 5"
+          objectPosition="center 45%"
+          animation="slide-left"
+          className="h-full"
+          mobileStart="0%"
+          mobileMiddle="50%"
+          mobileEnd="100%"
+        />
+      </section>
 
-      <section class="mt-8 section-bg rounded-[2.5rem] p-8 md:p-10">
-        <section class="grid md:grid-cols-3 gap-6">
-          <div class="soft-card rounded-[2rem] p-8 zoom-in">
-            <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
-              Écouter
-            </h2>
-            <p class="mt-4 leading-relaxed text-[var(--text)]">
-              Un temps d’échange permet de comprendre votre situation, vos ressentis,
-              vos besoins et la direction que vous souhaitez prendre.
-            </p>
-          </div>
+      <section class="mt-8 section-bg rounded-none sm:rounded-[2.5rem] p-4 sm:p-6 md:p-10">
+        <!-- ECOUTER APAISER ANCRER : image gauche / texte droite -->
+        <section class="grid lg:grid-cols-[0.85fr_1.15fr] gap-6 md:gap-8 items-stretch">
+          <VerticalImageCard
+            src="/images/sophro/mousses-arbres.webp"
+            alt=""
+            ratio="4 / 5"
+            objectPosition="center"
+            animation="slide-right"
+            className="h-full"
+            mobileStart="0%"
+            mobileMiddle="50%"
+            mobileEnd="100%"
+          />
 
-          <div class="soft-card rounded-[2rem] p-8 zoom-in">
-            <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
-              Apaiser
-            </h2>
-            <p class="mt-4 leading-relaxed text-[var(--text)]">
-              Les exercices de respiration, de détente corporelle et de visualisation
-              permettent de relâcher progressivement les tensions.
-            </p>
-          </div>
+          <div class="grid md:grid-cols-3 gap-6">
+            <div class="soft-card rounded-[1.5rem] md:rounded-[2rem] p-5 md:p-8 zoom-in">
+              <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+                Écouter
+              </h2>
+              <p class="mt-4 leading-relaxed text-[var(--text)]">
+                Un temps d’échange permet de comprendre votre situation, vos ressentis,
+                vos besoins et la direction que vous souhaitez prendre.
+              </p>
+            </div>
 
-          <div class="soft-card rounded-[2rem] p-8 zoom-in">
-            <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
-              Ancrer
-            </h2>
-            <p class="mt-4 leading-relaxed text-[var(--text)]">
-              Vous repartez avec des outils simples à réutiliser entre les séances
-              pour avancer à votre rythme.
-            </p>
+            <div class="soft-card rounded-[1.5rem] md:rounded-[2rem] p-5 md:p-8 zoom-in">
+              <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+                Apaiser
+              </h2>
+              <p class="mt-4 leading-relaxed text-[var(--text)]">
+                Les exercices de respiration, de détente corporelle et de visualisation
+                permettent de relâcher progressivement les tensions.
+              </p>
+            </div>
+
+            <div class="soft-card rounded-[1.5rem] md:rounded-[2rem] p-5 md:p-8 zoom-in">
+              <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+                Ancrer
+              </h2>
+              <p class="mt-4 leading-relaxed text-[var(--text)]">
+                Vous repartez avec des outils simples à réutiliser entre les séances
+                pour avancer à votre rythme.
+              </p>
+            </div>
           </div>
         </section>
 
-        <section class="mt-8 soft-card rounded-[2rem] p-8 slide-right">
-          <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
-            Une pédagogie de la vie
-          </h2>
+        <!-- PEDAGOGIE : texte gauche / image droite -->
+        <section class="mt-8 grid lg:grid-cols-[1.15fr_0.85fr] gap-6 md:gap-8 items-stretch">
+          <div class="soft-card rounded-[1.5rem] md:rounded-[2rem] p-5 md:p-8 slide-right flex flex-col justify-center">
+            <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+              Une pédagogie de la vie
+            </h2>
 
-          <div class="mt-5 space-y-4 leading-relaxed text-[var(--text)]">
-            <p>
-              Pour moi, la sophrologie est plus qu’un outil de relaxation.
-              C’est une pédagogie de la vie qui aide à mieux se connaître,
-              se respecter et développer une relation plus douce avec soi-même.
-            </p>
+            <div class="mt-5 space-y-4 leading-relaxed text-[var(--text)]">
+              <p>
+                Pour moi, la sophrologie est plus qu’un outil de relaxation.
+                C’est une pédagogie de la vie qui aide à mieux se connaître,
+                se respecter et développer une relation plus douce avec soi-même.
+              </p>
 
-            <p>
-              Chaque séance s’adapte à votre état du moment. Parfois la pratique prend
-              plus de place, parfois l’échange est essentiel. Le cadre reste toujours
-              sécurisant, progressif et respectueux de votre rythme.
-            </p>
+              <p>
+                Chaque séance s’adapte à votre état du moment. Parfois la pratique prend
+                plus de place, parfois l’échange est essentiel. Le cadre reste toujours
+                sécurisant, progressif et respectueux de votre rythme.
+              </p>
 
-            <p>
-              Même dans les séances relaxantes, vous restez consciente et actrice
-              de votre expérience. L’objectif est de retrouver de l’autonomie,
-              du calme et une sécurité intérieure durable.
-            </p>
+              <p>
+                Même dans les séances relaxantes, vous restez consciente et actrice
+                de votre expérience. L’objectif est de retrouver de l’autonomie,
+                du calme et une sécurité intérieure durable.
+              </p>
+            </div>
           </div>
+
+          <VerticalImageCard
+            src="/images/sophro/eaux-rochers-apaisants.webp"
+            alt=""
+            ratio="4 / 5"
+            objectPosition="center"
+            animation="slide-left"
+            className="h-full"
+            mobileStart="0%"
+            mobileMiddle="50%"
+            mobileEnd="100%"
+          />
         </section>
 
-        <!-- <ImageBlock
-          src="/images/approche-pedagogie-vie.webp"
-          alt="Un chemin doux vers plus de calme et d’autonomie"
-        /> -->
+        <!-- ACCOMPAGNEMENT : image gauche / texte droite -->
+        <section class="mt-8 grid lg:grid-cols-[0.85fr_1.15fr] gap-6 md:gap-8 items-stretch">
+          <VerticalImageCard
+            src="/images/sophro/sculpture-2.webp"
+            alt=""
+            ratio="4 / 5"
+            objectPosition="center"
+            animation="slide-right"
+            className="h-full"
+            mobileStart="0%"
+            mobileMiddle="50%"
+            mobileEnd="100%"
+          />
 
-        <section class="mt-8 soft-card rounded-[2rem] p-8 slide-left">
-          <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
-            Comment puis-je vous accompagner ?
-          </h2>
+          <div class="soft-card rounded-[1.5rem] md:rounded-[2rem] p-5 md:p-8 slide-left flex flex-col justify-center">
+            <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+              Comment puis-je vous accompagner ?
+            </h2>
 
-          <ul class="mt-5 space-y-3 leading-relaxed text-[var(--text)]">
-            <li>• Apaiser l’anxiété chronique, le stress et les angoisses</li>
-            <li>• Retrouver un sommeil plus serein et réparateur</li>
-            <li>• Renforcer l’estime et la confiance en soi</li>
-            <li>• Traverser une période de transition ou de surcharge mentale</li>
-            <li>• Revenir au corps, au souffle et à vos ressentis</li>
-          </ul>
+            <ul class="mt-5 space-y-3 leading-relaxed text-[var(--text)]">
+              <li>• Apaiser l’anxiété chronique, le stress et les angoisses</li>
+              <li>• Retrouver un sommeil plus serein et réparateur</li>
+              <li>• Renforcer l’estime et la confiance en soi</li>
+              <li>• Traverser une période de transition ou de surcharge mentale</li>
+              <li>• Revenir au corps, au souffle et à vos ressentis</li>
+            </ul>
 
-          <div class="mt-8 flex flex-wrap gap-4">
-            <a
-              href="/a-quoi-s-attendre"
-              class="soft-btn border border-[var(--brown-soft)]/20 bg-white/70 px-7 py-3.5 text-[var(--brown-deep)] hover:bg-white"
-            >
-              À quoi s’attendre ?
-            </a>
+            <div class="mt-8 flex flex-wrap gap-4">
+              <a
+                href="/a-quoi-s-attendre"
+                class="soft-btn border border-[var(--brown-soft)]/20 bg-white/70 px-7 py-3.5 text-[var(--brown-deep)] hover:bg-white"
+              >
+                À quoi s’attendre ?
+              </a>
 
-            <a
-              href="/contact"
-              class="soft-btn bg-[var(--brown-soft)] text-white px-7 py-3.5 font-medium inline-block hover:bg-[var(--brown-deep)]"
-            >
-              Prendre rendez-vous
-            </a>
+              <a
+                href="/contact"
+                class="soft-btn bg-[var(--brown-soft)] text-white px-7 py-3.5 font-medium inline-block hover:bg-[var(--brown-deep)]"
+              >
+                Prendre rendez-vous
+              </a>
+            </div>
           </div>
         </section>
       </section>

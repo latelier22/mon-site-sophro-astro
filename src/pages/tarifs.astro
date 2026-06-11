@@ -4,6 +4,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import ScrollReveal from "../components/ScrollReveal.astro";
 import ScrollBlurImage from "../components/ScrollBlurImage.astro";
+import WideImageBanner from "../components/WideImageBanner.astro";
 ---
 
 <BaseLayout
@@ -14,7 +15,7 @@ import ScrollBlurImage from "../components/ScrollBlurImage.astro";
 
   <main>
     <section class="mx-auto max-w-7xl px-4 sm:px-6 py-10 md:py-16">
-      <div class="soft-card rounded-[2.5rem] p-8 md:p-10 slide-right">
+      <div class="soft-card rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-10slide-right">
         <p class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]">
           Tarifs et fonctionnement
         </p>
@@ -31,6 +32,16 @@ import ScrollBlurImage from "../components/ScrollBlurImage.astro";
           profonds et durables.
         </p>
       </div>
+
+      <section class="mt-8">
+        <WideImageBanner
+          src="/images/sophro/cabinet-de-sophrologie.webp"
+          alt=""
+          ratio="16 / 7"
+          objectPosition="center"
+          animation="fade-in"
+        />
+      </section>
 
       <section class="mt-8 section-bg rounded-[2.5rem] p-8 md:p-10">
         <section class="grid md:grid-cols-3 gap-6">
@@ -251,10 +262,10 @@ import ScrollBlurImage from "../components/ScrollBlurImage.astro";
           </div>
         </section>
       </section>
-      <!-- <ScrollBlurImage
-        src="/images/tarifs.webp"
-        alt="Tarifs et fonctionnement des séances de sophrologie"
-      /> -->
+      <ScrollBlurImage
+        src="/images/sophro/plante-detail-du-cabinet.webp"
+        alt=""
+      />
     </section>
   </main>
 

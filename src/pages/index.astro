@@ -9,9 +9,7 @@ import ScrollBlurImage from "../components/ScrollBlurImage.astro";
 import ImageBlock from "../components/ImageBlock.astro";
 import CalendlyButton from "../components/CalendlyButton.astro";
 
-import WideImageBanner from "../components/WideImageBanner.astro";
 import PortraitCard from "../components/PortraitCard.astro";
-import SoftImageTriptych from "../components/SoftImageTriptych.astro";
 import VerticalImageCard from "../components/VerticalImageCard.astro";
 ---
 
@@ -103,16 +101,6 @@ import VerticalImageCard from "../components/VerticalImageCard.astro";
       </section>
     </section>
 
-    <section class="mx-auto max-w-7xl px-4 sm:px-6 pb-8">
-      <WideImageBanner
-        src="/images/sophro/bois-de-cerisiers.webp"
-        alt=""
-        ratio="16 / 7"
-        objectPosition="center"
-        animation="fade-in"
-      />
-    </section>
-
     <!-- <section class="mx-auto max-w-7xl px-4 sm:px-6 py-16">
       <section
         class="section-bg relative overflow-hidden min-h-[40vh] flex items-center"
@@ -121,211 +109,200 @@ import VerticalImageCard from "../components/VerticalImageCard.astro";
       </section>
     </section> -->
 
-    <section class="mx-auto max-w-7xl px-4 sm:px-6 py-8 md:py-14">
-      <div class="soft-card rounded-[2.5rem] p-8 md:p-10 fade-in">
-        <h2 class="text-3xl md:text-4xl font-semibold text-[var(--brown-deep)]">
-          Tu en as assez de te sentir submergée ? Il est temps de t’offrir un
-          vrai moment pour toi.
-        </h2>
+    <section class="mx-auto max-w-7xl px-0 sm:px-6 py-6 md:py-14">
+      <div class="grid lg:grid-cols-[0.85fr_1.15fr] gap-8 items-stretch">
+        <VerticalImageCard
+          src="/images/sophro/banc-sous-le-cerisier.webp"
+          alt=""
+          ratio="4 / 5"
+          objectPosition="center 40%"
+          animation="slide-right"
+          className="h-full"
+        />
 
-        <p class="mt-6 text-lg leading-relaxed text-[var(--text)]">
-          Tu te dis parfois que tu es « née anxieuse », comme si c’était une
-          fatalité. Toujours en train d’anticiper, de ressasser, d’imaginer le
-          pire même quand tout va bien… et ça t’épuise.
-        </p>
-
-        <details class="mt-6 rounded-[1.5rem] bg-white/70 p-5">
-          <summary
-            class="cursor-pointer font-semibold text-[var(--brown-deep)]"
+        <div
+          class="soft-card rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-10slide-left flex flex-col justify-center"
+        >
+          <h2
+            class="text-3xl md:text-4xl font-semibold text-[var(--brown-deep)]"
           >
-            Lire la suite
-          </summary>
+            Tu en as assez de te sentir submergée ? Il est temps de t’offrir un
+            vrai moment pour toi.
+          </h2>
 
-          <div class="mt-4 space-y-4 leading-relaxed text-[var(--text)]">
-            <p>
-              Tu ressens ce mal-être diffus, cette perte de sens : « Je ne me
-              reconnais plus. » « Je n’ai plus envie de rien. » Tes émotions
-              débordent : hypersensibilité, culpabilité, peur de l’échec, charge
-              mentale constante.
-            </p>
+          <p class="mt-6 text-lg leading-relaxed text-[var(--text)]">
+            Tu te dis parfois que tu es « née anxieuse », comme si c’était une
+            fatalité. Toujours en train d’anticiper, de ressasser, d’imaginer le
+            pire même quand tout va bien… et ça t’épuise.
+          </p>
 
-            <p>
-              Dans tes relations, tu te sens parfois en décalage, comme une
-              éponge émotionnelle face aux autres. Et ton corps, lui aussi, crie
-              « stop » : fatigue, tensions, douleurs, troubles du sommeil…
-            </p>
+          <details class="mt-6 rounded-[1.5rem] bg-white/70 p-5">
+            <summary
+              class="cursor-pointer font-semibold text-[var(--brown-deep)]"
+            >
+              Lire la suite
+            </summary>
 
-            <p class="font-medium text-[var(--brown-deep)]">
-              Au fond, tu ne veux pas “tout changer” — tu veux simplement te
-              sentir bien, reprendre confiance, retrouver ta joie, ton élan, ton
-              équilibre, et vivre en paix avec toi-même et avec les autres.
-            </p>
+            <div class="mt-4 space-y-4 leading-relaxed text-[var(--text)]">
+              <p>
+                Tu ressens ce mal-être diffus, cette perte de sens : « Je ne me
+                reconnais plus. » « Je n’ai plus envie de rien. » Tes émotions
+                débordent : hypersensibilité, culpabilité, peur de l’échec,
+                charge mentale constante.
+              </p>
 
-            <p>
-              La bonne nouvelle, c’est que rien n’est figé. Tu peux apprendre à
-              comprendre ce qui se passe en toi, à apaiser ce tumulte intérieur
-              et à réinstaller un équilibre durable.
-            </p>
+              <p>
+                Dans tes relations, tu te sens parfois en décalage, comme une
+                éponge émotionnelle face aux autres. Et ton corps, lui aussi,
+                crie « stop » : fatigue, tensions, douleurs, troubles du
+                sommeil…
+              </p>
+
+              <p class="font-medium text-[var(--brown-deep)]">
+                Au fond, tu ne veux pas “tout changer” — tu veux simplement te
+                sentir bien, reprendre confiance, retrouver ta joie, ton élan,
+                ton équilibre, et vivre en paix avec toi-même et avec les
+                autres.
+              </p>
+
+              <p>
+                La bonne nouvelle, c’est que rien n’est figé. Tu peux apprendre
+                à comprendre ce qui se passe en toi, à apaiser ce tumulte
+                intérieur et à réinstaller un équilibre durable.
+              </p>
+            </div>
+          </details>
+
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a
+              href="/anxiete-stress-emotions"
+              class="soft-btn border border-[var(--brown-soft)]/20 bg-white/70 px-7 py-3.5 text-[var(--brown-deep)] hover:bg-white"
+            >
+              Comprendre ce que je ressens
+            </a>
+
+            <CalendlyButton
+              label="Prendre rendez-vous"
+              className="px-6 py-3"
+              url="https://calendly.com/alexandracoirier-sophrologue/?hide_gdpr_banner=1&primary_color=9a6750&text_color=5e4a42&background_color=f8f2ef"
+            />
           </div>
-        </details>
-
-        <div class="mt-8 flex flex-wrap gap-4">
-          <a
-            href="/anxiete-stress-emotions"
-            class="soft-btn border border-[var(--brown-soft)]/20 bg-white/70 px-7 py-3.5 text-[var(--brown-deep)] hover:bg-white"
-          >
-            Comprendre ce que je ressens
-          </a>
-
-          <CalendlyButton
-            label="Prendre rendez-vous"
-            className="px-6 py-3"
-            url="https://calendly.com/alexandracoirier-sophrologue/?hide_gdpr_banner=1&primary_color=9a6750&text_color=5e4a42&background_color=f8f2ef"
-          /> 
         </div>
       </div>
     </section>
 
-    <section class="mx-auto max-w-7xl px-4 sm:px-6 py-8 md:py-14 fade-in">
-      <SoftImageTriptych
-        animation="fade-in"
-        images={[
-          {
-            src: "/images/sophro/banc-sous-le-cerisier.webp",
-            alt: "",
-            ratio: "4 / 5",
-            objectPosition: "center 40%",
-          },
-          {
-            src: "/images/sophro/paysage-lac-et-soleil-ponton.webp",
-            alt: "",
-            ratio: "4 / 5",
-            objectPosition: "center",
-          },
-          {
-            src: "/images/sophro/pont-seul-plage-3.webp",
-            alt: "",
-            ratio: "4 / 5",
-            objectPosition: "center",
-          },
-        ]}
-      />
-    </section>
+  <section class="mx-auto max-w-7xl px-0 sm:px-6 py-6 md:py-14">
+  <section class="section-bg rounded-none sm:rounded-[2.5rem] p-4 sm:p-6 md:p-10">
+    <div class="space-y-8">
+      <!-- BLOC 1 : texte à gauche / image à droite -->
+      <div class="grid lg:grid-cols-[1.15fr_0.85fr] gap-8 items-stretch">
+        <div class="soft-card rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-10slide-right flex flex-col justify-center">
+          <h2
+            class="text-3xl md:text-4xl font-semibold text-[var(--brown-deep)]"
+          >
+            Et si tu décidais de reprendre les rênes ?
+          </h2>
 
-    <!-- <section class="mx-auto max-w-7xl px-4 sm:px-6 py-16">
-      <section class="mb-8">
-       <div class="grid lg:grid-cols-[0.75fr_1.25fr] gap-8 items-center mb-8">
-  <VerticalImageCard
-    src="/images/sophro/lac-ouvrir-le-champs-des-possibles.webp"
-    alt=""
-    ratio="4 / 5"
-    objectPosition="center 45%"
-    animation="slide-right"
-  />
+          <ul class="mt-8 space-y-4 text-[var(--text)] leading-relaxed">
+            <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
+              Tu sens bien que vivre ainsi t’épuise et t’empêche d’être à
+              l’aise dans tes relations, au travail ou dans ta vie
+              personnelle.
+            </li>
+            <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
+              L’anxiété ronge peu à peu la confiance et l’estime de soi.
+            </li>
+            <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
+              La sophrologie donne des outils concrets et simples pour
+              apaiser tes émotions et retrouver une clarté intérieure.
+            </li>
+            <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
+              Tu peux reprendre confiance, avancer pas à pas et retrouver la
+              simplicité d’être bien avec toi-même.
+            </li>
+          </ul>
 
-  <WideImageBanner
-    src="/images/sophro/paysage-lac-et-soleil-ponton.webp"
-    alt=""
-    ratio="16 / 9"
-    objectPosition="center 55%"
-    animation="slide-left"
-  />
-</div>
-      </section> -->
-
-      <section
-        class="section-bg relative overflow-hidden min-h-[50vh] flex items-center"
-      >
-        <section class="mx-auto max-w-7xl px-4 sm:px-6 py-8 md:py-14">
-          <div class="grid lg:grid-cols-2 gap-8 items-stretch">
-            <div class="soft-card rounded-[2.5rem] p-8 md:p-10 slide-right">
-              <h2
-                class="text-3xl md:text-4xl font-semibold text-[var(--brown-deep)]"
-              >
-                Et si tu décidais de reprendre les rênes ?
-              </h2>
-
-              <ul class="mt-8 space-y-4 text-[var(--text)] leading-relaxed">
-                <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
-                  Tu sens bien que vivre ainsi t’épuise et t’empêche d’être à
-                  l’aise dans tes relations, au travail ou dans ta vie
-                  personnelle.
-                </li>
-                <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
-                  L’anxiété ronge peu à peu la confiance et l’estime de soi.
-                </li>
-                <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
-                  La sophrologie donne des outils concrets et simples pour
-                  apaiser tes émotions et retrouver une clarté intérieure.
-                </li>
-                <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
-                  Tu peux reprendre confiance, avancer pas à pas et retrouver la
-                  simplicité d’être bien avec toi-même.
-                </li>
-              </ul>
-
-              <div class="mt-8">
-                <a
-                  href="/anxiete-stress-emotions"
-                  class="soft-btn border border-[var(--brown-soft)]/20 bg-white/70 px-7 py-3.5 text-[var(--brown-deep)] hover:bg-white"
-                >
-                  En savoir plus sur l’anxiété
-                </a>
-              </div>
-            </div>
-
-            <div class="soft-card rounded-[2.5rem] p-8 md:p-10 slide-left">
-              <h2
-                class="text-3xl md:text-4xl font-semibold text-[var(--brown-deep)]"
-              >
-                Vers une vie plus légère et sereine
-              </h2>
-
-              <ul class="mt-8 space-y-4 text-[var(--text)]">
-                <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
-                  Te réveiller sans boule au ventre et sans angoisse qui
-                  t’épuise avant même que la journée ne commence.
-                </li>
-                <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
-                  Retrouver la joie de vivre, l’élan et l’envie de faire des
-                  projets.
-                </li>
-                <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
-                  Vivre des relations plus apaisées et te sentir plus libre
-                  d’être toi-même.
-                </li>
-                <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
-                  Sentir les crises d’angoisse perdre peu à peu en intensité
-                  jusqu’à ne plus dicter tes choix.
-                </li>
-              </ul>
-
-              <div class="mt-8">
-                <a
-                  href="/sophrologie-pour-qui"
-                  class="soft-btn border border-[var(--brown-soft)]/20 bg-white/70 px-7 py-3.5 text-[var(--brown-deep)] hover:bg-white"
-                >
-                  Voir si la sophrologie est faite pour moi
-                </a>
-              </div>
-            </div>
+          <div class="mt-8">
+            <a
+              href="/anxiete-stress-emotions"
+              class="soft-btn border border-[var(--brown-soft)]/20 bg-white/70 px-7 py-3.5 text-[var(--brown-deep)] hover:bg-white"
+            >
+              En savoir plus sur l’anxiété
+            </a>
           </div>
-        </section>
-      </section>
+        </div>
 
-      <section class="mt-8">
-        <WideImageBanner
-          src="/images/sophro/eaux-rochers-apaisants.webp"
-          alt=""
-          ratio="16 / 7"
-          objectPosition="center 50%"
-          animation="slide-left"
-        />
-      </section>
-    </section>
+        <VerticalImageCard
+  src="/images/sophro/composition-ici-et-ailleurs.webp"
+  alt=""
+  ratio="4 / 5"
+  objectPosition="center"
+  animation="slide-left"
+  className="h-full"
+  mobileStart="0%"
+  mobileMiddle="50%"
+  mobileEnd="100%"
+/>
+      </div>
 
-    <section class="mx-auto max-w-7xl px-4 sm:px-6 py-8 md:py-14">
-      <div class="soft-card rounded-[2.5rem] p-8 md:p-10 zoom-in">
+
+
+      <!-- BLOC 2 : image à gauche / texte à droite -->
+      <div class="grid lg:grid-cols-[0.85fr_1.15fr] gap-8 items-stretch">
+       <VerticalImageCard
+  src="/images/sophro/Plage-mer-farniente.webp"
+  alt=""
+  ratio="4 / 5"
+  objectPosition="center 45%"
+  animation="slide-right"
+  className="h-full"
+  mobileStart="50%"
+  mobileMiddle="75%"
+  mobileEnd="100%"
+/>
+
+        <div class="soft-card rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-10slide-left flex flex-col justify-center">
+          <h2
+            class="text-3xl md:text-4xl font-semibold text-[var(--brown-deep)]"
+          >
+            Vers une vie plus légère et sereine
+          </h2>
+
+          <ul class="mt-8 space-y-4 text-[var(--text)]">
+            <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
+              Te réveiller sans boule au ventre et sans angoisse qui
+              t’épuise avant même que la journée ne commence.
+            </li>
+            <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
+              Retrouver la joie de vivre, l’élan et l’envie de faire des
+              projets.
+            </li>
+            <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
+              Vivre des relations plus apaisées et te sentir plus libre
+              d’être toi-même.
+            </li>
+            <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
+              Sentir les crises d’angoisse perdre peu à peu en intensité
+              jusqu’à ne plus dicter tes choix.
+            </li>
+          </ul>
+
+          <div class="mt-8">
+            <a
+              href="/sophrologie-pour-qui"
+              class="soft-btn border border-[var(--brown-soft)]/20 bg-white/70 px-7 py-3.5 text-[var(--brown-deep)] hover:bg-white"
+            >
+              Voir si la sophrologie est faite pour moi
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+    <section class="mx-auto max-w-7xl px-0 sm:px-6 py-6 md:py-14">
+      <div class="soft-card rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-10zoom-in">
         <p class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]">
           Mon approche
         </p>
@@ -414,14 +391,14 @@ import VerticalImageCard from "../components/VerticalImageCard.astro";
             label="Prendre rendez-vous"
             className="px-6 py-3"
             url="https://calendly.com/alexandracoirier-sophrologue/?hide_gdpr_banner=1&primary_color=9a6750&text_color=5e4a42&background_color=f8f2ef"
-          /> 
+          />
         </div>
       </div>
 
       <section class="mt-8 soft-card rounded-[2.5rem] overflow-hidden fade-in">
         <div class="grid lg:grid-cols-2 items-stretch">
           <VerticalImageCard
-            src="/images/sophro/respiration-et-centration.webp"
+            src="/images/parent-enfant.webp"
             alt=""
             ratio="4 / 5"
             objectPosition="center 40%"
@@ -474,8 +451,8 @@ import VerticalImageCard from "../components/VerticalImageCard.astro";
       </section>
     </section>
 
-    <section class="mx-auto max-w-7xl px-4 sm:px-6 py-8 md:py-14">
-      <div class="soft-card rounded-[2.5rem] p-8 md:p-10 fade-in">
+    <section class="mx-auto max-w-7xl px-0 sm:px-6 py-6 md:py-14">
+      <div class="soft-card rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-10fade-in">
         <h2 class="text-3xl md:text-4xl font-semibold text-[var(--brown-deep)]">
           Ce qu’ils en ont pensé
         </h2>
@@ -523,14 +500,14 @@ import VerticalImageCard from "../components/VerticalImageCard.astro";
             label="Prendre rendez-vous"
             className="px-6 py-3"
             url="https://calendly.com/alexandracoirier-sophrologue/?hide_gdpr_banner=1&primary_color=9a6750&text_color=5e4a42&background_color=f8f2ef"
-          /> 
+          />
         </div>
       </div>
     </section>
 
-    <section class="mx-auto max-w-7xl px-4 sm:px-6 py-8 md:py-14">
+    <section class="mx-auto max-w-7xl px-0 sm:px-6 py-6 md:py-14">
       <div class="grid lg:grid-cols-2 gap-8 items-start">
-        <div class="soft-card rounded-[2.5rem] p-8 md:p-10 slide-right">
+        <div class="soft-card rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-10slide-right">
           <h2
             class="text-3xl md:text-4xl font-semibold text-[var(--brown-deep)]"
           >
@@ -573,11 +550,11 @@ import VerticalImageCard from "../components/VerticalImageCard.astro";
               label="Prendre rendez-vous"
               className="px-6 py-3"
               url="https://calendly.com/alexandracoirier-sophrologue/?hide_gdpr_banner=1&primary_color=9a6750&text_color=5e4a42&background_color=f8f2ef"
-            /> 
+            />
           </div>
         </div>
 
-        <div class="soft-card rounded-[2.5rem] p-8 md:p-10 slide-left">
+        <div class="soft-card rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-10slide-left">
           <h2
             class="text-3xl md:text-4xl font-semibold text-[var(--brown-deep)]"
           >
@@ -626,13 +603,13 @@ import VerticalImageCard from "../components/VerticalImageCard.astro";
               label="Prendre rendez-vous"
               className="px-6 py-3"
               url="https://calendly.com/alexandracoirier-sophrologue/?hide_gdpr_banner=1&primary_color=9a6750&text_color=5e4a42&background_color=f8f2ef"
-            /> 
+            />
           </div>
         </div>
       </div>
     </section>
 
-    <!-- <section class="mx-auto max-w-7xl px-4 sm:px-6 py-8 md:py-14">
+    <!-- <section class="mx-auto max-w-7xl px-0 sm:px-6 py-6 md:py-14">
       <SophroCarousel autoplayMs={3800} />
     </section> -->
   </main>

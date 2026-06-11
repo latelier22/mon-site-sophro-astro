@@ -2,6 +2,9 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import ScrollReveal from "../components/ScrollReveal.astro";
+import WideImageBanner from "../components/WideImageBanner.astro";
+import VerticalImageCard from "../components/VerticalImageCard.astro";
 ---
 
 <BaseLayout
@@ -25,6 +28,24 @@ import Footer from "../components/Footer.astro";
         de l’anxiété, des émotions et du mieux-être au quotidien.
       </p>
     </div>
+
+    <section class="mt-8 grid lg:grid-cols-[0.8fr_1.2fr] gap-8 items-stretch">
+      <VerticalImageCard
+        src="/images/sophro/fleurs-doigts-de-sorcieres.webp"
+        alt=""
+        ratio="1 / 1"
+        objectPosition="center"
+        animation="slide-right"
+      />
+
+      <WideImageBanner
+        src="/images/sophro/bois-de-cerisiers.webp"
+        alt=""
+        ratio="16 / 9"
+        objectPosition="center"
+        animation="slide-left"
+      />
+    </section>
 
     <section class="mt-8 section-bg rounded-[2.5rem] p-8 md:p-10">
       <section class="soft-card rounded-[2rem] p-8">
@@ -116,4 +137,5 @@ import Footer from "../components/Footer.astro";
   </main>
 
   <Footer />
+  <ScrollReveal />
 </BaseLayout>

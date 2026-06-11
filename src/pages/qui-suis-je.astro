@@ -5,6 +5,7 @@ import Footer from "../components/Footer.astro";
 import ScrollReveal from "../components/ScrollReveal.astro";
 import SophroMozaicFlip from "../components/SophroMozaicFlip.astro";
 import CalendlyButton from "../components/CalendlyButton.astro";
+import WideImageBanner from "../components/WideImageBanner.astro";
 ---
 
 <BaseLayout
@@ -17,7 +18,7 @@ import CalendlyButton from "../components/CalendlyButton.astro";
     <section class="mx-auto max-w-7xl px-4 sm:px-6 py-10 md:py-16">
       <section class="section-bg relative overflow-hidden rounded-[2.5rem] p-8 md:p-10">
         <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-          <div class="soft-card rounded-[2.5rem] p-8 md:p-10 slide-right">
+          <div class="soft-card rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-10slide-right">
             <p class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]">
               Qui suis-je ?
             </p>
@@ -67,7 +68,7 @@ import CalendlyButton from "../components/CalendlyButton.astro";
 
             <div class="relative soft-card rounded-[2.5rem] p-4">
               <img
-                src="/images/alexandra-coirier.webp"
+                src="/images/sophro/moi-maintenant.webp"
                 alt="Alexandra Coirier, sophrologue à Loudéac"
                 class="h-[520px] w-full rounded-[2rem] object-cover"
               />
@@ -77,8 +78,18 @@ import CalendlyButton from "../components/CalendlyButton.astro";
       </section>
     </section>
 
-    <section class="mx-auto max-w-7xl px-4 sm:px-6 py-8 md:py-14">
-      <div class="soft-card rounded-[2.5rem] p-8 md:p-10 fade-in">
+    <section class="mx-auto max-w-7xl px-4 sm:px-6 pb-8">
+      <WideImageBanner
+        src="/images/sophro/bois-de-cerisiers.webp"
+        alt=""
+        ratio="16 / 7"
+        objectPosition="center"
+        animation="fade-in"
+      />
+    </section>
+
+    <section class="mx-auto max-w-7xl px-0 sm:px-6 py-6 md:py-14">
+      <div class="soft-card rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-10fade-in">
         <p class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]">
           Ce qui m’anime
         </p>
@@ -124,10 +135,10 @@ import CalendlyButton from "../components/CalendlyButton.astro";
       </div>
     </section>
 
-    <section class="mx-auto max-w-7xl px-4 sm:px-6 py-8 md:py-14">
+    <section class="mx-auto max-w-7xl px-0 sm:px-6 py-6 md:py-14">
       <section class="section-bg relative overflow-hidden rounded-[2.5rem] p-8 md:p-10">
         <div class="grid lg:grid-cols-2 gap-8 items-stretch">
-          <div class="soft-card rounded-[2.5rem] p-8 md:p-10 slide-right">
+          <div class="soft-card rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-10slide-right">
             <h2 class="text-3xl md:text-4xl font-semibold text-[var(--brown-deep)]">
               Une présence douce et sécurisante
             </h2>
@@ -155,7 +166,7 @@ import CalendlyButton from "../components/CalendlyButton.astro";
             </div>
           </div>
 
-          <div class="soft-card rounded-[2.5rem] p-8 md:p-10 slide-left">
+          <div class="soft-card rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-10slide-left">
             <h2 class="text-3xl md:text-4xl font-semibold text-[var(--brown-deep)]">
               Ce que je souhaite transmettre
             </h2>
@@ -182,8 +193,8 @@ import CalendlyButton from "../components/CalendlyButton.astro";
       </section>
     </section>
 
-    <section class="mx-auto max-w-7xl px-4 sm:px-6 py-8 md:py-14">
-      <div class="soft-card rounded-[2.5rem] p-8 md:p-10 fade-in">
+    <section class="mx-auto max-w-7xl px-0 sm:px-6 py-6 md:py-14">
+      <div class="soft-card rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-10fade-in">
         <p class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]">
           Quelques mots sur mon parcours
         </p>
@@ -220,14 +231,14 @@ import CalendlyButton from "../components/CalendlyButton.astro";
       </div>
     </section>
 
-    <section class="mx-auto max-w-7xl px-4 sm:px-6 py-8 md:py-14">
+    <section class="mx-auto max-w-7xl px-0 sm:px-6 py-6 md:py-14">
       <section class="section-bg relative overflow-hidden rounded-[2.5rem] p-8 md:p-10">
         <div class="grid lg:grid-cols-2 gap-8 items-center">
           <div class="slide-right">
             <SophroMozaicFlip />
           </div>
 
-          <div class="soft-card rounded-[2.5rem] p-8 md:p-10 slide-left">
+          <div class="soft-card rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-10slide-left">
             <h2 class="text-3xl md:text-4xl font-semibold text-[var(--brown-deep)]">
               Aujourd’hui
             </h2>

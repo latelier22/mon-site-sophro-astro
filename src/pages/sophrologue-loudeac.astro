@@ -4,6 +4,8 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import ScrollReveal from "../components/ScrollReveal.astro";
 import ScrollBlurImage from "../components/ScrollBlurImage.astro";
+import WideImageBanner from "../components/WideImageBanner.astro";
+import VerticalImageCard from "../components/VerticalImageCard.astro";
 ---
 
 <BaseLayout
@@ -14,7 +16,7 @@ import ScrollBlurImage from "../components/ScrollBlurImage.astro";
 
   <main>
     <section class="mx-auto max-w-7xl px-4 sm:px-6 py-10 md:py-16">
-      <div class="soft-card rounded-[2.5rem] p-8 md:p-10 slide-right">
+      <div class="soft-card rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-10slide-right">
         <p class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]">
           Sophrologue à Loudéac
         </p>
@@ -34,14 +36,24 @@ import ScrollBlurImage from "../components/ScrollBlurImage.astro";
         </p>
       </div>
 
+      <section class="mt-8">
+        <WideImageBanner
+          src="/images/sophro/plante-detail-du-cabinet.webp"
+          alt=""
+          ratio="16 / 7"
+          objectPosition="center"
+          animation="fade-in"
+        />
+      </section>
+
       <section class="mt-8 section-bg rounded-[2.5rem] p-8 md:p-10">
         <section class="grid lg:grid-cols-2 gap-8 items-stretch">
           <div class="slide-right">
-            <!-- <ScrollBlurImage
-              src="/images/sophrologue-loudeac-cabinet.webp"
-              alt="Cabinet de sophrologie chaleureux à Loudéac"
+            <ScrollBlurImage
+              src="/images/sophro/cabinet-de-sophrologie.webp"
+              alt=""
               className="mt-0 h-full"
-            /> -->
+            />
           </div>
 
           <div class="soft-card rounded-[2rem] p-8 md:p-10 slide-left flex flex-col justify-center">
@@ -94,13 +106,20 @@ import ScrollBlurImage from "../components/ScrollBlurImage.astro";
           </div>
 
           <div class="slide-left order-1 lg:order-2">
-            <!-- <ScrollBlurImage
-              src="/images/sophrologue-loudeac-centre-bretagne.webp"
-              alt="Centre-Bretagne, calme et nature autour de Loudéac"
-              className="mt-0 h-full"
-            /> -->
-          </div>
+            <VerticalImageCard
+          src="/images/sophro/etang-plantes-sauvages.webp"
+          alt=""
+          ratio="4 / 5"
+          objectPosition="center"
+          animation="slide-left"
+          className="h-full"
+          mobileStart="0%"
+          mobileMiddle="50%"
+          mobileEnd="100%"
+        />
         </section>
+
+        
 
         <section class="mt-8 soft-card rounded-[2rem] p-8 md:p-10 fade-in">
           <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">

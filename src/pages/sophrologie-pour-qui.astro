@@ -3,7 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import ScrollReveal from "../components/ScrollReveal.astro";
-import ImageBlock from "../components/ImageBlock.astro";
+import VerticalImageCard from "../components/VerticalImageCard.astro";
 ---
 
 <BaseLayout
@@ -13,63 +13,89 @@ import ImageBlock from "../components/ImageBlock.astro";
   <Header />
 
   <main>
-    <section class="mx-auto max-w-7xl px-4 sm:px-6 py-10 md:py-16">
-      <div class="soft-card rounded-[2.5rem] p-8 md:p-10 slide-right">
-        <p class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]">
-          Sophrologie
-        </p>
+    <section class="mx-auto max-w-7xl px-0 sm:px-6 py-8 md:py-16">
+      <!-- INTRO : texte gauche / image droite -->
+      <section class="grid lg:grid-cols-[1.15fr_0.85fr] gap-6 md:gap-8 items-stretch">
+        <div class="soft-card rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-10 slide-right flex flex-col justify-center">
+          <p class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]">
+            Sophrologie
+          </p>
 
-        <h1 class="mt-4 text-4xl md:text-5xl font-semibold text-[var(--brown-deep)]">
-          Est-ce que la sophrologie est faite pour vous ?
-        </h1>
+          <h1 class="mt-4 text-4xl md:text-5xl font-semibold text-[var(--brown-deep)]">
+            Est-ce que la sophrologie est faite pour vous ?
+          </h1>
 
-        <p class="mt-5 text-lg leading-relaxed text-[var(--text)]">
-          Vous vous demandez peut-être si cette approche peut réellement vous aider.
-          La réponse dépend surtout de ce que vous vivez aujourd’hui… et de ce que vous souhaitez changer.
-        </p>
-      </div>
+          <p class="mt-5 text-lg leading-relaxed text-[var(--text)]">
+            Vous vous demandez peut-être si cette approche peut réellement vous aider.
+            La réponse dépend surtout de ce que vous vivez aujourd’hui… et de ce que vous souhaitez changer.
+          </p>
+        </div>
 
-      <!-- <ImageBlock
-        src="/images/sophrologie-pour-qui-intro.webp"
-        alt="La sophrologie pour retrouver calme, clarté et confiance"
-      /> -->
+        <VerticalImageCard
+          src="/images/sophro/pont-seul-plage-3.webp"
+          alt=""
+          ratio="4 / 5"
+          objectPosition="center"
+          animation="slide-left"
+          className="h-full"
+          mobileStart="50%"
+          mobileMiddle="100%"
+          mobileEnd="25%"
+        />
+      </section>
 
-      <section class="mt-8 section-bg rounded-[2.5rem] p-8 md:p-10">
-        <section class="soft-card rounded-[2rem] p-8 fade-in">
-          <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
-            Cela peut être fait pour vous si…
-          </h2>
+      <section class="mt-8 section-bg rounded-none sm:rounded-[2.5rem] p-4 sm:p-6 md:p-10">
+        <!-- BLOC 1 : image gauche / texte droite -->
+        <section class="grid lg:grid-cols-[0.85fr_1.15fr] gap-6 md:gap-8 items-stretch">
+          <VerticalImageCard
+            src="/images/sophro/cerisier-3.webp"
+            alt=""
+            ratio="4 / 5"
+            objectPosition="center 40%"
+            animation="slide-right"
+            className="h-full"
+            mobileStart="0%"
+            mobileMiddle="50%"
+            mobileEnd="100%"
+          />
 
-          <ul class="mt-6 space-y-4 text-[var(--text)] leading-relaxed">
-            <li class="rounded-[1.25rem] bg-white/70 px-5 py-4 zoom-in">
-              Vous sentez que vous ne pouvez plus continuer ainsi et que vous avez besoin
-              de retrouver du calme, de l’énergie et de la sérénité.
-            </li>
+          <div class="soft-card rounded-[1.5rem] md:rounded-[2rem] p-5 md:p-8 fade-in flex flex-col justify-center">
+            <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+              Cela peut être fait pour vous si…
+            </h2>
 
-            <li class="rounded-[1.25rem] bg-white/70 px-5 py-4 zoom-in">
-              Vous souhaitez comprendre ce qui se passe en vous plutôt que de subir
-              vos émotions, vos peurs ou vos réactions.
-            </li>
+            <ul class="mt-6 space-y-4 text-[var(--text)] leading-relaxed">
+              <li class="rounded-[1.25rem] bg-white/70 px-5 py-4 zoom-in">
+                Vous sentez que vous ne pouvez plus continuer ainsi et que vous avez besoin
+                de retrouver du calme, de l’énergie et de la sérénité.
+              </li>
 
-            <li class="rounded-[1.25rem] bg-white/70 px-5 py-4 zoom-in">
-              Vous êtes souvent dans le mental, dans l’anticipation ou le stress,
-              et vous avez du mal à lâcher prise.
-            </li>
+              <li class="rounded-[1.25rem] bg-white/70 px-5 py-4 zoom-in">
+                Vous souhaitez comprendre ce qui se passe en vous plutôt que de subir
+                vos émotions, vos peurs ou vos réactions.
+              </li>
 
-            <li class="rounded-[1.25rem] bg-white/70 px-5 py-4 zoom-in">
-              Vous ressentez une fatigue émotionnelle, une surcharge mentale
-              ou un besoin de ralentir.
-            </li>
+              <li class="rounded-[1.25rem] bg-white/70 px-5 py-4 zoom-in">
+                Vous êtes souvent dans le mental, dans l’anticipation ou le stress,
+                et vous avez du mal à lâcher prise.
+              </li>
 
-            <li class="rounded-[1.25rem] bg-white/70 px-5 py-4 zoom-in">
-              Vous cherchez une approche concrète, avec des outils simples
-              à utiliser dans votre quotidien.
-            </li>
-          </ul>
+              <li class="rounded-[1.25rem] bg-white/70 px-5 py-4 zoom-in">
+                Vous ressentez une fatigue émotionnelle, une surcharge mentale
+                ou un besoin de ralentir.
+              </li>
+
+              <li class="rounded-[1.25rem] bg-white/70 px-5 py-4 zoom-in">
+                Vous cherchez une approche concrète, avec des outils simples
+                à utiliser dans votre quotidien.
+              </li>
+            </ul>
+          </div>
         </section>
 
-        <section class="mt-8 grid md:grid-cols-2 gap-6">
-          <div class="soft-card rounded-[2rem] p-8 slide-right">
+        <!-- BLOC 2 : texte gauche / image droite -->
+        <section class="mt-8 grid lg:grid-cols-[1.15fr_0.85fr] gap-6 md:gap-8 items-stretch">
+          <div class="soft-card rounded-[1.5rem] md:rounded-[2rem] p-5 md:p-8 slide-right flex flex-col justify-center">
             <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
               Ce que vous pouvez en attendre
             </h2>
@@ -84,7 +110,34 @@ import ImageBlock from "../components/ImageBlock.astro";
             </ul>
           </div>
 
-          <div class="soft-card rounded-[2rem] p-8 slide-left">
+          <VerticalImageCard
+            src="/images/sophro/cerisier.webp"
+            alt=""
+            ratio="4 / 5"
+            objectPosition="center 40%"
+            animation="slide-left"
+            className="h-full"
+            mobileStart="0%"
+            mobileMiddle="50%"
+            mobileEnd="100%"
+          />
+        </section>
+
+        <!-- BLOC 3 : image gauche / texte droite -->
+        <section class="mt-8 grid lg:grid-cols-[0.85fr_1.15fr] gap-6 md:gap-8 items-stretch">
+          <VerticalImageCard
+            src="/images/sophro/banc-sous-le-cerisier.webp"
+            alt=""
+            ratio="4 / 5"
+            objectPosition="center 40%"
+            animation="slide-right"
+            className="h-full"
+            mobileStart="0%"
+            mobileMiddle="50%"
+            mobileEnd="100%"
+          />
+
+          <div class="soft-card rounded-[1.5rem] md:rounded-[2rem] p-5 md:p-8 slide-left flex flex-col justify-center">
             <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
               Ce que cela demande
             </h2>
@@ -103,58 +156,83 @@ import ImageBlock from "../components/ImageBlock.astro";
           </div>
         </section>
 
-        <!-- <ImageBlock
-          src="/images/sophrologie-pour-qui-chemin.webp"
-          alt="Un chemin vers plus de calme et d’équilibre intérieur"
-        /> -->
+        <!-- BLOC 4 : texte gauche / image droite -->
+        <section class="mt-8 grid lg:grid-cols-[1.15fr_0.85fr] gap-6 md:gap-8 items-stretch">
+          <div class="soft-card rounded-[1.5rem] md:rounded-[2rem] p-5 md:p-8 fade-in flex flex-col justify-center">
+            <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+              Dans quels cas ce n’est pas adapté ?
+            </h2>
 
-        <section class="mt-8 soft-card rounded-[2rem] p-8 fade-in">
-          <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
-            Dans quels cas ce n’est pas adapté ?
-          </h2>
+            <div class="mt-5 space-y-4 text-[var(--text)] leading-relaxed">
+              <p>
+                La sophrologie ne remplace pas un suivi médical ou psychologique
+                lorsque cela est nécessaire.
+              </p>
 
-          <div class="mt-5 space-y-4 text-[var(--text)] leading-relaxed">
-            <p>
-              La sophrologie ne remplace pas un suivi médical ou psychologique
-              lorsque cela est nécessaire.
-            </p>
-
-            <p>
-              Elle peut en revanche être un excellent complément pour vous aider
-              à mieux vivre ce que vous traversez et retrouver des ressources en vous.
-            </p>
+              <p>
+                Elle peut en revanche être un excellent complément pour vous aider
+                à mieux vivre ce que vous traversez et retrouver des ressources en vous.
+              </p>
+            </div>
           </div>
+
+          <VerticalImageCard
+            src="/images/sophro/silhouette-lac.webp"
+            alt=""
+            ratio="4 / 5"
+            objectPosition="center"
+            animation="slide-left"
+            className="h-full"
+            mobileStart="0%"
+            mobileMiddle="50%"
+            mobileEnd="100%"
+          />
         </section>
 
-        <section class="mt-8 soft-card rounded-[2rem] p-8 text-center zoom-in">
-          <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
-            Et si vous faisiez le premier pas ?
-          </h2>
+        <!-- FINAL : image gauche / texte droite -->
+        <section class="mt-8 grid lg:grid-cols-[0.85fr_1.15fr] gap-6 md:gap-8 items-stretch">
+          <VerticalImageCard
+            src="/images/sophro/lac-ouvrir-le-champs-des-possibles.webp"
+            alt=""
+            ratio="4 / 5"
+            objectPosition="center 45%"
+            animation="slide-right"
+            className="h-full"
+            mobileStart="0%"
+            mobileMiddle="50%"
+            mobileEnd="100%"
+          />
 
-          <p class="mt-5 text-[var(--text)] leading-relaxed">
-            Un premier échange permet souvent de clarifier votre situation
-            et de voir si cet accompagnement est adapté pour vous.
-          </p>
+          <div class="soft-card rounded-[1.5rem] md:rounded-[2rem] p-5 md:p-8 text-center zoom-in flex flex-col justify-center">
+            <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+              Et si vous faisiez le premier pas ?
+            </h2>
 
-          <p class="mt-6 italic text-[var(--brown-soft)]">
-            « La vie, ce n’est pas d’attendre que les orages passent,
-            c’est d’apprendre comment danser sous la pluie. »
-          </p>
+            <p class="mt-5 text-[var(--text)] leading-relaxed">
+              Un premier échange permet souvent de clarifier votre situation
+              et de voir si cet accompagnement est adapté pour vous.
+            </p>
 
-          <div class="mt-8 flex flex-wrap justify-center gap-4">
-            <a
-              href="/contact"
-              class="soft-btn bg-[var(--brown-soft)] text-white px-7 py-3.5 font-medium inline-block hover:bg-[var(--brown-deep)]"
-            >
-              Prendre rendez-vous
-            </a>
+            <p class="mt-6 italic text-[var(--brown-soft)]">
+              « La vie, ce n’est pas d’attendre que les orages passent,
+              c’est d’apprendre comment danser sous la pluie. »
+            </p>
 
-            <a
-              href="/accompagnement"
-              class="soft-btn border border-[var(--brown-soft)]/20 bg-white/70 px-7 py-3.5 text-[var(--brown-deep)] hover:bg-white"
-            >
-              Voir les accompagnements
-            </a>
+            <div class="mt-8 flex flex-wrap justify-center gap-4">
+              <a
+                href="/contact"
+                class="soft-btn bg-[var(--brown-soft)] text-white px-7 py-3.5 font-medium inline-block hover:bg-[var(--brown-deep)]"
+              >
+                Prendre rendez-vous
+              </a>
+
+              <a
+                href="/accompagnement"
+                class="soft-btn border border-[var(--brown-soft)]/20 bg-white/70 px-7 py-3.5 text-[var(--brown-deep)] hover:bg-white"
+              >
+                Voir les accompagnements
+              </a>
+            </div>
           </div>
         </section>
       </section>

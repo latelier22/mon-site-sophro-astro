@@ -61,4 +61,20 @@ const {
   .portrait-card:hover img {
     transform: scale(1.055);
   }
+
+  @media (max-width: 900px) {
+    .portrait-card {
+      padding: 0.75rem;
+      border-radius: 1.75rem;
+    }
+
+    .portrait-card__image {
+      aspect-ratio: 16 / 12 !important;
+      border-radius: 1.35rem;
+    }
+
+    .portrait-card__image img {
+      transform: scale(1.1);
+    }
+  }
 </style>
