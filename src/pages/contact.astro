@@ -4,8 +4,8 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import ConfirmSript from "../components/ConfirmScript.astro";
 import CalendlyButton from "../components/CalendlyButton.astro";
-import VerticalImageCard from "../components/VerticalImageCard.astro";
 import ScrollReveal from "../components/ScrollReveal.astro";
+import SquareFadeLogo from "../components/SquareFadeLogo.astro";
 
 const success = Astro.url.searchParams.get("success");
 const error = Astro.url.searchParams.get("error");
@@ -18,10 +18,53 @@ const error = Astro.url.searchParams.get("error");
   <Header />
 
   <main>
-    <section class="mx-auto max-w-7xl px-4 sm:px-6 py-10 md:py-16">
+    <section class="mx-auto max-w-7xl px-0 sm:px-6 py-8 md:py-16">
       <div class="section-bg rounded-none sm:rounded-[2.5rem] p-4 sm:p-6 md:p-10">
         <div class="grid lg:grid-cols-2 gap-8 items-start">
-          <div class="soft-card rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-10slide-right">
+          <div class="space-y-8">
+            <div class="soft-card rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-10 slide-left">
+              <div
+                class="flex flex-col sm:flex-row gap-6 items-center sm:items-start"
+              >
+                <img
+                  src="/images/alexandra-coirier.webp"
+                  alt="Alexandra Coirier, sophrologue à Loudéac"
+                  class="h-32 w-32 sm:h-36 sm:w-36 rounded-full object-cover soft-card p-2"
+                />
+
+                <div>
+                  <p
+                    class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]"
+                  >
+                    Alexandra Coirier
+                  </p>
+
+                  <h2
+                    class="mt-2 text-2xl font-semibold text-[var(--brown-deep)]"
+                  >
+                    Sophrologue à Loudéac
+                  </h2>
+
+                  <p class="mt-4 leading-relaxed text-[var(--text)]">
+                    Une question, un doute, ou simplement besoin d’échanger
+                    avant de vous lancer ? N’hésitez pas à m’écrire. Je vous
+                    répondrai avec attention et bienveillance.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <SquareFadeLogo
+              src="/images/sophro/moi-au-cabinet-de-sophrologie.webp"
+              logo="/images/sophro-hero.webp"
+              alt=""
+              ratio="1 / 1"
+              objectPosition="center"
+              animation="zoom-in"
+              duration="9s"
+            />
+          </div>
+          <div class="soft-card rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-10 slide-right">
             <p
               class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]"
             >
@@ -118,122 +161,99 @@ const error = Astro.url.searchParams.get("error");
             </div>
           </div>
 
-          <div class="space-y-8">
-            <div class="soft-card rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-10slide-left">
-              <div
-                class="flex flex-col sm:flex-row gap-6 items-center sm:items-start"
-              >
-                <img
-                  src="/images/alexandra-coirier.webp"
-                  alt="Alexandra Coirier, sophrologue à Loudéac"
-                  class="h-32 w-32 sm:h-36 sm:w-36 rounded-full object-cover soft-card p-2"
-                />
-
-                <div>
-                  <p
-                    class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]"
-                  >
-                    Alexandra Coirier
-                  </p>
-
-                  <h2
-                    class="mt-2 text-2xl font-semibold text-[var(--brown-deep)]"
-                  >
-                    Sophrologue à Loudéac
-                  </h2>
-
-                  <p class="mt-4 leading-relaxed text-[var(--text)]">
-                    Une question, un doute, ou simplement besoin d’échanger
-                    avant de vous lancer ? N’hésitez pas à m’écrire. Je vous
-                    répondrai avec attention et bienveillance.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <VerticalImageCard
-              src="/images/sophro/moi-au-cabinet-de-sophrologie.webp"
-              alt=""
-              ratio="4 / 5"
-              objectPosition="center 35%"
-              animation="slide-left"
-            />
-
-            <div class="soft-card rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-10fade-in">
-              <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
-                Écrivez-moi
-              </h2>
-
-              <div id="form-status" class="mt-6" hidden></div>
-
-              <form action="/contact.php" method="POST" class="mt-8 space-y-5">
-                <div>
-                  <label
-                    class="mb-2 block text-sm font-medium text-[var(--brown-deep)]"
-                  >
-                    Nom
-                  </label>
-                  <input
-                    name="nom"
-                    type="text"
-                    class="input-soft"
-                    placeholder="Votre nom"
-                    required
-                  />
-                </div>
-
-                <div>
-                  <label
-                    class="mb-2 block text-sm font-medium text-[var(--brown-deep)]"
-                  >
-                    Email
-                  </label>
-                  <input
-                    name="email"
-                    type="email"
-                    class="input-soft"
-                    placeholder="votre@email.com"
-                    required
-                  />
-                </div>
-
-                <div>
-                  <label
-                    class="mb-2 block text-sm font-medium text-[var(--brown-deep)]"
-                  >
-                    Téléphone
-                  </label>
-                  <input
-                    name="telephone"
-                    type="text"
-                    class="input-soft"
-                    placeholder="Votre numéro"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    class="mb-2 block text-sm font-medium text-[var(--brown-deep)]"
-                  >
-                    Message
-                  </label>
-                  <textarea
-                    name="message"
-                    class="input-soft min-h-[160px] resize-none"
-                    placeholder="Expliquez brièvement votre besoin..."
-                    required></textarea>
-                </div>
-
-                <button
-                  type="submit"
-                  class="soft-btn w-full bg-[var(--brown-soft)] py-4 text-white font-medium hover:bg-[var(--brown-deep)]"
-                >
-                  Envoyer le message
-                </button>
-              </form>
-            </div>
-          </div>
+          
         </div>
+
+        <section class="mt-8 grid lg:grid-cols-[0.85fr_1.15fr] gap-8 items-stretch">
+        
+
+          <div class="soft-card rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-10 fade-in">
+            <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+              Écrivez-moi
+            </h2>
+
+            <div id="form-status" class="mt-6" hidden></div>
+
+            <form action="/contact.php" method="POST" class="mt-8 space-y-5">
+              <div>
+                <label
+                  class="mb-2 block text-sm font-medium text-[var(--brown-deep)]"
+                >
+                  Nom
+                </label>
+                <input
+                  name="nom"
+                  type="text"
+                  class="input-soft"
+                  placeholder="Votre nom"
+                  required
+                />
+              </div>
+
+              <div>
+                <label
+                  class="mb-2 block text-sm font-medium text-[var(--brown-deep)]"
+                >
+                  Email
+                </label>
+                <input
+                  name="email"
+                  type="email"
+                  class="input-soft"
+                  placeholder="votre@email.com"
+                  required
+                />
+              </div>
+
+              <div>
+                <label
+                  class="mb-2 block text-sm font-medium text-[var(--brown-deep)]"
+                >
+                  Téléphone
+                </label>
+                <input
+                  name="telephone"
+                  type="text"
+                  class="input-soft"
+                  placeholder="Votre numéro"
+                />
+              </div>
+
+              <div>
+                <label
+                  class="mb-2 block text-sm font-medium text-[var(--brown-deep)]"
+                >
+                  Message
+                </label>
+                <textarea
+                  name="message"
+                  class="input-soft min-h-[160px] resize-none"
+                  placeholder="Expliquez brièvement votre besoin..."
+                  required></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="soft-btn w-full bg-[var(--brown-soft)] py-4 text-white font-medium hover:bg-[var(--brown-deep)]"
+              >
+                Envoyer le message
+              </button>
+            </form>
+          </div>
+           <SquareFadeLogo
+  src="/images/sophro/triskel-sable.webp"
+  logo="/images/sophro/poser-l-ancre.webp"
+  alt=""
+  ratio="1 / 1"
+  objectPosition="center"
+  logoPosition="center 45%"
+  logoFit="cover"
+  logoPadding="0"
+  animation="slide-right"
+  duration="9s"
+  className="h-full"
+/>
+        </section>
 
         <div class="mt-10 flex justify-center zoom-in">
           <CalendlyButton

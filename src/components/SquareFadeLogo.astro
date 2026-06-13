@@ -1,0 +1,141 @@
+---
+const {
+  src = "/images/sophro-hero.webp",
+  logo = "/logo.png",
+  alt = "",
+  ratio = "1 / 1",
+  objectPosition = "center",
+  logoPosition = "center",
+  animation = "fade-in",
+  className = "",
+  duration = "7s",
+
+  // contain = logo centré
+  // cover = image qui remplit tout
+  logoFit = "contain",
+  logoPadding = "18%",
+} = Astro.props;
+---
+
+<article
+  class={`square-fade-logo ${animation} ${className}`}
+  style={`
+    --fade-duration:${duration};
+    --logo-fit:${logoFit};
+    --logo-padding:${logoPadding};
+    aspect-ratio:${ratio};
+  `}
+>
+  <img
+    src={src}
+    alt={alt}
+    loading="lazy"
+    class="square-fade-logo__photo"
+    style={`object-position:${objectPosition};`}
+  />
+
+  <div class="square-fade-logo__second-wrap">
+    <img
+      src={logo}
+      alt=""
+      loading="lazy"
+      class="square-fade-logo__second"
+      style={`object-position:${logoPosition};`}
+    />
+  </div>
+</article>
+
+<style>
+  .square-fade-logo {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 2rem;
+    background: rgba(255, 255, 255, 0.68);
+    box-shadow: 0 18px 44px rgba(94, 74, 66, 0.1);
+    backdrop-filter: blur(12px);
+  }
+
+  .square-fade-logo__photo,
+  .square-fade-logo__second-wrap {
+    position: absolute;
+    inset: 0;
+  }
+
+  .square-fade-logo__photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: square-photo-fade var(--fade-duration) ease-in-out infinite;
+  }
+
+  .square-fade-logo__second-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--logo-padding);
+    background:
+      radial-gradient(circle at center, rgba(255,255,255,.92), rgba(255,255,255,.62)),
+      linear-gradient(135deg, rgba(244,232,226,.88), rgba(255,255,255,.62));
+    opacity: 0;
+    animation: square-logo-fade var(--fade-duration) ease-in-out infinite;
+  }
+
+  .square-fade-logo__second {
+    width: 100%;
+    height: 100%;
+    object-fit: var(--logo-fit);
+    filter: drop-shadow(0 10px 24px rgba(94, 74, 66, 0.16));
+  }
+
+  @keyframes square-photo-fade {
+  0%, 25% {
+    opacity: 1;
+    transform: scale(1.04);
+  }
+
+  50% {
+    opacity: 0;
+    transform: scale(1.08);
+  }
+
+  75%, 100% {
+    opacity: 1;
+    transform: scale(1.04);
+  }
+}
+
+@keyframes square-logo-fade {
+  0%, 25% {
+    opacity: 0;
+    transform: scale(1.02);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.04);
+  }
+
+  75%, 100% {
+    opacity: 0;
+    transform: scale(1.02);
+  }
+}
+
+  @media (max-width: 900px) {
+    .square-fade-logo {
+      border-radius: 1.5rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .square-fade-logo__photo,
+    .square-fade-logo__second-wrap {
+      animation: none !important;
+    }
+
+    .square-fade-logo__second-wrap {
+      opacity: 0;
+    }
+  }
+</style>

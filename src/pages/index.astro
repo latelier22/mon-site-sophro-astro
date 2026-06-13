@@ -11,6 +11,7 @@ import CalendlyButton from "../components/CalendlyButton.astro";
 
 import PortraitCard from "../components/PortraitCard.astro";
 import VerticalImageCard from "../components/VerticalImageCard.astro";
+import SquareFadeLogo from "../components/SquareFadeLogo.astro";
 ---
 
 <BaseLayout
@@ -87,14 +88,21 @@ import VerticalImageCard from "../components/VerticalImageCard.astro";
               </div>
             </div>
 
-            <PortraitCard
+            <!-- <PortraitCard
               src="/images/sophro/moi-respi-filtre.webp"
               alt="Ambiance douce et apaisante de sophrologie"
               ratio="4 / 5"
               objectPosition="center 35%"
               animation="slide-left"
-            />
+            /> -->
+            <SquareFadeLogo
+    src="/images/sophro/moi-respi-filtre.webp"
+    logo="/images/sophro-hero.webp"
+    alt=""
+    duration="8s"
+  />
           </div>
+
         </div>
 
         <div class="hero-waves"></div>

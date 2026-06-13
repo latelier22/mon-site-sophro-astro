@@ -7,6 +7,7 @@ import CalendlyButton from "../components/CalendlyButton.astro";
 
 import WideImageBanner from "../components/WideImageBanner.astro";
 import VerticalImageCard from "../components/VerticalImageCard.astro";
+import SquareFadeLogo from "../components/SquareFadeLogo.astro";
 ---
 
 <BaseLayout
@@ -18,7 +19,7 @@ import VerticalImageCard from "../components/VerticalImageCard.astro";
   <main>
     <section class="mx-auto max-w-7xl px-4 sm:px-6 py-10 md:py-16">
       <section class="grid lg:grid-cols-[0.75fr_1.25fr] gap-8 items-stretch">
-       <VerticalImageCard
+       <!-- <VerticalImageCard
   src="/images/sophro/moi-pont-2-plage.webp"
   alt=""
   ratio="4 / 5"
@@ -28,8 +29,13 @@ import VerticalImageCard from "../components/VerticalImageCard.astro";
   mobileStart="50%%"
   mobileMiddle="25%"
   mobileEnd="50%"
-/>
-
+/> -->
+ <SquareFadeLogo
+    src="/images/sophro/moi-pont-2-plage.webp"
+    logo="/images/sophro-hero.webp"
+    alt=""
+    duration="8s"
+  />
         <div class="soft-card rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-10slide-left flex flex-col justify-center">
           <p class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]">
             Déroulé des séances
