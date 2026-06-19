@@ -11,7 +11,7 @@ Ils utilisent les composants :
 Principe :
 - 1 à 2 images par page maximum, sauf triptyque léger.
 - Animations : fade-in, slide-right, slide-left, zoom-in.
-- Style cohérent avec soft-card, section-bg et les variables CSS du site.
+- Style cohérent avec soft-card, section-bg-new et les variables CSS du site.
 
 Attention :
 - Le fichier temoignages.astro utilise le nom actuel : fleurs-doigts-de-sorci`eres.webp
