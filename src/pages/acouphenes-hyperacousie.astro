@@ -1,0 +1,298 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import ScrollReveal from "../components/ScrollReveal.astro";
+import VerticalImageCard from "../components/VerticalImageCard.astro";
+import CalendlyButton from "../components/CalendlyButton.astro";
+---
+
+<BaseLayout
+  title="Acouphènes et hyperacousie – Sophrologue à Loudéac"
+  description="Accompagnement en sophrologie pour mieux vivre avec les acouphènes, l’hyperacousie, les vertiges et les troubles auditifs à Loudéac."
+>
+  <Header />
+
+  <main>
+    <section class="mx-auto max-w-7xl px-0 sm:px-6 py-8 md:py-16">
+      <!-- INTRO -->
+      <section class="grid lg:grid-cols-[1.15fr_0.85fr] gap-6 md:gap-8 items-stretch">
+        <div class="soft-card rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-10 slide-right flex flex-col justify-center">
+          <p class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]">
+            Acouphènes · Hyperacousie · Troubles auditifs
+          </p>
+
+          <h1 class="mt-4 text-4xl md:text-5xl font-semibold text-[var(--brown-deep)]">
+            Mieux vivre avec les acouphènes et l’hyperacousie
+          </h1>
+
+          <p class="mt-6 text-lg leading-relaxed text-[var(--text)]">
+            Les <strong class="font-semibold text-[var(--brown-deep)]">acouphènes</strong>,
+            l’<strong class="font-semibold text-[var(--brown-deep)]">hyperacousie</strong>
+            ou les <strong class="font-semibold text-[var(--brown-deep)]">vertiges</strong>
+            peuvent avoir un impact important sur le quotidien :
+            fatigue, anxiété, perte de repères, isolement ou impression de ne plus vivre comme avant.
+          </p>
+
+          <p class="mt-4 text-lg leading-relaxed text-[var(--text)]">
+            La <strong class="font-semibold text-[var(--brown-deep)]">sophrologie spécialisée dans les troubles auditifs</strong>
+            peut vous aider à mieux comprendre ce que vous vivez, à apaiser la charge émotionnelle
+            et à retrouver progressivement plus de confort au quotidien.
+          </p>
+
+          <div class="mt-8 flex flex-wrap gap-4">
+            <CalendlyButton
+              label="Prendre rendez-vous"
+              className="px-6 py-3"
+              url="https://calendly.com/alexandracoirier-sophrologue/?hide_gdpr_banner=1&primary_color=9a6750&text_color=5e4a42&background_color=f8f2ef"
+            />
+
+            <a
+              href="/contact"
+              class="soft-btn border border-[var(--brown-soft)]/20 bg-white/70 px-7 py-3.5 text-[var(--brown-deep)] hover:bg-white"
+            >
+              Me contacter
+            </a>
+          </div>
+        </div>
+
+        <VerticalImageCard
+          src="/images/sophro/respiration-et-centration.webp"
+          alt="Sophrologie spécialisée acouphènes et hyperacousie"
+          ratio="4 / 5"
+          objectPosition="center 35%"
+          animation="slide-left"
+          className="h-full"
+          mobileStart="0%"
+          mobileMiddle="35%"
+          mobileEnd="70%"
+        />
+      </section>
+
+      <section class="mt-8 section-bg-new rounded-none sm:rounded-[2.5rem] p-4 sm:p-6 md:p-10">
+        <!-- COMPRENDRE -->
+        <section class="soft-card rounded-[1.5rem] md:rounded-[2rem] p-5 md:p-8 fade-in">
+          <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+            L’acouphène, c’est quoi ?
+          </h2>
+
+          <div class="mt-5 space-y-4 leading-relaxed text-[var(--text)]">
+            <p>
+              L’<strong class="font-semibold text-[var(--brown-deep)]">acouphène</strong>
+              est un symptôme auditif qui peut devenir une expérience très inconfortable,
+              surtout lorsqu’il prend beaucoup de place dans la vie quotidienne.
+            </p>
+
+            <p>
+              Il peut entraîner une
+              <strong class="font-semibold text-[var(--brown-deep)]">charge émotionnelle importante</strong> :
+              anxiété, fatigue, irritabilité, difficultés de concentration ou perte du plaisir
+              à faire les choses comme avant.
+            </p>
+
+            <p>
+              Beaucoup de personnes ont peur d’abîmer davantage leurs oreilles avec certains sons.
+              Cette peur est compréhensible. Être rassuré, mieux comprendre les phénomènes
+              et apprendre à mettre de la distance avec la gêne fait partie du travail d’accompagnement.
+            </p>
+          </div>
+        </section>
+
+        <!-- BENEFICES -->
+        <section class="mt-8 soft-card rounded-[1.5rem] md:rounded-[2rem] p-5 md:p-8 slide-right">
+          <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+            Ce que la sophrologie peut vous apporter
+          </h2>
+
+          <div class="mt-8 grid md:grid-cols-2 gap-5">
+            <div class="rounded-[1.5rem] bg-white/75 p-6 zoom-in">
+              <p class="text-lg leading-relaxed text-[var(--text)]">
+                Apprendre à percevoir le
+                <strong class="font-semibold text-[var(--brown-deep)]">signal acouphène</strong>
+                différemment.
+              </p>
+            </div>
+
+            <div class="rounded-[1.5rem] bg-white/75 p-6 zoom-in">
+              <p class="text-lg leading-relaxed text-[var(--text)]">
+                Mettre de la distance entre la gêne ressentie et les
+                <strong class="font-semibold text-[var(--brown-deep)]">émotions associées</strong>.
+              </p>
+            </div>
+
+            <div class="rounded-[1.5rem] bg-white/75 p-6 zoom-in">
+              <p class="text-lg leading-relaxed text-[var(--text)]">
+                Apaiser le stress, l’anxiété et les tensions qui peuvent amplifier l’inconfort.
+              </p>
+            </div>
+
+            <div class="rounded-[1.5rem] bg-white/75 p-6 zoom-in">
+              <p class="text-lg leading-relaxed text-[var(--text)]">
+                Développer des techniques simples à réutiliser en autonomie.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- SPECIALISATION + DEROULE -->
+        <section class="mt-8 grid lg:grid-cols-2 gap-6 md:gap-8">
+          <div class="soft-card rounded-[1.5rem] md:rounded-[2rem] p-5 md:p-8 slide-right">
+            <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+              Une spécialisation troubles auditifs
+            </h2>
+
+            <div class="mt-5 space-y-4 leading-relaxed text-[var(--text)]">
+              <p>
+                Je suis spécialisée dans l’accompagnement des
+                <strong class="font-semibold text-[var(--brown-deep)]">troubles auditifs</strong>
+                par la sophrologie :
+                <strong class="font-semibold text-[var(--brown-deep)]">acouphènes</strong>,
+                <strong class="font-semibold text-[var(--brown-deep)]">hyperacousie</strong>,
+                vertiges et maladie de Ménière.
+              </p>
+
+              <p>
+                J’ai été formée par l’école de
+                <strong class="font-semibold text-[var(--brown-deep)]">Patricia Grévin</strong>,
+                au Pôle Sophrologie et Acouphènes, niveaux 1 et 2.
+              </p>
+
+              <p>
+                L’accompagnement s’appuie sur un protocole spécifique, avec des objectifs
+                et des étapes claires, tout en restant adapté à votre situation.
+              </p>
+            </div>
+          </div>
+
+          <div class="soft-card rounded-[1.5rem] md:rounded-[2rem] p-5 md:p-8 slide-left">
+            <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+              Comment se déroule l’accompagnement ?
+            </h2>
+
+            <div class="mt-5 space-y-4 leading-relaxed text-[var(--text)]">
+              <p>
+                Il s’agit d’un
+                <strong class="font-semibold text-[var(--brown-deep)]">accompagnement spécifique acouphènes</strong>,
+                progressif et personnalisé.
+              </p>
+
+              <p>
+                En général, un suivi de
+                <strong class="font-semibold text-[var(--brown-deep)]">6 à 8 séances</strong>
+                sur une période de 2 à 4 mois permet d’installer les techniques
+                et de favoriser leur utilisation en autonomie.
+              </p>
+
+              <p>
+                Les séances peuvent intégrer respiration, détente corporelle,
+                visualisation, écoute des ressentis et mise à distance de la gêne.
+              </p>
+
+              <p class="font-medium text-[var(--brown-deep)]">
+                Vous êtes acteur de votre mieux-être : il ne s’agit pas de magie,
+                mais d’un chemin progressif, guidé et soutenant.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- POUR QUI -->
+        <section class="mt-8 soft-card rounded-[1.5rem] md:rounded-[2rem] p-5 md:p-8 fade-in">
+          <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+            Cet accompagnement peut vous aider si…
+          </h2>
+
+          <ul class="mt-6 space-y-4 text-[var(--text)] leading-relaxed">
+            <li class="rounded-[1.25rem] bg-white/75 px-5 py-4 zoom-in">
+              Vous vivez avec des
+              <strong class="font-semibold text-[var(--brown-deep)]">acouphènes chroniques</strong>
+              qui prennent trop de place.
+            </li>
+
+            <li class="rounded-[1.25rem] bg-white/75 px-5 py-4 zoom-in">
+              Vous souffrez d’
+              <strong class="font-semibold text-[var(--brown-deep)]">hyperacousie</strong>
+              ou d’une sensibilité importante aux sons.
+            </li>
+
+            <li class="rounded-[1.25rem] bg-white/75 px-5 py-4 zoom-in">
+              Vous ressentez de l’anxiété, de la fatigue ou une perte d’élan
+              liée aux troubles auditifs.
+            </li>
+
+            <li class="rounded-[1.25rem] bg-white/75 px-5 py-4 zoom-in">
+              Vous souhaitez retrouver plus de calme, de confiance et d’autonomie
+              dans votre quotidien.
+            </li>
+          </ul>
+        </section>
+
+        <!-- IMAGE UNIQUE D'AMBIANCE -->
+        <section class="mt-8 grid lg:grid-cols-[0.85fr_1.15fr] gap-6 md:gap-8 items-stretch">
+          <VerticalImageCard
+            src="/images/sophro/eaux-rochers-apaisants.webp"
+            alt="Apaiser la charge émotionnelle liée aux acouphènes"
+            ratio="4 / 5"
+            objectPosition="center"
+            animation="slide-right"
+            className="h-full"
+            mobileStart="0%"
+            mobileMiddle="50%"
+            mobileEnd="100%"
+          />
+
+          <div class="soft-card rounded-[1.5rem] md:rounded-[2rem] p-5 md:p-8 slide-left flex flex-col justify-center">
+            <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+              Important
+            </h2>
+
+            <div class="mt-5 space-y-4 leading-relaxed text-[var(--text)]">
+              <p>
+                La sophrologie ne remplace pas un avis médical. En cas d’acouphènes,
+                d’hyperacousie, de vertiges ou de symptômes auditifs, il est important
+                d’avoir un suivi adapté auprès d’un médecin ORL ou d’un professionnel de santé.
+              </p>
+
+              <p>
+                La sophrologie vient en complément pour vous aider à mieux vivre avec les symptômes,
+                apaiser la charge émotionnelle et retrouver des ressources dans votre quotidien.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- FINAL SANS IMAGE -->
+        <section class="mt-8 soft-card rounded-[1.5rem] md:rounded-[2rem] p-5 md:p-8 text-center zoom-in">
+          <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+            Vous souhaitez en parler ?
+          </h2>
+
+          <p class="mt-5 mx-auto max-w-3xl text-[var(--text)] leading-relaxed">
+            Un premier échange permet de faire le point sur votre situation,
+            vos besoins et de voir si cet
+            <strong class="font-semibold text-[var(--brown-deep)]">accompagnement acouphènes et hyperacousie</strong>
+            peut vous convenir.
+          </p>
+
+          <div class="mt-8 flex flex-wrap justify-center gap-4">
+            <CalendlyButton
+              label="Prendre rendez-vous"
+              className="px-6 py-3"
+              url="https://calendly.com/alexandracoirier-sophrologue/?hide_gdpr_banner=1&primary_color=9a6750&text_color=5e4a42&background_color=f8f2ef"
+            />
+
+            <a
+              href="/contact"
+              class="soft-btn border border-[var(--brown-soft)]/20 bg-white/70 px-7 py-3.5 text-[var(--brown-deep)] hover:bg-white"
+            >
+              Me contacter
+            </a>
+          </div>
+        </section>
+      </section>
+    </section>
+  </main>
+
+  <Footer />
+  <ScrollReveal />
+</BaseLayout>
