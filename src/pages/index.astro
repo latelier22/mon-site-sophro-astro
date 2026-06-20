@@ -3,13 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import ScrollReveal from "../components/ScrollReveal.astro";
-import SophroCarousel from "../components/SophroCarousel.astro";
-import SophroMozaicFlip from "../components/SophroMozaicFlip.astro";
-import ScrollBlurImage from "../components/ScrollBlurImage.astro";
-import ImageBlock from "../components/ImageBlock.astro";
 import CalendlyButton from "../components/CalendlyButton.astro";
-
-import PortraitCard from "../components/PortraitCard.astro";
 import VerticalImageCard from "../components/VerticalImageCard.astro";
 import SquareFadeLogo from "../components/SquareFadeLogo.astro";
 ---
@@ -22,9 +16,7 @@ import SquareFadeLogo from "../components/SquareFadeLogo.astro";
 
   <main>
     <section class="mx-auto max-w-7xl px-4 sm:px-6 py-16">
-      <section
-        class=" relative overflow-hidden min-h-[40vh] flex items-center"
-      >
+      <section class="relative overflow-hidden min-h-[40vh] flex items-center">
         <div
           class="absolute left-10 top-24 h-40 w-40 rounded-full bg-[var(--rose-powder)]/40 blur-3xl float-slow"
         >
@@ -40,15 +32,14 @@ import SquareFadeLogo from "../components/SquareFadeLogo.astro";
               <div
                 class="inline-flex items-center gap-2 rounded-full bg-white/60 px-4 py-2 text-sm text-[var(--brown-soft)] soft-card"
               >
-                <span class="h-2.5 w-2.5 rounded-full bg-[var(--brown-soft)]"
-                ></span>
+                <span class="h-2.5 w-2.5 rounded-full bg-[var(--brown-soft)]"></span>
                 Se faire accompagner par une sophrologue certifiée
               </div>
 
               <h1
                 class="mt-6 text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight text-[var(--brown-deep)]"
               >
-                APAISER enfin l’anxiété
+                Apaiser enfin l’anxiété
               </h1>
 
               <p
@@ -61,8 +52,12 @@ import SquareFadeLogo from "../components/SquareFadeLogo.astro";
               <p
                 class="mt-6 max-w-xl text-lg leading-relaxed text-[var(--text)]"
               >
-                Spécialisée en stress, anxiété et émotions — à Loudéac, en
-                Centre-Bretagne.
+                <strong class="font-semibold text-[var(--brown-deep)]">Sophrologue à Loudéac</strong>,
+                spécialisée en
+                <strong class="font-semibold text-[var(--brown-deep)]">stress</strong>,
+                <strong class="font-semibold text-[var(--brown-deep)]">anxiété</strong>
+                et <strong class="font-semibold text-[var(--brown-deep)]">émotions</strong>
+                — en Centre-Bretagne.
               </p>
 
               <div class="mt-8 flex flex-wrap gap-4">
@@ -88,40 +83,24 @@ import SquareFadeLogo from "../components/SquareFadeLogo.astro";
               </div>
             </div>
 
-            <!-- <PortraitCard
-              src="/images/sophro/moi-respi-filtre.webp"
-              alt="Ambiance douce et apaisante de sophrologie"
-              ratio="4 / 5"
-              objectPosition="center 35%"
-              animation="slide-left"
-            /> -->
             <SquareFadeLogo
-    src="/images/sophro-hero.webp"
-    logo="/images/sophro-hero.webp"
-    alt=""
-    duration="8s"
-  />
+              src="/images/sophro-hero.webp"
+              logo="/images/sophro-hero.webp"
+              alt=""
+              duration="8s"
+            />
           </div>
-
         </div>
 
         <div class="hero-waves"></div>
       </section>
     </section>
 
-    <!-- <section class="mx-auto max-w-7xl px-4 sm:px-6 py-16">
-      <section
-        class="section-bg-new relative overflow-hidden min-h-[40vh] flex items-center"
-      >
-        <SophroMozaicFlip />
-      </section>
-    </section> -->
-
     <section class="mx-auto max-w-7xl px-0 sm:px-6 py-6 md:py-14">
       <div class="grid lg:grid-cols-[0.85fr_1.15fr] gap-8 items-stretch">
         <VerticalImageCard
           src="/images/sophro/moi-respi-filtre.webp"
-          alt=""
+          alt="Respiration et apaisement du stress avec la sophrologie"
           ratio="4 / 5"
           objectPosition="center 40%"
           animation="slide-right"
@@ -129,7 +108,7 @@ import SquareFadeLogo from "../components/SquareFadeLogo.astro";
         />
 
         <div
-          class="soft-card rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-10slide-left flex flex-col justify-center"
+          class="soft-card rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-10 slide-left flex flex-col justify-center"
         >
           <h2
             class="text-3xl md:text-4xl font-semibold text-[var(--brown-deep)]"
@@ -139,9 +118,10 @@ import SquareFadeLogo from "../components/SquareFadeLogo.astro";
           </h2>
 
           <p class="mt-6 text-lg leading-relaxed text-[var(--text)]">
-            Tu te dis parfois que tu es « née anxieuse », comme si c’était une
-            fatalité. Toujours en train d’anticiper, de ressasser, d’imaginer le
-            pire même quand tout va bien… et ça t’épuise.
+            Tu te dis parfois que tu es
+            <strong class="font-semibold text-[var(--brown-deep)]">« née anxieuse »</strong>,
+            comme si c’était une fatalité. Toujours en train d’anticiper, de ressasser,
+            d’imaginer le pire même quand tout va bien… et ça t’épuise.
           </p>
 
           <details class="mt-6 rounded-[1.5rem] bg-white/70 p-5">
@@ -154,16 +134,20 @@ import SquareFadeLogo from "../components/SquareFadeLogo.astro";
             <div class="mt-4 space-y-4 leading-relaxed text-[var(--text)]">
               <p>
                 Tu ressens ce mal-être diffus, cette perte de sens : « Je ne me
-                reconnais plus. » « Je n’ai plus envie de rien. » Tes émotions
-                débordent : hypersensibilité, culpabilité, peur de l’échec,
-                charge mentale constante.
+                reconnais plus. » « Je n’ai plus envie de rien. » Tes
+                <strong class="font-semibold text-[var(--brown-deep)]">émotions débordent</strong> :
+                hypersensibilité, culpabilité, peur de l’échec,
+                <strong class="font-semibold text-[var(--brown-deep)]">charge mentale</strong>
+                constante.
               </p>
 
               <p>
                 Dans tes relations, tu te sens parfois en décalage, comme une
                 éponge émotionnelle face aux autres. Et ton corps, lui aussi,
-                crie « stop » : fatigue, tensions, douleurs, troubles du
-                sommeil…
+                crie « stop » :
+                <strong class="font-semibold text-[var(--brown-deep)]">fatigue</strong>,
+                tensions, douleurs,
+                <strong class="font-semibold text-[var(--brown-deep)]">troubles du sommeil</strong>…
               </p>
 
               <p class="font-medium text-[var(--brown-deep)]">
@@ -175,8 +159,10 @@ import SquareFadeLogo from "../components/SquareFadeLogo.astro";
 
               <p>
                 La bonne nouvelle, c’est que rien n’est figé. Tu peux apprendre
-                à comprendre ce qui se passe en toi, à apaiser ce tumulte
-                intérieur et à réinstaller un équilibre durable.
+                à comprendre ce qui se passe en toi, à
+                <strong class="font-semibold text-[var(--brown-deep)]">apaiser ce tumulte intérieur</strong>
+                et à réinstaller un
+                <strong class="font-semibold text-[var(--brown-deep)]">équilibre durable</strong>.
               </p>
             </div>
           </details>
@@ -199,118 +185,123 @@ import SquareFadeLogo from "../components/SquareFadeLogo.astro";
       </div>
     </section>
 
-  <section class="mx-auto max-w-7xl px-0 sm:px-6 py-6 md:py-14">
-  <section class=" rounded-none sm:rounded-[2.5rem] p-4 sm:p-6 md:p-10">
-    <div class="space-y-8">
-      <!-- BLOC 1 : texte à gauche / image à droite -->
-      <div class="grid lg:grid-cols-[1.15fr_0.85fr] gap-8 items-stretch">
-        <div class="soft-card rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-10slide-right flex flex-col justify-center">
-          <h2
-            class="text-3xl md:text-4xl font-semibold text-[var(--brown-deep)]"
-          >
-            Et si tu décidais de reprendre les rênes ?
-          </h2>
+    <section class="mx-auto max-w-7xl px-0 sm:px-6 py-6 md:py-14">
+      <section class="rounded-none sm:rounded-[2.5rem] p-4 sm:p-6 md:p-10">
+        <div class="space-y-8">
+          <div class="grid lg:grid-cols-[1.15fr_0.85fr] gap-8 items-stretch">
+            <div class="soft-card rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-10 slide-right flex flex-col justify-center">
+              <h2
+                class="text-3xl md:text-4xl font-semibold text-[var(--brown-deep)]"
+              >
+                Et si tu décidais de reprendre les rênes ?
+              </h2>
 
-          <ul class="mt-8 space-y-4 text-[var(--text)] leading-relaxed">
-            <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
-              Tu sens bien que vivre ainsi t’épuise et t’empêche d’être à
-              l’aise dans tes relations, au travail ou dans ta vie
-              personnelle.
-            </li>
-            <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
-              L’anxiété ronge peu à peu la confiance et l’estime de soi.
-            </li>
-            <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
-              La sophrologie donne des outils concrets et simples pour
-              apaiser tes émotions et retrouver une clarté intérieure.
-            </li>
-            <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
-              Tu peux reprendre confiance, avancer pas à pas et retrouver la
-              simplicité d’être bien avec toi-même.
-            </li>
-          </ul>
+              <ul class="mt-8 space-y-4 text-[var(--text)] leading-relaxed">
+                <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
+                  Tu sens bien que vivre ainsi t’épuise et t’empêche d’être à
+                  l’aise dans tes relations, au travail ou dans ta vie
+                  personnelle.
+                </li>
+                <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
+                  L’<strong class="font-semibold text-[var(--brown-deep)]">anxiété</strong>
+                  ronge peu à peu la
+                  <strong class="font-semibold text-[var(--brown-deep)]">confiance en soi</strong>
+                  et l’<strong class="font-semibold text-[var(--brown-deep)]">estime de soi</strong>.
+                </li>
+                <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
+                  La <strong class="font-semibold text-[var(--brown-deep)]">sophrologie</strong>
+                  donne des
+                  <strong class="font-semibold text-[var(--brown-deep)]">outils concrets</strong>
+                  et simples pour apaiser tes émotions et retrouver une clarté intérieure.
+                </li>
+                <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
+                  Tu peux reprendre confiance, avancer pas à pas et retrouver la
+                  simplicité d’être bien avec toi-même.
+                </li>
+              </ul>
 
-          <div class="mt-8">
-            <a
-              href="/anxiete-stress-emotions"
-              class="soft-btn border border-[var(--brown-soft)]/20 bg-white/70 px-7 py-3.5 text-[var(--brown-deep)] hover:bg-white"
-            >
-              En savoir plus sur l’anxiété
-            </a>
+              <div class="mt-8">
+                <a
+                  href="/anxiete-stress-emotions"
+                  class="soft-btn border border-[var(--brown-soft)]/20 bg-white/70 px-7 py-3.5 text-[var(--brown-deep)] hover:bg-white"
+                >
+                  En savoir plus sur l’anxiété
+                </a>
+              </div>
+            </div>
+
+            <VerticalImageCard
+              src="/images/sophro/moi-marchant-sous-les-cerisiers.webp"
+              alt="Retrouver confiance et apaiser l’anxiété avec la sophrologie"
+              ratio="4 / 5"
+              objectPosition="center"
+              animation="slide-left"
+              className="h-full"
+              mobileStart="0%"
+              mobileMiddle="50%"
+              mobileEnd="100%"
+            />
+          </div>
+
+          <div class="grid lg:grid-cols-[0.85fr_1.15fr] gap-8 items-stretch">
+            <VerticalImageCard
+              src="/images/sophro/moi-et-elle.jpg"
+              alt="Séance de sophrologie pour retrouver une vie plus sereine"
+              ratio="4 / 5"
+              objectPosition="center 45%"
+              animation="slide-right"
+              className="h-full"
+              mobileStart="50%"
+              mobileMiddle="75%"
+              mobileEnd="100%"
+            />
+
+            <div class="soft-card rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-10 slide-left flex flex-col justify-center">
+              <h2
+                class="text-3xl md:text-4xl font-semibold text-[var(--brown-deep)]"
+              >
+                Vers une vie plus légère et sereine
+              </h2>
+
+              <ul class="mt-8 space-y-4 text-[var(--text)]">
+                <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
+                  Te réveiller sans boule au ventre et sans
+                  <strong class="font-semibold text-[var(--brown-deep)]">angoisse</strong>
+                  qui t’épuise avant même que la journée ne commence.
+                </li>
+                <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
+                  Retrouver la
+                  <strong class="font-semibold text-[var(--brown-deep)]">joie de vivre</strong>,
+                  l’élan et l’envie de faire des projets.
+                </li>
+                <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
+                  Vivre des
+                  <strong class="font-semibold text-[var(--brown-deep)]">relations plus apaisées</strong>
+                  et te sentir plus libre d’être toi-même.
+                </li>
+                <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
+                  Sentir les
+                  <strong class="font-semibold text-[var(--brown-deep)]">crises d’angoisse</strong>
+                  perdre peu à peu en intensité jusqu’à ne plus dicter tes choix.
+                </li>
+              </ul>
+
+              <div class="mt-8">
+                <a
+                  href="/sophrologie-pour-qui"
+                  class="soft-btn border border-[var(--brown-soft)]/20 bg-white/70 px-7 py-3.5 text-[var(--brown-deep)] hover:bg-white"
+                >
+                  Voir si la sophrologie est faite pour moi
+                </a>
+              </div>
+            </div>
           </div>
         </div>
-
-        <VerticalImageCard
-  src="/images/sophro/moi-marchant-sous-les-cerisiers.webp"
-  alt=""
-  ratio="4 / 5"
-  objectPosition="center"
-  animation="slide-left"
-  className="h-full"
-  mobileStart="0%"
-  mobileMiddle="50%"
-  mobileEnd="100%"
-/>
-      </div>
-
-
-
-      <!-- BLOC 2 : image à gauche / texte à droite -->
-      <div class="grid lg:grid-cols-[0.85fr_1.15fr] gap-8 items-stretch">
-       <VerticalImageCard
-  src="/images/sophro/moi-et-elle.jpg"
-  alt=""
-  ratio="4 / 5"
-  objectPosition="center 45%"
-  animation="slide-right"
-  className="h-full"
-  mobileStart="50%"
-  mobileMiddle="75%"
-  mobileEnd="100%"
-/>
-
-        <div class="soft-card rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-10slide-left flex flex-col justify-center">
-          <h2
-            class="text-3xl md:text-4xl font-semibold text-[var(--brown-deep)]"
-          >
-            Vers une vie plus légère et sereine
-          </h2>
-
-          <ul class="mt-8 space-y-4 text-[var(--text)]">
-            <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
-              Te réveiller sans boule au ventre et sans angoisse qui
-              t’épuise avant même que la journée ne commence.
-            </li>
-            <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
-              Retrouver la joie de vivre, l’élan et l’envie de faire des
-              projets.
-            </li>
-            <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
-              Vivre des relations plus apaisées et te sentir plus libre
-              d’être toi-même.
-            </li>
-            <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
-              Sentir les crises d’angoisse perdre peu à peu en intensité
-              jusqu’à ne plus dicter tes choix.
-            </li>
-          </ul>
-
-          <div class="mt-8">
-            <a
-              href="/sophrologie-pour-qui"
-              class="soft-btn border border-[var(--brown-soft)]/20 bg-white/70 px-7 py-3.5 text-[var(--brown-deep)] hover:bg-white"
-            >
-              Voir si la sophrologie est faite pour moi
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</section>
+      </section>
+    </section>
 
     <section class="mx-auto max-w-7xl px-0 sm:px-6 py-6 md:py-14">
-      <div class="soft-card rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-10zoom-in">
+      <div class="soft-card rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-10 zoom-in">
         <p class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]">
           Mon approche
         </p>
@@ -337,8 +328,10 @@ import SquareFadeLogo from "../components/SquareFadeLogo.astro";
               Apaiser
             </h3>
             <p class="mt-3 text-[var(--text)]">
-              Respiration, mouvements, visualisations et outils simples pour
-              relâcher les tensions et retrouver du calme.
+              <strong class="font-semibold text-[var(--brown-deep)]">Respiration</strong>,
+              mouvements, visualisations et outils simples pour
+              <strong class="font-semibold text-[var(--brown-deep)]">relâcher les tensions</strong>
+              et retrouver du calme.
             </p>
           </div>
 
@@ -362,20 +355,24 @@ import SquareFadeLogo from "../components/SquareFadeLogo.astro";
 
           <div class="mt-4 space-y-4 text-[var(--text)] leading-relaxed">
             <p>
-              Mon approche est globale : corps, esprit et émotions. Je t’aide à
-              apaiser les tensions, clarifier les situations bloquées et
-              renforcer les ressources déjà présentes en toi.
+              Mon approche est globale :
+              <strong class="font-semibold text-[var(--brown-deep)]">corps, esprit et émotions</strong>.
+              Je t’aide à apaiser les tensions, clarifier les situations bloquées
+              et renforcer les ressources déjà présentes en toi.
             </p>
 
             <p>
-              Nous travaillons ensemble sur des techniques simples que tu peux
-              reproduire au quotidien. Parfois c’est la pratique, parfois c’est
-              l’échange qui prime.
+              Nous travaillons ensemble sur des
+              <strong class="font-semibold text-[var(--brown-deep)]">techniques simples</strong>
+              que tu peux reproduire au quotidien. Parfois c’est la pratique,
+              parfois c’est l’échange qui prime.
             </p>
 
             <p>
-              Mon but est que tu retrouves calme, sécurité intérieure, clarté et
-              énergie, tout en restant actrice de ton parcours.
+              Mon but est que tu retrouves
+              <strong class="font-semibold text-[var(--brown-deep)]">calme</strong>,
+              <strong class="font-semibold text-[var(--brown-deep)]">sécurité intérieure</strong>,
+              clarté et énergie, tout en restant actrice de ton parcours.
             </p>
           </div>
         </details>
@@ -407,7 +404,7 @@ import SquareFadeLogo from "../components/SquareFadeLogo.astro";
         <div class="grid lg:grid-cols-2 items-stretch">
           <VerticalImageCard
             src="/images/parent-enfant.webp"
-            alt=""
+            alt="Séance parent enfant en sophrologie pour apaiser les émotions"
             ratio="4 / 5"
             objectPosition="center 40%"
             animation="slide-right"
@@ -429,14 +426,15 @@ import SquareFadeLogo from "../components/SquareFadeLogo.astro";
 
             <p class="mt-5 leading-relaxed text-[var(--text)]">
               Certaines périodes peuvent être sensibles pour un enfant comme
-              pour un parent : émotions fortes, fatigue, stress, besoin de
-              retrouver un lien plus apaisé.
+              pour un parent :
+              <strong class="font-semibold text-[var(--brown-deep)]">émotions fortes</strong>,
+              fatigue, stress, besoin de retrouver un lien plus apaisé.
             </p>
 
             <p class="mt-4 leading-relaxed text-[var(--text)]">
-              Les séances parent-enfant offrent un espace sécurisant pour se
-              déposer, mieux se comprendre et retrouver ensemble plus de calme
-              et de confiance.
+              Les <strong class="font-semibold text-[var(--brown-deep)]">séances parent-enfant</strong>
+              offrent un espace sécurisant pour se déposer, mieux se comprendre
+              et retrouver ensemble plus de calme et de confiance.
             </p>
 
             <div class="mt-8 flex flex-wrap gap-4">
@@ -460,7 +458,7 @@ import SquareFadeLogo from "../components/SquareFadeLogo.astro";
     </section>
 
     <section class="mx-auto max-w-7xl px-0 sm:px-6 py-6 md:py-14">
-      <div class="soft-card rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-10fade-in">
+      <div class="soft-card rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-10 fade-in">
         <h2 class="text-3xl md:text-4xl font-semibold text-[var(--brown-deep)]">
           Ce qu’ils en ont pensé
         </h2>
@@ -469,16 +467,18 @@ import SquareFadeLogo from "../components/SquareFadeLogo.astro";
           <blockquote class="rounded-[1.5rem] bg-white/70 p-6 zoom-in">
             <p class="leading-relaxed">
               « Je suis très heureuse d’avoir fait la rencontre d’Alexandra et
-              je la recommande vivement. Mon stress s’en est allé au fil des
-              séances. »
+              je la recommande vivement. Mon
+              <strong class="font-semibold text-[var(--brown-deep)]">stress</strong>
+              s’en est allé au fil des séances. »
             </p>
             <footer class="mt-4 text-sm text-[var(--brown-soft)]">M-A</footer>
           </blockquote>
 
           <blockquote class="rounded-[1.5rem] bg-white/70 p-6 zoom-in">
             <p class="leading-relaxed">
-              « J’ai retrouvé un vrai apaisement intérieur et des outils
-              concrets pour mieux vivre mes émotions au quotidien. »
+              « J’ai retrouvé un vrai
+              <strong class="font-semibold text-[var(--brown-deep)]">apaisement intérieur</strong>
+              et des outils concrets pour mieux vivre mes émotions au quotidien. »
             </p>
             <footer class="mt-4 text-sm text-[var(--brown-soft)]">
               Témoignage
@@ -487,8 +487,9 @@ import SquareFadeLogo from "../components/SquareFadeLogo.astro";
 
           <blockquote class="rounded-[1.5rem] bg-white/70 p-6 zoom-in">
             <p class="leading-relaxed">
-              « Les séances m’ont permis de reprendre confiance et de me
-              reconnecter à mes besoins avec plus de douceur. »
+              « Les séances m’ont permis de
+              <strong class="font-semibold text-[var(--brown-deep)]">reprendre confiance</strong>
+              et de me reconnecter à mes besoins avec plus de douceur. »
             </p>
             <footer class="mt-4 text-sm text-[var(--brown-soft)]">
               Témoignage
@@ -515,7 +516,7 @@ import SquareFadeLogo from "../components/SquareFadeLogo.astro";
 
     <section class="mx-auto max-w-7xl px-0 sm:px-6 py-6 md:py-14">
       <div class="grid lg:grid-cols-2 gap-8 items-start">
-        <div class="soft-card rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-10slide-right">
+        <div class="soft-card rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-10 slide-right">
           <h2
             class="text-3xl md:text-4xl font-semibold text-[var(--brown-deep)]"
           >
@@ -529,11 +530,14 @@ import SquareFadeLogo from "../components/SquareFadeLogo.astro";
             </li>
             <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
               Tu cherches à comprendre ce qui se passe en toi plutôt que de
-              subir tes émotions, tes peurs ou tes crises.
+              subir tes
+              <strong class="font-semibold text-[var(--brown-deep)]">émotions</strong>,
+              tes peurs ou tes crises.
             </li>
             <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
-              Tu recherches une pratique incarnée avec des outils concrets pour
-              te recentrer et t’ancrer dans le présent.
+              Tu recherches une pratique incarnée avec des
+              <strong class="font-semibold text-[var(--brown-deep)]">outils concrets</strong>
+              pour te recentrer et t’ancrer dans le présent.
             </li>
             <li class="rounded-[1.25rem] bg-white/70 px-5 py-4">
               Tu souhaites compléter un suivi psychologique ou t’offrir une
@@ -562,7 +566,7 @@ import SquareFadeLogo from "../components/SquareFadeLogo.astro";
           </div>
         </div>
 
-        <div class="soft-card rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-10slide-left">
+        <div class="soft-card rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-10 slide-left">
           <h2
             class="text-3xl md:text-4xl font-semibold text-[var(--brown-deep)]"
           >
@@ -616,10 +620,6 @@ import SquareFadeLogo from "../components/SquareFadeLogo.astro";
         </div>
       </div>
     </section>
-
-    <!-- <section class="mx-auto max-w-7xl px-0 sm:px-6 py-6 md:py-14">
-      <SophroCarousel autoplayMs={3800} />
-    </section> -->
   </main>
 
   <Footer />
