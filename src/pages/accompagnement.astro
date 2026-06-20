@@ -17,12 +17,18 @@ import SquareFadeLogo from "../components/SquareFadeLogo.astro";
     <section class="mx-auto max-w-7xl px-4 sm:px-6 py-10 md:py-16">
       <!-- INTRO -->
       <section class="grid lg:grid-cols-[0.75fr_1.25fr] gap-8 items-stretch">
-        <SquareFadeLogo
-          src="/images/sophro/pont-seul-plage.webp"
-          logo="/images/sophro-hero.webp"
-          alt=""
-          duration="8s"
-        />
+        <VerticalImageCard
+  src="/images/sophro/respiration-et-centration.webp"
+  alt=""
+  ratio="10 / 15"
+  objectPosition="center 35%"
+  animation="slide-right"
+  className="h-full"
+  mobileStart="0%"
+  mobileMiddle="30%"
+  mobileEnd="65%"
+  mobileDuration="16s"
+/>
 
         <div class="soft-card rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-10 slide-left flex flex-col justify-center">
           <p class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]">
