@@ -5,6 +5,7 @@ import Footer from "../components/Footer.astro";
 import ScrollReveal from "../components/ScrollReveal.astro";
 import ScrollBlurImage from "../components/ScrollBlurImage.astro";
 import WideImageBanner from "../components/WideImageBanner.astro";
+import VerticalImageCard from "../components/VerticalImageCard.astro";
 ---
 
 <BaseLayout
@@ -14,36 +15,40 @@ import WideImageBanner from "../components/WideImageBanner.astro";
   <Header />
 
   <main>
-    <section class="mx-auto max-w-7xl px-4 sm:px-6 py-10 md:py-16">
-      <div class="soft-card rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-10 slide-right">
-        <p class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]">
-          Tarifs et fonctionnement
-        </p>
+   <section class="mx-auto max-w-7xl px-4 sm:px-6 py-10 md:py-16">
+  <section class="grid lg:grid-cols-[1.15fr_0.85fr] gap-8 items-stretch">
+    <div class="soft-card rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-10 slide-right flex flex-col justify-center">
+      <p class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]">
+        Tarifs et fonctionnement
+      </p>
 
-        <h1
-          class="mt-4 text-4xl md:text-5xl font-semibold text-[var(--brown-deep)]"
-        >
-          Tarifs et modalités
-        </h1>
+      <h1
+        class="mt-4 text-4xl md:text-5xl font-semibold text-[var(--brown-deep)]"
+      >
+        Tarifs et modalités
+      </h1>
 
-        <p class="mt-5 text-lg leading-relaxed text-[var(--text)]">
-          Je propose des
-          <strong class="font-semibold text-[var(--brown-deep)]">séances de sophrologie à l’unité</strong>
-          pour un besoin ponctuel, ainsi que des
-          <strong class="font-semibold text-[var(--brown-deep)]">parcours d’accompagnement</strong>
-          pour installer des changements plus profonds et durables.
-        </p>
-      </div>
+      <p class="mt-5 text-lg leading-relaxed text-[var(--text)]">
+        Je propose des
+        <strong class="font-semibold text-[var(--brown-deep)]">séances de sophrologie à l’unité</strong>
+        pour un besoin ponctuel, ainsi que des
+        <strong class="font-semibold text-[var(--brown-deep)]">parcours d’accompagnement</strong>
+        pour installer des changements plus profonds et durables.
+      </p>
+    </div>
 
-      <section class="mt-8">
-        <WideImageBanner
-          src="/images/sophro/cabinet-de-sophrologie.jpg"
-          alt="Cabinet de sophrologie à Loudéac"
-          ratio="16 / 7"
-          objectPosition="center"
-          animation="fade-in"
-        />
-      </section>
+    <VerticalImageCard
+      src="/images/sophro/cabinet-de-sophrologie.webp"
+      alt="Cabinet de sophrologie à Loudéac"
+      ratio="4 / 5"
+      objectPosition="center"
+      animation="slide-left"
+      className="h-full"
+      mobileStart="0%"
+      mobileMiddle="50%"
+      mobileEnd="100%"
+    />
+  </section>
 
       <section class="mt-8 section-bg-new rounded-[2.5rem] p-8 md:p-10">
         <section class="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
