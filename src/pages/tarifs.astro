@@ -15,7 +15,7 @@ import WideImageBanner from "../components/WideImageBanner.astro";
 
   <main>
     <section class="mx-auto max-w-7xl px-4 sm:px-6 py-10 md:py-16">
-      <div class="soft-card rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-10slide-right">
+      <div class="soft-card rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-10 slide-right">
         <p class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]">
           Tarifs et fonctionnement
         </p>
@@ -44,7 +44,7 @@ import WideImageBanner from "../components/WideImageBanner.astro";
       </section>
 
       <section class="mt-8 section-bg-new rounded-[2.5rem] p-8 md:p-10">
-        <section class="grid md:grid-cols-3 gap-6">
+        <section class="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
           <div class="soft-card rounded-[2rem] p-8 zoom-in">
             <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
               Première séance
@@ -78,6 +78,24 @@ import WideImageBanner from "../components/WideImageBanner.astro";
 
             <p class="mt-6 text-4xl font-semibold text-[var(--brown-deep)]">
               70 €
+            </p>
+          </div>
+
+          <div class="soft-card rounded-[2rem] p-8 zoom-in">
+            <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+              Séances de groupe
+            </h2>
+
+            <p class="mt-4 text-[var(--text)]">
+              En association avec LALC Plémet
+            </p>
+
+            <p class="mt-6 text-4xl font-semibold text-[var(--brown-deep)]">
+              90–95 €
+            </p>
+
+            <p class="mt-2 text-[var(--text)]">
+              / trimestre
             </p>
           </div>
         </section>
@@ -122,6 +140,22 @@ import WideImageBanner from "../components/WideImageBanner.astro";
               Un acompte de 30 € est demandé pour toute réservation de séance de
               suivi. Il soutient la préparation de votre accompagnement et
               confirme votre engagement.
+            </p>
+          </div>
+        </section>
+
+        <section class="mt-8 soft-card rounded-[2rem] p-8 fade-in">
+          <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
+            Séances de groupe
+          </h2>
+
+          <div class="mt-5 space-y-4 leading-relaxed text-[var(--text)]">
+            <p>
+              Des séances de groupe sont proposées en association avec LALC Plémet.
+            </p>
+
+            <p class="text-2xl font-semibold text-[var(--brown-deep)]">
+              90–95 € / trimestre
             </p>
           </div>
         </section>
@@ -262,6 +296,7 @@ import WideImageBanner from "../components/WideImageBanner.astro";
           </div>
         </section>
       </section>
+
       <ScrollBlurImage
         src="/images/sophro/plante-detail-du-cabinet.webp"
         alt=""
