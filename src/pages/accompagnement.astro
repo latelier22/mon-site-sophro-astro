@@ -4,12 +4,11 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import ScrollReveal from "../components/ScrollReveal.astro";
 import VerticalImageCard from "../components/VerticalImageCard.astro";
-import SquareFadeLogo from "../components/SquareFadeLogo.astro";
 ---
 
 <BaseLayout
-  title="Accompagnements – Alexandra Coirier"
-  description="Séances à l’unité, parcours Envol et Harmonie : les différentes façons d’être accompagné en sophrologie à Loudéac."
+  title="Accompagnements en sophrologie à Loudéac – Alexandra Coirier"
+  description="Séances à l’unité, Parcours Envol et Parcours Harmonie : accompagnement en sophrologie pour apaiser l’anxiété, le stress, la surcharge mentale et retrouver son équilibre à Loudéac."
 >
   <Header />
 
@@ -18,17 +17,17 @@ import SquareFadeLogo from "../components/SquareFadeLogo.astro";
       <!-- INTRO -->
       <section class="grid lg:grid-cols-[0.75fr_1.25fr] gap-8 items-stretch">
         <VerticalImageCard
-  src="/images/sophro/respiration-et-centration.webp"
-  alt=""
-  ratio="10 / 15"
-  objectPosition="center 35%"
-  animation="slide-right"
-  className="h-full"
-  mobileStart="0%"
-  mobileMiddle="30%"
-  mobileEnd="65%"
-  mobileDuration="16s"
-/>
+          src="/images/sophro/respiration-et-centration.webp"
+          alt="Respiration et centration pendant un accompagnement en sophrologie"
+          ratio="10 / 15"
+          objectPosition="center 35%"
+          animation="slide-right"
+          className="h-full"
+          mobileStart="0%"
+          mobileMiddle="30%"
+          mobileEnd="65%"
+          mobileDuration="16s"
+        />
 
         <div class="soft-card rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-10 slide-left flex flex-col justify-center">
           <p class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]">
@@ -40,14 +39,16 @@ import SquareFadeLogo from "../components/SquareFadeLogo.astro";
           </h1>
 
           <p class="mt-5 text-lg leading-relaxed text-[var(--text)]">
-            Je propose deux formes d’accompagnement en sophrologie : des séances à l’unité,
-            pour un besoin ponctuel ou un premier contact, et des parcours d’accompagnement,
+            Je propose deux formes d’<strong class="font-semibold text-[var(--brown-deep)]">accompagnement en sophrologie</strong> :
+            des <strong class="font-semibold text-[var(--brown-deep)]">séances à l’unité</strong>,
+            pour un besoin ponctuel ou un premier contact, et des
+            <strong class="font-semibold text-[var(--brown-deep)]">parcours d’accompagnement</strong>,
             pour installer des changements plus profonds et durables.
           </p>
 
           <p class="mt-4 text-lg leading-relaxed text-[var(--text)]">
-            Chaque accompagnement est personnalisé et s’adapte à votre rythme, à votre situation
-            et à vos besoins.
+            Chaque accompagnement est personnalisé et s’adapte à votre rythme,
+            à votre situation et à vos besoins.
           </p>
         </div>
       </section>
@@ -60,8 +61,10 @@ import SquareFadeLogo from "../components/SquareFadeLogo.astro";
           </h2>
 
           <p class="mt-5 leading-relaxed text-[var(--text)]">
-            Les séances à l’unité conviennent si vous souhaitez un soutien ponctuel,
-            découvrir la sophrologie ou avancer à votre rythme sans engagement sur un parcours.
+            Les <strong class="font-semibold text-[var(--brown-deep)]">séances à l’unité</strong>
+            conviennent si vous souhaitez un soutien ponctuel,
+            <strong class="font-semibold text-[var(--brown-deep)]">découvrir la sophrologie</strong>
+            ou avancer à votre rythme sans engagement sur un parcours.
           </p>
 
           <div class="mt-8 grid md:grid-cols-2 gap-6">
@@ -102,20 +105,28 @@ import SquareFadeLogo from "../components/SquareFadeLogo.astro";
           <div class="mt-5 space-y-4 leading-relaxed text-[var(--text)]">
             <p>
               Certaines situations demandent plus qu’une séance ponctuelle.
-              Lorsqu’on traverse une période de fatigue, d’anxiété ou de transition,
-              le corps et l’esprit ont souvent besoin de temps pour retrouver leur équilibre.
+              Lorsqu’on traverse une période de
+              <strong class="font-semibold text-[var(--brown-deep)]">fatigue</strong>,
+              d’<strong class="font-semibold text-[var(--brown-deep)]">anxiété</strong>
+              ou de transition, le corps et l’esprit ont souvent besoin de temps
+              pour <strong class="font-semibold text-[var(--brown-deep)]">retrouver leur équilibre</strong>.
             </p>
 
             <p>
-              Les parcours offrent un cadre progressif et sécurisant pour accompagner ce processus.
+              Les <strong class="font-semibold text-[var(--brown-deep)]">parcours d’accompagnement</strong>
+              offrent un cadre progressif et sécurisant.
               D’une séance à l’autre, vous apprenez à mieux comprendre votre fonctionnement,
-              à relâcher les tensions et à renforcer vos ressources intérieures.
+              à <strong class="font-semibold text-[var(--brown-deep)]">relâcher les tensions</strong>
+              et à renforcer vos
+              <strong class="font-semibold text-[var(--brown-deep)]">ressources intérieures</strong>.
             </p>
 
             <p>
               Les pratiques proposées entre les séances permettent d’ancrer ces changements
-              dans votre quotidien. Le parcours devient alors un véritable chemin d’évolution,
-              qui soutient votre autonomie et votre capacité à retrouver un équilibre durable.
+              dans votre quotidien. Le parcours devient alors un véritable
+              <strong class="font-semibold text-[var(--brown-deep)]">chemin d’évolution</strong>,
+              qui soutient votre autonomie et votre capacité à retrouver un
+              <strong class="font-semibold text-[var(--brown-deep)]">équilibre durable</strong>.
             </p>
           </div>
         </section>
@@ -133,8 +144,11 @@ import SquareFadeLogo from "../components/SquareFadeLogo.astro";
 
             <p class="mt-5 leading-relaxed text-[var(--text)]">
               Ce parcours est souvent le point de départ de l’accompagnement.
-              Il aide à apaiser l’anxiété, se libérer de ce qui pèse,
-              se reconnecter à soi et amorcer un changement durable.
+              Il aide à <strong class="font-semibold text-[var(--brown-deep)]">apaiser l’anxiété</strong>,
+              se libérer de ce qui pèse,
+              <strong class="font-semibold text-[var(--brown-deep)]">se reconnecter à soi</strong>
+              et amorcer un
+              <strong class="font-semibold text-[var(--brown-deep)]">changement durable</strong>.
             </p>
 
             <ul class="mt-5 space-y-3 leading-relaxed text-[var(--text)]">
@@ -155,8 +169,10 @@ import SquareFadeLogo from "../components/SquareFadeLogo.astro";
             </h2>
 
             <p class="mt-5 leading-relaxed text-[var(--text)]">
-              Ce parcours s’adresse aux personnes ayant déjà réalisé le parcours Envol
-              et souhaitant consolider les changements amorcés, stabiliser leur équilibre
+              Ce parcours s’adresse aux personnes ayant déjà réalisé le
+              <strong class="font-semibold text-[var(--brown-deep)]">Parcours Envol</strong>
+              et souhaitant consolider les changements amorcés,
+              <strong class="font-semibold text-[var(--brown-deep)]">stabiliser leur équilibre</strong>
               ou approfondir leur cheminement.
             </p>
 
@@ -182,33 +198,45 @@ import SquareFadeLogo from "../components/SquareFadeLogo.astro";
 
             <div class="mt-5 space-y-4 leading-relaxed text-[var(--text)]">
               <p>
-                Le Parcours Envol est un accompagnement en sophrologie conçu pour les personnes
-                qui traversent une période de fatigue, d’anxiété, de surcharge mentale ou de transition
-                dans leur vie.
+                Le <strong class="font-semibold text-[var(--brown-deep)]">Parcours Envol</strong>
+                est un <strong class="font-semibold text-[var(--brown-deep)]">accompagnement en sophrologie</strong>
+                conçu pour les personnes qui traversent une période de
+                <strong class="font-semibold text-[var(--brown-deep)]">fatigue</strong>,
+                d’<strong class="font-semibold text-[var(--brown-deep)]">anxiété</strong>,
+                de <strong class="font-semibold text-[var(--brown-deep)]">surcharge mentale</strong>
+                ou de transition dans leur vie.
               </p>
 
               <p>
                 Lorsque tout devient trop lourd ou confus, il peut être difficile de savoir
-                par où commencer. Ce parcours offre un espace pour ralentir, déposer ce qui pèse
-                et retrouver progressivement plus de clarté et de stabilité intérieure.
+                par où commencer. Ce parcours offre un espace pour ralentir,
+                <strong class="font-semibold text-[var(--brown-deep)]"> déposer ce qui pèse</strong>
+                et retrouver progressivement plus de
+                <strong class="font-semibold text-[var(--brown-deep)]"> clarté</strong>
+                et de <strong class="font-semibold text-[var(--brown-deep)]">stabilité intérieure</strong>.
               </p>
 
               <p>
-                Au fil des séances, vous apprenez à relâcher les tensions, à mieux comprendre
-                vos émotions et à vous reconnecter à vos ressources. Pas à pas, votre corps
-                et votre esprit retrouvent un rythme plus apaisé et un nouvel élan peut émerger.
+                Au fil des séances, vous apprenez à
+                <strong class="font-semibold text-[var(--brown-deep)]">relâcher les tensions</strong>,
+                à mieux comprendre vos
+                <strong class="font-semibold text-[var(--brown-deep)]"> émotions</strong>
+                et à vous
+                <strong class="font-semibold text-[var(--brown-deep)]"> reconnecter à vos ressources</strong>.
+                Pas à pas, votre corps et votre esprit retrouvent un rythme plus apaisé
+                et un nouvel élan peut émerger.
               </p>
 
               <p>
-                Le Parcours Envol est une invitation à prendre soin de vous, à votre rythme,
-                dans un cadre soutenant et bienveillant.
+                Le Parcours Envol est une invitation à prendre soin de vous,
+                à votre rythme, dans un cadre soutenant et bienveillant.
               </p>
             </div>
           </div>
 
           <VerticalImageCard
             src="/images/sophro/moi-au-milieu-des-cerisiers.webp"
-            alt=""
+            alt="Se reconnecter à soi et retrouver son équilibre avec la sophrologie"
             ratio="4 / 5"
             objectPosition="center 35%"
             animation="slide-left"
@@ -228,7 +256,8 @@ import SquareFadeLogo from "../components/SquareFadeLogo.astro";
 
             <p class="mt-5 leading-relaxed text-[var(--text)]">
               Au-delà des séances, le parcours propose un cadre soutenant
-              qui favorise l’intégration et l’autonomie.
+              qui favorise <strong class="font-semibold text-[var(--brown-deep)]">l’intégration</strong>
+              et <strong class="font-semibold text-[var(--brown-deep)]">l’autonomie</strong>.
             </p>
           </div>
 
@@ -250,7 +279,8 @@ import SquareFadeLogo from "../components/SquareFadeLogo.astro";
                 Audios personnalisés
               </h3>
               <p class="mt-3 leading-relaxed text-[var(--text)]">
-                Vous recevez des pratiques audio pour favoriser l’apaisement,
+                Vous recevez des pratiques audio pour favoriser
+                <strong class="font-semibold text-[var(--brown-deep)]"> l’apaisement</strong>,
                 relâcher les tensions et soutenir votre progression.
               </p>
             </div>
@@ -262,7 +292,8 @@ import SquareFadeLogo from "../components/SquareFadeLogo.astro";
               </h3>
               <p class="mt-3 leading-relaxed text-[var(--text)]">
                 Des pratiques simples entre les séances :
-                respiration, pauses conscientes, rituels d’ancrage.
+                <strong class="font-semibold text-[var(--brown-deep)]"> respiration</strong>,
+                pauses conscientes, rituels d’ancrage.
               </p>
             </div>
 
@@ -292,399 +323,404 @@ import SquareFadeLogo from "../components/SquareFadeLogo.astro";
         </section>
 
         <!-- FINAL -->
-      <section class="mt-8 parcours-check-section">
-  <div class="parcours-check-card">
-    <div class="mx-auto max-w-4xl">
-      <h2 class="parcours-check-title">
-        Ce parcours est fait pour vous si...
-      </h2>
-
-      <ul class="parcours-check-list">
-        <li class="parcours-check-item">
-          <span class="parcours-check-box">✓</span>
-          <span class="parcours-check-text">
-            Vous traversez une période de fatigue, de surcharge mentale ou d’anxiété.
-          </span>
-        </li>
-
-        <li class="parcours-check-item">
-          <span class="parcours-check-box">✓</span>
-          <span class="parcours-check-text">
-            Vous ressentez le besoin de ralentir et de prendre soin de vous.
-          </span>
-        </li>
-
-        <li class="parcours-check-item">
-          <span class="parcours-check-box">✓</span>
-          <span class="parcours-check-text">
-            Vous souhaitez retrouver plus de clarté, de stabilité et d’élan dans votre vie.
-          </span>
-        </li>
-
-        <li class="parcours-check-item">
-          <span class="parcours-check-box">✓</span>
-          <span class="parcours-check-text">
-            Vous avez envie d’apprendre des outils concrets pour gérer vos émotions et relâcher les tensions.
-          </span>
-        </li>
-
-        <li class="parcours-check-item">
-          <span class="parcours-check-box">✓</span>
-          <span class="parcours-check-text">
-            Vous souhaitez un accompagnement structuré, progressif et bienveillant, qui s’adapte à votre rythme.
-          </span>
-        </li>
-      </ul>
-
-      <div class="parcours-check-buttons">
-        <a
-          href="/contact"
-          class="parcours-check-btn parcours-check-btn-primary"
-        >
-          Prendre rendez-vous
-        </a>
-
-        <a
-          href="/tarifs"
-          class="parcours-check-btn parcours-check-btn-secondary"
-        >
-          Voir les tarifs
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<style>
-  .parcours-check-section {
-    opacity: 0;
-    transform: translateY(34px);
-    transition:
-      opacity 1.1s cubic-bezier(0.22, 1, 0.36, 1),
-      transform 1.1s cubic-bezier(0.22, 1, 0.36, 1);
-  }
-
-  .parcours-check-section.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  .parcours-check-card {
-    border-radius: 2.5rem;
-    background:
-      radial-gradient(circle at top left, rgba(170, 183, 161, 0.16), transparent 34%),
-      radial-gradient(circle at bottom right, rgba(111, 136, 146, 0.10), transparent 38%),
-      linear-gradient(135deg, #f8f3ec, #fffaf4);
-    padding: 2.2rem;
-    box-shadow: 0 18px 46px rgba(79, 64, 58, 0.08);
-  }
-
-  .parcours-check-title {
-    font-size: clamp(1.7rem, 3vw, 2.35rem);
-    font-weight: 600;
-    color: var(--brown-deep);
-  }
-
-  .parcours-check-list {
-    margin-top: 2.5rem;
-    display: grid;
-    gap: 1.55rem;
-    color: var(--text);
-  }
-
-  .parcours-check-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 1.1rem;
-    opacity: 0;
-    transform: translateY(24px);
-  }
-
-  .parcours-check-box {
-    margin-top: 0.15rem;
-    width: 2rem;
-    height: 2rem;
-    flex: 0 0 2rem;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 0.75rem;
-    background: white;
-    color: transparent;
-    border: 1px solid rgba(111, 136, 146, 0.25);
-    box-shadow: 0 8px 20px rgba(79, 64, 58, 0.06);
-    transform: scale(0.92);
-  }
-
-  .parcours-check-text {
-    font-size: clamp(1.08rem, 1.6vw, 1.28rem);
-    line-height: 1.7;
-    transform-origin: left center;
-  }
-
-  .parcours-check-section.is-visible .parcours-check-item {
-    animation: checkItemAppear 1.05s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-  }
-
-  .parcours-check-section.is-visible .parcours-check-item:nth-child(1) {
-    animation-delay: 0.35s;
-  }
-
-  .parcours-check-section.is-visible .parcours-check-item:nth-child(2) {
-    animation-delay: 1.35s;
-  }
-
-  .parcours-check-section.is-visible .parcours-check-item:nth-child(3) {
-    animation-delay: 2.35s;
-  }
-
-  .parcours-check-section.is-visible .parcours-check-item:nth-child(4) {
-    animation-delay: 3.35s;
-  }
-
-  .parcours-check-section.is-visible .parcours-check-item:nth-child(5) {
-    animation-delay: 4.35s;
-  }
-
-  .parcours-check-section.is-visible .parcours-check-box {
-    animation: checkBoxValidate 0.95s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-  }
-
-  .parcours-check-section.is-visible .parcours-check-item:nth-child(1) .parcours-check-box {
-    animation-delay: 0.75s;
-  }
-
-  .parcours-check-section.is-visible .parcours-check-item:nth-child(2) .parcours-check-box {
-    animation-delay: 1.75s;
-  }
-
-  .parcours-check-section.is-visible .parcours-check-item:nth-child(3) .parcours-check-box {
-    animation-delay: 2.75s;
-  }
-
-  .parcours-check-section.is-visible .parcours-check-item:nth-child(4) .parcours-check-box {
-    animation-delay: 3.75s;
-  }
-
-  .parcours-check-section.is-visible .parcours-check-item:nth-child(5) .parcours-check-box {
-    animation-delay: 4.75s;
-  }
-
-  .parcours-check-section.is-visible .parcours-check-text {
-    animation: textGrow 0.95s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-  }
-
-  .parcours-check-section.is-visible .parcours-check-item:nth-child(1) .parcours-check-text {
-    animation-delay: 0.85s;
-  }
-
-  .parcours-check-section.is-visible .parcours-check-item:nth-child(2) .parcours-check-text {
-    animation-delay: 1.85s;
-  }
-
-  .parcours-check-section.is-visible .parcours-check-item:nth-child(3) .parcours-check-text {
-    animation-delay: 2.85s;
-  }
-
-  .parcours-check-section.is-visible .parcours-check-item:nth-child(4) .parcours-check-text {
-    animation-delay: 3.85s;
-  }
-
-  .parcours-check-section.is-visible .parcours-check-item:nth-child(5) .parcours-check-text {
-    animation-delay: 4.85s;
-  }
-
-  .parcours-check-buttons {
-    margin-top: 3rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-
-  .parcours-check-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 9999px;
-    padding: 0.95rem 1.8rem;
-    font-weight: 600;
-    opacity: 0;
-    transform: scale(0.92);
-    transition:
-      background 0.35s ease,
-      transform 0.35s ease,
-      box-shadow 0.35s ease;
-  }
-
-  .parcours-check-btn:hover {
-    transform: translateY(-2px) scale(1.03);
-    box-shadow: 0 12px 26px rgba(79, 64, 58, 0.12);
-  }
-
-  .parcours-check-btn-primary {
-    background: var(--brown-soft);
-    color: white;
-  }
-
-  .parcours-check-btn-primary:hover {
-    background: var(--brown-deep);
-  }
-
-  .parcours-check-btn-secondary {
-    background: rgba(255, 255, 255, 0.82);
-    color: var(--brown-deep);
-    border: 1px solid rgba(111, 136, 146, 0.18);
-  }
-
-  .parcours-check-btn-secondary:hover {
-    background: white;
-  }
-
-  .parcours-check-section.is-visible .parcours-check-btn:nth-child(1) {
-    animation: buttonPop 1.15s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-    animation-delay: 5.9s;
-  }
-
-  .parcours-check-section.is-visible .parcours-check-btn:nth-child(2) {
-    animation: buttonPop 1.15s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-    animation-delay: 6.7s;
-  }
-
-  @keyframes checkItemAppear {
-    from {
-      opacity: 0;
-      transform: translateY(24px);
-    }
-
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes checkBoxValidate {
-    0% {
-      color: transparent;
-      background: white;
-      transform: scale(0.92);
-    }
-
-    45% {
-      color: white;
-      background: var(--brown-soft);
-      transform: scale(1.08);
-    }
-
-    100% {
-      color: white;
-      background: var(--brown-soft);
-      transform: scale(1);
-    }
-  }
-
-  @keyframes textGrow {
-    0% {
-      transform: scale(1);
-    }
-
-    45% {
-      transform: scale(1.018);
-      color: var(--brown-deep);
-    }
-
-    100% {
-      transform: scale(1);
-    }
-  }
-
-  @keyframes buttonPop {
-    0% {
-      opacity: 0;
-      transform: scale(0.92);
-    }
-
-    55% {
-      opacity: 1;
-      transform: scale(1.045);
-    }
-
-    100% {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-
-  @media (max-width: 640px) {
-    .parcours-check-card {
-      border-radius: 1.5rem;
-      padding: 1.35rem;
-    }
-
-    .parcours-check-list {
-      gap: 1.25rem;
-    }
-
-    .parcours-check-item {
-      gap: 0.85rem;
-    }
-
-    .parcours-check-box {
-      width: 1.75rem;
-      height: 1.75rem;
-      flex-basis: 1.75rem;
-      border-radius: 0.65rem;
-    }
-
-    .parcours-check-buttons {
-      display: grid;
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .parcours-check-section,
-    .parcours-check-item,
-    .parcours-check-box,
-    .parcours-check-text,
-    .parcours-check-btn {
-      animation: none !important;
-      opacity: 1 !important;
-      transform: none !important;
-    }
-
-    .parcours-check-box {
-      color: white;
-      background: var(--brown-soft);
-    }
-  }
-</style>
-
-<script is:inline>
-  const setupParcoursCheckAnimation = () => {
-    const section = document.querySelector(".parcours-check-section");
-
-    if (!section) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          section.classList.add("is-visible");
-          observer.disconnect();
-        }
-      },
-      {
-        threshold: 0.3,
-      }
-    );
-
-    observer.observe(section);
-  };
-
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", setupParcoursCheckAnimation);
-  } else {
-    setupParcoursCheckAnimation();
-  }
-</script>
+        <section class="mt-8 parcours-check-section">
+          <div class="parcours-check-card">
+            <div class="mx-auto max-w-4xl">
+              <h2 class="parcours-check-title">
+                Ce parcours est fait pour vous si...
+              </h2>
+
+              <ul class="parcours-check-list">
+                <li class="parcours-check-item">
+                  <span class="parcours-check-box">✓</span>
+                  <span class="parcours-check-text">
+                    Vous traversez une période de <strong>fatigue</strong>, de <strong>surcharge mentale</strong> ou d’<strong>anxiété</strong>.
+                  </span>
+                </li>
+
+                <li class="parcours-check-item">
+                  <span class="parcours-check-box">✓</span>
+                  <span class="parcours-check-text">
+                    Vous ressentez le besoin de ralentir et de prendre soin de vous.
+                  </span>
+                </li>
+
+                <li class="parcours-check-item">
+                  <span class="parcours-check-box">✓</span>
+                  <span class="parcours-check-text">
+                    Vous souhaitez retrouver plus de <strong>clarté</strong>, de <strong>stabilité</strong> et d’élan dans votre vie.
+                  </span>
+                </li>
+
+                <li class="parcours-check-item">
+                  <span class="parcours-check-box">✓</span>
+                  <span class="parcours-check-text">
+                    Vous avez envie d’apprendre des <strong>outils concrets</strong> pour gérer vos émotions et relâcher les tensions.
+                  </span>
+                </li>
+
+                <li class="parcours-check-item">
+                  <span class="parcours-check-box">✓</span>
+                  <span class="parcours-check-text">
+                    Vous souhaitez un accompagnement structuré, progressif et bienveillant, qui s’adapte à votre rythme.
+                  </span>
+                </li>
+              </ul>
+
+              <div class="parcours-check-buttons">
+                <a
+                  href="/contact"
+                  class="parcours-check-btn parcours-check-btn-primary"
+                >
+                  Prendre rendez-vous
+                </a>
+
+                <a
+                  href="/tarifs"
+                  class="parcours-check-btn parcours-check-btn-secondary"
+                >
+                  Voir les tarifs
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <style>
+          .parcours-check-section {
+            opacity: 0;
+            transform: translateY(34px);
+            transition:
+              opacity 1.1s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 1.1s cubic-bezier(0.22, 1, 0.36, 1);
+          }
+
+          .parcours-check-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+          }
+
+          .parcours-check-card {
+            border-radius: 2.5rem;
+            background:
+              radial-gradient(circle at top left, rgba(170, 183, 161, 0.16), transparent 34%),
+              radial-gradient(circle at bottom right, rgba(111, 136, 146, 0.10), transparent 38%),
+              linear-gradient(135deg, #f8f3ec, #fffaf4);
+            padding: 2.2rem;
+            box-shadow: 0 18px 46px rgba(79, 64, 58, 0.08);
+          }
+
+          .parcours-check-title {
+            font-size: clamp(1.7rem, 3vw, 2.35rem);
+            font-weight: 600;
+            color: var(--brown-deep);
+          }
+
+          .parcours-check-list {
+            margin-top: 2.5rem;
+            display: grid;
+            gap: 1.55rem;
+            color: var(--text);
+          }
+
+          .parcours-check-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.1rem;
+            opacity: 0;
+            transform: translateY(24px);
+          }
+
+          .parcours-check-box {
+            margin-top: 0.15rem;
+            width: 2rem;
+            height: 2rem;
+            flex: 0 0 2rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0.75rem;
+            background: white;
+            color: transparent;
+            border: 1px solid rgba(111, 136, 146, 0.25);
+            box-shadow: 0 8px 20px rgba(79, 64, 58, 0.06);
+            transform: scale(0.92);
+          }
+
+          .parcours-check-text {
+            font-size: clamp(1.08rem, 1.6vw, 1.28rem);
+            line-height: 1.7;
+            transform-origin: left center;
+          }
+
+          .parcours-check-text strong {
+            font-weight: 700;
+            color: var(--brown-deep);
+          }
+
+          .parcours-check-section.is-visible .parcours-check-item {
+            animation: checkItemAppear 1.05s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+          }
+
+          .parcours-check-section.is-visible .parcours-check-item:nth-child(1) {
+            animation-delay: 0.35s;
+          }
+
+          .parcours-check-section.is-visible .parcours-check-item:nth-child(2) {
+            animation-delay: 1.35s;
+          }
+
+          .parcours-check-section.is-visible .parcours-check-item:nth-child(3) {
+            animation-delay: 2.35s;
+          }
+
+          .parcours-check-section.is-visible .parcours-check-item:nth-child(4) {
+            animation-delay: 3.35s;
+          }
+
+          .parcours-check-section.is-visible .parcours-check-item:nth-child(5) {
+            animation-delay: 4.35s;
+          }
+
+          .parcours-check-section.is-visible .parcours-check-box {
+            animation: checkBoxValidate 0.95s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+          }
+
+          .parcours-check-section.is-visible .parcours-check-item:nth-child(1) .parcours-check-box {
+            animation-delay: 0.75s;
+          }
+
+          .parcours-check-section.is-visible .parcours-check-item:nth-child(2) .parcours-check-box {
+            animation-delay: 1.75s;
+          }
+
+          .parcours-check-section.is-visible .parcours-check-item:nth-child(3) .parcours-check-box {
+            animation-delay: 2.75s;
+          }
+
+          .parcours-check-section.is-visible .parcours-check-item:nth-child(4) .parcours-check-box {
+            animation-delay: 3.75s;
+          }
+
+          .parcours-check-section.is-visible .parcours-check-item:nth-child(5) .parcours-check-box {
+            animation-delay: 4.75s;
+          }
+
+          .parcours-check-section.is-visible .parcours-check-text {
+            animation: textGrow 0.95s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+          }
+
+          .parcours-check-section.is-visible .parcours-check-item:nth-child(1) .parcours-check-text {
+            animation-delay: 0.85s;
+          }
+
+          .parcours-check-section.is-visible .parcours-check-item:nth-child(2) .parcours-check-text {
+            animation-delay: 1.85s;
+          }
+
+          .parcours-check-section.is-visible .parcours-check-item:nth-child(3) .parcours-check-text {
+            animation-delay: 2.85s;
+          }
+
+          .parcours-check-section.is-visible .parcours-check-item:nth-child(4) .parcours-check-text {
+            animation-delay: 3.85s;
+          }
+
+          .parcours-check-section.is-visible .parcours-check-item:nth-child(5) .parcours-check-text {
+            animation-delay: 4.85s;
+          }
+
+          .parcours-check-buttons {
+            margin-top: 3rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+          }
+
+          .parcours-check-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 9999px;
+            padding: 0.95rem 1.8rem;
+            font-weight: 600;
+            opacity: 0;
+            transform: scale(0.92);
+            transition:
+              background 0.35s ease,
+              transform 0.35s ease,
+              box-shadow 0.35s ease;
+          }
+
+          .parcours-check-btn:hover {
+            transform: translateY(-2px) scale(1.03);
+            box-shadow: 0 12px 26px rgba(79, 64, 58, 0.12);
+          }
+
+          .parcours-check-btn-primary {
+            background: var(--brown-soft);
+            color: white;
+          }
+
+          .parcours-check-btn-primary:hover {
+            background: var(--brown-deep);
+          }
+
+          .parcours-check-btn-secondary {
+            background: rgba(255, 255, 255, 0.82);
+            color: var(--brown-deep);
+            border: 1px solid rgba(111, 136, 146, 0.18);
+          }
+
+          .parcours-check-btn-secondary:hover {
+            background: white;
+          }
+
+          .parcours-check-section.is-visible .parcours-check-btn:nth-child(1) {
+            animation: buttonPop 1.15s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+            animation-delay: 5.9s;
+          }
+
+          .parcours-check-section.is-visible .parcours-check-btn:nth-child(2) {
+            animation: buttonPop 1.15s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+            animation-delay: 6.7s;
+          }
+
+          @keyframes checkItemAppear {
+            from {
+              opacity: 0;
+              transform: translateY(24px);
+            }
+
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+
+          @keyframes checkBoxValidate {
+            0% {
+              color: transparent;
+              background: white;
+              transform: scale(0.92);
+            }
+
+            45% {
+              color: white;
+              background: var(--brown-soft);
+              transform: scale(1.08);
+            }
+
+            100% {
+              color: white;
+              background: var(--brown-soft);
+              transform: scale(1);
+            }
+          }
+
+          @keyframes textGrow {
+            0% {
+              transform: scale(1);
+            }
+
+            45% {
+              transform: scale(1.018);
+              color: var(--brown-deep);
+            }
+
+            100% {
+              transform: scale(1);
+            }
+          }
+
+          @keyframes buttonPop {
+            0% {
+              opacity: 0;
+              transform: scale(0.92);
+            }
+
+            55% {
+              opacity: 1;
+              transform: scale(1.045);
+            }
+
+            100% {
+              opacity: 1;
+              transform: scale(1);
+            }
+          }
+
+          @media (max-width: 640px) {
+            .parcours-check-card {
+              border-radius: 1.5rem;
+              padding: 1.35rem;
+            }
+
+            .parcours-check-list {
+              gap: 1.25rem;
+            }
+
+            .parcours-check-item {
+              gap: 0.85rem;
+            }
+
+            .parcours-check-box {
+              width: 1.75rem;
+              height: 1.75rem;
+              flex-basis: 1.75rem;
+              border-radius: 0.65rem;
+            }
+
+            .parcours-check-buttons {
+              display: grid;
+            }
+          }
+
+          @media (prefers-reduced-motion: reduce) {
+            .parcours-check-section,
+            .parcours-check-item,
+            .parcours-check-box,
+            .parcours-check-text,
+            .parcours-check-btn {
+              animation: none !important;
+              opacity: 1 !important;
+              transform: none !important;
+            }
+
+            .parcours-check-box {
+              color: white;
+              background: var(--brown-soft);
+            }
+          }
+        </style>
+
+        <script is:inline>
+          const setupParcoursCheckAnimation = () => {
+            const section = document.querySelector(".parcours-check-section");
+
+            if (!section) return;
+
+            const observer = new IntersectionObserver(
+              ([entry]) => {
+                if (entry.isIntersecting) {
+                  section.classList.add("is-visible");
+                  observer.disconnect();
+                }
+              },
+              {
+                threshold: 0.3,
+              }
+            );
+
+            observer.observe(section);
+          };
+
+          if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", setupParcoursCheckAnimation);
+          } else {
+            setupParcoursCheckAnimation();
+          }
+        </script>
       </section>
     </section>
   </main>
