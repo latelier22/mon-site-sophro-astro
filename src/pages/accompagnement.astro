@@ -286,71 +286,61 @@ import SquareFadeLogo from "../components/SquareFadeLogo.astro";
         </section>
 
         <!-- FINAL -->
-      <section class="mt-8 slide-left">
-  <div class="rounded-[2rem] md:rounded-[2.5rem] bg-[#F8F3EC] p-8 md:p-12">
+      <section class="mt-8 parcours-check-section">
+  <div class="parcours-check-card">
     <div class="mx-auto max-w-4xl">
-      <h2 class="text-2xl md:text-3xl font-semibold text-[var(--brown-deep)]">
+      <h2 class="parcours-check-title">
         Ce parcours est fait pour vous si...
       </h2>
 
-      <ul class="mt-8 space-y-6 text-lg md:text-[1.22rem] leading-relaxed text-[var(--text)]">
-        <li class="flex items-start gap-4">
-          <span class="mt-1 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-white text-[var(--brown-soft)] shadow-sm">
-            ✓
-          </span>
-          <span>
+      <ul class="parcours-check-list">
+        <li class="parcours-check-item">
+          <span class="parcours-check-box">✓</span>
+          <span class="parcours-check-text">
             Vous traversez une période de fatigue, de surcharge mentale ou d’anxiété.
           </span>
         </li>
 
-        <li class="flex items-start gap-4">
-          <span class="mt-1 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-white text-[var(--brown-soft)] shadow-sm">
-            ✓
-          </span>
-          <span>
+        <li class="parcours-check-item">
+          <span class="parcours-check-box">✓</span>
+          <span class="parcours-check-text">
             Vous ressentez le besoin de ralentir et de prendre soin de vous.
           </span>
         </li>
 
-        <li class="flex items-start gap-4">
-          <span class="mt-1 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-white text-[var(--brown-soft)] shadow-sm">
-            ✓
-          </span>
-          <span>
+        <li class="parcours-check-item">
+          <span class="parcours-check-box">✓</span>
+          <span class="parcours-check-text">
             Vous souhaitez retrouver plus de clarté, de stabilité et d’élan dans votre vie.
           </span>
         </li>
 
-        <li class="flex items-start gap-4">
-          <span class="mt-1 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-white text-[var(--brown-soft)] shadow-sm">
-            ✓
-          </span>
-          <span>
+        <li class="parcours-check-item">
+          <span class="parcours-check-box">✓</span>
+          <span class="parcours-check-text">
             Vous avez envie d’apprendre des outils concrets pour gérer vos émotions et relâcher les tensions.
           </span>
         </li>
 
-        <li class="flex items-start gap-4">
-          <span class="mt-1 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-white text-[var(--brown-soft)] shadow-sm">
-            ✓
-          </span>
-          <span>
+        <li class="parcours-check-item">
+          <span class="parcours-check-box">✓</span>
+          <span class="parcours-check-text">
             Vous souhaitez un accompagnement structuré, progressif et bienveillant, qui s’adapte à votre rythme.
           </span>
         </li>
       </ul>
 
-      <div class="mt-10 flex flex-wrap gap-4">
+      <div class="parcours-check-buttons">
         <a
           href="/contact"
-          class="soft-btn bg-[var(--brown-soft)] text-white px-7 py-3.5 font-medium inline-block hover:bg-[var(--brown-deep)]"
+          class="parcours-check-btn parcours-check-btn-primary"
         >
           Prendre rendez-vous
         </a>
 
         <a
           href="/tarifs"
-          class="soft-btn border border-[var(--brown-soft)]/20 bg-white/80 px-7 py-3.5 text-[var(--brown-deep)] hover:bg-white"
+          class="parcours-check-btn parcours-check-btn-secondary"
         >
           Voir les tarifs
         </a>
@@ -358,6 +348,337 @@ import SquareFadeLogo from "../components/SquareFadeLogo.astro";
     </div>
   </div>
 </section>
+
+<style>
+  .parcours-check-section {
+    opacity: 0;
+    transform: translateY(34px);
+    transition:
+      opacity 1.1s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 1.1s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .parcours-check-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .parcours-check-card {
+    border-radius: 2.5rem;
+    background:
+      radial-gradient(circle at top left, rgba(170, 183, 161, 0.16), transparent 34%),
+      radial-gradient(circle at bottom right, rgba(111, 136, 146, 0.10), transparent 38%),
+      linear-gradient(135deg, #f8f3ec, #fffaf4);
+    padding: 2.2rem;
+    box-shadow: 0 18px 46px rgba(79, 64, 58, 0.08);
+  }
+
+  .parcours-check-title {
+    font-size: clamp(1.7rem, 3vw, 2.35rem);
+    font-weight: 600;
+    color: var(--brown-deep);
+  }
+
+  .parcours-check-list {
+    margin-top: 2.5rem;
+    display: grid;
+    gap: 1.55rem;
+    color: var(--text);
+  }
+
+  .parcours-check-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.1rem;
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  .parcours-check-box {
+    margin-top: 0.15rem;
+    width: 2rem;
+    height: 2rem;
+    flex: 0 0 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.75rem;
+    background: white;
+    color: transparent;
+    border: 1px solid rgba(111, 136, 146, 0.25);
+    box-shadow: 0 8px 20px rgba(79, 64, 58, 0.06);
+    transform: scale(0.92);
+  }
+
+  .parcours-check-text {
+    font-size: clamp(1.08rem, 1.6vw, 1.28rem);
+    line-height: 1.7;
+    transform-origin: left center;
+  }
+
+  .parcours-check-section.is-visible .parcours-check-item {
+    animation: checkItemAppear 1.05s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  .parcours-check-section.is-visible .parcours-check-item:nth-child(1) {
+    animation-delay: 0.35s;
+  }
+
+  .parcours-check-section.is-visible .parcours-check-item:nth-child(2) {
+    animation-delay: 1.35s;
+  }
+
+  .parcours-check-section.is-visible .parcours-check-item:nth-child(3) {
+    animation-delay: 2.35s;
+  }
+
+  .parcours-check-section.is-visible .parcours-check-item:nth-child(4) {
+    animation-delay: 3.35s;
+  }
+
+  .parcours-check-section.is-visible .parcours-check-item:nth-child(5) {
+    animation-delay: 4.35s;
+  }
+
+  .parcours-check-section.is-visible .parcours-check-box {
+    animation: checkBoxValidate 0.95s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  .parcours-check-section.is-visible .parcours-check-item:nth-child(1) .parcours-check-box {
+    animation-delay: 0.75s;
+  }
+
+  .parcours-check-section.is-visible .parcours-check-item:nth-child(2) .parcours-check-box {
+    animation-delay: 1.75s;
+  }
+
+  .parcours-check-section.is-visible .parcours-check-item:nth-child(3) .parcours-check-box {
+    animation-delay: 2.75s;
+  }
+
+  .parcours-check-section.is-visible .parcours-check-item:nth-child(4) .parcours-check-box {
+    animation-delay: 3.75s;
+  }
+
+  .parcours-check-section.is-visible .parcours-check-item:nth-child(5) .parcours-check-box {
+    animation-delay: 4.75s;
+  }
+
+  .parcours-check-section.is-visible .parcours-check-text {
+    animation: textGrow 0.95s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  .parcours-check-section.is-visible .parcours-check-item:nth-child(1) .parcours-check-text {
+    animation-delay: 0.85s;
+  }
+
+  .parcours-check-section.is-visible .parcours-check-item:nth-child(2) .parcours-check-text {
+    animation-delay: 1.85s;
+  }
+
+  .parcours-check-section.is-visible .parcours-check-item:nth-child(3) .parcours-check-text {
+    animation-delay: 2.85s;
+  }
+
+  .parcours-check-section.is-visible .parcours-check-item:nth-child(4) .parcours-check-text {
+    animation-delay: 3.85s;
+  }
+
+  .parcours-check-section.is-visible .parcours-check-item:nth-child(5) .parcours-check-text {
+    animation-delay: 4.85s;
+  }
+
+  .parcours-check-buttons {
+    margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .parcours-check-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    padding: 0.95rem 1.8rem;
+    font-weight: 600;
+    opacity: 0;
+    transform: scale(0.92);
+    transition:
+      background 0.35s ease,
+      transform 0.35s ease,
+      box-shadow 0.35s ease;
+  }
+
+  .parcours-check-btn:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 12px 26px rgba(79, 64, 58, 0.12);
+  }
+
+  .parcours-check-btn-primary {
+    background: var(--brown-soft);
+    color: white;
+  }
+
+  .parcours-check-btn-primary:hover {
+    background: var(--brown-deep);
+  }
+
+  .parcours-check-btn-secondary {
+    background: rgba(255, 255, 255, 0.82);
+    color: var(--brown-deep);
+    border: 1px solid rgba(111, 136, 146, 0.18);
+  }
+
+  .parcours-check-btn-secondary:hover {
+    background: white;
+  }
+
+  .parcours-check-section.is-visible .parcours-check-btn:nth-child(1) {
+    animation: buttonPop 1.15s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: 5.9s;
+  }
+
+  .parcours-check-section.is-visible .parcours-check-btn:nth-child(2) {
+    animation: buttonPop 1.15s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: 6.7s;
+  }
+
+  @keyframes checkItemAppear {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes checkBoxValidate {
+    0% {
+      color: transparent;
+      background: white;
+      transform: scale(0.92);
+    }
+
+    45% {
+      color: white;
+      background: var(--brown-soft);
+      transform: scale(1.08);
+    }
+
+    100% {
+      color: white;
+      background: var(--brown-soft);
+      transform: scale(1);
+    }
+  }
+
+  @keyframes textGrow {
+    0% {
+      transform: scale(1);
+    }
+
+    45% {
+      transform: scale(1.018);
+      color: var(--brown-deep);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes buttonPop {
+    0% {
+      opacity: 0;
+      transform: scale(0.92);
+    }
+
+    55% {
+      opacity: 1;
+      transform: scale(1.045);
+    }
+
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .parcours-check-card {
+      border-radius: 1.5rem;
+      padding: 1.35rem;
+    }
+
+    .parcours-check-list {
+      gap: 1.25rem;
+    }
+
+    .parcours-check-item {
+      gap: 0.85rem;
+    }
+
+    .parcours-check-box {
+      width: 1.75rem;
+      height: 1.75rem;
+      flex-basis: 1.75rem;
+      border-radius: 0.65rem;
+    }
+
+    .parcours-check-buttons {
+      display: grid;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .parcours-check-section,
+    .parcours-check-item,
+    .parcours-check-box,
+    .parcours-check-text,
+    .parcours-check-btn {
+      animation: none !important;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+
+    .parcours-check-box {
+      color: white;
+      background: var(--brown-soft);
+    }
+  }
+</style>
+
+<script is:inline>
+  const setupParcoursCheckAnimation = () => {
+    const section = document.querySelector(".parcours-check-section");
+
+    if (!section) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          section.classList.add("is-visible");
+          observer.disconnect();
+        }
+      },
+      {
+        threshold: 0.3,
+      }
+    );
+
+    observer.observe(section);
+  };
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", setupParcoursCheckAnimation);
+  } else {
+    setupParcoursCheckAnimation();
+  }
+</script>
       </section>
     </section>
   </main>
