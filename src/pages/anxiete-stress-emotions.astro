@@ -27,11 +27,19 @@ import VerticalImageCard from "../components/VerticalImageCard.astro";
           </h1>
 
           <p class="mt-6 text-lg leading-relaxed text-[var(--text)]">
-            Vous ressentez peut-être une
-            <strong class="font-semibold text-[var(--brown-deep)]">tension constante</strong>,
-            un mental qui ne s’arrête jamais, ou des
-            <strong class="font-semibold text-[var(--brown-deep)]">émotions envahissantes</strong>
-            qui prennent trop de place.
+            Vous avez l’impression d’être
+            <strong class="font-semibold text-[var(--brown-deep)]">toujours en alerte</strong>.
+          </p>
+
+          <p class="mt-4 text-lg leading-relaxed text-[var(--text)]">
+            Votre mental ne s’arrête jamais. Vous réfléchissez à tout, vous anticipez,
+            vous gérez… jusqu’à ne plus savoir comment retrouver le calme.
+          </p>
+
+          <p class="mt-4 text-lg leading-relaxed text-[var(--text)]">
+            Peut-être ressentez-vous aussi des
+            <strong class="font-semibold text-[var(--brown-deep)]">émotions qui débordent</strong>,
+            une fatigue profonde ou cette sensation de ne plus être tout à fait vous-même.
           </p>
 
           <p class="mt-4 text-lg leading-relaxed text-[var(--text)]">
@@ -52,66 +60,58 @@ import VerticalImageCard from "../components/VerticalImageCard.astro";
       </section>
 
       <section class="mt-8 section-bg-new rounded-[2.5rem] p-8 md:p-10">
-        <!-- BLOC 1 -->
-        <section class="grid lg:grid-cols-[0.85fr_1.15fr] gap-8 items-stretch">
-          <VerticalImageCard
-            src="/images/sophro/banc-sous-le-cerisier.webp"
-            alt="Pause calme pour retrouver sérénité et apaisement"
-            ratio="4 / 5"
-            objectPosition="center 40%"
-            animation="slide-right"
-            className="h-full"
-          />
-
-          <div class="soft-card rounded-[2rem] p-8 fade-in flex flex-col justify-center">
+        <!-- BLOC 1 SANS PHOTO -->
+        <section class="mt-0">
+          <div class="soft-card rounded-[2rem] p-8 fade-in">
             <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
-              Vous vous reconnaissez peut-être…
+              Vous vous reconnaissez peut-être si…
             </h2>
 
-            <ul class="mt-6 space-y-4 text-[var(--text)]">
+            <ul class="mt-6 grid md:grid-cols-2 gap-4 text-[var(--text)]">
               <li class="bg-white/70 rounded-[1.25rem] p-4 zoom-in">
-                Vous anticipez tout, vous ressassez, vous avez du mal à
-                <strong class="font-semibold text-[var(--brown-deep)]">couper le mental</strong>.
+                Votre mental tourne sans arrêt.
               </li>
 
               <li class="bg-white/70 rounded-[1.25rem] p-4 zoom-in">
-                Vous ressentez une
-                <strong class="font-semibold text-[var(--brown-deep)]">fatigue permanente</strong>,
-                comme si votre cerveau ne s’arrêtait jamais.
+                Vous ressassez les mêmes pensées.
               </li>
 
               <li class="bg-white/70 rounded-[1.25rem] p-4 zoom-in">
-                Vous avez des
-                <strong class="font-semibold text-[var(--brown-deep)]">tensions dans le corps</strong>,
-                des douleurs, un
-                <strong class="font-semibold text-[var(--brown-deep)]">sommeil perturbé</strong>.
+                Vous avez du mal à vous détendre, même lorsque tout est terminé.
               </li>
 
               <li class="bg-white/70 rounded-[1.25rem] p-4 zoom-in">
-                Vous vous sentez submergé(e) par vos
-                <strong class="font-semibold text-[var(--brown-deep)]">émotions</strong>
-                ou en décalage avec les autres.
+                Votre corps reste tendu ou douloureux.
               </li>
 
               <li class="bg-white/70 rounded-[1.25rem] p-4 zoom-in">
-                Vous avez parfois l’impression de ne plus vous reconnaître.
+                Votre sommeil n’est plus vraiment réparateur.
+              </li>
+
+              <li class="bg-white/70 rounded-[1.25rem] p-4 zoom-in">
+                Vous vous sentez plus irritable, plus émotive ou au contraire complètement vidée.
+              </li>
+
+              <li class="bg-white/70 rounded-[1.25rem] p-4 zoom-in md:col-span-2">
+                Vous avez parfois l’impression de ne plus être la personne que vous étiez.
               </li>
             </ul>
           </div>
         </section>
 
-        <!-- BLOC 2 -->
-        <section class="mt-8 grid lg:grid-cols-[1.15fr_0.85fr] gap-8 items-stretch">
-          <div class="soft-card rounded-[2rem] p-8 slide-right flex flex-col justify-center">
+        <!-- BLOC 2 SANS PHOTO -->
+        <section class="mt-8">
+          <div class="soft-card rounded-[2rem] p-8 slide-right">
             <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
               Ce n’est pas “vous le problème”
             </h2>
 
             <div class="mt-5 space-y-4 text-[var(--text)] leading-relaxed">
               <p>
-                Ce que vous vivez n’est pas une faiblesse. C’est souvent le résultat
-                d’un <strong class="font-semibold text-[var(--brown-deep)]">système nerveux en surcharge</strong>,
-                qui est resté trop longtemps en état d’alerte.
+                Ce que vous vivez n’est pas une faiblesse.
+                C’est souvent le signe que votre
+                <strong class="font-semibold text-[var(--brown-deep)]">système nerveux</strong>
+                est resté trop longtemps en état d’alerte.
               </p>
 
               <p>
@@ -120,25 +120,18 @@ import VerticalImageCard from "../components/VerticalImageCard.astro";
               </p>
 
               <p class="font-medium text-[var(--brown-deep)]">
-                La bonne nouvelle, c’est que cela peut évoluer.
+                Avec un accompagnement adapté, il est possible de retrouver progressivement
+                un apaisement durable, de mieux comprendre ce qui se passe en vous
+                et de renouer avec un quotidien plus serein.
               </p>
             </div>
           </div>
-
-          <VerticalImageCard
-            src="/images/sophro/calme-introspection.webp"
-            alt="Calme et introspection pour apaiser le stress"
-            ratio="4 / 5"
-            objectPosition="center"
-            animation="slide-left"
-            className="h-full"
-          />
         </section>
 
         <!-- BLOC 3 -->
         <section class="mt-8 grid lg:grid-cols-[0.85fr_1.15fr] gap-8 items-stretch">
           <VerticalImageCard
-            src="/images/sophro/respiration-et-centration.webp"
+            src="/images/sophro/cerisier3.webp"
             alt="Respiration et centration en sophrologie"
             ratio="4 / 5"
             objectPosition="center 40%"
@@ -206,28 +199,20 @@ import VerticalImageCard from "../components/VerticalImageCard.astro";
           </div>
 
           <VerticalImageCard
-            src="/images/sophro/instant-present-resilience.webp"
+            src="/images/sophro/moi-au-milieu-des-cerisiers-2.webp"
             alt="Retrouver calme, énergie et sérénité"
             ratio="4 / 5"
             objectPosition="center 45%"
             animation="slide-left"
             className="h-full"
-          />
-        </section>
-
-        <!-- FINAL -->
-        <section class="mt-8 grid lg:grid-cols-[0.85fr_1.15fr] gap-8 items-stretch">
-          <VerticalImageCard
-            src="/images/sophro/lac-ouvrir-le-champs-des-possibles.webp"
-            alt="Ouvrir le champ des possibles grâce à la sophrologie"
-            ratio="4 / 5"
-            objectPosition="center 45%"
-            animation="slide-right"
-            className="h-full"
             mobileStart="50%"
             mobileMiddle="75%"
             mobileEnd="100%"
           />
+        </section>
+
+        <!-- FINAL -->
+       <section class="mt-8 section-bg-new rounded-[2.5rem] p-8 md:p-10">
 
           <div class="soft-card rounded-[2rem] p-8 text-center zoom-in flex flex-col justify-center">
             <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
