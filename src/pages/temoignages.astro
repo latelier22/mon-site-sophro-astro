@@ -9,47 +9,103 @@ import VerticalImageCard from "../components/VerticalImageCard.astro";
 
 <BaseLayout
   title="Témoignages – Alexandra Coirier"
-  description="Témoignages de personnes accompagnées par Alexandra Coirier, sophrologue à Loudéac."
+  description="Découvrez les témoignages de personnes accompagnées par Alexandra Coirier, sophrologue à Loudéac, pour l’anxiété, la confiance en soi, le sommeil et l’accompagnement des enfants."
 >
   <Header />
 
-  <main class="mx-auto max-w-7xl px-4 sm:px-6 py-10 md:py-16">
-    <div class="soft-card rounded-[2.5rem] p-8 md:p-10">
+  <main class="mx-auto max-w-7xl px-0 sm:px-6 py-8 md:py-16">
+    <!-- INTRO -->
+    <section class="soft-card rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-10 slide-right">
       <p class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]">
         Témoignages
       </p>
 
       <h1 class="mt-4 text-4xl md:text-5xl font-semibold text-[var(--brown-deep)]">
-        Ce qu’ils en ont pensé
+        Elles ont retrouvé un peu de souffle…
       </h1>
 
-      <p class="mt-5 text-lg leading-relaxed text-[var(--text)]">
-        Quelques retours de personnes accompagnées en sophrologie, autour du stress,
-        de l’anxiété, des émotions et du mieux-être au quotidien.
+      <div class="mt-6 max-w-4xl space-y-2 text-lg md:text-xl leading-relaxed text-[var(--text)]">
+        <p>Chaque accompagnement est unique.</p>
+
+        <p>Mais tous commencent par la même chose :</p>
+
+        <p class="font-medium text-[var(--brown-deep)]">
+          la décision de ne plus rester seule avec ce qui pèse.
+        </p>
+      </div>
+
+      <p class="mt-8 text-lg leading-relaxed text-[var(--text)]">
+        Voici quelques mots de personnes qui m’ont fait confiance.
       </p>
-    </div>
+    </section>
 
-    <section class="mt-8 grid lg:grid-cols-[0.8fr_1.2fr] gap-8 items-stretch">
-      <VerticalImageCard
-        src="/images/sophro/fleurs-doigts-de-sorcieres.webp"
-        alt=""
-        ratio="1 / 1"
-        objectPosition="center"
-        animation="slide-right"
-      />
-
+    <!-- BANDEAU CONSERVÉ -->
+    <section class="mt-8">
       <WideImageBanner
         src="/images/sophro/bois-de-cerisiers.webp"
-        alt=""
-        ratio="16 / 9"
+        alt="Chemin bordé de cerisiers, symbole d’apaisement et de renouveau"
+        ratio="16 / 6"
         objectPosition="center"
-        animation="slide-left"
+        animation="fade-in"
       />
     </section>
 
-    <section class="mt-8 section-bg-new rounded-[2.5rem] p-8 md:p-10">
-      <section class="soft-card rounded-[2rem] p-8">
-        <blockquote class="space-y-4 leading-relaxed text-[var(--text)]">
+    <!-- PHOTO UNIQUE + TEXTE PERSONNEL -->
+    <section class="mt-8 grid lg:grid-cols-[0.8fr_1.2fr] gap-6 md:gap-8 items-stretch">
+      <VerticalImageCard
+        src="/images/sophro/alexandra-assise-carnet.webp"
+        alt="Alexandra Coirier assise avec son carnet"
+        ratio="4 / 5"
+        objectPosition="center"
+        animation="slide-right"
+        className="h-full"
+        mobileStart="0%"
+        mobileMiddle="50%"
+        mobileEnd="100%"
+      />
+
+      <div class="soft-card rounded-[1.5rem] md:rounded-[2rem] p-5 md:p-8 slide-left flex flex-col justify-center">
+        <div class="space-y-5 leading-relaxed text-[var(--text)]">
+          <p>
+            Lorsque je relis les témoignages des personnes que j’ai accompagnées,
+            je ressens toujours beaucoup de gratitude.
+          </p>
+
+          <p>
+            Chaque histoire est différente. Chaque personne avance à son rythme,
+            avec son vécu, ses difficultés et ses ressources.
+          </p>
+
+          <p>
+            Ce qui me touche, c’est de voir qu’au fil des séances,
+            beaucoup retrouvent progressivement plus de calme,
+            de confiance et un nouvel élan.
+          </p>
+
+          <p class="font-medium text-[var(--brown-deep)]">
+            J’espère que leurs mots vous permettront peut-être de vous reconnaître…
+            et de sentir qu’il est possible, vous aussi,
+            d’aller vers un mieux-être.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ENSEMBLE DES TÉMOIGNAGES -->
+    <section class="mt-8 section-bg-new rounded-none sm:rounded-[2.5rem] p-4 sm:p-6 md:p-10">
+      <!-- AVIS PRINCIPAL -->
+      <section class="soft-card rounded-[1.5rem] md:rounded-[2rem] p-6 md:p-10">
+        <div class="flex flex-wrap gap-2">
+          <span class="rounded-full bg-white/75 px-4 py-2 text-sm font-medium text-[var(--brown-deep)]">
+            🌿 Anxiété
+          </span>
+
+          <span class="rounded-full bg-white/75 px-4 py-2 text-sm font-medium text-[var(--brown-deep)]">
+            🌿 Acouphènes
+          </span>
+        </div>
+
+        <blockquote class="mt-7 space-y-5 text-lg leading-relaxed text-[var(--text)]">
           <p>
             « J’avais vraiment besoin de sortir d’un réel mal-être.
             C’était un peu une dernière chance après avoir essayé l’acupuncture
@@ -62,62 +118,237 @@ import VerticalImageCard from "../components/VerticalImageCard.astro";
           </p>
 
           <p>
-            À ce jour, je suis très heureuse d’avoir insisté. J’ai accroché tout
-            de suite et je n’ai jamais manqué les exercices à faire seule.
+            À ce jour, je suis très heureuse d’avoir insisté.
+            J’ai accroché tout de suite et je n’ai jamais manqué les exercices
+            à faire seule.
           </p>
 
           <p>
             Mon stress s’en est allé au fur et à mesure des séances.
-            Je suis très heureuse d’avoir fait la rencontre d’Alexandra et je la recommande vivement.
+            Je suis très heureuse d’avoir fait la rencontre d’Alexandra
+            et je la recommande vivement. »
           </p>
 
-          <p>
-            Je n’ai pas encore terminé les séances mais je suis très optimiste pour la suite. »
-          </p>
+          <footer class="pt-4">
+            <p class="font-semibold text-[var(--brown-deep)]">
+              Marianne, 54 ans
+            </p>
 
-          <footer class="pt-4 text-sm font-semibold text-[var(--brown-soft)]">
-            M-A
+            <p class="mt-1 text-sm text-[var(--brown-soft)]">
+              Anxiété et acouphènes
+            </p>
           </footer>
         </blockquote>
       </section>
 
-      <section class="mt-8 grid md:grid-cols-2 gap-6">
-        <div class="soft-card rounded-[2rem] p-8">
-          <blockquote class="leading-relaxed text-[var(--text)]">
-            <p>
-              « J’ai retrouvé un vrai apaisement intérieur et des outils concrets
-              pour mieux vivre mes émotions au quotidien. »
-            </p>
-            <footer class="mt-5 text-sm font-semibold text-[var(--brown-soft)]">
-              Témoignage
-            </footer>
-          </blockquote>
-        </div>
+      <!-- PETITE INTRO AUX CATÉGORIES -->
+      <section class="mt-8 text-center">
+        <p class="text-lg font-medium text-[var(--brown-deep)]">
+          Des parcours différents, des besoins différents…
+        </p>
 
-        <div class="soft-card rounded-[2rem] p-8">
-          <blockquote class="leading-relaxed text-[var(--text)]">
-            <p>
-              « Les séances m’ont permis de reprendre confiance et de me reconnecter
-              à mes besoins avec plus de douceur. »
-            </p>
-            <footer class="mt-5 text-sm font-semibold text-[var(--brown-soft)]">
-              Témoignage
-            </footer>
-          </blockquote>
+        <div class="mt-5 flex flex-wrap justify-center gap-3">
+          <span class="rounded-full bg-white/70 px-4 py-2 text-sm text-[var(--brown-deep)]">
+            🌿 Gestion de l’anxiété
+          </span>
+
+          <span class="rounded-full bg-white/70 px-4 py-2 text-sm text-[var(--brown-deep)]">
+            🌿 Confiance en soi
+          </span>
+
+          <span class="rounded-full bg-white/70 px-4 py-2 text-sm text-[var(--brown-deep)]">
+            🌿 Sommeil
+          </span>
+
+          <span class="rounded-full bg-white/70 px-4 py-2 text-sm text-[var(--brown-deep)]">
+            🌿 Enfants
+          </span>
         </div>
       </section>
 
-      <section class="mt-8 soft-card rounded-[2rem] p-8">
+      <!-- ADULTES -->
+      <section class="mt-8 grid lg:grid-cols-2 gap-6 md:gap-8">
+        <!-- ALBANE -->
+        <article class="soft-card rounded-[1.5rem] md:rounded-[2rem] p-6 md:p-8 flex flex-col">
+          <p class="text-sm font-medium uppercase tracking-[0.12em] text-[var(--brown-soft)]">
+            Confiance et anxiété
+          </p>
+
+          <blockquote class="mt-5 flex-1 leading-relaxed text-[var(--text)]">
+            <p>
+              « J’ai eu la chance de suivre des séances avec Alexandra,
+              et cela a été une expérience extrêmement bénéfique pour moi.
+              Dès nos premières séances, elle a su créer un espace de confiance
+              et de bienveillance qui m’a permis de me sentir à l’aise et en sécurité.
+              Grâce à ses techniques de sophrologie, j’ai pu mieux gérer mes angoisses,
+              trouver un équilibre intérieur et reprendre progressivement confiance en moi.
+              Sa douceur et son écoute attentive font de chaque séance un moment précieux.
+              Je me sens apaisée, plus sereine, et les effets se ressentent au quotidien.
+              Je suis actuellement en Burn-Out et ses séances ont été un véritable déclic pour moi.
+              Je recommande vivement ses services à toute personne en quête
+              de bien-être et de sérénité. »
+            </p>
+          </blockquote>
+
+          <footer class="mt-6 border-t border-[var(--brown-soft)]/15 pt-5">
+            <p class="font-semibold text-[var(--brown-deep)]">
+              Albane, 35 ans
+            </p>
+          </footer>
+        </article>
+
+        <!-- VALÉRIE -->
+        <article class="soft-card rounded-[1.5rem] md:rounded-[2rem] p-6 md:p-8 flex flex-col">
+          <p class="text-sm font-medium uppercase tracking-[0.12em] text-[var(--brown-soft)]">
+            Stress et perte de repères
+          </p>
+
+          <blockquote class="mt-5 flex-1 leading-relaxed text-[var(--text)]">
+            <p>
+              « Alexandra m’a beaucoup aidé à un moment de ma vie où j’avais
+              tellement de problèmes et de stress que j’avais beaucoup de mal
+              à me détendre et où j’avais de fortes douleurs suite à tout cela.
+            </p>
+
+            <p class="mt-4">
+              Elle m’a fait faire des exercices qui m’ont aidé
+              et que j’ai pu refaire ensuite de mon côté
+              et qui m’aideront certainement à nouveau
+              lorsque j’en ressentirai le besoin. »
+            </p>
+          </blockquote>
+
+          <footer class="mt-6 border-t border-[var(--brown-soft)]/15 pt-5">
+            <p class="font-semibold text-[var(--brown-deep)]">
+              Valérie, 49 ans
+            </p>
+          </footer>
+        </article>
+
+        <!-- CÉCILE -->
+        <article class="soft-card rounded-[1.5rem] md:rounded-[2rem] p-6 md:p-8 flex flex-col">
+          <p class="text-sm font-medium uppercase tracking-[0.12em] text-[var(--brown-soft)]">
+            Hypersensibilité et anxiété
+          </p>
+
+          <blockquote class="mt-5 flex-1 leading-relaxed text-[var(--text)]">
+            <p>
+              « Je recommande vivement Alexandra qui m’a aidé
+              à mieux comprendre mon hypersensibilité et à la gérer au quotidien !
+              Aujourd’hui, je peux dire que ça a changé ma vie,
+              Alexandra est à l’écoute et est bienveillante,
+              elle ne porte aucun jugement. »
+            </p>
+          </blockquote>
+
+          <footer class="mt-6 border-t border-[var(--brown-soft)]/15 pt-5">
+            <p class="font-semibold text-[var(--brown-deep)]">
+              Cécile, 31 ans
+            </p>
+          </footer>
+        </article>
+
+        <!-- MICHÈLE : TEXTE MANQUANT -->
+        <!--
+        Le texte exact de l’avis de Michèle n’est pas présent dans les éléments transmis.
+        Décommenter cette carte lorsque le témoignage complet sera disponible.
+
+        <article class="soft-card rounded-[1.5rem] md:rounded-[2rem] p-6 md:p-8 flex flex-col">
+          <p class="text-sm font-medium uppercase tracking-[0.12em] text-[var(--brown-soft)]">
+            Sommeil et anxiété
+          </p>
+
+          <blockquote class="mt-5 flex-1 leading-relaxed text-[var(--text)]">
+            <p>
+              « TEXTE EXACT DU TÉMOIGNAGE DE MICHÈLE »
+            </p>
+          </blockquote>
+
+          <footer class="mt-6 border-t border-[var(--brown-soft)]/15 pt-5">
+            <p class="font-semibold text-[var(--brown-deep)]">
+              Michèle, 75 ans
+            </p>
+          </footer>
+        </article>
+        -->
+      </section>
+
+      <!-- ENFANTS -->
+      <section class="mt-8">
+        <p class="text-sm font-medium uppercase tracking-[0.16em] text-[var(--brown-soft)]">
+          Accompagnement des enfants
+        </p>
+
+        <div class="mt-5 grid lg:grid-cols-2 gap-6 md:gap-8">
+          <!-- THOMAS -->
+          <article class="soft-card rounded-[1.5rem] md:rounded-[2rem] p-6 md:p-8 flex flex-col">
+            <p class="text-sm font-medium uppercase tracking-[0.12em] text-[var(--brown-soft)]">
+              Stress et hypersensibilité
+            </p>
+
+            <blockquote class="mt-5 flex-1 leading-relaxed text-[var(--text)]">
+              <p>
+                « Mon fils a fait d’énormes progrès grâce à Alexandra
+                et la sophrologie, sur quasiment 1 an de suivi
+                nous avons vu la différence. Merci »
+              </p>
+            </blockquote>
+
+            <footer class="mt-6 border-t border-[var(--brown-soft)]/15 pt-5">
+              <p class="font-semibold text-[var(--brown-deep)]">
+                Sylviane, maman de Thomas, 7 ans
+              </p>
+            </footer>
+          </article>
+
+          <!-- ANNABELLE -->
+          <article class="soft-card rounded-[1.5rem] md:rounded-[2rem] p-6 md:p-8 flex flex-col">
+            <p class="text-sm font-medium uppercase tracking-[0.12em] text-[var(--brown-soft)]">
+              Confiance et peur de la séparation
+            </p>
+
+            <blockquote class="mt-5 flex-1 leading-relaxed text-[var(--text)]">
+              <p>
+                « Alexandra est une sophrologue à l’écoute et bienveillante.
+                Grâce à son approche très professionnelle,
+                notre fille a retrouvé confiance en elle.
+                Sa technique ludique et empreinte de douceur
+                a été un succès pour relever le grand défi de la confiance en soi.
+              </p>
+
+              <p class="mt-4">
+                Nous la remercions et la conseillons à quiconque
+                recherche un mieux être. »
+              </p>
+            </blockquote>
+
+            <footer class="mt-6 border-t border-[var(--brown-soft)]/15 pt-5">
+              <p class="font-semibold text-[var(--brown-deep)]">
+                Philippe, papa d’Annabelle, 8 ans
+              </p>
+            </footer>
+          </article>
+        </div>
+      </section>
+
+      <!-- CONFIDENTIALITÉ -->
+      <p class="mt-8 text-center text-sm italic leading-relaxed text-[var(--brown-soft)]">
+        Certains prénoms ont pu être modifiés afin de préserver la confidentialité
+        des personnes accompagnées.
+      </p>
+
+      <!-- CTA -->
+      <section class="mt-8 soft-card rounded-[1.5rem] md:rounded-[2rem] p-6 md:p-8 text-center zoom-in">
         <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
           Vous souhaitez échanger avant de commencer ?
         </h2>
 
-        <p class="mt-5 leading-relaxed text-[var(--text)]">
-          Vous pouvez me contacter pour poser une question, parler de votre situation
-          ou convenir d’un premier rendez-vous.
+        <p class="mt-5 mx-auto max-w-3xl leading-relaxed text-[var(--text)]">
+          Vous pouvez me contacter pour poser une question,
+          parler de votre situation ou convenir d’un premier rendez-vous.
         </p>
 
-        <div class="mt-8 flex flex-wrap gap-4">
+        <div class="mt-8 flex flex-wrap justify-center gap-4">
           <a
             href="/contact"
             class="soft-btn bg-[var(--brown-soft)] text-white px-7 py-3.5 font-medium inline-block hover:bg-[var(--brown-deep)]"
