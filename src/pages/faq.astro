@@ -4,25 +4,74 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import ScrollReveal from "../components/ScrollReveal.astro";
 import AnimatedFAQ from "../components/AnimatedFAQ.astro";
-import WideImageBanner from "../components/WideImageBanner.astro";
+import CalendlyButton from "../components/CalendlyButton.astro";
 ---
 
-<BaseLayout title="FAQ – Alexandra Coirier" description="Questions fréquentes sur la sophrologie, les séances et les modalités.">
+<BaseLayout
+  title="FAQ – Alexandra Coirier"
+  description="Questions fréquentes sur la sophrologie, le déroulement des séances et les modalités d’accompagnement."
+>
   <Header />
 
-  <main class="mx-auto max-w-7xl px-4 sm:px-6 py-10 md:py-16">
+  <main class="mx-auto max-w-7xl px-0 sm:px-6 py-8 md:py-16">
+    <!-- INTRODUCTION : AUCUNE PHOTO -->
+    <section class="soft-card rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-10 fade-in">
+      <p class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]">
+        Questions fréquentes
+      </p>
 
-       <section class="mb-8">
-      <WideImageBanner
-        src="/images/sophro/eaux-rochers-apaisants.webp"
-        alt=""
-        ratio="16 / 7"
-        objectPosition="center 50%"
-        animation="fade-in"
-      />
+      <h1 class="mt-4 text-4xl md:text-5xl font-semibold text-[var(--brown-deep)]">
+        Avant de commencer
+      </h1>
+
+      <div class="mt-6 max-w-4xl space-y-4 text-lg leading-relaxed text-[var(--text)]">
+        <p>
+          Prendre rendez-vous pour la première fois soulève souvent des questions.
+        </p>
+
+        <p>
+          Vous trouverez ici les réponses aux interrogations les plus fréquentes.
+          Et si vous ne trouvez pas celle que vous cherchez, je serai heureuse
+          d’y répondre directement.
+        </p>
+      </div>
     </section>
-<AnimatedFAQ />
 
+    <!--
+      4 QUESTIONS
+      PUIS PHOTO UNIQUE
+      PUIS ENCADRÉ
+      PUIS 4 DERNIÈRES QUESTIONS
+    -->
+    <section class="mt-8">
+      <AnimatedFAQ />
+    </section>
+
+    <!-- CONCLUSION APRÈS TOUTES LES QUESTIONS -->
+    <section class="mt-8 section-bg-new rounded-none sm:rounded-[2.5rem] p-6 sm:p-8 md:p-12 text-center fade-in">
+      <p class="mx-auto max-w-3xl text-2xl md:text-3xl italic leading-relaxed text-[var(--brown-deep)]">
+        Parfois, une réponse écrite ne remplace pas un échange.
+      </p>
+
+      <p class="mt-6 text-lg leading-relaxed text-[var(--text)]">
+        Si vous préférez, nous pouvons simplement en parler.
+      </p>
+
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <CalendlyButton
+          label="Prendre rendez-vous"
+          className="px-7 py-3.5"
+          url="https://calendly.com/alexandracoirier-sophrologue/?hide_gdpr_banner=1&primary_color=9a6750&text_color=5e4a42&background_color=f8f2ef"
+        />
+
+        <a
+          href="/contact"
+          class="soft-btn border border-[var(--brown-soft)]/20 bg-white/70 px-7 py-3.5 text-[var(--brown-deep)] hover:bg-white"
+        >
+          Me contacter
+        </a>
+      </div>
+    </section>
   </main>
 
   <Footer />

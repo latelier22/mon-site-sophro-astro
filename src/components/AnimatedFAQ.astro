@@ -49,59 +49,104 @@ const questions = [
       "Certaines mutuelles remboursent partiellement la sophrologie. Une facture peut être fournie sur demande.",
   },
 ];
+
+const firstQuestions = questions.slice(0, 4);
+const lastQuestions = questions.slice(4);
 ---
 
-<section class="faq-animated soft-card rounded-[2.5rem] p-8 md:p-10">
-  <div class="grid lg:grid-cols-[0.9fr_1.1fr] gap-8 items-start">
-    <div>
-  <p class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]">
-    Questions fréquentes
-  </p>
-
-  <h2 class="mt-4 text-3xl md:text-4xl font-semibold text-[var(--brown-deep)]">
-    Avant de commencer
-  </h2>
-
-  <p class="mt-5 leading-relaxed text-[var(--text)]">
-    Les questions apparaissent progressivement. Les réponses défilent automatiquement,
-    mais vous pouvez aussi choisir celle qui vous intéresse.
-  </p>
-
-  <div class="mt-8 flex gap-3">
-    <span class="faq-dot"></span>
-    <span class="faq-dot"></span>
-    <span class="faq-dot"></span>
-  </div>
-
-  <div class="mt-4 mb-4 h-[82%] min-h-[620px] max-lg:h-auto max-lg:min-h-0 max-lg:aspect-square rounded-[2rem] overflow-hidden soft-card p-3 fade-in">
-  <img
-    src="/images/sophro/cabinet-de-sophrologie.webp"
-    alt="Prendre un temps pour soi, respirer et avancer avec douceur"
-    class="scroll-blur-image faq-side-image h-full w-full rounded-[1.6rem] object-cover"
-    loading="lazy"
-  />
-</div>
-</div>
-
+<section class="faq-animated section-bg-new rounded-none sm:rounded-[2.5rem] p-4 sm:p-6 md:p-10">
+  <div class="mx-auto max-w-4xl">
+    <!-- 4 PREMIÈRES QUESTIONS -->
     <div class="faq-list">
-      {questions.map((item, index) => (
-        <button
-          type="button"
-          class="faq-item"
-          data-faq-item
-          data-index={index}
-          style={`--delay:${index * 120}ms`}
-        >
-          <span class="faq-icon-wrap" aria-hidden="true">
-  ?
-</span>
+      {
+        firstQuestions.map((item, index) => (
+          <button
+            type="button"
+            class="faq-item"
+            data-faq-item
+            data-index={index}
+            style={`--delay:${index * 120}ms`}
+          >
+            <span class="faq-icon-wrap" aria-hidden="true">
+              ?
+            </span>
 
-          <span class="faq-content">
-            <span class="faq-question">{item.question}</span>
-            <span class="faq-answer">{item.answer}</span>
-          </span>
-        </button>
-      ))}
+            <span class="faq-content">
+              <span class="faq-question">{item.question}</span>
+              <span class="faq-answer">{item.answer}</span>
+            </span>
+          </button>
+        ))
+      }
+    </div>
+
+    <!--
+      SEULE ET UNIQUE PHOTO DE LA PAGE
+      PLACÉE AU MILIEU, JAMAIS À DROITE
+    -->
+    <div class="mt-12 fade-in">
+      <img
+        src="/images/sophro/alexandra-assise-carnet.webp"
+        alt="Alexandra Coirier assise avec son carnet et regardant l’objectif"
+        class="mx-auto h-auto max-h-[720px] w-full max-w-2xl rounded-[1.5rem] object-cover object-center md:rounded-[2rem]"
+        loading="lazy"
+      />
+    </div>
+
+    <!-- PETIT ENCART JUSTE SOUS LA PHOTO -->
+    <section class="mt-8 soft-card rounded-[1.5rem] md:rounded-[2rem] p-6 md:p-10 text-center fade-in">
+      <h2 class="text-2xl md:text-3xl font-semibold text-[var(--brown-deep)]">
+        Vous ne trouvez pas votre réponse ?
+      </h2>
+
+      <div class="mx-auto mt-5 max-w-2xl space-y-4 leading-relaxed text-[var(--text)]">
+        <p>
+          Chaque parcours est différent.
+        </p>
+
+        <p>
+          Si vous hésitez ou si vous souhaitez simplement échanger avant de
+          prendre rendez-vous, vous pouvez me contacter.
+          Je prendrai le temps de répondre à vos questions.
+        </p>
+      </div>
+
+      <div class="mt-8">
+        <a
+          href="/contact"
+          class="soft-btn inline-block bg-[var(--brown-soft)] px-7 py-3.5 font-medium text-white hover:bg-[var(--brown-deep)]"
+        >
+          Me contacter
+        </a>
+      </div>
+    </section>
+
+    <!-- 4 DERNIÈRES QUESTIONS -->
+    <div class="faq-list mt-12">
+      {
+        lastQuestions.map((item, index) => {
+          const realIndex = index + firstQuestions.length;
+
+          return (
+            <button
+              type="button"
+              class="faq-item"
+              data-faq-item
+              data-index={realIndex}
+              style={`--delay:${realIndex * 120}ms`}
+            >
+              <span class="faq-icon-wrap" aria-hidden="true">
+                ?
+              </span>
+
+              <span class="faq-content">
+                <span class="faq-question">{item.question}</span>
+                <span class="faq-answer">{item.answer}</span>
+              </span>
+            </button>
+          );
+        })
+      }
     </div>
   </div>
 </section>
@@ -111,7 +156,10 @@ const questions = [
     const sections = document.querySelectorAll(".faq-animated");
 
     sections.forEach((section) => {
-      const items = Array.from(section.querySelectorAll("[data-faq-item]"));
+      const items = Array.from(
+        section.querySelectorAll("[data-faq-item]")
+      );
+
       if (!items.length) return;
 
       let activeIndex = 0;
@@ -120,15 +168,15 @@ const questions = [
       const setActive = (index) => {
         activeIndex = index;
 
-        items.forEach((item, i) => {
-          item.classList.toggle("is-active", i === activeIndex);
+        items.forEach((item, itemIndex) => {
+          item.classList.toggle("is-active", itemIndex === activeIndex);
         });
       };
 
       const startAuto = () => {
-        clearInterval(timer);
+        window.clearInterval(timer);
 
-        timer = setInterval(() => {
+        timer = window.setInterval(() => {
           activeIndex = (activeIndex + 1) % items.length;
           setActive(activeIndex);
         }, 4200);
@@ -137,15 +185,17 @@ const questions = [
       const revealObserver = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              section.classList.add("is-visible");
-              setActive(0);
-              startAuto();
-              revealObserver.unobserve(section);
-            }
+            if (!entry.isIntersecting) return;
+
+            section.classList.add("is-visible");
+            setActive(0);
+            startAuto();
+            revealObserver.unobserve(section);
           });
         },
-        { threshold: 0.25 }
+        {
+          threshold: 0.15,
+        }
       );
 
       revealObserver.observe(section);
@@ -165,23 +215,6 @@ const questions = [
     overflow: hidden;
   }
 
-  .faq-dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 999px;
-    background: var(--brown-soft);
-    opacity: 0.35;
-    animation: faqPulse 1.8s ease-in-out infinite;
-  }
-
-  .faq-dot:nth-child(2) {
-    animation-delay: 0.25s;
-  }
-
-  .faq-dot:nth-child(3) {
-    animation-delay: 0.5s;
-  }
-
   .faq-list {
     display: grid;
     gap: 14px;
@@ -192,19 +225,21 @@ const questions = [
     display: flex;
     align-items: flex-start;
     gap: 16px;
-    text-align: left;
+    padding: 18px;
     border: 0;
-    cursor: pointer;
     border-radius: 1.5rem;
     background: rgba(255, 255, 255, 0.68);
-    padding: 18px;
+    text-align: left;
+    cursor: pointer;
     opacity: 0;
     transform: translateY(24px);
+
     transition:
       opacity 700ms ease,
       transform 700ms ease,
       background 300ms ease,
       box-shadow 300ms ease;
+
     transition-delay: var(--delay);
   }
 
@@ -213,6 +248,7 @@ const questions = [
     transform: translateY(0);
   }
 
+  .faq-item:hover,
   .faq-item.is-active {
     background: rgba(255, 255, 255, 0.92);
     box-shadow: 0 18px 45px rgba(94, 74, 66, 0.12);
@@ -220,129 +256,82 @@ const questions = [
 
   .faq-icon-wrap {
     flex: 0 0 auto;
-    width: 48px;
-    height: 48px;
-    border-radius: 999px;
+    width: 54px;
+    height: 54px;
     display: grid;
     place-items: center;
-    background: rgba(255, 236, 224, 0.8);
+    border: 2px solid rgba(154, 103, 80, 0.28);
+    border-radius: 999px;
+    background: rgba(255, 236, 224, 0.85);
+    box-shadow:
+      0 10px 24px rgba(94, 74, 66, 0.14),
+      inset 0 0 0 6px rgba(255, 255, 255, 0.35);
+    color: var(--brown-deep);
+    font-size: 1.65rem;
+    font-weight: 700;
+    line-height: 1;
   }
 
-  .faq-icon {
-    width: 26px;
-    height: 26px;
-    object-fit: contain;
+  .faq-item:nth-child(2n) .faq-icon-wrap {
+    border-color: rgba(101, 117, 82, 0.28);
+    background: rgba(217, 222, 199, 0.9);
+  }
+
+  .faq-item:nth-child(3n) .faq-icon-wrap {
+    border-color: rgba(154, 103, 80, 0.25);
+    background: rgba(231, 186, 166, 0.75);
+  }
+
+  .faq-content {
+    min-width: 0;
+    flex: 1;
   }
 
   .faq-question {
     display: block;
-    font-weight: 600;
     color: var(--brown-deep);
     font-size: 1.05rem;
+    font-weight: 600;
   }
 
   .faq-answer {
-    display: grid;
-    grid-template-rows: 0fr;
-    opacity: 0;
+    display: block;
+    max-height: 0;
     margin-top: 0;
+    overflow: hidden;
+    opacity: 0;
     color: var(--text);
     line-height: 1.7;
+
     transition:
-      grid-template-rows 450ms ease,
+      max-height 450ms ease,
       opacity 350ms ease,
       margin-top 350ms ease;
   }
 
-  .faq-answer::before {
-    content: attr(data-empty);
+  .faq-item:hover .faq-answer,
+  .faq-item.is-active .faq-answer {
+    max-height: 300px;
+    margin-top: 10px;
+    opacity: 1;
   }
 
-  .faq-answer {
-    overflow: hidden;
-  }
-
-  .faq-item.is-active .faq-answer,
-.faq-item:hover .faq-answer {
-  display: block;
-  opacity: 1;
-  margin-top: 10px;
-}
-
-  .faq-icon-wrap {
-  flex: 0 0 auto;
-  width: 54px;
-  height: 54px;
-  border-radius: 999px;
-  display: grid;
-  place-items: center;
-  background: rgba(255, 236, 224, 0.85);
-  border: 2px solid rgba(154, 103, 80, 0.28);
-  box-shadow:
-    0 10px 24px rgba(94, 74, 66, 0.14),
-    inset 0 0 0 6px rgba(255, 255, 255, 0.35);
-  color: var(--brown-deep);
-  font-size: 1.65rem;
-  font-weight: 700;
-  line-height: 1;
-}
-
-.faq-item:hover {
-  background: rgba(255, 255, 255, 0.92);
-  box-shadow: 0 18px 45px rgba(94, 74, 66, 0.12);
-}
-
-.faq-item:hover .faq-answer {
-  display: block;
-  opacity: 1;
-  margin-top: 10px;
-}
-
-
-.faq-item:nth-child(2n) .faq-icon-wrap {
-  background: rgba(217, 222, 199, 0.9);
-  border-color: rgba(101, 117, 82, 0.28);
-}
-
-.faq-animated > .grid {
-  align-items: stretch;
-}
-
-..faq-side-image {
-  height: 100%;
-  min-height: 620px;
-  object-fit: cover;
-  object-position: right 28%;
-}
-
-@media (max-width: 1023px) {
-  .faq-side-image {
-    min-height: 0;
-    object-position: center top;
-  }
-}
-
-.faq-item:nth-child(3n) .faq-icon-wrap {
-  background: rgba(231, 186, 166, 0.75);
-  border-color: rgba(154, 103, 80, 0.25);
-
-  @keyframes faqPulse {
-    0%, 100% {
-      transform: scale(1);
-      opacity: 0.25;
+  @media (max-width: 640px) {
+    .faq-item {
+      gap: 12px;
+      padding: 16px;
     }
 
-    50% {
-      transform: scale(1.35);
-      opacity: 0.65;
+    .faq-icon-wrap {
+      width: 46px;
+      height: 46px;
+      font-size: 1.4rem;
     }
   }
 
   @media (prefers-reduced-motion: reduce) {
     .faq-item,
-    .faq-answer,
-    .faq-dot {
-      animation: none;
+    .faq-answer {
       transition: none;
     }
   }
