@@ -53,6 +53,40 @@ const questions = [
 const firstQuestions = questions.slice(0, 4);
 const lastQuestions = questions.slice(4);
 ---
+<style>
+ .photo-scroll {
+  position: relative;
+  min-height: 520px;
+  overflow: hidden;
+  border-radius: 2rem;
+  box-shadow: 0 20px 60px rgba(94, 74, 66, 0.12);
+}
+
+.photo-scroll-img {
+  position: absolute;
+  inset: -6%;
+  display: block;
+  width: 112%;
+  height: 112%;
+  object-fit: cover;
+  object-position: center 25%;
+  transform: translateY(35px) scale(1.06);
+  will-change: transform;
+}
+
+@media (max-width: 1023px) {
+  .photo-scroll {
+    min-height: 620px;
+  }
+}
+
+@media (max-width: 640px) {
+  .photo-scroll {
+    min-height: 480px;
+    border-radius: 1.5rem;
+  }
+}
+</style>
 
 <section class="faq-animated section-bg-new rounded-none sm:rounded-[2.5rem] p-4 sm:p-6 md:p-10">
   <div class="mx-auto max-w-4xl">
@@ -80,46 +114,51 @@ const lastQuestions = questions.slice(4);
       }
     </div>
 
-    <!--
-      SEULE ET UNIQUE PHOTO DE LA PAGE
-      PLACÉE AU MILIEU, JAMAIS À DROITE
-    -->
-    <div class="mt-12 fade-in">
-      <img
-        src="/images/sophro/alexandra-assise-carnet.webp"
-        alt="Alexandra Coirier assise avec son carnet et regardant l’objectif"
-        class="mx-auto h-auto max-h-[720px] w-full max-w-2xl rounded-[1.5rem] object-cover object-center md:rounded-[2rem]"
-        loading="lazy"
-      />
+    <!-- PHOTO + ENCADRÉ SUR 2 COLONNES -->
+<section class="mt-12 grid lg:grid-cols-[0.85fr_1.15fr] gap-6 md:gap-8 items-stretch">
+  <!-- PHOTO UNIQUE -->
+  <div class="photo-scroll fade-in">
+    <img
+      src="/images/sophro/alexandra-assise-carnet.webp"
+      alt="Alexandra Coirier assise avec son carnet"
+      class="photo-scroll-img"
+      loading="lazy"
+    />
+  </div>
+
+  <!-- ENCADRÉ -->
+  <div class="soft-card rounded-[1.5rem] md:rounded-[2rem] p-6 md:p-10 fade-in flex flex-col justify-center">
+    <p class="text-sm uppercase tracking-[0.2em] text-[var(--brown-soft)]">
+      Une question personnelle ?
+    </p>
+
+    <h2 class="mt-4 text-2xl md:text-3xl font-semibold text-[var(--brown-deep)]">
+      Vous ne trouvez pas votre réponse ?
+    </h2>
+
+    <div class="mt-5 space-y-4 leading-relaxed text-[var(--text)]">
+      <p>
+        Chaque parcours est différent.
+      </p>
+
+      <p>
+        Si vous hésitez ou si vous souhaitez simplement échanger avant de
+        prendre rendez-vous, vous pouvez me contacter.
+        Je prendrai le temps de répondre à vos questions.
+      </p>
     </div>
 
-    <!-- PETIT ENCART JUSTE SOUS LA PHOTO -->
-    <section class="mt-8 soft-card rounded-[1.5rem] md:rounded-[2rem] p-6 md:p-10 text-center fade-in">
-      <h2 class="text-2xl md:text-3xl font-semibold text-[var(--brown-deep)]">
-        Vous ne trouvez pas votre réponse ?
-      </h2>
-
-      <div class="mx-auto mt-5 max-w-2xl space-y-4 leading-relaxed text-[var(--text)]">
-        <p>
-          Chaque parcours est différent.
-        </p>
-
-        <p>
-          Si vous hésitez ou si vous souhaitez simplement échanger avant de
-          prendre rendez-vous, vous pouvez me contacter.
-          Je prendrai le temps de répondre à vos questions.
-        </p>
-      </div>
-
-      <div class="mt-8">
-        <a
-          href="/contact"
-          class="soft-btn inline-block bg-[var(--brown-soft)] px-7 py-3.5 font-medium text-white hover:bg-[var(--brown-deep)]"
-        >
-          Me contacter
-        </a>
-      </div>
-    </section>
+    <div class="mt-8">
+      <a
+        href="/contact"
+        class="soft-btn inline-block bg-[var(--brown-soft)] px-7 py-3.5 font-medium text-white hover:bg-[var(--brown-deep)]"
+      >
+        Me contacter
+      </a>
+    </div>
+  </div>
+</section>
+   
 
     <!-- 4 DERNIÈRES QUESTIONS -->
     <div class="faq-list mt-12">
@@ -208,6 +247,38 @@ const lastQuestions = questions.slice(4);
       });
     });
   })();
+</script>
+
+<script is:inline>
+(() => {
+
+  const image = document.querySelector(".photo-scroll-img");
+
+  if (!image) return;
+
+  const update = () => {
+
+    const rect = image.parentElement.getBoundingClientRect();
+
+    const vh = window.innerHeight;
+
+    const progress = (vh - rect.top) / (vh + rect.height);
+
+    const p = Math.max(0, Math.min(1, progress));
+
+    const scale = 1.08 - p * 0.08;
+    const translate = 40 - p * 40;
+
+    image.style.transform =
+      `translateY(${translate}px) scale(${scale})`;
+
+  };
+
+  update();
+
+  window.addEventListener("scroll", update, { passive:true });
+
+})();
 </script>
 
 <style>
