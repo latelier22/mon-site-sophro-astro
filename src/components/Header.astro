@@ -117,33 +117,50 @@ const ctaMobile =
         </div>
       </div>
 
-      <div class="header-light relative z-0">
-        <a href="#site-footer" class="header-scroll-link" aria-label="Aller en bas de page">
-          ↓
-        </a>
+<div class="header-light relative z-0">
 
-        <div class="header-light-buttons">
-          <CalendlyButton
-            label="Prendre rendez-vous"
-            className={ctaDesktop}
-            url={calendlyUrl}
-          />
+  <div class="header-light-buttons">
 
-          <CalendlyButton
-            label="RDV"
-            className={ctaMobile}
-            url={calendlyUrl}
-          />
+    <CalendlyButton
+      label="Prendre rendez-vous"
+      className={ctaDesktop}
+      url={calendlyUrl}
+    />
 
-          <a href="/contact" class={`${ctaDesktop} !bg-[var(--peach)] !text-[var(--brown-deep)] border border-[var(--brown-soft)]/25 hover:!bg-white`}>
-            Me contacter
-          </a>
+    <CalendlyButton
+      label="RDV"
+      className={ctaMobile}
+      url={calendlyUrl}
+    />
 
-          <a href="/contact" class={`${ctaMobile} !bg-white/90 !text-[var(--brown-deep)] border border-[var(--brown-soft)]/25 hover:!bg-white`}>
-            Me contacter
-          </a>
-        </div>
-      </div>
+    <a
+      href="/contact"
+      class={`${ctaDesktop} !bg-[var(--peach)] !text-[var(--brown-deep)] border border-[var(--brown-soft)]/25 hover:!bg-white`}
+    >
+      Me contacter
+    </a>
+
+    <a
+      href="/contact"
+      class={`${ctaMobile} !bg-white/90 !text-[var(--brown-deep)] border border-[var(--brown-soft)]/25 hover:!bg-white`}
+    >
+      Me contacter
+    </a>
+
+  </div>
+
+  <div class="header-mobile-image">
+    <img
+      src="/images/header-bg-new.webp"
+      alt="Alexandra Coirier"
+    />
+  </div>
+
+  <a href="#site-footer" class="header-scroll-link" aria-label="Aller en bas de page">
+    ↓
+  </a>
+
+</div>
     </div>
   </div>
 </header>
@@ -182,6 +199,11 @@ const ctaMobile =
 </script>
 
 <style>
+
+.header-mobile-image {
+  display: none;
+}
+
 .header-panel {
   min-height: 200px;
 }
@@ -326,13 +348,10 @@ const ctaMobile =
 }
 
 @media (max-width: 640px) {
+
   .header-panel,
   .header-bg-mask {
     border-radius: 1.5rem;
-  }
-
-  .header-bg {
-    background-position: center 86%;
   }
 
   .header-dark {
@@ -354,18 +373,65 @@ const ctaMobile =
     letter-spacing: 0.18em;
   }
 
-  .header-light {
-    height: 68px;
-    background: var(--header-light-bg-mobile);
+  /* IMPORTANT : on supprime l'ancien fond-image */
+  .header-bg {
+    background-image: none !important;
+    transform: none !important;
   }
 
+  .header-bg-mask {
+    display: none;
+  }
+
+  /* Zone sous le menu */
+  .header-light {
+    height: auto !important;
+    min-height: 0 !important;
+    background: transparent !important;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Boutons AU-DESSUS de l'image */
   .header-light-buttons {
-    left: 0.75rem;
-    right: 0.75rem;
-    bottom: 0.7rem;
+    position: static !important;
+    inset: auto !important;
+
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0.5rem;
+    gap: 0.6rem;
+
+    padding: 0.8rem 0.75rem;
+
+    background: var(--header-light-bg-mobile);
+
+    order: 1;
+  }
+
+  /* Image EN-DESSOUS */
+  .header-mobile-image {
+    display: block !important;
+    position: relative;
+    width: 100%;
+    order: 2;
+
+    overflow: hidden;
+    border-radius: 0 0 1.5rem 1.5rem;
+  }
+
+  .header-mobile-image img {
+    display: block;
+
+    width: 100%;
+    height: auto !important;
+
+    object-fit: contain !important;
+    object-position: center top !important;
+  }
+
+  .header-scroll-link {
+    display: none !important;
   }
 }
 
@@ -392,5 +458,17 @@ const ctaMobile =
   color: var(--brown-deep);
   background: var(--cream-72);
   transform: translateX(3px);
+}
+
+.header-mobile-image {
+  position: relative;
+}
+
+.header-mobile-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: var(--header-light-bg-mobile);
 }
 </style>

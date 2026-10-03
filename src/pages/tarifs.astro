@@ -15,44 +15,58 @@ import VerticalImageCard from "../components/VerticalImageCard.astro";
   <Header />
 
   <main>
-   <section class="mx-auto max-w-7xl px-4 sm:px-6 py-10 md:py-16">
-  <section class="grid lg:grid-cols-[1.15fr_0.85fr] gap-8 items-stretch">
-    <div class="soft-card rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-10 slide-right flex flex-col justify-center">
-      <p class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]">
-        Tarifs et fonctionnement
-      </p>
+    <section class="mx-auto max-w-7xl px-4 sm:px-6 py-10 md:py-16">
 
-      <h1
-        class="mt-4 text-4xl md:text-5xl font-semibold text-[var(--brown-deep)]"
-      >
-        Tarifs et modalités
-      </h1>
+      <!-- INTRO -->
+      <section class="grid lg:grid-cols-[1.15fr_0.85fr] gap-8 items-stretch">
 
-      <p class="mt-5 text-lg leading-relaxed text-[var(--text)]">
-        Je propose des
-        <strong class="font-semibold text-[var(--brown-deep)]">séances de sophrologie à l’unité</strong>
-        pour un besoin ponctuel, ainsi que des
-        <strong class="font-semibold text-[var(--brown-deep)]">parcours d’accompagnement</strong>
-        pour installer des changements plus profonds et durables.
-      </p>
-    </div>
+        <div class="soft-card rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-10 slide-right flex flex-col justify-center">
 
-    <VerticalImageCard
-      src="/images/sophro/cabinet-de-sophrologie.webp"
-      alt="Cabinet de sophrologie à Loudéac"
-      ratio="4 / 5"
-      objectPosition="center"
-      animation="slide-left"
-      className="h-full"
-      mobileStart="0%"
-      mobileMiddle="50%"
-      mobileEnd="100%"
-    />
-  </section>
+          <p class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]">
+            Tarifs et fonctionnement
+          </p>
+
+          <h1
+            class="mt-4 text-4xl md:text-5xl font-semibold text-[var(--brown-deep)]"
+          >
+            Tarifs et modalités
+          </h1>
+
+          <p class="mt-5 text-lg leading-relaxed text-[var(--text)]">
+            Je propose des
+            <strong class="font-semibold text-[var(--brown-deep)]">
+              séances de sophrologie à l’unité
+            </strong>
+            pour un besoin ponctuel, ainsi que des
+            <strong class="font-semibold text-[var(--brown-deep)]">
+              parcours d’accompagnement
+            </strong>
+            pour installer des changements plus profonds et durables.
+          </p>
+
+        </div>
+
+        <VerticalImageCard
+          src="/images/sophro/cabinet-de-sophrologie.webp"
+          alt="Cabinet de sophrologie à Loudéac"
+          ratio="4 / 5"
+          objectPosition="center"
+          animation="slide-left"
+          className="h-full"
+          mobileStart="0%"
+          mobileMiddle="50%"
+          mobileEnd="100%"
+        />
+
+      </section>
 
       <section class="mt-8 section-bg-new rounded-[2.5rem] p-8 md:p-10">
+
+        <!-- CARTES RESUME -->
         <section class="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
+
           <div class="soft-card rounded-[2rem] p-8 zoom-in">
+
             <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
               Première séance
             </h2>
@@ -64,9 +78,11 @@ import VerticalImageCard from "../components/VerticalImageCard.astro";
             <p class="mt-6 text-4xl font-semibold text-[var(--brown-deep)]">
               60 €
             </p>
+
           </div>
 
           <div class="soft-card rounded-[2rem] p-8 zoom-in">
+
             <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
               Séance de suivi
             </h2>
@@ -78,9 +94,11 @@ import VerticalImageCard from "../components/VerticalImageCard.astro";
             <p class="mt-6 text-4xl font-semibold text-[var(--brown-deep)]">
               60 €
             </p>
+
           </div>
 
           <div class="soft-card rounded-[2rem] p-8 zoom-in">
+
             <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
               Duo parent-enfant
             </h2>
@@ -92,93 +110,289 @@ import VerticalImageCard from "../components/VerticalImageCard.astro";
             <p class="mt-6 text-4xl font-semibold text-[var(--brown-deep)]">
               70 €
             </p>
+
           </div>
 
           <div class="soft-card rounded-[2rem] p-8 zoom-in">
+
             <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
               Séances de groupe
             </h2>
 
             <p class="mt-4 text-[var(--text)]">
-              En association avec LALC Plémet
+              Avec LALC Plémet
             </p>
 
             <p class="mt-6 text-4xl font-semibold text-[var(--brown-deep)]">
-              90–95 €
+              300 €
             </p>
 
             <p class="mt-2 text-[var(--text)]">
-              / trimestre
+              forfait annuel
             </p>
+
+            <p class="mt-3 text-sm leading-relaxed text-[var(--brown-soft)]">
+              ou règlement au trimestre
+            </p>
+
           </div>
+
         </section>
 
+        <!-- SEANCES INDIVIDUELLES -->
         <section class="mt-8 soft-card rounded-[2rem] p-8 fade-in">
+
           <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
             Séances individuelles
           </h2>
 
           <div class="mt-6 grid md:grid-cols-2 gap-6">
+
             <div class="rounded-[1.5rem] bg-white/70 p-6">
+
               <p class="font-semibold text-[var(--brown-deep)]">
                 Première séance
               </p>
+
               <p class="mt-2 leading-relaxed text-[var(--text)]">
-                Une <strong class="font-semibold text-[var(--brown-deep)]">séance d’analyse et de découverte</strong>
+                Une
+                <strong class="font-semibold text-[var(--brown-deep)]">
+                  séance d’analyse et de découverte
+                </strong>
                 pour faire le point sur votre situation, vos besoins et la
                 direction que vous souhaitez prendre.
               </p>
+
               <p class="mt-4 text-2xl font-semibold text-[var(--brown-deep)]">
                 60 €
               </p>
+
             </div>
 
             <div class="rounded-[1.5rem] bg-white/70 p-6">
+
               <p class="font-semibold text-[var(--brown-deep)]">
                 Séance de suivi
               </p>
+
               <p class="mt-2 leading-relaxed text-[var(--text)]">
-                Une <strong class="font-semibold text-[var(--brown-deep)]">séance personnalisée</strong>
+                Une
+                <strong class="font-semibold text-[var(--brown-deep)]">
+                  séance personnalisée
+                </strong>
                 pour poursuivre l’accompagnement, pratiquer et
-                <strong class="font-semibold text-[var(--brown-deep)]">ancrer progressivement les changements</strong>.
+                <strong class="font-semibold text-[var(--brown-deep)]">
+                  ancrer progressivement les changements
+                </strong>.
               </p>
+
               <p class="mt-4 text-2xl font-semibold text-[var(--brown-deep)]">
                 60 €
               </p>
+
             </div>
+
           </div>
 
           <div class="mt-6 rounded-[1.5rem] bg-white/70 p-6">
-            <p class="font-semibold text-[var(--brown-deep)]">Acompte</p>
+
+            <p class="font-semibold text-[var(--brown-deep)]">
+              Acompte
+            </p>
+
             <p class="mt-2 leading-relaxed text-[var(--text)]">
               Un acompte de 30 € est demandé pour toute réservation de séance de
               suivi. Il soutient la préparation de votre
-              <strong class="font-semibold text-[var(--brown-deep)]">accompagnement en sophrologie</strong>
+              <strong class="font-semibold text-[var(--brown-deep)]">
+                accompagnement en sophrologie
+              </strong>
               et confirme votre engagement.
             </p>
+
           </div>
+
         </section>
 
-        <section class="mt-8 soft-card rounded-[2rem] p-8 fade-in">
-          <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
-            Séances de groupe
+        <!-- SEANCES DE GROUPE -->
+        <section class="mt-8 soft-card rounded-[2rem] p-8 md:p-10 fade-in">
+
+          <p class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]">
+            Séances collectives
+          </p>
+
+          <h2 class="mt-4 text-2xl md:text-3xl font-semibold text-[var(--brown-deep)]">
+            Sophrologie avec LALC Plémet
           </h2>
 
-          <div class="mt-5 space-y-4 leading-relaxed text-[var(--text)]">
-            <p>
-              Des <strong class="font-semibold text-[var(--brown-deep)]">séances de sophrologie en groupe</strong>
-              sont proposées en association avec
-              <strong class="font-semibold text-[var(--brown-deep)]">LALC Plémet</strong>.
-            </p>
+          <p class="mt-5 text-lg italic leading-relaxed text-[var(--brown-soft)]">
+            Un rendez-vous chaque semaine pour souffler, relâcher les tensions,
+            se recentrer et prendre un vrai temps pour soi, chacun à son rythme.
+          </p>
 
-            <p class="text-2xl font-semibold text-[var(--brown-deep)]">
-              90–95 € / trimestre
-            </p>
+          <div class="mt-8 grid md:grid-cols-3 gap-5">
+
+            <div class="rounded-[1.5rem] bg-white/70 p-6">
+
+              <p class="text-sm uppercase tracking-[0.18em] text-[var(--brown-soft)]">
+                Saison 2026 / 2027
+              </p>
+
+              <p class="mt-3 font-semibold leading-relaxed text-[var(--brown-deep)]">
+                Du mercredi 9 septembre au mercredi 30 juin
+              </p>
+
+              <p class="mt-2 text-sm leading-relaxed text-[var(--text)]">
+                35 séances d’une heure, hors vacances scolaires.
+              </p>
+
+            </div>
+
+            <div class="rounded-[1.5rem] bg-white/70 p-6">
+
+              <p class="text-sm uppercase tracking-[0.18em] text-[var(--brown-soft)]">
+                Horaires
+              </p>
+
+              <p class="mt-3 font-semibold text-[var(--brown-deep)]">
+                Tous les mercredis
+              </p>
+
+              <p class="mt-2 text-[var(--text)]">
+                de 19 h à 20 h
+              </p>
+
+            </div>
+
+            <div class="rounded-[1.5rem] bg-white/70 p-6">
+
+              <p class="text-sm uppercase tracking-[0.18em] text-[var(--brown-soft)]">
+                Lieu
+              </p>
+
+              <p class="mt-3 font-semibold text-[var(--brown-deep)]">
+                Salle des associations
+              </p>
+
+              <p class="mt-2 text-[var(--text)]">
+                Mairie de Plémet
+              </p>
+
+            </div>
+
           </div>
+
+          <div class="mt-8 grid lg:grid-cols-2 gap-6">
+
+            <!-- FORFAIT ANNUEL -->
+            <div class="rounded-[1.75rem] bg-white/75 p-6 md:p-8">
+
+              <p class="text-sm uppercase tracking-[0.2em] text-[var(--brown-soft)]">
+                Forfait annuel
+              </p>
+
+              <p class="mt-4 text-4xl font-semibold text-[var(--brown-deep)]">
+                300 €
+              </p>
+
+              <p class="mt-4 leading-relaxed text-[var(--text)]">
+                Paiement en une fois ou échelonné en
+                <strong class="font-semibold text-[var(--brown-deep)]">
+                  3 × 100 €
+                </strong>.
+              </p>
+
+              <p class="mt-2 text-sm text-[var(--brown-soft)]">
+                Septembre, octobre et novembre
+              </p>
+
+            </div>
+
+            <!-- TRIMESTRES -->
+            <div class="rounded-[1.75rem] bg-white/75 p-6 md:p-8">
+
+              <p class="text-sm uppercase tracking-[0.2em] text-[var(--brown-soft)]">
+                Règlement au trimestre
+              </p>
+
+              <div class="mt-5 space-y-3">
+
+                <div class="flex items-center justify-between gap-4 rounded-[1rem] bg-white/70 p-4">
+
+                  <span class="text-[var(--text)]">
+                    Septembre à décembre
+                  </span>
+
+                  <strong class="text-xl text-[var(--brown-deep)]">
+                    115 €
+                  </strong>
+
+                </div>
+
+                <div class="flex items-center justify-between gap-4 rounded-[1rem] bg-white/70 p-4">
+
+                  <span class="text-[var(--text)]">
+                    Janvier à mars
+                  </span>
+
+                  <strong class="text-xl text-[var(--brown-deep)]">
+                    95 €
+                  </strong>
+
+                </div>
+
+                <div class="flex items-center justify-between gap-4 rounded-[1rem] bg-white/70 p-4">
+
+                  <span class="text-[var(--text)]">
+                    Avril à juin
+                  </span>
+
+                  <strong class="text-xl text-[var(--brown-deep)]">
+                    95 €
+                  </strong>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="mt-6 grid md:grid-cols-2 gap-5">
+
+            <div class="rounded-[1.5rem] bg-white/70 p-6">
+
+              <p class="text-sm uppercase tracking-[0.18em] text-[var(--brown-soft)]">
+                Séance ponctuelle
+              </p>
+
+              <p class="mt-3 text-3xl font-semibold text-[var(--brown-deep)]">
+                15 €
+              </p>
+
+            </div>
+
+            <div class="rounded-[1.5rem] bg-white/70 p-6">
+
+              <p class="text-sm uppercase tracking-[0.18em] text-[var(--brown-soft)]">
+                Adhésion LALC Plémet
+              </p>
+
+              <p class="mt-3 text-3xl font-semibold text-[var(--brown-deep)]">
+                10 €
+              </p>
+
+            </div>
+
+          </div>
+
         </section>
 
+        <!-- PARCOURS -->
         <section class="mt-8 grid md:grid-cols-2 gap-6">
+
           <div class="soft-card rounded-[2rem] p-8 slide-right">
+
             <p
               class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]"
             >
@@ -190,7 +404,9 @@ import VerticalImageCard from "../components/VerticalImageCard.astro";
             </h2>
 
             <p class="mt-4 leading-relaxed text-[var(--text)]">
-              <strong class="font-semibold text-[var(--brown-deep)]">Découverte et transformation</strong>
+              <strong class="font-semibold text-[var(--brown-deep)]">
+                Découverte et transformation
+              </strong>
               — 6 séances personnalisées. Un suivi structuré avec des outils
               additionnels pour avancer progressivement, apaiser l’anxiété et
               retrouver un équilibre plus durable.
@@ -201,9 +417,11 @@ import VerticalImageCard from "../components/VerticalImageCard.astro";
               <li>• Duo parent-enfant : 420 €</li>
               <li>• Paiement possible en 1 ou 2 fois</li>
             </ul>
+
           </div>
 
           <div class="soft-card rounded-[2rem] p-8 slide-left">
+
             <p
               class="text-sm uppercase tracking-[0.25em] text-[var(--brown-soft)]"
             >
@@ -215,7 +433,9 @@ import VerticalImageCard from "../components/VerticalImageCard.astro";
             </h2>
 
             <p class="mt-4 leading-relaxed text-[var(--text)]">
-              <strong class="font-semibold text-[var(--brown-deep)]">Stabilisation et ancrage</strong>
+              <strong class="font-semibold text-[var(--brown-deep)]">
+                Stabilisation et ancrage
+              </strong>
               — 4 à 5 séances personnalisées. Ce parcours permet de consolider
               les changements amorcés et de renforcer votre équilibre intérieur.
             </p>
@@ -225,19 +445,29 @@ import VerticalImageCard from "../components/VerticalImageCard.astro";
               <li>• Duo parent-enfant : 280 € à 350 €</li>
               <li>• Paiement possible en 1 ou 2 fois</li>
             </ul>
+
           </div>
+
         </section>
 
+        <!-- PARCOURS 6 SEANCES -->
         <section class="mt-8 soft-card rounded-[2rem] p-8 fade-in">
+
           <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
             Parcours 6 séances
           </h2>
 
           <div class="mt-5 space-y-4 leading-relaxed text-[var(--text)]">
+
             <p>
-              Le <strong class="font-semibold text-[var(--brown-deep)]">parcours de 6 séances</strong>
+              Le
+              <strong class="font-semibold text-[var(--brown-deep)]">
+                parcours de 6 séances
+              </strong>
               permet un suivi structuré avec des outils additionnels :
-              <strong class="font-semibold text-[var(--brown-deep)]">audios personnalisés</strong>,
+              <strong class="font-semibold text-[var(--brown-deep)]">
+                audios personnalisés
+              </strong>,
               pratiques entre les séances, messages de soutien si nécessaire
               et temps d’intégration.
             </p>
@@ -245,55 +475,78 @@ import VerticalImageCard from "../components/VerticalImageCard.astro";
             <p>
               Les tarifs et modalités sont définis selon le type
               d’accompagnement choisi :
-              <strong class="font-semibold text-[var(--brown-deep)]">séance individuelle</strong>,
+              <strong class="font-semibold text-[var(--brown-deep)]">
+                séance individuelle
+              </strong>,
               duo parent-enfant ou besoin spécifique.
             </p>
+
           </div>
 
           <div class="mt-8">
+
             <a
               href="/accompagnement"
               class="soft-btn border border-[var(--brown-soft)]/20 bg-white/70 px-7 py-3.5 text-[var(--brown-deep)] hover:bg-white"
             >
               Voir les accompagnements
             </a>
+
           </div>
+
         </section>
 
+        <!-- CADRE DES RENDEZ-VOUS -->
         <section class="mt-8 soft-card rounded-[2rem] p-8 slide-right">
+
           <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
             Cadre des rendez-vous
           </h2>
 
           <ul class="mt-5 space-y-3 text-[var(--text)] leading-relaxed">
+
             <li>
               • Modification ou report possible jusqu’à 48h avant le
               rendez-vous.
             </li>
+
             <li>
               • En cas d’annulation tardive, l’acompte est conservé.
             </li>
+
             <li>
               • En situation exceptionnelle, hospitalisation ou urgence, un
               report reste possible.
             </li>
+
             <li>
-              • Les <strong class="font-semibold text-[var(--brown-deep)]">séances de sophrologie</strong>
+              • Les
+              <strong class="font-semibold text-[var(--brown-deep)]">
+                séances de sophrologie
+              </strong>
               peuvent se dérouler en cabinet, en visio ou à domicile selon les possibilités.
             </li>
+
             <li>
-              • Un <strong class="font-semibold text-[var(--brown-deep)]">enregistrement audio personnalisé</strong>
+              • Un
+              <strong class="font-semibold text-[var(--brown-deep)]">
+                enregistrement audio personnalisé
+              </strong>
               peut être proposé pour poursuivre la pratique chez vous.
             </li>
+
           </ul>
 
           <p class="mt-6 font-medium text-[var(--brown-deep)] leading-relaxed">
             Ce cadre garantit un espace respectueux et pleinement dédié à votre
             cheminement. Merci pour votre confiance dans cette démarche.
           </p>
+
         </section>
 
+        <!-- CTA -->
         <section class="mt-8 soft-card rounded-[2rem] p-8 text-center zoom-in">
+
           <h2 class="text-2xl font-semibold text-[var(--brown-deep)]">
             Vous souhaitez prendre rendez-vous ?
           </h2>
@@ -301,10 +554,13 @@ import VerticalImageCard from "../components/VerticalImageCard.astro";
           <p class="mt-5 leading-relaxed text-[var(--text)]">
             Vous pouvez me contacter pour poser une question, échanger sur votre
             situation ou convenir ensemble d’un
-            <strong class="font-semibold text-[var(--brown-deep)]">premier rendez-vous de sophrologie</strong>.
+            <strong class="font-semibold text-[var(--brown-deep)]">
+              premier rendez-vous de sophrologie
+            </strong>.
           </p>
 
           <div class="mt-8 flex flex-wrap justify-center gap-4">
+
             <a
               href="/contact"
               class="soft-btn bg-[var(--brown-soft)] text-white px-7 py-3.5 font-medium inline-block hover:bg-[var(--brown-deep)]"
@@ -318,14 +574,18 @@ import VerticalImageCard from "../components/VerticalImageCard.astro";
             >
               À quoi s’attendre ?
             </a>
+
           </div>
+
         </section>
+
       </section>
 
       <ScrollBlurImage
         src="/images/sophro/plante-detail-du-cabinet.webp"
         alt=""
       />
+
     </section>
   </main>
 

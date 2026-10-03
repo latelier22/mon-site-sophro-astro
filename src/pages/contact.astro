@@ -114,50 +114,75 @@ const error = Astro.url.searchParams.get("error");
                 </p>
               </div>
 
-              <div class="rounded-[1.25rem] bg-white/70 p-5 zoom-in">
-                <p class="font-semibold text-[var(--brown-deep)]">Horaires</p>
+            <div class="rounded-[1.25rem] bg-white/70 p-5 zoom-in">
 
-                <div class="mt-3 space-y-2 text-sm sm:text-base">
-                  <div class="flex justify-between gap-4">
-                    <span>Lundi</span>
-                    <span class="text-right">
-                      09:30–10:30, 11:00–12:00, 14:00–15:00, 18:00–19:00
-                    </span>
-                  </div>
+  <p class="font-semibold text-[var(--brown-deep)]">
+    Horaires de consultation au cabinet
+  </p>
 
-                  <div class="flex justify-between gap-4">
-                    <span>Mardi</span>
-                    <span class="text-right">Fermé</span>
-                  </div>
+  <div class="mt-5 space-y-5 text-sm sm:text-base">
 
-                  <div class="flex justify-between gap-4">
-                    <span>Mercredi</span>
-                    <span class="text-right">09:00–12:00</span>
-                  </div>
+    <!-- ADULTES -->
+    <div>
+      <p class="font-semibold text-[var(--brown-soft)]">
+        Adultes
+      </p>
 
-                  <div class="flex justify-between gap-4">
-                    <span>Jeudi</span>
-                    <span class="text-right">
-                      09:30–10:30, 11:00–12:00, 14:00–15:00
-                    </span>
-                  </div>
+      <div class="mt-3 space-y-3">
 
-                  <div class="flex justify-between gap-4">
-                    <span>Vendredi</span>
-                    <span class="text-right">Fermé</span>
-                  </div>
+        <div class="flex flex-col sm:flex-row sm:justify-between gap-1 sm:gap-4">
+          <span class="font-medium text-[var(--brown-deep)]">
+            Lundi
+          </span>
 
-                  <div class="flex justify-between gap-4">
-                    <span>Samedi</span>
-                    <span class="text-right">Fermé</span>
-                  </div>
+          <span class="sm:text-right">
+            9h00 – 12h30 / 14h00 – 18h00
+          </span>
+        </div>
 
-                  <div class="flex justify-between gap-4">
-                    <span>Dimanche</span>
-                    <span class="text-right">Fermé</span>
-                  </div>
-                </div>
-              </div>
+        <div class="flex flex-col sm:flex-row sm:justify-between gap-1 sm:gap-4">
+          <span class="font-medium text-[var(--brown-deep)]">
+            Jeudi
+          </span>
+
+          <span class="sm:text-right">
+            9h00 – 12h30 / 14h00 – 16h30
+          </span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ENFANTS / ADOS -->
+    <div class="border-t border-[var(--brown-soft)]/15 pt-5">
+
+      <p class="font-semibold text-[var(--brown-soft)]">
+        Enfants & adolescents
+      </p>
+
+      <div class="mt-3">
+
+        <div class="flex flex-col sm:flex-row sm:justify-between gap-1 sm:gap-4">
+          <span class="font-medium text-[var(--brown-deep)]">
+            Mercredi
+          </span>
+
+          <span class="sm:text-right">
+            9h00 – 12h30 / 14h00 – 16h30
+          </span>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <p class="mt-5 border-t border-[var(--brown-soft)]/15 pt-4 text-sm italic leading-relaxed text-[var(--brown-soft)]">
+    Consultations uniquement sur rendez-vous.
+    Les créneaux disponibles sur Calendly sont proposés selon ces horaires.
+  </p>
+
+</div>
             </div>
           </div>
 
